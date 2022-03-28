@@ -1,5 +1,4 @@
-# Đồ án chuyên ngành
-# Đề tài: Website Study Vocabulary (Website học từ vựng)
+# Website Study Vocabulary (Website học từ vựng)
 Thành viên:
 1. Trần Nhật Thy (NT) 18130239
 2. Nguyễn Du Khánh    18130108
