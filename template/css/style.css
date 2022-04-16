@@ -2162,33 +2162,6 @@ body.theme-default {
   --checkbox-check-fill: var(--neutral-100);
   --mode-button-option-border: var(--neutral-400);
   --progress-bar-empty: var(--indigo-100);
-  --upgrade_header_teacher_background_url: url(https://assets.quizlet.com/a/j/dist/app/i/upgrade/redesign_hero_teacher.191023a086a429c.jpg);
-  --upgrade_header_student_background_url: url(https://assets.quizlet.com/a/j/dist/app/i/upgrade/redesign_hero_student.361d06d51adbd9c.jpg);
-  --confirmation_redesign_header_background_url: url(https://assets.quizlet.com/a/j/dist/app/i/confirmation_redesign/background-shape.ff2e05a490c92e6.svg);
-  --confirmation_redesign_header_mweb_background_url: url(https://assets.quizlet.com/a/j/dist/app/i/confirmation_redesign/background-shape-mweb.016c406e5655ee9.svg);
-  --next_action_assistant_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/learning-assistant.8ee0b94376b04c2.svg);
-  --next_action_flashcards_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/flashcards.4a9157135468252.svg);
-  --next_action_learn_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/learn.01a2161658d477a.svg);
-  --next_action_live_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/live.17e19507456dc4f.svg);
-  --next_action_match_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/match.f9a8a5d34a89496.svg);
-  --next_action_test_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/test.dd40c6b394797c8.svg);
-  --next_action_write_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/learn.01a2161658d477a.svg);
-  --next_action_gravity_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/gravity.9d83850d88ef6d0.svg);
-  --next_action_spell_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/spell.d4627d1a03fc028.svg);
-  --next_action_progress_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/progress.e70036eb8a52244.svg);
-  --next_action_confirm_email_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/confirm-email.cb1041349514f33.svg);
-  --next_action_create_folder_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/create-folder.1646f70855c07d6.svg);
-  --next_action_create_set_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/create-set.50d30b647d8acbb.svg);
-  --next_action_create_class_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/create-class.469d002192e1245.svg);
-  --next_action_get_app_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/get-app.fa40b0ed8d7ae35.svg);
-  --next_action_track_progress_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/track-progress.ac96246709b1732.svg);
-  --next_action_add_image_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/add-image.4f887ac5b6303e2.svg);
-  --flashcard_swipe_background_url: url(https://assets.quizlet.com/a/j/dist/app/i/cards/flashcardSwipe.1c1c0b13686d188.gif);
-  --edgy_default_illustration: url(https://assets.quizlet.com/a/j/dist/app/i/homepage/distance-learning-graphic.3770e5c32aef368.png);
-  --thankyou_modal_background_url: url(https://assets.quizlet.com/a/j/dist/app/i/set/thank-you-avatar-bg.749dbda044f8484.svg);
-  --study_path_loading: url(https://assets.quizlet.com/a/j/dist/app/i/gifs/study_paths_redesign_loading_light-mode.5d826a2e647a95b.gif);
-  --lit_study_guides_link_blue_above_fold_background: url(https://assets.quizlet.com/a/j/dist/app/i/set/blue-above-fold-background.e0b0dd11fdc25c6.png);
-  --lit-study-guides-link-text: var(--ink-200);
   --inverted-button-background-opaque: var(--ink-100);
   --inverted-button-text-opaque: var(--neutral-100);
   --tertiary-button-text: var(--ink-200);
@@ -2410,32 +2383,6 @@ body.theme-default {
   --be-the-change-see-more-link-color: var(--neutral-200);
   --mode-button-option-border: var(--neutral-500);
   --progress-bar-empty: var(--indigo-300);
-  --upgrade_header_teacher_background_url: url(https://assets.quizlet.com/a/j/dist/app/i/upgrade/redesign_hero_teacher_night.1f8659c803386a8.jpg);
-  --upgrade_header_student_background_url: url(https://assets.quizlet.com/a/j/dist/app/i/upgrade/redesign_hero_student_night.254db9da2ee12a6.jpg);
-  --confirmation_redesign_header_background_url: url(https://assets.quizlet.com/a/j/dist/app/i/confirmation_redesign/background-shape-night.2aa0a7b2fcc86ac.svg);
-  --confirmation_redesign_header_mweb_background_url: url(https://assets.quizlet.com/a/j/dist/app/i/confirmation_redesign/background-shape-mweb-night.f9045f3d894a76e.svg);
-  --next_action_assistant_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/learning-assistant-nm.8a3e5ccfda913be.svg);
-  --next_action_flashcards_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/flashcards-nm.77b2cb8944ea7a3.svg);
-  --next_action_learn_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/learn-nm.ab7026f9fd1cf55.svg);
-  --next_action_live_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/live-nm.a9e1112d04f41b7.svg);
-  --next_action_match_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/match-nm.a80177ba6db9c51.svg);
-  --next_action_test_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/test-nm.7642fdb01ad4265.svg);
-  --next_action_write_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/learn-nm.ab7026f9fd1cf55.svg);
-  --next_action_gravity_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/gravity-nm.112f1d0764f7cb6.svg);
-  --next_action_spell_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/spell-nm.750014e7448784e.svg);
-  --next_action_progress_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/progress-nm.235dce325103696.svg);
-  --next_action_confirm_email_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/confirm-email-nm.c67d0ad4a1c83f1.svg);
-  --next_action_create_folder_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/create-folder-nm.34d28d7a74df62f.svg);
-  --next_action_create_set_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/create-set-nm.cfb2a447b680e45.svg);
-  --next_action_create_class_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/create-class-nm.02db4533255d2ab.svg);
-  --next_action_get_app_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/get-app-nm.641d69bb1573f86.svg);
-  --next_action_track_progress_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/track-progress-nm.65ae859f783c1ae.svg);
-  --next_action_add_image_background_icon_url: url(https://assets.quizlet.com/a/j/dist/app/i/next_action/add-image-nm.dd2e05a827078b9.svg);
-  --flashcard_swipe_background_url: url(https://assets.quizlet.com/a/j/dist/app/i/cards/flashcardSwipeNightmode.34a243be5bfcfd1.png);
-  --edgy_default_illustration: url(https://assets.quizlet.com/a/j/dist/app/i/homepage/distance-learning-graphic-dark.9383c8d796e5aad.png);
-  --study_path_loading: url(https://assets.quizlet.com/a/j/dist/app/i/gifs/study_paths_redesign_loading_dark-mode.dbb981b1c8d992f.gif);
-  --thankyou_modal_background_url: url(https://assets.quizlet.com/a/j/dist/app/i/set/thank-you-avatar-bg-dark.6d0915306d2b724.svg);
-  --lit_study_guides_link_blue_above_fold_background: url(https://assets.quizlet.com/a/j/dist/app/i/set/blue-above-fold-background-dark.69df8b0305d8c42.png);
   --lit-study-guides-link-text: var(--neutral-200);
   --inverted-button-background-opaque: var(--neutral-100);
   --inverted-button-text-opaque: var(--ink-200);
@@ -2721,7 +2668,7 @@ body.theme-default {
   }
 }
 
-body.has-sticky-header .TopNavigationWrapper {
+body.has-sticky-header div.TopNavigationWrapper {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
