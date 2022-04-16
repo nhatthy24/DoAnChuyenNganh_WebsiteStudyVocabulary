@@ -1,0 +1,446 @@
+.setting h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 4px 8px;
+}
+
+@media screen and (max-width: 38.75em) {
+  .setting h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.111111111111111;
+  }
+}
+
+.setting legend {
+  font: 500 12px/18px hurme_no2-webfont, -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0.5px;
+  padding: 12px 8px 8px;
+}
+
+.setting legend,
+.setting p {
+  color: var(--ui_color_gray_30);
+}
+
+.setting p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625;
+  padding: 4px 8px;
+}
+
+@media screen and (max-width: 38.75em) {
+  .setting p {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.571428571428571;
+  }
+}
+
+.setting label {
+  display: block;
+  padding: 8px;
+}
+
+.setting fieldset {
+  border: 0;
+}
+
+.notifications.setting fieldset {
+  margin-bottom: 1.5rem;
+}
+
+.notifications.setting .class-checkbox-setting {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.notifications.setting .class-checkbox-setting .UICheckbox {
+  width: auto;
+}
+
+.notifications.setting .class-checkbox-setting .UILink {
+  margin-top: 0;
+}
+
+.HourSetting-select {
+  margin-left: 0.5rem;
+  max-width: 9.375rem;
+}
+
+@media screen and (max-width: 38.75em) {
+  .HourSetting-select {
+    max-width: 100%;
+  }
+}
+
+.TimeZoneSetting-select {
+  margin-left: 0.5rem;
+  max-width: 25rem;
+}
+
+@media screen and (max-width: 38.75em) {
+  .TimeZoneSetting-select {
+    max-width: 100%;
+  }
+}
+
+.TimeZoneSetting-autoDetect {
+  display: none;
+}
+
+.TimeZoneSetting.has-differingAutoDetectedTimeZone .TimeZoneSetting-autoDetect {
+  display: block;
+}
+
+.TimeZoneSetting-autoDetect a:hover {
+  text-decoration: underline;
+}
+
+.add-image {
+  *zoom: 1;
+  margin: -8px 0 -2px;
+  padding: 8px 0 0;
+}
+
+.add-image:after,
+.add-image:before {
+  content: "";
+  display: table;
+}
+
+.add-image:after {
+  clear: both;
+}
+
+.add-image #animalGallery {
+  *zoom: 1;
+  margin: 10px -4px 0 0;
+  padding: 0;
+  -webkit-user-select: none;
+}
+
+.add-image #animalGallery:after,
+.add-image #animalGallery:before {
+  content: "";
+  display: table;
+}
+
+.add-image #animalGallery:after {
+  clear: both;
+}
+
+.add-image #animalGallery .animal {
+  background: var(--ui_color_white_background);
+  border: 0;
+  border-radius: 50%;
+  filter: none;
+  -webkit-filter: blur(0);
+  float: left;
+  margin: 2px;
+  outline: 0 none;
+  padding: 2px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: background 0.2s linear 10ms;
+  transition: background 0.2s linear 10ms;
+  -webkit-transition-timing-function: cubic-bezier(0.46, 0.655, 0.495, 1.65);
+          transition-timing-function: cubic-bezier(0.46, 0.655, 0.495, 1.65);
+}
+
+.add-image #animalGallery .animal:hover {
+  background: #ddd;
+  z-index: 2;
+}
+
+.add-image #animalGallery .animal.selected {
+  background: var(--active_color);
+  z-index: 3;
+}
+
+.add-image #animalGallery .animal img {
+  border-radius: 50%;
+  display: block;
+  height: 46px;
+  outline: 0 none;
+  width: 46px;
+}
+
+.profile-photo-upload {
+  position: relative;
+}
+
+.profile-photo-upload .the-label {
+  border-radius: var(--radius-small);
+  display: block;
+  padding: 12px 8px;
+  text-align: center;
+}
+
+.profile-photo-upload .loading-text {
+  background: #388e34;
+  border-radius: var(--radius-small);
+  color: #fff;
+  display: none;
+  line-height: 26px;
+  padding: 12px 8px;
+  text-align: center;
+}
+
+.profile-photo-upload .file {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.SettingsBox {
+  clear: both;
+  margin: 1.5rem auto 0;
+  max-width: 80rem;
+  padding: 0.5rem 0;
+}
+
+@media screen and (max-width: 56.25em) {
+  .SettingsBox {
+    margin: 0.75rem auto 0;
+  }
+}
+
+.SettingsBox-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  float: left;
+  padding: 0 1.5rem 0 2.5rem;
+  text-align: center;
+  width: 25%;
+}
+
+@media screen and (min-width: 64.0625em) {
+  .SettingsBox-title {
+    width: 15.625rem;
+  }
+}
+
+@media screen and (max-width: 56.25em) {
+  .SettingsBox-title {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    float: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 0.75rem;
+    padding: 1rem 2.5rem 0;
+    text-align: center;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 38.75em) {
+  .SettingsBox-title {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.SettingsBox-illustration {
+  margin: 0.625rem auto 0.5rem;
+}
+
+@media screen and (max-width: 56.25em) {
+  .SettingsBox-illustration {
+    margin: 0 0.25rem 0 0;
+  }
+}
+
+.SettingsBox-illustration .UIIcon {
+  color: var(--ui_color_default_foreground);
+  height: 50px;
+  width: 50px;
+}
+
+@media screen and (max-width: 56.25em) {
+  .SettingsBox-illustration .UIIcon {
+    height: 28px;
+    margin: 0 0.25rem 0 0;
+    width: 28px;
+  }
+}
+
+@media screen and (max-width: 56.25em) {
+  .SettingsBox-heading {
+    margin: 0 0 0 0.25rem;
+  }
+}
+
+.SettingsBox-box {
+  background-color: var(--card-alt-background);
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
+  clear: none;
+  margin: 0 2.5rem 0 25%;
+  min-height: 6.25rem;
+  padding: 1rem;
+  position: relative;
+}
+
+@media screen and (min-width: 64.0625em) {
+  .SettingsBox-box {
+    margin-left: 15.625rem;
+  }
+}
+
+@media screen and (max-width: 38.75em) {
+  .SettingsBox-box {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 56.25em) {
+  .SettingsBox-box {
+    margin-left: 2.5rem;
+    min-height: 0;
+  }
+}
+
+.SettingsLocalePreference-select {
+  max-width: 15.625rem;
+}
+
+@media screen and (max-width: 38.75em) {
+  .SettingsLocalePreference-select {
+    max-width: 100%;
+  }
+}
+
+.SettingsPrivacyOptionsBox .SettingsPrivacyOptionsBox-deindexInfo {
+  display: none;
+}
+
+.SettingsFormNightThemeTarget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 56.25rem) {
+  .SettingsFormNightThemeTarget {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+.SettingsFormLabelNightThemeTarget {
+  display: block;
+  margin-right: 1rem;
+  width: 6.25rem;
+}
+
+.SettingsFormLabelNightThemeTarget:last-of-type {
+  margin-right: 0;
+}
+
+.p22broa {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition: all 0.12s cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition: all 0.12s cubic-bezier(0.47, 0, 0.745, 0.715);
+  width: 100%;
+}
+
+input:checked + .p22broa {
+  -webkit-box-shadow: 0 0 0 0.25rem var(--indigo-400-indigo-300);
+          box-shadow: 0 0 0 0.25rem var(--indigo-400-indigo-300);
+}
+
+.p22broa:after {
+  background: rgba(0, 0, 0, 0.8);
+  bottom: 0;
+  content: "";
+  cursor: var(--p22broa-4);
+  left: 0;
+  opacity: var(--p22broa-5);
+  pointer-events: var(--p22broa-6);
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: all 0.12s cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition: all 0.12s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.tj2z5y0 {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  background: var(--neutral-200-ink-500) -webkit-gradient(linear, left top, left bottom, from(var(--indigo-400-ink-400)), color-stop(25%, var(--indigo-400-ink-400)), color-stop(25%, var(--neutral-200-ink-500)));
+  background: var(--neutral-200-ink-500) linear-gradient(var(--indigo-400-ink-400), var(--indigo-400-ink-400) 25%, var(--neutral-200-ink-500) 25%);
+  flex-grow: 1;
+  height: 6.25rem;
+  width: 100%;
+}
+
+.ifz7gbh {
+  color: #fff;
+  display: inline-block;
+  padding: 0.125rem;
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.SettingsFormLabelInputNightThemeTarget {
+  opacity: 0;
+  position: absolute;
+}
+
+.l1wznb7z {
+  font-size: 1rem;
+  font-weight: 600;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+@media (max-width: 38.75rem) {
+  .l1wznb7z {
+    font-size: 0.875rem;
+    -webkit-letter-spacing: normal;
+    -moz-letter-spacing: normal;
+    -ms-letter-spacing: normal;
+    letter-spacing: normal;
+    line-height: 1.4285714285714286;
+  }
+}
+/*# sourceMappingURL=settings.css.map */
