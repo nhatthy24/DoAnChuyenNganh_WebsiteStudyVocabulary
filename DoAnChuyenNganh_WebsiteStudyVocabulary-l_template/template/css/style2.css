@@ -587,25 +587,7 @@ p {
 .ClassAdminBadge{
     color: #93a3cc;
 }
-.DashboardFeedGroup-separator {
-    padding-left: 0.75rem;
-    vertical-align: top;
-    width: 100%;
-}
-.DashboardFeedGroup-separator, .DashboardFeedGroup-title {
-    display: table-cell;
-}
-.DashboardFeedGroup-separator .UIHorizontalRule {
-    border-color: #d9dde8;
-    width: 100%;
-}
-.UIHorizontalRule {
-    border: none;
-    border-bottom: 0.0625rem solid #f6f7fb;
-    height: 0;
-    margin-bottom: 0;
-    overflow: visible;
-}
+
 hr {
     display: block;
     unicode-bidi: isolate;
