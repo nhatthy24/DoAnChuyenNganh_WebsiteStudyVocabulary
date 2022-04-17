@@ -1,0 +1,619 @@
+*{
+    font-family: Arial;
+    /*background-color: rgba(99, 197, 222, 0.07);*/
+}
+body{
+    background-color: #f6f7fb;
+}
+.DashboardHeader.DashboardHeader--hasTabs {
+    padding-bottom: 0;
+}
+.DashboardHeader {
+    margin-right: calc(-50vw - -41.1875em);
+    outline: 0;
+    padding: 2.5rem calc(50vw - 41.1875em) 2.5rem 0;
+    position: relative;
+}
+DashboardHeaderTitle .UIIcon {
+    fill: var(--ui_color_gray_60);
+    color: var(--ui_color_gray_60);
+    height: 3.125rem;
+    vertical-align: middle;
+    width: 3.125rem;
+}
+.UIContainer {
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 81.25em;
+    padding: 0 2.5rem;
+}
+.ClassPageHeader {
+    *zoom: 1;
+    position: relative;
+}
+.fa-user-group {
+    fill: #939bb4;
+    color: #939bb4;
+    height: 3.125rem;
+    vertical-align: middle;
+    width: 3.125rem;
+}
+.fa-user-group {
+    fill: currentColor;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+}
+
+.DashboardHeaderActions {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.UIIconButton {
+    display: inline-block;
+}
+.MenuIconWithTooltip {
+    display: inline-block;
+    text-align: center;
+}
+.UIIconButton .UIButton {
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+.UIButton--social, .UIButton--social:visited, html.touch .UIButton--social:focus:hover:not(:active) {
+    background-color: var(--ui_color_white_background);
+    border: 0.125rem solid var(--ui_color_gray_80_foreground);
+    color: var(--ui_color_gray_30);
+}
+.UIButton, .UIButton:visited, html.touch .UIButton:focus:hover:not(:active) {
+    background-color: var(--primary-button-background);
+    color: var(--primary-button-text);
+}
+.UIButton {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.285714285714286;
+    max-width: 100%;
+    padding: 0.75rem 1.5rem;
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+    width: auto;
+}
+.UIIconButton .UIButton-wrapper {
+    padding: 0.5625rem;
+}
+.UIButton-wrapper {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    white-space: pre-wrap;
+    width: 100%;
+}
+.UIIconButton .UIButton {
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+.UIButton{
+    background-color: var(--ui_color_white_background);
+    border: 0.125rem solid var(--ui_color_gray_80_foreground);
+    color: var(--ui_color_gray_30);
+}
+.ClassPageHeader .DashboardHeaderActions .fa-user-group {
+    color: var(--ink-100);
+}
+.UIButton {
+    border: 0.125rem solid #e0e0e2;
+    color: #646f90;
+    background-color: #fff;
+}
+.UIIconButton .fa-user-group {
+    display: block;
+    height: 1.125rem;
+    pointer-events: none;
+    width: 1.125rem;
+}
+.fa-user-group {
+    fill: currentColor;
+    display: inline-block;
+    height: 1rem;
+    width: 100rem;
+}
+.UIButton2 {
+    color: #fff;
+    border: none;
+    height: 2.5rem;
+    background-color: #3ccfcf;
+}
+.ClassPageShareCard-copyWrap .UIButton2 {
+    width: 7.5rem;
+}
+.UIButton2 {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.285714285714286;
+    max-width: 100%;
+    padding: 0.75rem 1.5rem;
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+    width: auto;
+}
+.fa-user-group{
+    width: 3rem;
+    font-size: 2em;
+    height: 3.5rem;
+}
+.DashboardHeaderTitle-title{
+    font-size: 2rem;
+}
+.UINavTab{
+    margin-top: 2rem;
+}
+.DashboardFeedEmptyState {
+    background: rgba(255,255,255,0);
+    padding: 2rem;
+    text-align: center;
+}
+h3{
+    font-weight: bold;
+}
+.ClassPageDetails {
+    padding-top: 2.5rem;
+    width: 18.75rem;
+}
+.UIHeading {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.UIHeading--six {
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .0625rem;
+    line-height: 1.333333333333333;
+    text-transform: uppercase;
+}
+.ClassPageDetails-copyLink {
+    align-items: stretch;
+    display: flex;
+    margin-bottom: 1.5rem;
+    margin-top: 0.875rem;
+}
+.UIInput[aria-disabled=true] {
+    cursor: default;
+}
+.UIInput {
+    cursor: pointer;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.444444444444444;
+}
+.UIButton {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.285714285714286;
+    max-width: 100%;
+    padding: 0.75rem 1.5rem;
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+    border: 0.125rem solid #e0e0e2;
+}
+.ClassPageDetails-info {
+    display: flex;
+    font-size: .875rem;
+    font-weight: var(--typography-section-weight);
+    letter-spacing: normal;
+    line-height: 1.428571428571429;
+    margin-top: 1.125rem;
+    color: #586380;
+}
+.icondetail {
+    color: #d9dde8;
+    margin-right: 20px;
+}
+p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.DashboardPage-main {
+    overflow: hidden;
+    padding: 2.5rem 0;
+}
+.UIContainer {
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 81.25em;
+    padding: 0 2.5rem;
+}
+.ClassPageMembersView-shareCard {
+    margin-bottom: 2.5rem;
+}
+.ClassPageShareCard {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+}
+.UIHeading {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.UIHeading--three {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.266666666666667;
+}
+.UIParagraph {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625;
+}
+.ClassPageShareCard-copyWrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    min-width: 100%;
+}
+.ClassPageShareCard-copyWrap .UITextarea {
+    background-color: var(--ui_section_header_background_color);
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    width: 90%;
+}
+.UITextarea {
+    cursor: pointer;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.444444444444444;
+}
+.ClassPageShareCard-copyWrap .UIButton {
+    width: 7.5rem;
+}
+.UIButton, .UIButton:visited, html.touch .UIButton:focus:hover:not(:active) {
+    background-color: var(--primary-button-background);
+    color: var(--primary-button-text);
+}
+.UIButton {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.285714285714286;
+    max-width: 100%;
+    padding: 0.75rem 1.5rem;
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+    border: 0.125rem solid #e0e0e2;
+}
+.UIButton2 {
+    color: #fff;
+    border: none;
+    background-color: #3ccfcf;
+}
+.ClassPageShareCard-copyWrap .UITextarea {
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    width: 90%;
+}
+.ClassPageShareCard {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+}
+.UITextarea {
+    cursor: pointer;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.444444444444444;
+}
+.DashboardFeedGroup-header {
+    display: table;
+    padding-bottom: 1.25rem;
+    vertical-align: middle;
+}
+.DashboardFeedGroup-title {
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .0625rem;
+    line-height: 1.333333333333333;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.DashboardFeedGroup-separator {
+    padding-left: 0.75rem;
+    vertical-align: top;
+    width: 100%;
+}
+.DashboardFeedGroup-separator, .DashboardFeedGroup-title {
+    display: table-cell;
+}
+.ClassPageListTransitionItem-item {
+    margin-bottom: 0.625rem;
+}
+.DashboardFeedGroup-separator .UIHorizontalRule {
+    border-color: var(--ui_color_gray_80_foreground);
+    width: 100%;
+}
+.UIHorizontalRule {
+    border: none;
+    border-bottom: 0.0625rem solid var(--ui_divider_color_black);
+    height: 0;
+    margin-bottom: 0;
+    overflow: visible;
+}
+.ClassPageListTransitionItem-item {
+    margin-bottom: 0.625rem;
+}
+.UILinkBox {
+    background-color: var(--card-background);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+    position: relative;
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+}
+.UILinkBox-inner {
+    padding: 0.75rem 1.25rem;
+}
+.UILinkBox-link {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+.UILinkBox-link a.UILink {
+    border-radius: 0.25rem;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.UILinkBox-link .UILink {
+    border-bottom: 0.3125rem solid rgba(255,255,255,0);
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+}
+.UILink, .UILink:visited {
+    color: #3ccfcf;
+}
+.UILink {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: initial;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    font: inherit;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.285714285714286;
+    margin-top: 0;
+    outline: none;
+    padding: 0;
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+}
+.UIInput.UIInput--boxed .UIInput-input, .UIInput[aria-readonly=true] .UIInput-input {
+    border: 0.125rem solid #303545;
+    padding: 0.44rem;
+    transition: none .12s cubic-bezier(.47,0,.745,.715);
+    transition-property: border-color;
+}
+.UIInput-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: initial;
+    border: none;
+    border-radius: 0.25rem;
+    box-shadow: none;
+    color: #1a1d28;
+    cursor: text;
+    filter: none;
+    flex: 1 1 auto;
+    font: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    outline: none;
+    padding-bottom: 0.375rem;
+    text-align: inherit;
+    white-space: pre-wrap;
+    width: 100%;
+    word-break: break-word;
+}
+.ClassPageShareCard-copyWrap .UITextarea[aria-readonly=true] .UITextarea-textarea {
+    border: none;
+    padding: 1rem;
+}
+.UITextarea[aria-readonly=true] .UITextarea-textarea {
+    border: 0.125rem solid var(--ui_color_revert);
+    padding: 0.75rem;
+    transition: none .12s cubic-bezier(.47,0,.745,.715);
+    transition-property: border-color;
+}
+.UITextarea-textarea[rows="1"] {
+    resize: none;
+    white-space: nowrap;
+}
+.UITextarea-textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: initial;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--ui_color_gray_20);
+    cursor: text;
+    flex: 1 1 auto;
+    font: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    outline: none;
+    overflow: hidden;
+    padding-bottom: 0.375rem;
+    resize: vertical;
+    text-align: inherit;
+    white-space: pre-wrap;
+    width: 100%;
+    word-break: break-word;
+}
+.ClassPageListTransitionItem-item{
+    background-color: #fff;
+}
+.UILinkBox-inner {
+    padding: 0.75rem 1.25rem;
+}
+.ClassPagePersonCard-inner {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.ClassPagePersonCard-person {
+    align-items: center;
+    display: inline-flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+.ClassPagePersonCard-avatar {
+    display: inline-block;
+    margin-right: 1.25rem;
+}
+.UserAvatar {
+    background: transparent no-repeat top;
+    background-color: rgba(0,0,0,.04);
+    background-image: none;
+    background-size: cover;
+    border-radius: 100%;
+    box-shadow: inset 0 0 1px rgb(0 0 0 / 30%);
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    transform: translateZ(0);
+    vertical-align: middle;
+}
+.ClassPagePersonCard-info {
+    display: inline-block;
+    margin-right: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ClassPagePersonCard-badges {
+    display: block;
+}
+.ClassAdminBadge {
+    color: var(--ui_color_gray_60);
+    cursor: default;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.285714285714286;
+}
+.ClassPagePersonCard-username {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+}
+.UIHeading {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.UIHeading--four {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.ClassPagePersonCard-usernameInner {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+.ClassPagePersonCard-onlineIndicator {
+    margin-left: 1rem;
+}
+.UIOnlineIndicator {
+    background: #23b26d;
+    border-radius: 0.75rem;
+    display: hidden;
+    height: 0.75rem;
+    vertical-align: middle;
+    width: 0.75rem;
+}
+.ClassAdminBadge{
+    color: #93a3cc;
+}
+.DashboardFeedGroup-separator {
+    padding-left: 0.75rem;
+    vertical-align: top;
+    width: 100%;
+}
+.DashboardFeedGroup-separator, .DashboardFeedGroup-title {
+    display: table-cell;
+}
+.DashboardFeedGroup-separator .UIHorizontalRule {
+    border-color: #d9dde8;
+    width: 100%;
+}
+.UIHorizontalRule {
+    border: none;
+    border-bottom: 0.0625rem solid #f6f7fb;
+    height: 0;
+    margin-bottom: 0;
+    overflow: visible;
+}
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
