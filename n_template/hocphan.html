@@ -1,0 +1,1105 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<!-- Mirrored from demo.hasthemes.com/pustok-preview/pustok/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Mar 2021 09:15:13 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>hocphan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Use Minified Plugins Version For Fast Page Load -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="css/fontawesome.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/jquery-ui.min.css"> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="quizlethocphancss.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+
+<body>
+<div class="SetPageWrapper-contentContainerWithAdz">
+    <div class="SetPageSidebarAdz-container control" id="SetPageSidebarAdz">
+        <div class="SetPage-adzWrapper SetPageStickyStudyNav">
+            <div class="">
+                <div class="SetPage-adz SetPage-superiorAdz">
+                    <div>
+                        <div class="SiteAd a1g86l20">
+                            <div class="SiteAd-adContainer agk2jqb" id="dfp-SetRectangleHeader"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="SetPage-adz SetPage-inferiorAdz">
+                    <div class="StickyAdz">
+                        <div class="StickyInferiorAdz-wrapper">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>(() => { "use strict"; var e, t = e => { var t = e.indexOf("upr"); if (-1 === t) return { enabled: !1 }; var n = e.substr(t + 3, 3); return { enabled: !0, minUSUPRFloor: (() => { switch (n) { case "05c": return .05; case "10c": return .1; case "15c": return .15; case "20c": return .2; case "25c": return .25; case "30c": return .3; default: return 0 } })() } }, n = e => { var t = e.indexOf("Ow"); if (-1 === t) return { enabled: !1 }; var n = e.substr(t + 2); return { enabled: !0, mult: (() => { switch (n) { case "Quarterx": return .25; case "Halfx": return .5; default: return 1; case "2x": return 2 } })() } }, o = e => ({ partners: { adX: t(e), openWrap: n(e) }, staticMultiplier: 1, floors: { geoc_mult: { us: 1, ca: .6, gb: .25, au: .57, se: .18, jp: .22, ch: .56, in: .13, mx: .18, ru: .12, kr: .2, fr: .22, ae: .6, nl: .2, de: .31, es: .15, sg: .4, other: .07 } } }), r = (e, t, n) => { var o, r, i, a = "pubmaticServer" === n ? "pubmatic" : n; return null != (o = null == e || null == (r = e.base_floors) || null == (i = r[t]) ? void 0 : i[a]) ? o : .1 }, i = (e, t) => { var n, o; return null != (n = null == e || null == (o = e.bn_mult) ? void 0 : o[t]) ? n : 1 }, a = (e, t) => { var n, o, r = null == e ? void 0 : e.geoc_mult; return null != (n = null != (o = null == r ? void 0 : r[t]) ? o : null == r ? void 0 : r.other) ? n : 1 }, s = (e, t) => { var n, o; if (t < 1) return 1; var r = Math.min(Math.round(t), 20); return null != (n = null == e || null == (o = e.pd_mult) ? void 0 : o[r]) ? n : 1 }, d = (e, t) => { var n, o, r = Math.min(t, 20); return null != (n = null == e || null == (o = e.ref_mult) ? void 0 : o[r]) ? n : 1 }, l = e => { var t, n, o = (new Date).getUTCHours(); return null != (t = null == e || null == (n = e.hod_mult) ? void 0 : n[o]) ? t : 1 }, u = e => { var t, n, o = (new Date).getUTCDay(); return 0 === o && (o = 7), null != (t = null == e || null == (n = e.dow_mult) ? void 0 : n[o]) ? t : 1 }, c = e => Math.round(100 * e + Number.EPSILON) / 100, g = (e, t, n, r, d, c, g) => { var p = "control" !== g ? ((e, t, n) => { var o, r, i, a; return null != (o = null == (r = e.decisioning) || null == (i = r[n]) || null == (a = i[t]) ? void 0 : a.cpm_sum_per_1000_imps) ? o : "control" })(e, t, g) : c, m = o(p); return m.floors = e, m.staticMultiplier = ((e, t, n, o) => { for (var r = [s(e, t), a(e, n), i(e, o), l(e), u(e)], d = 1, c = 0; c < r.length; c++)d *= r[c]; return d })(e, d, r, n), m }, p = e => (t, n) => (n[e] = t, n), m = p("bidFloor"), f = { appnexus: p("reserve"), districtmDMX: p("floor"), ix: (e, t) => (t.bidFloorCur = "USD", p("bidFloor")(e, t)), onedisplay: m, onemobile: m, openx: p("customFloor"), pubmatic: (e, t) => p("kadfloor")("" + c(e), t), pubmaticServer: (e, t) => p("kadfloor")("" + c(e), t), smartadserver: p("bidfloor"), sonobi: p("floor"), sovrn: p("bidfloor"), triplelift: p("floor") }, w = (e, t, n) => { var o = t ? null : e.HookForPrebidRequestBids; e.HookForPrebidRequestBids = e => { o && o(e), n(e) } }, h = function (e, t, n, o) { void 0 === o && (o = !1), w(e, o, (e => { var o, i = "function" == typeof t ? t() : t; i.partners.openWrap.enabled && ((e, t, n, o, i) => { i.forEach((i => { var a = "function" == typeof o ? o(i.code) : o, s = d(e, a), l = t * s; i.bids = i.bids.map(((e, t, n, o) => i => { var a = f[i.bidder]; return void 0 === a || (i.params = a(c(r(e, o, i.bidder) * n * t), i.params)), i })(e, l, n, i.code)) })) })(i.floors, i.staticMultiplier, null != (o = i.partners.openWrap.mult) ? o : 1, n, e) })) }; !function (e) { e.CUSTOM_HARD_UPR = "chu", e.PWT_BID_ECPM = "pwtecp" }(e || (e = {})); var T = [4, 3.8, 3.6, 3.4, 3.2, 3, 2.8, 2.6, 2.4, 2.2, 2, 1.95, 1.9, 1.85, 1.8, 1.75, 1.7, 1.65, 1.6, 1.55, 1.5, 1.45, 1.4, 1.35, 1.3, 1.25, 1.2, 1.15, 1.1, 1.05, 1, .95, .9, .85, .8, .75, .7, .65, .6, .55, .5, .45, .4, .36, .32, .28, .24, .2, .18, .16, .14, .12, .1, .09, .08, .07, .06, .05, .04, .03, .02, .01], b = e => { for (var t = 0; t < T.length; t++) { var n = T[t]; if (e >= n) return n } return T[T.length - 1] }, P = (e, t, n, o, i) => { var a = ((e, t) => { var n, o, r, i = e.floors.geoc_mult, a = null != (n = null != (o = null == i ? void 0 : i[t]) ? o : null == i ? void 0 : i.other) ? n : 1; return (null != (r = e.partners.adX.minUSUPRFloor) ? r : 0) * a })(e, o); if (i && i > 0) return b(i); var s = ((e, t, n, o, i) => { var a = i * d(e, o), s = r(e, t, "UPR"); return c(s * a) })(e.floors, t, 0, n, e.staticMultiplier); return b(Math.max(s, a)) }; window.googletag = window.googletag || {}, window.googletag.cmd = window.googletag.cmd || []; const { NETWORK_CODE: v, serverAdsTimeout: _, shouldSkipInMWeb: W, registeredAds: y, targetingKeyValues: S, tagForChildDirectedTreatment: E, sidebarSlotElementId: I, sidebarSlotElementDomId: F, browserName: R, countryCode: x, flooringTrainVariant: M, flooringTestVariantTimeRange: O, deviceCategory: C, shouldRemoveWaitDependencies: D } = { "serverAdsTimeout": 2500, "NETWORK_CODE": "6396803", "targetingKeyValues": { "adexp_spm88c": "0", "adexp_sppsgv047": "2", "childDirected": "no", "n": "vi", "l": "1", "pa": "Sets_show", "p": "1", "v": "1", "iefft": "1", "a": "21", "g": "2", "f": "0", "t": "1", "u": "0", "rpv": "75", "tcs": "1", "set_id": "632958515", "ct_level1": "Languages", "ct_level2": "English", "ct_level3": "Professions", "stc": "1-10", "ot": "0" }, "tagForChildDirectedTreatment": 0, "registeredAds": { "SetRectangleHeader": { "defaultSizeMap": [300, 250], "sizeMap": [[[769, 0], [300, 250]], [[0, 0], []]], "options": { "allowPrefetch": false, "defineSlotImmediately": false, "isBCS": false, "isFlexible": false, "isOutstream": false, "isServerRendered": false, "lazyLoaded": false, "showAdHeading": true, "useHeaderBidding": true, "usePWTBidding": true } }, "SetSidebarV4": { "defaultSizeMap": [160, 600], "sizeMap": [[[1025, 750], [[300, 600], [120, 600], [160, 600], [300, 250], [250, 250]]], [[1025, 0], [[300, 250]]], [[769, 0], [[160, 600], [120, 600]]], [[0, 0], []]], "options": { "allowPrefetch": false, "defineSlotImmediately": false, "isBCS": false, "isFlexible": false, "isOutstream": false, "isServerRendered": false, "lazyLoaded": false, "showAdHeading": true, "useHeaderBidding": true, "usePWTBidding": true } } }, "sidebarSlotElementId": "SetPageSidebarAdz", "sidebarSlotElementDomId": "SetPageSidebarAdz-container", "shouldSkipInMWeb": true, "browserName": "Chrome", "countryCode": "vn", "flooringTrainVariant": "control", "flooringTestVariantTimeRange": "lastThreeHours", "deviceCategory": "desktop", "shouldRemoveWaitDependencies": false }, B = _, k = _, A = "ad_init_php_ran", H = "ads-page-depth", q = Object.keys(y), U = {}, z = {}; let N = !1; const Q = q.some((e => te(e) || ne(e))); let G = !1, L = !1, j = null, $ = o("control"), V = !1; const X = []; function K() { N || (N = !0, J()) } function J() { window.googletag.cmd.push((() => { !function () { if (0 === q.length) return; if (!Q) return oe(!1, !1); const e = { hasRequestStarted: !1 }; e.failsafeTimeout = setTimeout((() => { e.hasRequestStarted || (e.hasRequestStarted = !0, oe(!e.bidProcessFinishedApstag || e.bidProcessTimeoutApstag, !e.bidProcessFinishedPWT || e.bidProcessTimeoutPWT)) }), k), new Promise(((e, t) => { if (0 === q.filter(te).length) return e(); const n = setTimeout((() => { e(!1) }), B); (function () { const e = ee("useHeaderBidding").map((e => { const t = e.getSlotElementId(), n = function (e) { const t = y[e].sizeMap, n = window.innerHeight || window.document && window.document.documentElement && window.document.documentElement.clientHeight || 0, o = window.innerWidth || window.document && window.document.documentElement && window.document.documentElement.clientWidth || 0; return t.filter((e => { const t = e[0]; return t[0] <= o && t[1] <= n })).slice(0, 1)[0][1] }(t.split("php-")[1]); return n.length < 1 ? null : { sizes: n, slotID: t, slotName: e.getAdUnitPath(), slotParams: {} } })).filter((e => null !== e)); return new Promise(((t, n) => { window.googletag.cmd.push((() => { 0 === e.length && t(); try { window.apstag.fetchBids({ slots: e, timeout: B - 50 }, (e => { e.forEach((e => { const t = e && e.targeting; if (e && e.slotID && t && (t.amzniid || t.amzniid_sp || t.r_amzniid)) { const n = e.slotID.split("php-")[1], o = U[n]; o && Object.entries(t).forEach((([e, t]) => { o.setTargeting(e, t) })) } })), t() })) } catch (e) { n(e) } })) })) })().then((() => { clearTimeout(n), e(!0) })).catch((() => { t() })) })).then((t => { e.bidProcessFinishedApstag = !0, e.bidProcessTimeoutApstag = !t, re(e) })).catch((() => { e.bidProcessFinishedApstag = !0, re(e) })), new Promise(((e, t) => { if (0 === q.filter(ne).length) return e(!0); const n = setTimeout((() => { e(!1) }), B); (function () { const e = ee("usePWTBidding"); return new Promise(((t, n) => { 0 === e.length && t(), window.googletag.cmd.push((() => { try { const n = () => { z.PWT.requestBids(z.PWT.generateConfForGPT(e), (e => { z.PWT.addKeyValuePairsToGPTSlots(e), t() })) }; !D || V ? n() : X.push(n) } catch (e) { n(e) } })) })) })().then((() => { clearTimeout(n), e(!0) })).catch((e => { clearTimeout(n), t(e) })) })).then((t => { e.bidProcessFinishedPWT = !0, e.bidProcessTimeoutPWT = !t, re(e) })).catch((() => { e.bidProcessFinishedPWT = !0, re(e) })) }() })) } function Y(e) { const t = e.slot.getSlotElementId(); if (function (e, t, n, o) { const r = document.getElementById(`${e}-heading`); r && (t || 4623761902 === n || 2548271416 === o ? (r.style.visibility = "hidden", ie(r, "none")) : (r.style.visibility = "visible", ie(r, "block"))) }(t, e.isEmpty, e.advertiserId, e.campaignId), e.isEmpty && t === I) { const e = document.getElementById(F); e && (e.style.display = "none") } t.indexOf("php-") >= 0 && !G && (G = !0, de("ad_init_to_render_first_ad_php_time", A, "first_ad_rendered_php")), "php-SetRectangleHeader" !== t || L || (L = !0, de("ad_init_to_set_rect_render_php_time", A, "set_rect_ad_rendered_php")) } function Z(e) { return `php-${e}` } function ee(e) { return q.filter((t => !!y[t].options[e])).map((e => U[e])) } function te(e) { return !!y[e].options.useHeaderBidding } function ne(e) { return !!y[e].options.usePWTBidding } function oe(t, n) { let o = q.map((e => U[e])).map((e => (function (e, t, n) { try { let o = "0"; t && n ? o = "3" : t ? o = "1" : n && (o = "2"), e.setTargeting("rwb", o) } catch (e) { } }(e, t, n), e))); window.googletag.cmd.push((() => { $.partners.adX.enabled && (o = o.map((t => ((t, n, o, r) => { if ("function" == typeof (null == n ? void 0 : n.setTargeting)) { var i = n.getSlotElementId(), a = ((t, n, o, r) => { if ("function" == typeof (null == n ? void 0 : n.getTargeting) && "function" == typeof (null == n ? void 0 : n.getSlotElementId)) { var i = n.getSlotElementId(), a = n.getTargeting(e.PWT_BID_ECPM), s = () => P(t, i, o, r); if (0 === a.length) return s(); var d = +a[0]; return Number.isNaN(d) ? s() : P(t, i, o, r, d) } return 0 })(t, n, "function" == typeof o ? o(i) : o, r); n.setTargeting(e.CUSTOM_HARD_UPR, (e => { var t = c(e), n = String(t); switch (n.length) { case 1: return n + ".00"; case 3: return n + "0"; default: return n } })(a > 0 ? a : .01)) } return n })($, t, 1, x)))), window.googletag.pubads().refresh(o), o.map((e => e.getSlotElementId())).forEach((e => { se(`${e}-gpt-start`) })) })) } function re(e) { e.hasRequestStarted || e.bidProcessFinishedApstag && e.bidProcessFinishedPWT && (e.hasRequestStarted = !0, e.failsafeTimeout && clearTimeout(e.failsafeTimeout), oe(e.bidProcessTimeoutApstag, e.bidProcessTimeoutPWT)) } function ie(e, t) { ae(e, ".AdHeading-removeLink", t), ae(e, ".AdHeading-upgradePrice", t) } function ae(e, t, n) { const o = e.querySelector(t); o && (o.style.display = n) } function se(e) { try { window.performance.mark(e) } catch (e) { } } function de(e, t, n) { se(n); try { window.performance.measure(e, t, n) } catch (e) { } } function le() { try { j = window.localStorage } catch (e) { try { j = window.sessionStorage } catch (e) { } } } function ue(e) { return j ? j.getItem(e) : null } !function () { if (!function () { if ("undefined" != typeof window) { const e = window.document.querySelector(".__isAdBlockerEnabled"); return !e || 0 === e.offsetHeight } return !1 }()) { if ("control" !== M || "control" !== O) { const e = e => { window.Rollbar && Math.random() <= .01 && window.Rollbar.warn("Ads (1%): Failed to fetch floors for advertisers", e) }; try { le(); let t = 0; const n = ue(H); null !== n && (t = parseInt(n, 10)), $ = g(o("upr10cOw1x").floors, C, R, x, t, "upr10cOw1x", "control"), ((e, t, n, o, r, i, a, s) => { var d = new XMLHttpRequest; d.onreadystatechange = () => { if (4 === d.readyState) if (200 === d.status) { var a, l = null != (a = JSON.parse(d.responseText)) ? a : {}, u = g(l, e, t, n, o, r, i); $ = u } else 0 === d.status ? null == s || s(new Error("Fetching ad floors timed out")) : null == s || s(new Error("Fetching ad floors failed with statusCode=" + d.status)) }, d.open("GET", "https://d3q9h1uwpmml3k.cloudfront.net/floors.json", !0), d.setRequestHeader("Cache-Control", "max-age=3600"), d.send() })(C, R, x, t, M || "control", O || "control", 0, (t => { e(t) })) } catch (t) { e(t) } } if (se(A), Q && (function () { if (window.apstag) return; const e = []; window.apstag = { init() { e.push(["i", arguments]) }, fetchBids() { e.push(["f", arguments]) }, setDisplayBids() { }, _Q: e } }(), z.PWT = function () { if (window.PWT && !window.PWT.mockPWT) return V = !0, window.PWT; if (window.PWT || (window.PWT = { addKeyValuePairsToGPTSlots() { }, generateConfForGPT() { }, requestBids() { }, mockPWT() { } }), z.OWT = { notifyExternalBiddingComplete() { }, registerExternalBidders() { } }, D ? (z.PWT = window.PWT, z.OWT = window.OWT) : QWait("Quizlet.pubmatic", (() => { z.PWT = window.PWT, z.OWT = window.OWT })), D) { const e = window.PWT.jsLoaded; window.PWT.jsLoaded = () => { "function" == typeof e && e(), V = !0, X.forEach((e => e())) } } return window.PWT }(), function () { const e = e => { const t = S.gl, n = S.t; (t || n) && e.forEach((e => { e.bids = e.bids.map((e => ("appnexus" === e.bidder && (e.params.keywords = e.params.keywords || {}, e.params.keywords.gl = t), "onemobile" === e.bidder && (e.params.ext = e.params.ext || {}, e.params.ext.t = n), e))) })) }; D ? (h(z.PWT, $, 1, !1), w(z.PWT, !1, e)) : QWait("Quizlet.pubmatic", (() => { h(z.PWT, $, 1, !1), w(z.PWT, !1, e) })) }()), function () { le(); let e = 0; const t = ue(H); null !== t && (e = parseInt(t, 10)), e++, e && e <= 3 && (S.pd = `${e}`), function (e, t) { if (j) try { j.setItem("ads-page-depth", t) } catch (e) { } }(0, e) }(), window.googletag.cmd.push((() => { window.googletag.pubads().setTagForChildDirectedTreatment(E), function () { for (const e in S) window.googletag.pubads().setTargeting(e, S[e]) }(), function () { for (const e in y) { const t = y[e], n = window.googletag.defineSlot(`/${v}/${e}`, t.defaultSizeMap, Z(e)).defineSizeMapping(t.sizeMap).addService(window.googletag.pubads()); n.setTargeting("arc", "1"), n.setTargeting("ref", "1"), U[e] = n } }(), window.googletag.pubads().addEventListener("slotRenderEnded", Y), window.googletag.pubads().disableInitialLoad(), window.googletag.enableServices(), Q && window.apstag && window.apstag.init({ adServer: "googletag", bidTimeout: B, deals: !0, pubID: "3742", simplerGPT: !1 }) })), !W || !function () { const e = window.innerWidth; let t = 0, n = 0; return window.document && window.document.documentElement && (t = window.document.documentElement.clientWidth), window.screen && (n = window.screen.width), (e || t || n || 0) <= 768 }()) { if (window.googletag.cmd.push((() => { !function () { for (const e in y) window.googletag.display(Z(e)) }() })), !Q) return J(); D ? setTimeout((() => { K() }), 0) : QWait("Quizlet.apstag", "Quizlet.pubmatic", (() => { setTimeout((() => { K() }), 0) })), setTimeout(K, B) } } }() })();</script>
+    <div id="SetPageTarget">
+        <div class="SetPage">
+            <div class="SetPage-setContentWrapper">
+                <div class="SetPage-setIntroWrapper" id="setPageSetIntroWrapper">
+                    <div class="SetPage-setIntro">
+                        <div class="SetPage-content">
+                            <div class="SetPage-setTitle">
+                                <div class="SetPage-titleWrapper">
+                                    <h1 class="UIHeading UIHeading--one">Học phần title</h1>
+                                </div>
+                                <div class="SocialProofContainer"></div>
+                            </div>
+                            <div class="SetPage-studyPreview">
+                                <nav aria-label="Các chế độ học" class="SetPage-studyModes has-adz">
+                                    <div class="UIRow">
+                                        <div class="SetPageModes-group"><span class="s1q2gvv6">
+                                                <div class="SetPageModes-groupLabel">
+                                                    <div class="htfvr7f">TRONG LỚP</div>
+                                                </div><span class="SetPageModes-buttonWrapper"><a aria-label="Live"
+                                                        class="SetPageModeButton" data-sourcename="mode-link-live"
+                                                        data-testid="SetPageModeButton-mode-link-live"
+                                                        href="/632958515/live" rel="nofollow">
+                                                        <div class="SetPageModeButton-content">
+                                                            <div class="SetPageModeButton-icon">
+                                                                <div
+                                                                    class="UIModeIcon UIModeIcon--live UIModeIcon--large">
+                                                                    <svg aria-label="chế độ trực tiếp"
+                                                                        class="UIIcon UIIcon--mode-live-sober UIModeIcon-modeIcon"
+                                                                        role="presentation"><noscript></noscript>
+                                                                        <use xlink:href="#mode-live-sober"></use>
+                                                                        <noscript></noscript>
+                                                                    </svg></div>
+                                                            </div>
+                                                            <div class="dgsfd5i"><span
+                                                                    class="SetPageModeButton-modeName">Live</span></div>
+                                                        </div>
+                                                    </a></span>
+                                            </span></div>
+                                        <div class="SetPageModes-group SetPageModes-group--study">
+                                            <div class="SetPageModes-groupLabel">
+                                                <div class="htfvr7f">HỌC</div>
+                                            </div><span class="SetPageModes-buttonWrapper"><a aria-label="Thẻ ghi nhớ"
+                                                    class="SetPageModeButton" data-sourcename="mode-link-flashcards"
+                                                    data-testid="SetPageModeButton-mode-link-flashcards"
+                                                    href="/632958515/flashcards?funnelUUID=686ab556-15f9-417f-b447-0e559404e202"
+                                                    rel="nofollow">
+                                                    <div class="SetPageModeButton-content">
+                                                        <div class="SetPageModeButton-icon">
+                                                            <div
+                                                                class="UIModeIcon UIModeIcon--flashcards UIModeIcon--large">
+                                                                <svg aria-label="chế độ thẻ ghi nhớ"
+                                                                    class="UIIcon UIIcon--mode-cards-sober UIModeIcon-modeIcon"
+                                                                    role="presentation"><noscript></noscript>
+                                                                    <use xlink:href="#mode-cards-sober"></use>
+                                                                    <noscript></noscript>
+                                                                </svg></div>
+                                                        </div>
+                                                        <div class="dgsfd5i"><span
+                                                                class="SetPageModeButton-modeName">Thẻ ghi nhớ</span>
+                                                        </div>
+                                                    </div>
+                                                </a></span><span class="SetPageModes-buttonWrapper"><a aria-label="Học"
+                                                    class="SetPageModeButton" data-sourcename="mode-link-learn"
+                                                    data-testid="SetPageModeButton-mode-link-learn"
+                                                    href="/632958515/learn?funnelUUID=686ab556-15f9-417f-b447-0e559404e202"
+                                                    rel="nofollow">
+                                                    <div class="SetPageModeButton-content">
+                                                        <div class="SetPageModeButton-icon">
+                                                            <div
+                                                                class="UIModeIcon UIModeIcon--assistant UIModeIcon--large">
+                                                                <svg aria-label="chế độ trợ lý"
+                                                                    class="UIIcon UIIcon--mode-assistant-sober UIModeIcon-modeIcon"
+                                                                    role="presentation"><noscript></noscript>
+                                                                    <use xlink:href="#mode-assistant-sober"></use>
+                                                                    <noscript></noscript>
+                                                                </svg></div>
+                                                        </div>
+                                                        <div class="dgsfd5i"><span
+                                                                class="SetPageModeButton-modeName">Học</span></div>
+                                                    </div>
+                                                </a></span><span class="SetPageModes-buttonWrapper"><a aria-label="Viết"
+                                                    class="SetPageModeButton" data-sourcename="mode-link-write"
+                                                    data-testid="SetPageModeButton-mode-link-write"
+                                                    href="/632958515/write?funnelUUID=686ab556-15f9-417f-b447-0e559404e202"
+                                                    rel="nofollow">
+                                                    <div class="SetPageModeButton-content">
+                                                        <div class="SetPageModeButton-icon">
+                                                            <div class="UIModeIcon UIModeIcon--write UIModeIcon--large">
+                                                                <svg aria-label="chế độ học"
+                                                                    class="UIIcon UIIcon--mode-learn-sober UIModeIcon-modeIcon"
+                                                                    role="presentation"><noscript></noscript>
+                                                                    <use xlink:href="#mode-learn-sober"></use>
+                                                                    <noscript></noscript>
+                                                                </svg></div>
+                                                        </div>
+                                                        <div class="dgsfd5i"><span
+                                                                class="SetPageModeButton-modeName">Viết</span></div>
+                                                    </div>
+                                                </a></span><span class="SetPageModes-buttonWrapper"><a
+                                                    aria-label="Chính tả" class="SetPageModeButton"
+                                                    data-sourcename="mode-link-spell"
+                                                    data-testid="SetPageModeButton-mode-link-spell"
+                                                    href="/632958515/spell?funnelUUID=686ab556-15f9-417f-b447-0e559404e202"
+                                                    rel="nofollow">
+                                                    <div class="SetPageModeButton-content">
+                                                        <div class="SetPageModeButton-icon">
+                                                            <div class="UIModeIcon UIModeIcon--spell UIModeIcon--large">
+                                                                <svg aria-label="chế độ chính tả"
+                                                                    class="UIIcon UIIcon--mode-spell-sober UIModeIcon-modeIcon"
+                                                                    role="presentation"><noscript></noscript>
+                                                                    <use xlink:href="#mode-spell-sober"></use>
+                                                                    <noscript></noscript>
+                                                                </svg></div>
+                                                        </div>
+                                                        <div class="dgsfd5i"><span
+                                                                class="SetPageModeButton-modeName">Chính tả</span></div>
+                                                    </div>                                       
+                                        </div>
+                                    </div>
+                                </nav>
+                                <section aria-label="Xem trước thẻ ghi nhớ" class="SetPageCardsPreview-container"
+                                    role="main">
+                                    <div class="SetPageCardsPreview">
+                                        <div class="SetPageCardsPreview-inner">
+                                            <div class="CardsList CardsList--showSingle">
+                                                <div class="CardsList-container">
+                                                   <!-- Slideshow container -->
+                                                    <div class="slideshow-container">
+
+                                                    <!-- Full-width slides/quotes -->
+                                                        <div class="mySlides">
+                                                            <q>English</q>
+                                                            <p class="author">Tiếng Anh</p>
+                                                            </div>
+                                                    
+                                                        <div class="mySlides">
+                                                            <q>Job</q>
+                                                            <p class="author">Công việc</p>
+                                                            </div>
+                                                    
+                                                        <div class="mySlides">
+                                                            <q>Right</q>
+                                                            <p class="author">Phải</p>
+                                                            </div>
+                                                        <div class="mySlides">
+                                                            <q>Left</q>
+                                                            <p class="author">Trái</p>
+                                                            </div>
+                                                        <div class="mySlides">
+                                                            <q>Up</q>
+                                                            <p class="author">Trên</p>
+                                                            </div>
+                                                        <div class="mySlides">
+                                                            <q>Down</q>
+                                                            <p class="author">Dưới</p>
+                                                            </div>
+                                                        <div class="mySlides">
+                                                            <q>Table</q>
+                                                            <p class="author">Bàn</p>
+                                                            </div>                                                                                                     
+                                                        <!-- Next/prev buttons -->
+                                                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                                    </div>
+  
+                                                    <!-- Dots/bullets/indicators -->
+                                                     <div class="dot-container">
+                                                        <span id="dot1" class="dot">1</span>
+                                                        <span class="dot">/</span>
+                                                        <span id="dot2" class="dot">1</span>                                  
+                                                    </div>
+                                                </div>                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="SetPage-setDetails" id="setPageSetDetails">
+                    <div class="SetPage-setDetailsInfoWrapper">
+                        <div class="SetPage-setDetailsInfo">
+                            <div class="SetPage-content">
+                                <div>
+                                    <section aria-label="Thông tin Học phần" class="SetPage-setInfo SetPageInformation"
+                                        role="contentinfo">
+                                        <div class="SetPageInformation-headerContainer">
+                                            <div class="SetPageInformation-headerOptions">
+                                                <div class="UIDiv SetPage-options" aria-label="Tùy chọn">                                                                  
+                                                    <div class="SetPage-menuOption"><span
+                                                            class="MenuIconWithTooltip is-Popover is-Tooltip UIOverlayTrigger-target UIOverlayTrigger-element-attached-top UIOverlayTrigger-element-attached-center UIOverlayTrigger-target-attached-bottom UIOverlayTrigger-target-attached-center"><span
+                                                                class="UIIconButton">
+                                                                <button type="button" data-toggle="modal" data-target="#exampleModal"
+                                                                    class="UIButton UIButton--whiteBorder"
+                                                                    title="Thêm học phần vào lớp hoặc thư mục" type="button"><span
+                                                                        class="UIButton-wrapper">
+                                                                        <!-- <svg aria-label="info"
+                                                                            class="UIIcon UIIcon--info-inverse"
+                                                                            role="img"><noscript></noscript>
+                                                                            <use xlink:href="#info-inverse"></use>
+                                                                            <noscript></noscript>
+                                                                        </svg> -->
+                                                                        <i class="fa solid fa-plus"></i>
+                                                                        <!-- <i class='fa fa-500px' style='font-size:24px'></i> -->
+                                                                    </span></button></span></span></div>
+                                                    <div class="SetPage-menuOption"><span
+                                                            class="MenuIconWithTooltip is-Popover is-Tooltip UIOverlayTrigger-target UIOverlayTrigger-element-attached-top UIOverlayTrigger-element-attached-center UIOverlayTrigger-target-attached-bottom UIOverlayTrigger-target-attached-center"><span
+                                                                class="UIIconButton"><button
+                                                                    class="UIButton UIButton--whiteBorder"
+                                                                    title="sửa" type="button"><span
+                                                                        class="UIButton-wrapper">
+                                                                        <!-- <svg
+                                                                            aria-label="new class"
+                                                                            class="UIIcon UIIcon--new-class"
+                                                                            role="img"><noscript></noscript>
+                                                                            <use xlink:href="#new-class"></use>
+                                                                            <noscript></noscript>
+                                                                            
+                                                                        </svg> -->
+                                                                        <i class="fa solid fa-edit"></i>
+                                                                    </span></button></span></span></div>
+                                                    <div class="SetPage-menuOption"><span
+                                                            class="MenuIconWithTooltip"><span
+                                                                class="UIIconButton"><button
+                                                                    class="UIButton UIButton--whiteBorder"
+                                                                    title="Chia sẻ" type="button"><span
+                                                                        class="UIButton-wrapper">
+                                                                        <!-- <svg
+                                                                            aria-label="more menu - horizontal"
+                                                                            class="UIIcon UIIcon--more"
+                                                                            role="img"><noscript></noscript>
+                                                                            <use xlink:href="#more"></use>
+                                                                            <noscript></noscript>
+                                                                        </svg> -->
+                                                                        <i class="fa solid fa-share-alt-square"></i> 
+                                                                    </span></button></span></span></div>
+                                                </div>
+                                            </div>
+                                            <div class="SetPageHeader">
+                                                <div class="SetPageHeader-container">
+                                                    <div class="UIDiv SetPageHeader-info">
+                                                        <div class="UIDelimiter">
+                                                            <div aria-label="Xem hồ sơ" class="SetPageHeader-creator">
+                                                                <div class="UserLink">
+                                                                    <div class="UserLink-inner">
+                                                                        <div class="UserLink-avatar"><a class="UILink"
+                                                                                data-testid="UILink-anchor"
+                                                                                href="/Nhuan_DuongBa" tabindex="0"
+                                                                                title="Thăm hồ sơ của Nhuan_DuongBa"><span
+                                                                                    class="UserAvatar"
+                                                                                    style="height: 50px; width: 50px;">
+                                                                                    <div class="Image"><img
+                                                                                            alt="Ảnh hồ sơ"
+                                                                                            class="Image-image"
+                                                                                            height="50"
+                                                                                            referrerpolicy="no-referrer"
+                                                                                            src="https://assets.quizlet.com/a/j/dist/app/i/animals/26.2b8e0453716fa8f.jpg"
+                                                                                            width="50"></div>
+                                                                                </span></a></div>
+                                                                        <div class="UserLink-content">
+                                                                            <div class="UserLink-createdBy"><span>Tạo
+                                                                                    bởi</span></div><a class="UILink"
+                                                                                data-testid="UILink-anchor"
+                                                                                href="/Nhuan_DuongBa" tabindex="0"><span
+                                                                                    class="UserLink-username">Nhuan_DuongBa</span></a><noscript></noscript>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="SetPageHeader-description">Đây là mô tả của học phần,Đây
+                                                        là mô tả của học phần,Đây là mô tả của học phần,Đây là mô tả của
+                                                        học phần,Đây là mô tả của học phần,Đây là mô tả của học phần,Đây
+                                                        là mô tả của học phần<div class="SetPageHeader-descriptionBlur">
+                                                        </div>
+                                                    </div>
+                                                    <div class="SetPageHeader-setMemberships">Đã thêm vào <div
+                                                            class="UIDelimiter is-inline"><a class="UILink"
+                                                                data-testid="UILink-anchor"
+                                                                href="/class/20295977/"><span>Test 2</span></a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="SetPage-setDetailsTermsWrapper">
+                        <div class="SetPage-setDetailsTerms">
+                            <div class="SetPage-content">
+                                <div class="SetPageTaggingEmbedded SetPageTaggingEmbedded--hidden"></div>
+                            </div>
+                            <div class="SetPage-content">
+                                <div>
+                                    <div>
+                                        <section class="UISection SetPageTerms-termsWrapper SetPage-termsList"
+                                            role="contentinfo"
+                                            aria-labelledby="SetPageTermsHeader-termsListHeading-632958515">
+                                            <div class="SetPage-terms">
+                                                <div class="UIDiv SetPageTermsHeader-termsListTitle">
+                                                    <h4 class="UIHeading UIHeading--assembly UIHeading--four"><span
+                                                            id="SetPageTermsHeader-termsListHeading-632958515">Thuật ngữ
+                                                            trong học phần này (6)</span></h4>
+                                                    <div
+                                                        class="SetPageTermsHeader-controls SetPageTermsHeader-controls--main">
+                                                        <div class="SetPageTermsHeader-sortDropdown">
+                                                            <div class="UIFieldset notranslate UIFieldset--inline">
+                                                                <div class="UIFieldset-fields">
+                                                                    <div class="UIDropdown"><select
+                                                                            class="UIDropdown-select">
+                                                                            <option value="original">Thứ tự gốc</option>
+                                                                            <option value="alphabetical">Bảng chữ cái
+                                                                            </option>
+                                                                            <option value="missed">Thông số của bạn
+                                                                            </option>
+                                                                        </select><svg aria-label="chevron down"
+                                                                            class="UIIcon UIIcon--chevron-down UIDropdown-icon"
+                                                                            role="img"><noscript></noscript>
+                                                                            <use xlink:href="#chevron-down"></use>
+                                                                            <noscript></noscript>
+                                                                        </svg></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="SetPageTermsHeader-filterToggle">
+                                        
+                                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                                <label class="btn btn-secondary active v">
+                                                                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Tất cả
+                                                                </label>
+                                                                <label class="btn btn-secondary">
+                                                                  <input type="radio" name="options" id="option2" autocomplete="off"> Gắn dấu sao (1)
+                                                                </label>                                                  
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <section class="SetPageTerms-termsList">
+                                                    <div class="SetPageTerms-yourStats">
+                                                        <div class="SetPageTerms-chunkWrapper">
+                                                            <div
+                                                                class="SetPageTermChunk SetPageTermChunk--stillLearning">
+                                                                <div class="SetPageTermChunk-header">
+                                                                    <div class="SetPageTermChunk-heading"><span
+                                                                            class="SetPageTermChunk-title">
+                                                                            <h4 class="UIHeading UIHeading--four">Đang
+                                                                                học (3)</h4>
+                                                                        </span><span
+                                                                            class="SetPageTermChunk-subtitle"><span>Bạn
+                                                                                đã bắt đầu học những thuật ngữ này. Tiếp
+                                                                                tục phát huy nhé!</span></span></div>
+                                                                    <div class="SetPageTermChunk-selectAll"><label
+                                                                            class="UISwitch"
+                                                                            for="ui-control-1174abf7-1e27-4c6a-a9c9-47edefd002cf"><input
+                                                                                class="UISwitch-input"
+                                                                                id="ui-control-1174abf7-1e27-4c6a-a9c9-47edefd002cf"
+                                                                                type="checkbox" value=""><span
+                                                                                class="UISwitch-fauxInput"></span><span
+                                                                                class="UISwitch-label">
+                                                                                <svg
+                                                                                    aria-label="star empty"
+                                                                                    class="UIIcon UIIcon--star-empty"
+                                                                                    role="img"><noscript></noscript>
+                                                                                    <use xlink:href="#star-empty"></use>
+                                                                                    <noscript></noscript>
+                                                                                </svg>Chọn 3</span></label></div>
+                                                                </div>
+                                                                <div aria-label="Thuật ngữ" class="SetPageTerms-term">
+                                                                    <div
+                                                                        class="SetPageTerm has-image has-definitionText has-threeActions is-selected is-showing">
+                                                                        <div class="SetPageTerm-inner">
+                                                                            <div class="SetPageTerm-contentWrapper">
+                                                                                <div class="SetPageTerm-content">
+                                                                                    <div
+                                                                                        class="SetPageTerm-side SetPageTerm-smallSide">
+                                                                                        <div
+                                                                                            class="SetPageTerm-sideContent">
+                                                                                            <a
+                                                                                                class="SetPageTerm-wordText"><span
+                                                                                                    class="TermText notranslate lang-en">English</span></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="SetPageTerm-side SetPageTerm-largeSide">
+                                                                                        <div
+                                                                                            class="SetPageTerm-sideContent">
+                                                                                            <span
+                                                                                                class="SetPageTerm-definitionText"><span
+                                                                                                    class="TermText notranslate lang-vi">tiếng
+                                                                                                    anh</span></span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="SetPageTerm-actions"><span
+                                                                                    class="SetPageTerm-star"><span
+                                                                                        class="UIIconButton"><button
+                                                                                            class="UIButton UIButton--borderless"
+                                                                                            type="button"><span
+                                                                                                class="UIButton-wrapper">
+                                                                                                <!-- <svg
+                                                                                                    aria-label="Gắn sao"
+                                                                                                    class="UIIcon UIIcon--star"
+                                                                                                    role="img"><noscript></noscript>
+                                                                                                    <use
+                                                                                                        xlink:href="#star">
+                                                                                                    </use>
+                                                                                                    <noscript></noscript>
+                                                                                                </svg> -->
+                                                                                                <i class="fa solid fa-star"></i> 
+                                                                                            </span></button></span></span><span
+                                                                                    class="SetPageTerm-audio"><span
+                                                                                        class="UIIconButton"><button
+                                                                                            class="UIButton UIButton--borderless"
+                                                                                            type="button"><span
+                                                                                                class="UIButton-wrapper">
+                                                                                                <!-- <svg
+                                                                                                    aria-label="Âm thanh"
+                                                                                                    class="UIIcon UIIcon--audio"
+                                                                                                    role="img"><noscript></noscript>
+                                                                                                    <use
+                                                                                                        xlink:href="#audio">
+                                                                                                    </use>
+                                                                                                    <noscript></noscript>
+                                                                                                </svg> -->
+                                                                                                <i class="fa solid fa-volume-up"></i>                                                                                            
+                                                                                            </span></button></span></span><span
+                                                                                    class="SetPageTerm-edit"><span
+                                                                                        class="UIIconButton"><button
+                                                                                            class="UIButton UIButton--borderless"
+                                                                                            type="button"><span
+                                                                                                class="UIButton-wrapper">
+                                                                                                <!-- <svg
+                                                                                                    aria-label="Sửa"
+                                                                                                    class="UIIcon UIIcon--edit"
+                                                                                                    role="img"><noscript></noscript>
+                                                                                                    <use
+                                                                                                        xlink:href="#edit">
+                                                                                                    </use>
+                                                                                                    <noscript></noscript>
+                                                                                                </svg> -->
+                                                                                                <i class="fa solid fa-edit"></i>
+                                                                                            </span></button></span></span>
+                                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div aria-label="Thuật ngữ" class="SetPageTerms-term">
+                                                                    <div
+                                                                        class="SetPageTerm has-definitionText has-threeActions is-showing">
+                                                                        <div class="SetPageTerm-inner">
+                                                                            <div class="SetPageTerm-contentWrapper">
+                                                                                <div class="SetPageTerm-content">
+                                                                                    <div
+                                                                                        class="SetPageTerm-side SetPageTerm-smallSide">
+                                                                                        <div
+                                                                                            class="SetPageTerm-sideContent">
+                                                                                            <a
+                                                                                                class="SetPageTerm-wordText"><span
+                                                                                                    class="TermText notranslate lang-en">job</span></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="SetPageTerm-side SetPageTerm-largeSide">
+                                                                                        <div
+                                                                                            class="SetPageTerm-sideContent">
+                                                                                            <span
+                                                                                                class="SetPageTerm-definitionText"><span
+                                                                                                    class="TermText notranslate lang-vi">công
+                                                                                                    việc</span></span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="SetPageTerm-actions"><span
+                                                                                class="SetPageTerm-star"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Gắn sao"
+                                                                                                class="UIIcon UIIcon--star"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#star">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-star"></i> 
+                                                                                        </span></button></span></span><span
+                                                                                class="SetPageTerm-audio"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Âm thanh"
+                                                                                                class="UIIcon UIIcon--audio"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#audio">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-volume-up"></i>                                                                                            
+                                                                                        </span></button></span></span><span
+                                                                                class="SetPageTerm-edit"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Sửa"
+                                                                                                class="UIIcon UIIcon--edit"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#edit">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-edit"></i>
+                                                                                        </span></button></span></span>
+                                                                                            
+                                                                        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div aria-label="Thuật ngữ" class="SetPageTerms-term">
+                                                                    <div
+                                                                        class="SetPageTerm has-definitionText has-threeActions is-showing">
+                                                                        <div class="SetPageTerm-inner">
+                                                                            <div class="SetPageTerm-contentWrapper">
+                                                                                <div class="SetPageTerm-content">
+                                                                                    <div
+                                                                                        class="SetPageTerm-side SetPageTerm-smallSide">
+                                                                                        <div
+                                                                                            class="SetPageTerm-sideContent">
+                                                                                            <a
+                                                                                                class="SetPageTerm-wordText"><span
+                                                                                                    class="TermText notranslate lang-en">right</span></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="SetPageTerm-side SetPageTerm-largeSide">
+                                                                                        <div
+                                                                                            class="SetPageTerm-sideContent">
+                                                                                            <span
+                                                                                                class="SetPageTerm-definitionText"><span
+                                                                                                    class="TermText notranslate lang-vi">phải</span></span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="SetPageTerm-actions"><span
+                                                                                class="SetPageTerm-star"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Gắn sao"
+                                                                                                class="UIIcon UIIcon--star"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#star">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-star"></i> 
+                                                                                        </span></button></span></span><span
+                                                                                class="SetPageTerm-audio"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Âm thanh"
+                                                                                                class="UIIcon UIIcon--audio"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#audio">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-volume-up"></i>                                                                                            
+                                                                                        </span></button></span></span><span
+                                                                                class="SetPageTerm-edit"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Sửa"
+                                                                                                class="UIIcon UIIcon--edit"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#edit">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-edit"></i>
+                                                                                        </span></button></span></span>
+                                                                                            
+                                                                        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="SetPageTerms-chunkWrapper">
+                                                            <div class="SetPageTermChunk SetPageTermChunk--notStudied">
+                                                                <div class="SetPageTermChunk-header">
+                                                                    <div class="SetPageTermChunk-heading"><span
+                                                                            class="SetPageTermChunk-title">
+                                                                            <h4 class="UIHeading UIHeading--four">Chưa
+                                                                                học (3)</h4>
+                                                                        </span><span
+                                                                            class="SetPageTermChunk-subtitle"><span>Bạn
+                                                                                chưa học các thuật ngữ
+                                                                                này!</span></span></div>
+                                                                    <div class="SetPageTermChunk-selectAll"><label
+                                                                            class="UISwitch"
+                                                                            for="ui-control-400b5bd5-cba6-46dd-858f-cebc66f77fd8"><input
+                                                                                class="UISwitch-input"
+                                                                                id="ui-control-400b5bd5-cba6-46dd-858f-cebc66f77fd8"
+                                                                                type="checkbox" value=""><span
+                                                                                class="UISwitch-fauxInput"></span><span
+                                                                                class="UISwitch-label"><svg
+                                                                                    aria-label="star empty"
+                                                                                    class="UIIcon UIIcon--star-empty"
+                                                                                    role="img"><noscript></noscript>
+                                                                                    <use xlink:href="#star-empty"></use>
+                                                                                    <noscript></noscript>
+                                                                                </svg>Chọn 3</span></label></div>
+                                                                </div>
+                                                                <div aria-label="Thuật ngữ" class="SetPageTerms-term">
+                                                                    <div
+                                                                        class="SetPageTerm has-definitionText has-threeActions is-showing">
+                                                                        <div class="SetPageTerm-inner">
+                                                                            <div class="SetPageTerm-contentWrapper">
+                                                                                <div class="SetPageTerm-content">
+                                                                                    <div
+                                                                                        class="SetPageTerm-side SetPageTerm-smallSide">
+                                                                                        <div
+                                                                                            class="SetPageTerm-sideContent">
+                                                                                            <a
+                                                                                                class="SetPageTerm-wordText"><span
+                                                                                                    class="TermText notranslate lang-en">left</span></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="SetPageTerm-side SetPageTerm-largeSide">
+                                                                                        <div
+                                                                                            class="SetPageTerm-sideContent">
+                                                                                            <span
+                                                                                                class="SetPageTerm-definitionText"><span
+                                                                                                    class="TermText notranslate lang-vi">trái</span></span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="SetPageTerm-actions"><span
+                                                                                class="SetPageTerm-star"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Gắn sao"
+                                                                                                class="UIIcon UIIcon--star"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#star">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-star"></i> 
+                                                                                        </span></button></span></span><span
+                                                                                class="SetPageTerm-audio"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Âm thanh"
+                                                                                                class="UIIcon UIIcon--audio"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#audio">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-volume-up"></i>                                                                                            
+                                                                                        </span></button></span></span><span
+                                                                                class="SetPageTerm-edit"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Sửa"
+                                                                                                class="UIIcon UIIcon--edit"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#edit">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-edit"></i>
+                                                                                        </span></button></span></span>
+                                                                                            
+                                                                        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div aria-label="Thuật ngữ" class="SetPageTerms-term">
+                                                                    <div
+                                                                        class="SetPageTerm has-definitionText has-threeActions is-showing">
+                                                                        <div class="SetPageTerm-inner">
+                                                                            <div class="SetPageTerm-contentWrapper">
+                                                                                <div class="SetPageTerm-content">
+                                                                                    <div
+                                                                                        class="SetPageTerm-side SetPageTerm-smallSide">
+                                                                                        <div
+                                                                                            class="SetPageTerm-sideContent">
+                                                                                            <a
+                                                                                                class="SetPageTerm-wordText"><span
+                                                                                                    class="TermText notranslate lang-en">up</span></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="SetPageTerm-side SetPageTerm-largeSide">
+                                                                                        <div
+                                                                                            class="SetPageTerm-sideContent">
+                                                                                            <span
+                                                                                                class="SetPageTerm-definitionText"><span
+                                                                                                    class="TermText notranslate lang-vi">trên</span></span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="SetPageTerm-actions"><span
+                                                                                class="SetPageTerm-star"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Gắn sao"
+                                                                                                class="UIIcon UIIcon--star"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#star">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-star"></i> 
+                                                                                        </span></button></span></span><span
+                                                                                class="SetPageTerm-audio"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Âm thanh"
+                                                                                                class="UIIcon UIIcon--audio"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#audio">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-volume-up"></i>                                                                                            
+                                                                                        </span></button></span></span><span
+                                                                                class="SetPageTerm-edit"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Sửa"
+                                                                                                class="UIIcon UIIcon--edit"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#edit">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-edit"></i>
+                                                                                        </span></button></span></span>
+                                                                                            
+                                                                        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div aria-label="Thuật ngữ" class="SetPageTerms-term">
+                                                                    <div
+                                                                        class="SetPageTerm has-definitionText has-threeActions is-showing">
+                                                                        <div class="SetPageTerm-inner">
+                                                                            <div class="SetPageTerm-contentWrapper">
+                                                                                <div class="SetPageTerm-content">
+                                                                                    <div
+                                                                                        class="SetPageTerm-side SetPageTerm-smallSide">
+                                                                                        <div
+                                                                                            class="SetPageTerm-sideContent">
+                                                                                            <a
+                                                                                                class="SetPageTerm-wordText"><span
+                                                                                                    class="TermText notranslate lang-en">down</span></a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="SetPageTerm-side SetPageTerm-largeSide">
+                                                                                        <div
+                                                                                            class="SetPageTerm-sideContent">
+                                                                                            <span
+                                                                                                class="SetPageTerm-definitionText"><span
+                                                                                                    class="TermText notranslate lang-vi">dưới</span></span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="SetPageTerm-actions"><span
+                                                                                class="SetPageTerm-star"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Gắn sao"
+                                                                                                class="UIIcon UIIcon--star"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#star">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-star"></i> 
+                                                                                        </span></button></span></span><span
+                                                                                class="SetPageTerm-audio"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Âm thanh"
+                                                                                                class="UIIcon UIIcon--audio"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#audio">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-volume-up"></i>                                                                                            
+                                                                                        </span></button></span></span><span
+                                                                                class="SetPageTerm-edit"><span
+                                                                                    class="UIIconButton"><button
+                                                                                        class="UIButton UIButton--borderless"
+                                                                                        type="button"><span
+                                                                                            class="UIButton-wrapper">
+                                                                                            <!-- <svg
+                                                                                                aria-label="Sửa"
+                                                                                                class="UIIcon UIIcon--edit"
+                                                                                                role="img"><noscript></noscript>
+                                                                                                <use
+                                                                                                    xlink:href="#edit">
+                                                                                                </use>
+                                                                                                <noscript></noscript>
+                                                                                            </svg> -->
+                                                                                            <i class="fa solid fa-edit"></i>
+                                                                                        </span></button></span></span>
+                                                                                            
+                                                                        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <div class="SetPageTerms-editButtonWrapper">
+                                                    <a
+                                                        aria-label="Thêm hoặc xóa thuật ngữ"
+                                                        class="UIButton UIButton--hero" href="/632958515/edit#addRow"
+                                                        role="button">
+                                                        <span class="UIButton-wrapper">Thêm hoặc xóa thuật ngữ</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="UIModal-box">
+    <div class="UIModalHeader">
+        <div class="UIModalHeader-wrapper"><span class="UIModalHeader-close">
+                <div class="UIModalHeader-closeIconButton"><span class="UIIconButton"><button aria-label="Đóng cửa sổ"
+                            class="UIButton UIButton--inverted close" type="button"><span class="UIButton-wrapper"><svg
+                                    aria-label="close" class="UIIcon UIIcon--x-thin" role="img"><noscript></noscript>
+                                    <use xlink:href="#x-thin"></use><noscript></noscript>
+                                </svg></span></button></span></div>
+            </span>
+            <div class="UIModalHeader-childrenWrapper">
+                <h3 class="UIHeading UIHeading--three">Thêm vào lớp học hoặc thư mục</h3>
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <div class="UIModalHeader">
+                <div class="UIModalHeader-wrapper"><span class="UIModalHeader-close">
+                        <div class="UIModalHeader-closeIconButton"><span class="UIIconButton"><button aria-label="Đóng cửa sổ"
+                                    class="UIButton UIButton--inverted close" type="button"><span class="UIButton-wrapper"><svg
+                                            aria-label="close" class="UIIcon UIIcon--x-thin" role="img"><noscript></noscript>
+                                            <use xlink:href="#x-thin"></use><noscript></noscript>
+                                        </svg></span></button></span></div>
+                    </span>
+                    <div class="UIModalHeader-childrenWrapper">
+                        <h5 class="UIHeading UIHeading--three">Thêm vào lớp học hoặc thư mục</h5>
+                    </div>
+                </div>
+            </div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="UIModalBody">
+                <div class="SaveSetModal-main">
+                    
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                          <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Thêm vào lớp học
+                              </button>
+                            </h2>
+                          </div>
+                      
+                          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                             <!-- div tao lop moi -->
+                                    <div class="UIDiv SaveSetModal-createButton"><button aria-label="+ Tạo một lớp mới" class="UILinkButton"
+                                        type="button">+ Tạo lớp mới</button></div>
+                                    <div class="UIDiv">
+                                        <div class="ToggleList">
+                                            <div class="ToggleInclusionCard">
+                                                <div class="ToggleInclusionCard-heading">
+                                                    <h4 class="UIHeading UIHeading--four">Test 2</h4>
+                                                </div>
+                                                <div class="ToggleInclusionCard-toggle"><label class="UISwitch"
+                                                        for="ui-control-620ebb8a-f489-42ad-bed4-2b0b5442a13d"><input class="UISwitch-input"
+                                                            id="ui-control-620ebb8a-f489-42ad-bed4-2b0b5442a13d" type="checkbox" value=""><span
+                                                            class="UISwitch-fauxInput"></span><span class="UISwitch-label">
+                                                                <!-- <svg aria-label="add"
+                                                                class="UIIcon UIIcon--plus" role="img"><noscript></noscript>
+                                                                <use xlink:href="#plus"></use><noscript></noscript>
+                                                                </svg> -->
+                                                                <i class="fa solid fa-plus-circle"></i>
+                                                        </span></label></div>
+                                            </div>
+                                            <div class="ToggleInclusionCard">
+                                                <div class="ToggleInclusionCard-heading">
+                                                    <h4 class="UIHeading UIHeading--four">TestLop</h4>
+                                                </div>
+                                                <div class="ToggleInclusionCard-toggle"><label class="UISwitch"
+                                                        for="ui-control-5bab8076-8ce7-4867-83e9-7d38922f3380"><input class="UISwitch-input"
+                                                            id="ui-control-5bab8076-8ce7-4867-83e9-7d38922f3380" type="checkbox" value=""><span
+                                                            class="UISwitch-fauxInput"></span><span class="UISwitch-label">
+                                                                <!-- <svg aria-label="add"
+                                                                class="UIIcon UIIcon--plus" role="img"><noscript></noscript>
+                                                                <use xlink:href="#plus"></use><noscript></noscript>
+                                                                </svg> -->
+                                                                <i class="fa solid fa-minus-circle"></i>
+                                                        </span></label></div>
+                                            </div>            
+                                        </div>
+                                    </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Thêm vào thư mục
+                              </button>
+                            </h2>
+                          </div>
+                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                <!-- div tao thu muc moi -->
+                                <div class="UIDiv SaveSetModal-createButton"><button aria-label="+ Tạo một lớp mới" class="UILinkButton"
+                                    type="button">+ Tạo thư mục mới</button></div>
+                                    <div class="UIDiv">
+                                        <div class="ToggleList">
+                                            <div class="ToggleInclusionCard">
+                                                <div class="ToggleInclusionCard-heading">
+                                                    <h4 class="UIHeading UIHeading--four">Thư mục 1</h4>
+                                                </div>
+                                                <div class="ToggleInclusionCard-toggle"><label class="UISwitch"
+                                                        for="ui-control-620ebb8a-f489-42ad-bed4-2b0b5442a13d"><input class="UISwitch-input"
+                                                            id="ui-control-620ebb8a-f489-42ad-bed4-2b0b5442a13d" type="checkbox" value=""><span
+                                                            class="UISwitch-fauxInput"></span><span class="UISwitch-label">
+                                                                <!-- <svg aria-label="add"
+                                                                class="UIIcon UIIcon--plus" role="img"><noscript></noscript>
+                                                                <use xlink:href="#plus"></use><noscript></noscript>
+                                                                </svg> -->
+                                                                <i class="fa solid fa-plus-circle"></i>
+                                                        </span></label></div>
+                                            </div>
+                                            <div class="ToggleInclusionCard">
+                                                <div class="ToggleInclusionCard-heading">
+                                                    <h4 class="UIHeading UIHeading--four">Thư mục 2</h4>
+                                                </div>
+                                                <div class="ToggleInclusionCard-toggle"><label class="UISwitch"
+                                                        for="ui-control-5bab8076-8ce7-4867-83e9-7d38922f3380"><input class="UISwitch-input"
+                                                            id="ui-control-5bab8076-8ce7-4867-83e9-7d38922f3380" type="checkbox" value=""><span
+                                                            class="UISwitch-fauxInput"></span><span class="UISwitch-label">
+                                                                <!-- <svg aria-label="add"
+                                                                class="UIIcon UIIcon--plus" role="img"><noscript></noscript>
+                                                                <use xlink:href="#plus"></use><noscript></noscript>
+                                                                </svg> -->
+                                                                <i class="fa solid fa-minus-circle"></i>
+                                                        </span></label></div>
+                                            </div>            
+                                        </div>
+                                    </div>
+                          </div>
+                        </div>                        
+                      </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="js/plugins.js"></script>
+<!-- <script src="js/ajax-mail.js"></script> -->
+<!-- <script src="js/custom.js"></script> -->
+<script src="scriptquizlethocphan.js"></script>
+</body>
+
+
+<!-- Mirrored from demo.hasthemes.com/pustok-preview/pustok/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 12 Mar 2021 09:15:13 GMT -->
+</html>

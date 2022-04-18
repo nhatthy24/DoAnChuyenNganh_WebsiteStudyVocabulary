@@ -1,0 +1,565 @@
+body{
+    margin-left: 20px;
+}
+.UserLink {
+    display: inline-block;
+    white-space: nowrap;
+}
+.UserLink-inner {
+    display: flex;
+}
+.UserLink {
+    display: inline-block;
+    white-space: nowrap;
+}
+.UserLink-avatar, .UserLink-content {
+    vertical-align: middle;
+}
+.UILink {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: initial;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    font: inherit;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.285714285714286;
+    margin-top: 0;
+    outline: none;
+    padding: 0;
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+}
+.SetPage .UserLink .UserLink-createdBy {
+    color: gray;
+    display: block;
+    font-size: .625rem;
+}
+.SetPage .UserLink-createdBy {
+    margin-bottom: -0.125rem;
+}
+.SetPage .UserLink .UILink {
+    color: rgb(6, 223, 252);
+}
+.SetPage .SetPageHeader-description {
+    margin-top: 1.5rem;
+}
+.SetPageHeader-setMemberships {
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.285714285714286;
+    margin-top: 0.625rem;
+}
+.UIDelimiter.is-inline {
+    display: inline;
+}
+.SetPageTermsHeader-controls--main {
+    flex-direction: row-reverse;
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+}
+.SetPageTermsHeader-controls {
+    display: flex;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+.SetPageTermsHeader-sortDropdown {
+    display: inline-block;
+    margin-bottom: 0.625rem;
+    margin-left: 1.5rem;
+}
+.UIFieldset--inline .UIFieldset-fields {
+    display: inline-block;
+    margin-top: 0!important;
+    vertical-align: middle;
+}
+.UIFieldset.UIFieldset--inline {
+    display: inline-block;
+}
+.UIFieldset--inline {
+    margin-top: 0!important;
+}
+.UIFieldset {
+    border: none;
+    margin: 0;
+    min-width: 0;
+    padding: 0.01em 0 0;
+}
+.SetPageTermsHeader-filterToggle {
+    display: inline-block;
+    margin-bottom: 0.625rem;
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+}
+.UIToggle-option:first-child {
+    border-left: none;
+    background-color: rgb(245, 248, 79);
+    border-radius: 5px;
+}
+.UIToggle-option {
+    border-bottom: 0.125rem solid rgb(248, 253, 255);
+    display: inline-block;
+    margin-top: 0!important;
+    position: relative;
+    padding: 6px;
+}
+
+
+
+.SetPageTermChunk--mastered .SetPageTermChunk-header, .SetPageTermChunk--notStudied .SetPageTermChunk-header, .SetPageTermChunk--stillLearning .SetPageTermChunk-header {
+    margin-bottom: 1.5rem;
+}
+.SetPageTermChunk-header {
+    display: table;
+    margin-bottom: 0.625rem;
+    width: 100%;
+}
+.SetPageTermChunk-heading {
+    display: table-cell;
+    margin-right: 2rem;
+}
+.SetPageTermChunk--stillLearning .SetPageTermChunk-title {
+    color: #f08700;
+}
+.SetPageTerm {
+   
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+    min-height: 3.625rem;
+}
+.SetPageTerm-inner {
+    *zoom: 1;
+    position: relative;
+    width: 100%;
+}
+.SetPageTerm.has-threeActions:not(.has-score) .SetPageTerm-contentWrapper {
+    width: calc(98% - 7.75rem);
+}
+.SetPageTerm-contentWrapper {
+    display: inline-block;
+    float: left;
+    width: calc(100% - 4.5rem);
+}
+.SetPageTerm-content {
+    display: flex;  
+    flex-wrap: wrap;
+    margin-left: -2rem;
+    margin-top: -2.5rem;
+    text-align: left;
+}
+.SetPage .SetPageTerm-smallSide {
+    width: 40%;
+}
+.SetPageTerm-side {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    position: relative;
+    vertical-align: top;
+    width: 33%;
+}
+.SetPage .SetPageTerm-largeSide {
+    width: 60%;
+}
+.SetPageTerm-largeSide {
+    position: relative;
+    width: 60%;
+}
+.SetPageTerm-side {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    position: relative;
+    vertical-align: top;
+    width: 33%;
+}
+.SetPageTerm-sideContent {
+    border-right: 0.125rem solid rgb(248, 248, 248);
+    flex-grow: 1;
+}
+.SetPageTerm-sideContent, .SetPageTerm-sideLabel {
+    padding: 0 2rem;
+}
+.SetPageTerm-imageWrap {
+    border-radius: 0.25rem;
+    height: 6.25rem;
+    line-height: 0;
+    position: relative;
+    vertical-align: top;
+    width: 9.5rem;
+}
+.SetPageTerm-definition, .SetPageTerm-imageWrap, .SetPageTerm-word {
+    display: table-cell;
+}
+.ZoomableImage-rawImage {
+    vertical-align: middle;
+}
+.SetPageTerm-image {
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: block;
+    height: 6.25rem;
+    max-height: 6.25rem;
+    max-width: 7.5rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 7.5rem;
+}
+.SetPageTerm.has-threeActions .SetPageTerm-actions {
+    width: 7.75rem;
+    text-align: right;
+}
+.SetPageTerm-actions {
+    display: inline-block;
+    height: 1.625rem;
+    width: 4.5rem;
+}
+.UIIconButton {
+    display: inline-block;
+    margin-right: 5px;
+}
+.UIIconButton .UIButton {
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    border-color: yellow;
+}
+.SetPageTerm-actions .UIButton-wrapper {
+    padding-top: 0.25rem!important;
+    vertical-align: middle;
+}
+.UIButton-wrapper {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    white-space: pre-wrap;
+    width: 100%;
+}
+.UIButton-wrapper i{
+    font-size: 25px;
+    color: #727262;
+}
+.UIIconButton .UIIcon {
+    display: block;
+    height: 1.125rem;
+    pointer-events: none;
+    width: 1.125rem;
+}
+*, :after, :before {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+.SetPageTermChunk--notStudied .SetPageTermChunk-title {
+    color: rgb(83, 83, 233);
+}
+.SetPageTerms-editButtonWrapper {
+    margin: 2rem;
+    text-align: center;
+}
+.UIButton--hero {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: .0625rem;
+    line-height: 1.222222222222222;
+}
+.UISwitch-label {
+    align-items: center;
+    background-color: rgb(80 209 230);
+    border: 0.125rem solid var(--ui_color_gray_80_foreground);
+    border-radius: 0.25rem;
+    color: #0a0a0a;
+    display: flex;
+    font-size: .875rem;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.285714285714286;
+    padding: 0.625rem 1rem;
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+}
+.UIIcon {
+    fill: currentColor;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+}
+.UIToggle-optionInput {
+    bottom: 0;
+    cursor: inherit;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+.SetPageTermChunk--mastered .SetPageTermChunk-selectAll, .SetPageTermChunk--notStudied .SetPageTermChunk-selectAll, .SetPageTermChunk--stillLearning .SetPageTermChunk-selectAll {
+    vertical-align: middle;
+}
+.UISwitch-input {
+    bottom: 0;
+    cursor: inherit;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5%;
+}
+.SetPageTermChunk-selectAll {
+    display: table-cell;
+    min-width: 11.25rem;
+    text-align: right;
+}
+.UIToggle {
+    border: 0.125rem solid var(--ui_color_gray_80_foreground);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+    vertical-align: top;
+}
+.SetPageInformation-headerOptions {
+    min-height: 2.25rem;
+    position: absolute;
+    right: 40px;
+    z-index: 100;
+}
+.MenuIconWithTooltip {
+    display: inline-block;
+    text-align: center;
+}
+.SetPage .SetPage-options, .SetPage .SetPage-terms, .SetPage .SetPageHeader, .SetPage .SetPageHeader-container {
+    padding: 0;
+    margin-top: 10px;
+}
+.SetPage-options {
+    clear: both;
+    margin-left: auto;
+    margin-right: 26px;
+    max-width: 81.25em;
+    padding: 0;
+    display: flex;
+}
+.SetPage .SetPageCardsPreview .CardsList .CardsList-bottomControls, .SetPage .SetPageCardsPreview .CardsList .CardsList-navControl {
+    bottom: 0;
+}
+.SetPage .CardsList-navControl.progressIndex {
+    color: var(--ui_color_gray_30);
+}
+.CardsList-navControl.progressIndex {
+    color: var(--ui_color_gray_60);
+    height: 2rem;
+    left: 0;
+    margin: auto;
+    right: 0;
+    text-align: center;
+    width: 10%;
+}
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    background: #f1f1f1f1;
+  }
+  
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+    height: 96px;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(114, 208, 214, 0.8);
+    color: white;
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+  }
+ 
+  /* Add an italic font style to all quotes */
+  q {font-style: italic;}
+  
+  /* Add a blue color to the author */
+  .author {color: rgb(22, 23, 24);}
+
+.SetPage-setDetailsInfo, .SetPage .SetPage-setDetailsTerms, .SetPage .SetPage-setIntro, .SetPage .SetPage-setLinks {
+    margin: 0 auto;
+    max-width: 54.5625rem;
+    padding: 2.5rem;
+    position: relative;
+}
+.SetPage .SetPage-studyPreview {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.SetPage .SetPage-studyPreview .SetPage-studyModes {
+    width: 12.8125rem;
+}
+.SetPage .SetPage-studyPreview .SetPageCardsPreview-container {
+    flex: 1;
+    height: 15rem;
+    max-width: 36.25rem;
+    width: 36.25rem;
+}
+.UIModal.is-gray .UIModal-box {
+    background: rgb(247, 235, 235);
+}
+.UIModal-box {
+    display: none;
+    border: solid 2px #3ccfcf;
+    border-radius: 5px;
+    animation: fadeOutFlyOutModal .3s ease;
+    animation-fill-mode: forwards;
+    border-radius: 0.25rem;
+    color: var(--ui_color_default_foreground);
+    left: 50%;
+    margin-bottom: 2.8125rem;
+    margin-top: 2.8125rem;
+    max-width: 100%;
+    position: relative;
+    top: 0;
+    transform: translateX(-50%);
+    width: 37.5rem;
+    z-index: 1101;
+    /* position: fixed; */
+    background: white;
+
+}
+.UIModalHeader {
+    background-color: rgb(101, 101, 238);
+    color: #fff;
+    padding: 7PX;
+    width: 378px;
+    border-radius: 5px;
+    text-align: center;
+}
+.UIModalHeader-closeIconButton {
+    position: absolute;
+    right: 0;
+}
+.UIModalHeader-closeIconButton .UIButton {
+    padding: 0.125rem;
+    background: white;
+}
+.UIIconButton .UIButton {
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+.UIModalHeader-closeIconButton .UIIcon {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+UIHeading {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.UIModalBody {
+    padding: 2rem;
+    position: relative;
+}
+.UIDiv+.UIDiv, .UIDiv+[class^=UI], [class^=UI]+.UIDiv {
+    margin-top: 1.5rem;
+}
+.div-popup-unactive{
+    display: none;
+}
+.UILinkButton {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    border-bottom: 0.3125rem solid #3ccfcf;
+    color: var(--ui_color_default_foreground);
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    font-size: .9375rem;
+    font-weight: 700;
+    letter-spacing: .075rem;
+    line-height: 1.2;
+    max-width: 100%;
+    padding: 0 0 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .12s cubic-bezier(.47,0,.745,.715);
+    vertical-align: middle;
+    width: auto;
+}
+.SaveSetModal-createButton {
+    background:white;
+    padding: 1.5rem;
+    text-align: center;
+}
+.ToggleInclusionCard {
+    background: white;
+    display: table;
+    padding: 1.25rem;
+    width: 97%;
+}
+.ToggleInclusionCard-heading {
+    padding: 0 0.625rem;
+    word-break: break-word;
+}
+.ToggleInclusionCard-heading, .ToggleInclusionCard-toggle {
+    display: table-cell;
+    vertical-align: middle;
+}
+.ToggleInclusionCard-toggle {
+    float: right;
+}
+.btn-yellow-active .active{
+    background-color: rgb(231, 241, 77);
+}
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #8064A2 !important;
+}
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show > .btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color:rgb(80 209 230)!important;
+    border-color: rgb(80 209 230) !important;
+}
+.btn-secondary{
+    color: #fff;
+    background-color: #9eafbe!important;
+    border-color: #9eafbe!important;
+}
