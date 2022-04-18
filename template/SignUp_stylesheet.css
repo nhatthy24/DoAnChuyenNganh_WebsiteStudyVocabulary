@@ -1,0 +1,124 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #63C5DE;
+}
+
+.container {
+    width: 900px;
+    height: 500px;
+    background: url("57440203.jpg");
+    background-size: cover;
+}
+
+form {
+    width: 50%;
+    height: 100%;
+    background: #fff;
+}
+
+form .LogIn {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    margin-left: 58px;
+    font-family: "Segoe UI";
+    font-size: x-large;
+    font-weight: bold;
+    color: lightgrey;
+    border: none;
+    background: none;
+}
+
+form .Register {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 25px;
+    font-family: "Segoe UI";
+    font-size: x-large;
+    font-weight: bold;
+    color: #2ba9ca;
+    border: none;
+    background: none;
+}
+
+form .col {
+    display: flex;
+}
+
+
+
+form label.inputTitle {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 55px;
+    font-family: "Segoe UI";
+    font-weight: bold;
+    font-size: smaller;
+    color: darkgray;
+}
+
+form input {
+    width: 70%;
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    outline: none;
+    border-color: lightgrey;
+    border-width: 0.5px;
+}
+
+form .login {
+    width: 200px;
+    height: 40px;
+    margin: 30px auto;
+    display: block;
+    outline: none;
+    border: none;
+    background: #7041ff;
+    color: #fff;
+    font-weight: bolder;
+}
+
+form .login:hover {
+    background: #63C5DE;
+}
+
+form .reg {
+    position: center;
+    right: 10px;
+    bottom: 10px;
+    margin: 10px auto;
+
+}
+
+form .reg i {
+    width: 40px;
+    height: 40px;
+    margin: 10px auto;
+    font-size: x-large;
+    background-color: #63C5DE;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+form .reg i:hover {
+    background-color: #5324dd;
+    border-radius: 0px;
+}
+

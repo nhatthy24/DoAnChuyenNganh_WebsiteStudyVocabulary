@@ -1,0 +1,55 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #63C5DE;
+    font-family: "Segoe UI";
+}
+
+p.title {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+p.instruction {
+    margin-bottom: 25px;
+}
+
+input[type=text] {
+    width: 100%;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid ivory;
+    background: transparent;
+    font-size: large;
+}
+
+::placeholder {
+    color: aquamarine;
+    font-size: large;
+}
+
+button {
+    background: #A2DCEB;
+    color: white;
+    font-size: large;
+    font-family: "Segoe UI";
+    font-weight: bold;
+    width: 160px;
+    height: 60px;
+    border: none;
+    margin-top: 25px;
+    border-radius: 8px;
+}
+
+
