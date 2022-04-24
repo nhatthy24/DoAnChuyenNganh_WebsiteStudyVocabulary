@@ -227,6 +227,7 @@ body{
     margin: 0;
     padding: 0;
     border-color: yellow;
+    border: navajowhite;
 }
 .SetPageTerm-actions .UIButton-wrapper {
     padding-top: 0.25rem!important;
@@ -491,6 +492,7 @@ UIHeading {
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
+    font-size: 5px !important;
 }
 .UIModalBody {
     padding: 2rem;
@@ -562,4 +564,15 @@ UIHeading {
     color: #fff;
     background-color: #9eafbe!important;
     border-color: #9eafbe!important;
+}
+.dgsfd5i{
+    padding: 5px;
+}
+.dgsfd5i:hover{
+    background-color: #aef1f3;
+    border-radius: 5%;
+}
+.htfvr7f{
+    color: #9b9b95;
+    /* font-weight: bold; */
 }
