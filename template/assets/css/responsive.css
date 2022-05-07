@@ -1,0 +1,18 @@
+
+@media(min-width:1024px){
+ .term__container
+ {
+     padding-left: 100px;
+     padding-right: 100px;
+ }
+
+ .create__term-body{
+     margin-left: 25px;
+     margin-right: 25px;
+ }
+
+ .create__header{
+        padding-left: 65px;
+        padding-right: 65px;
+ }
+}
