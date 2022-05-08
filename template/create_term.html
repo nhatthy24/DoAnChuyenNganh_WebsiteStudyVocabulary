@@ -6,85 +6,88 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tạo học phần</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/fc92afee28.js" crossorigin="anonymous"></script>
-<!--    <link as="font" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/app/i/fonts/latin-basic/hurmegeosans-no2-400.7f3badcdcf2aadb.woff2" rel="preload" type="font/woff2">-->
-<!--    <link as="font" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/app/i/fonts/latin-sup/hurmegeosans-no2-400.0e0d6172d8923f8.woff2" rel="preload" type="font/woff2">-->
-<!--    <link as="font" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/app/i/fonts/latin-basic/hurmegeosans-no2-600.58e7761738b2022.woff2" rel="preload" type="font/woff2">-->
-<!--    <link as="font" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/app/i/fonts/latin-ext/hurmegeosans-no2-600.5fc563260c39eea.woff2" rel="preload" type="font/woff2">-->
-<!--    <link as="font" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/app/i/fonts/latin-sup/hurmegeosans-no2-600.9c15c1f83df97ea.woff2" rel="preload" type="font/woff2">-->
-<!--    <link as="font" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/app/i/fonts/latin-basic/hurmegeosans-no2-700.97a80bb0229b9a8.woff2" rel="preload" type="font/woff2">-->
-<!--    <link as="font" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/app/i/fonts/latin-sup/hurmegeosans-no2-700.42f8ecee380b6fd.woff2" rel="preload" type="font/woff2">-->
-<!--    <link as="fetch" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/i/icons.a6d9f73141a17d7698b6.svg" rel="preload"><link as="script" href="https://assets.quizlet.com/a/j/dist/app_j_messages_vi_translation_json.a44b6e93a467024.js" rel="preload">-->
-<!--    <link as="script" href="https://assets.quizlet.com/a/j/dist/app_j_messages_do-not-translate_translation_json.f04f23f68f7983d.js" rel="preload">-->
-<!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/global.f8db6f9038fd208.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/create_set.bb7269b3e5fe848.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/diagrams.047f5af6b6d5fb6.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/rich_text.2b05c0e5fc8be6f.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/common.683b7c63a3f9ff2.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/ui.b6c3316c0c4b67f.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/header_and_common.22f38f1ab8e5376.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/quizlet_global.4770cf9b19f050e.css">-->
+    <!--    <link as="font" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/app/i/fonts/latin-basic/hurmegeosans-no2-400.7f3badcdcf2aadb.woff2" rel="preload" type="font/woff2">-->
+    <!--    <link as="font" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/app/i/fonts/latin-sup/hurmegeosans-no2-400.0e0d6172d8923f8.woff2" rel="preload" type="font/woff2">-->
+    <!--    <link as="font" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/app/i/fonts/latin-basic/hurmegeosans-no2-600.58e7761738b2022.woff2" rel="preload" type="font/woff2">-->
+    <!--    <link as="font" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/app/i/fonts/latin-ext/hurmegeosans-no2-600.5fc563260c39eea.woff2" rel="preload" type="font/woff2">-->
+    <!--    <link as="font" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/app/i/fonts/latin-sup/hurmegeosans-no2-600.9c15c1f83df97ea.woff2" rel="preload" type="font/woff2">-->
+    <!--    <link as="font" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/app/i/fonts/latin-basic/hurmegeosans-no2-700.97a80bb0229b9a8.woff2" rel="preload" type="font/woff2">-->
+    <!--    <link as="font" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/app/i/fonts/latin-sup/hurmegeosans-no2-700.42f8ecee380b6fd.woff2" rel="preload" type="font/woff2">-->
+    <!--    <link as="fetch" crossorigin="anonymous" href="https://assets.quizlet.com/a/j/dist/i/icons.a6d9f73141a17d7698b6.svg" rel="preload"><link as="script" href="https://assets.quizlet.com/a/j/dist/app_j_messages_vi_translation_json.a44b6e93a467024.js" rel="preload">-->
+    <!--    <link as="script" href="https://assets.quizlet.com/a/j/dist/app_j_messages_do-not-translate_translation_json.f04f23f68f7983d.js" rel="preload">-->
+    <!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/global.f8db6f9038fd208.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/create_set.bb7269b3e5fe848.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/diagrams.047f5af6b6d5fb6.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/rich_text.2b05c0e5fc8be6f.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/common.683b7c63a3f9ff2.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/ui.b6c3316c0c4b67f.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/header_and_common.22f38f1ab8e5376.css">-->
+    <!--    <link rel="stylesheet" type="text/css" href="https://assets.quizlet.com/a/j/dist/c/quizlet_global.4770cf9b19f050e.css">-->
     <meta property="og:site_name" content="Flashcards">
     <link rel="shortcut icon" href="https://assets.quizlet.com/a/j/dist/app/i/logo/2021/q-twilight.389092a385cb51d.png">
     <link rel="manifest" href="/manifest.webmanifest">
     <meta name="description" content="Tạo thẻ flash trực tuyến giúp cho việc học trở nên nhanh chóng và vui thú!">
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="header-title-page">
-                <h2 class="CreateSetHeader-title">Tạo học phần mới</h2>
-                <div class="CreateSetHeader-headingContent">
-                    <div class="titleContent">
-                        <h6>Tiêu đề</h6>
-                        <input type="text" id="title-term" placeholder="Nhập tiêu đề">
-                    </div>
-                    <div class="descriptionContent">
-                        <h6>Mô tả</h6>
-                        <textarea id="description-term" placeholder="Thêm mô tả"></textarea>
-                    </div>
+<div class="container">
+    <div class="row">
+        <div class="header-title-page">
+            <h2 class="CreateSetHeader-title">Tạo học phần mới</h2>
+            <div class="CreateSetHeader-headingContent">
+                <div class="titleContent">
+                    <h6>Tiêu đề</h6>
+                    <input type="text" id="title-term" placeholder="Nhập tiêu đề">
+                </div>
+                <div class="descriptionContent">
+                    <h6>Mô tả</h6>
+                    <textarea id="description-term" placeholder="Thêm mô tả"></textarea>
                 </div>
             </div>
         </div>
-        <div class="row CreateSetHeader-PermissionAndImport">
-            <div class="col-lg-6">
+    </div>
+    <div class="row CreateSetHeader-PermissionAndImport">
+        <div class="col-lg-6">
                 <span style="cursor: pointer">
                     <button type="button" class="btn-import">Nhập từ Word, Excel, Google docs...</button>
                 </span>
 
-            </div>
-            <div class="col-lg-2">
-                <div class="display-term">
-                    <div>Hiển thị với mọi người</div>
-                    <span>
+        </div>
+        <div class="col-lg-2">
+            <div class="display-term">
+                <div>Hiển thị với mọi người</div>
+                <span>
                         <button type="button" class="btn-edit-display">Thay đổi</button>
                     </span>
-                </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="display-term">
-                    <div>Chỉ tôi có quyền chỉnh sửa</div>
-                    <span>
-                        <button type="button" class="btn-edit-display">Thay đổi</button>
-                    </span>
-                </div>
-            </div>
-            <div class="col-lg-2">
-                <div>
-                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="UIFloatedCard UIFloatedCard--white">
-                <div class="UIFileChooser">
-                    <form class="UIFileChooser-form">
-                        <input accept="image/bmp,image/jpeg,image/png" aria-label="Chọn tệp để tải lên" capture="environment" class="UIFileChooser-input js-keymaster-allow" name="UIFileChooser1" type="file">
-                    </form>
-                    <div class="UIFileChooser-contents">
+        <div class="col-lg-2">
+            <div class="display-term">
+                <div>Chỉ tôi có quyền chỉnh sửa</div>
+                <span>
+                        <button type="button" class="btn-edit-display">Thay đổi</button>
+                    </span>
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="UIFloatedCard UIFloatedCard--white">
+            <div class="UIFileChooser">
+                <form class="UIFileChooser-form">
+                    <input accept="image/bmp,image/jpeg,image/png" aria-label="Chọn tệp để tải lên"
+                           capture="environment" class="UIFileChooser-input js-keymaster-allow" name="UIFileChooser1"
+                           type="file">
+                </form>
+                <div class="UIFileChooser-contents">
                     <div class="CreateSetDiagramUploader-banner">
                         <div class="CreateSetDiagramUploader-bannerImage"></div>
                         <div class="CreateSetDiagramUploader-bannerText">
@@ -99,69 +102,74 @@
                             </p>
                         </div>
                     </div>
-                    </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="TermRows-termRowWrap" data-term-luid="term-0">
-                <div class="TermRow">
-                    <div class="TermRow-bareSide TermRow-bareSide--word TermText">&nbsp;</div>
-                    <div class="TermRow-bareSide TermRow-bareSide--definition TermText">&nbsp;</div>
-                    <div class="TermContent has-richTextToolbar rt-clean-design">
-                        <div class="TermContent-inner" draggable="true">
-                            <div class="StudiableItemToolbar">
-                                <span class="StudiableItemToolbar-counter">1</span>
-                                <div class="StudiableItemToolbar-editableToggles"></div>
-                                <div class="StudiableItemToolbar-actionableToggles">
+    </div>
+    <div class="row">
+        <div class="TermRows-termRowWrap" data-term-luid="term-0">
+            <div class="TermRow">
+                <div class="TermRow-bareSide TermRow-bareSide--word TermText">&nbsp;</div>
+                <div class="TermRow-bareSide TermRow-bareSide--definition TermText">&nbsp;</div>
+                <div class="TermContent has-richTextToolbar rt-clean-design">
+                    <div class="TermContent-inner" draggable="true">
+                        <div class="StudiableItemToolbar">
+                            <span class="StudiableItemToolbar-counter">1</span>
+                            <div class="StudiableItemToolbar-editableToggles"></div>
+                            <div class="StudiableItemToolbar-actionableToggles">
                                     <span class="ContextToggle">
                                         <span class="UIIconButton is-Popover is-Tooltip UIOverlayTrigger-target">
-                                            <button aria-label="Xoá thẻ này" class="btn-delete-card" tabindex="-1" type="button">
+                                            <button aria-label="Xoá thẻ này" class="btn-delete-card" tabindex="-1"
+                                                    type="button">
                                                 <span class="UIButton-wrapper">
                                                    <i class="fa-solid fa-trash"></i>
                                                 </span>
                                             </button>
                                         </span>
                                     </span>
-                                </div>
                             </div>
-                            <div class="TermContent-inner-padding">
-                                <div class="TermContent-sides" draggable="true">
-                                    <div class="TermContent-sideWrap">
-                                        <div class="TermContent-side TermContent-side--word">
-                                            <div class="WordSide">
+                        </div>
+                        <div class="TermContent-inner-padding">
+                            <div class="TermContent-sides" draggable="true">
+                                <div class="TermContent-sideWrap">
+                                    <div class="TermContent-side TermContent-side--word">
+                                        <div class="WordSide">
+                                            <div class="RichTextEditor">
+                                                <div class="PMEditor notranslate" data-testid="PMEditor">
+                                                    <div contenteditable="true" tabindex="2" role="textbox"
+                                                         aria-multiline="true" aria-labelledby="editor-term-side"
+                                                         class="ProseMirror">
+                                                    </div>
+                                                </div>
+                                                <div class="PMEditor-border"></div>
+                                                <span></span>
+                                                <span class="RichTextEditor-label">
+                                                        <div class="RichTextEditor-labelText">THUẬT NGỮ</div>
+                                                    </span>
+                                            </div>
+                                        </div>
+                                        <span></span>
+                                    </div>
+                                    <div class="TermContent-side TermContent-side--definition">
+                                        <div class="DefinitionSide">
+                                            <div class="DefinitionSide-richTextEditor">
                                                 <div class="RichTextEditor">
                                                     <div class="PMEditor notranslate" data-testid="PMEditor">
-                                                        <div contenteditable="true" tabindex="2" role="textbox" aria-multiline="true" aria-labelledby="editor-term-side" class="ProseMirror">
+                                                        <div contenteditable="true" tabindex="2" role="textbox"
+                                                             aria-multiline="true"
+                                                             aria-labelledby="editor-definition-side"
+                                                             class="ProseMirror">
                                                         </div>
                                                     </div>
                                                     <div class="PMEditor-border"></div>
                                                     <span></span>
                                                     <span class="RichTextEditor-label">
-                                                        <div class="RichTextEditor-labelText">THUẬT NGỮ</div>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <span></span>
-                                        </div>
-                                        <div class="TermContent-side TermContent-side--definition">
-                                            <div class="DefinitionSide">
-                                                <div class="DefinitionSide-richTextEditor">
-                                                    <div class="RichTextEditor">
-                                                        <div class="PMEditor notranslate" data-testid="PMEditor">
-                                                            <div contenteditable="true" tabindex="2" role="textbox" aria-multiline="true" aria-labelledby="editor-definition-side" class="ProseMirror">
-                                                            </div>
-                                                        </div>
-                                                        <div class="PMEditor-border"></div>
-                                                        <span></span>
-                                                        <span class="RichTextEditor-label">
                                                             <div class="RichTextEditor-labelText">ĐỊNH NGHĨA</div>
                                                         </span>
-                                                    </div>
                                                 </div>
                                             </div>
-                                            <span></span>
                                         </div>
+                                        <span></span>
                                     </div>
                                 </div>
                             </div>
@@ -170,65 +178,71 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="TermRows-termRowWrap" data-term-luid="term-0">
-                <div class="TermRow">
-                    <div class="TermRow-bareSide TermRow-bareSide--word TermText">&nbsp;</div>
-                    <div class="TermRow-bareSide TermRow-bareSide--definition TermText">&nbsp;</div>
-                    <div class="TermContent has-richTextToolbar rt-clean-design">
-                        <div class="TermContent-inner" draggable="true">
-                            <div class="StudiableItemToolbar">
-                                <span class="StudiableItemToolbar-counter">2</span>
-                                <div class="StudiableItemToolbar-editableToggles"></div>
-                                <div class="StudiableItemToolbar-actionableToggles">
+    </div>
+    <div class="row">
+        <div class="TermRows-termRowWrap" data-term-luid="term-0">
+            <div class="TermRow">
+                <div class="TermRow-bareSide TermRow-bareSide--word TermText">&nbsp;</div>
+                <div class="TermRow-bareSide TermRow-bareSide--definition TermText">&nbsp;</div>
+                <div class="TermContent has-richTextToolbar rt-clean-design">
+                    <div class="TermContent-inner" draggable="true">
+                        <div class="StudiableItemToolbar">
+                            <span class="StudiableItemToolbar-counter">2</span>
+                            <div class="StudiableItemToolbar-editableToggles"></div>
+                            <div class="StudiableItemToolbar-actionableToggles">
                                     <span class="ContextToggle">
                                         <span class="UIIconButton is-Popover is-Tooltip UIOverlayTrigger-target">
-                                            <button aria-label="Xoá thẻ này" class="btn-delete-card" tabindex="-1" type="button">
+                                            <button aria-label="Xoá thẻ này" class="btn-delete-card" tabindex="-1"
+                                                    type="button">
                                                 <span class="UIButton-wrapper">
                                                    <i class="fa-solid fa-trash"></i>
                                                 </span>
                                             </button>
                                         </span>
                                     </span>
-                                </div>
                             </div>
-                            <div class="TermContent-inner-padding">
-                                <div class="TermContent-sides" draggable="true">
-                                    <div class="TermContent-sideWrap">
-                                        <div class="TermContent-side TermContent-side--word">
-                                            <div class="WordSide">
+                        </div>
+                        <div class="TermContent-inner-padding">
+                            <div class="TermContent-sides" draggable="true">
+                                <div class="TermContent-sideWrap">
+                                    <div class="TermContent-side TermContent-side--word">
+                                        <div class="WordSide">
+                                            <div class="RichTextEditor">
+                                                <div class="PMEditor notranslate" data-testid="PMEditor">
+                                                    <div contenteditable="true" tabindex="7" role="textbox"
+                                                         aria-multiline="true" aria-labelledby="editor-term-side"
+                                                         class="ProseMirror">
+                                                    </div>
+                                                </div>
+                                                <div class="PMEditor-border"></div>
+                                                <span></span>
+                                                <span class="RichTextEditor-label">
+                                                        <div class="RichTextEditor-labelText">THUẬT NGỮ</div>
+                                                    </span>
+                                            </div>
+                                        </div>
+                                        <span></span>
+                                    </div>
+                                    <div class="TermContent-side TermContent-side--definition">
+                                        <div class="DefinitionSide">
+                                            <div class="DefinitionSide-richTextEditor">
                                                 <div class="RichTextEditor">
                                                     <div class="PMEditor notranslate" data-testid="PMEditor">
-                                                        <div contenteditable="true" tabindex="7" role="textbox" aria-multiline="true" aria-labelledby="editor-term-side" class="ProseMirror">
+                                                        <div contenteditable="true" tabindex="7" role="textbox"
+                                                             aria-multiline="true"
+                                                             aria-labelledby="editor-definition-side"
+                                                             class="ProseMirror">
                                                         </div>
                                                     </div>
                                                     <div class="PMEditor-border"></div>
                                                     <span></span>
                                                     <span class="RichTextEditor-label">
-                                                        <div class="RichTextEditor-labelText">THUẬT NGỮ</div>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <span></span>
-                                        </div>
-                                        <div class="TermContent-side TermContent-side--definition">
-                                            <div class="DefinitionSide">
-                                                <div class="DefinitionSide-richTextEditor">
-                                                    <div class="RichTextEditor">
-                                                        <div class="PMEditor notranslate" data-testid="PMEditor">
-                                                            <div contenteditable="true" tabindex="7" role="textbox" aria-multiline="true" aria-labelledby="editor-definition-side" class="ProseMirror">
-                                                            </div>
-                                                        </div>
-                                                        <div class="PMEditor-border"></div>
-                                                        <span></span>
-                                                        <span class="RichTextEditor-label">
                                                             <div class="RichTextEditor-labelText">ĐỊNH NGHĨA</div>
                                                         </span>
-                                                    </div>
                                                 </div>
                                             </div>
-                                            <span></span>
                                         </div>
+                                        <span></span>
                                     </div>
                                 </div>
                             </div>
@@ -237,90 +251,102 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="TermRows-termRowWrap" data-term-luid="term-2">
-                <div class="TermRow is-phantom">
-                    <div class="TermRow-bareSide TermRow-bareSide--word TermText lang-zh-CN">&nbsp;</div>
-                    <div class="TermRow-bareSide TermRow-bareSide--definition TermText lang-vi">&nbsp;</div>
-                    <div class="TermContent has-richTextToolbar rt-clean-design">
-                        <div class="TermContent-inner" draggable="true" style="height: 100px">
-                            <div class="TermContent-inner-padding">
-                                <div class="TermContent-sides" draggable="true">
-                                    <div class="TermContent-sideWrap">
-                                        <div class="TermContent-side TermContent-side--word">
-                                            <div class="WordSide">
-                                                <div class="RichTextEditor">
-                                                    <div class="PMEditor lang-zh-CN is-scaled-lang notranslate" data-testid="PMEditor">
-                                                        <div contenteditable="true" tabindex="7" role="textbox" aria-multiline="true" aria-labelledby="editor-term-side" class="ProseMirror">
-                                                        </div>
+    </div>
+    <div class="row">
+        <div class="TermRows-termRowWrap" data-term-luid="term-2">
+            <div class="TermRow is-phantom">
+                <div class="TermRow-bareSide TermRow-bareSide--word TermText lang-zh-CN">&nbsp;</div>
+                <div class="TermRow-bareSide TermRow-bareSide--definition TermText lang-vi">&nbsp;</div>
+                <div class="TermContent has-richTextToolbar rt-clean-design">
+                    <div class="TermContent-inner" draggable="true" style="height: 100px">
+                        <div class="TermContent-inner-padding">
+                            <div class="TermContent-sides" draggable="true">
+                                <div class="TermContent-sideWrap">
+                                    <div class="TermContent-side TermContent-side--word">
+                                        <div class="WordSide">
+                                            <div class="RichTextEditor">
+                                                <div class="PMEditor lang-zh-CN is-scaled-lang notranslate"
+                                                     data-testid="PMEditor">
+                                                    <div contenteditable="true" tabindex="7" role="textbox"
+                                                         aria-multiline="true" aria-labelledby="editor-term-side"
+                                                         class="ProseMirror">
                                                     </div>
-                                                    <div class="PMEditor-border"></div>
-                                                    <span></span>
-                                                    <span class="RichTextEditor-label">
+                                                </div>
+                                                <div class="PMEditor-border"></div>
+                                                <span></span>
+                                                <span class="RichTextEditor-label">
                                                         <div class="RichTextEditor-labelText">THUẬT NGỮ</div>
                                                     </span>
-                                                </div>
                                             </div>
-                                            <span></span>
                                         </div>
-                                        <div class="TermContent-side TermContent-side--definition">
-                                            <div class="DefinitionSide">
-                                                <div class="DefinitionSide-richTextEditor">
-                                                    <div class="DefinitionSide-imageContainer">
-                                                        <div class="ImageUploadComponent">
-                                                            <div data-testid="ImageUploadComponent-contextToggle">
+                                        <span></span>
+                                    </div>
+                                    <div class="TermContent-side TermContent-side--definition">
+                                        <div class="DefinitionSide">
+                                            <div class="DefinitionSide-richTextEditor">
+                                                <div class="DefinitionSide-imageContainer">
+                                                    <div class="ImageUploadComponent">
+                                                        <div data-testid="ImageUploadComponent-contextToggle">
                                                                 <span class="ContextToggle">
-                                                                    <div class="ImageUploadProminentContextToggle" data-testid="ImageUploadProminentContextToggle">
-                                                                        <svg aria-label="image" class="UIIcon UIIcon--image UIIcon--large" role="img"><noscript></noscript><use xlink:href="#image"></use><noscript></noscript></svg>
+                                                                    <div class="ImageUploadProminentContextToggle"
+                                                                         data-testid="ImageUploadProminentContextToggle">
+                                                                        <svg aria-label="image"
+                                                                             class="UIIcon UIIcon--image UIIcon--large"
+                                                                             role="img"><noscript></noscript><use
+                                                                                xlink:href="#image"></use><noscript></noscript></svg>
                                                                         <div class="ImageUploadProminentContextToggle-IconExplanation"><span>HÌNH ẢNH</span>
                                                                         </div>
                                                                     </div>
                                                                 </span>
-                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="RichTextEditor">
-                                                        <div class="PMEditor lang-vi is-scaled-lang notranslate" data-testid="PMEditor">
-                                                            <div contenteditable="true" tabindex="7" role="textbox" aria-multiline="true" aria-labelledby="editor-definition-side" class="ProseMirror"></div>
-                                                        </div>
-                                                        <div class="PMEditor-border"></div>
-                                                        <span></span>
-                                                        <span class="RichTextEditor-label">
-                                                            <div class="RichTextEditor-labelText">ĐỊNH NGHĨA</div>
-                                                        </span>
                                                     </div>
                                                 </div>
+                                                <div class="RichTextEditor">
+                                                    <div class="PMEditor lang-vi is-scaled-lang notranslate"
+                                                         data-testid="PMEditor">
+                                                        <div contenteditable="true" tabindex="7" role="textbox"
+                                                             aria-multiline="true"
+                                                             aria-labelledby="editor-definition-side"
+                                                             class="ProseMirror"></div>
+                                                    </div>
+                                                    <div class="PMEditor-border"></div>
+                                                    <span></span>
+                                                    <span class="RichTextEditor-label">
+                                                            <div class="RichTextEditor-labelText">ĐỊNH NGHĨA</div>
+                                                        </span>
+                                                </div>
                                             </div>
-                                            <span></span>
                                         </div>
-                                        <a class="TermContent-addRow" id="addRow">
+                                        <span></span>
+                                    </div>
+                                    <a class="TermContent-addRow" id="addRow">
                                             <span class="TermContent-addRowButton">
                                                 <button aria-label="+ Thêm thẻ" class="UILinkButton" type="button">
                                                     <span>+ Thêm thẻ</span>
                                                 </button>
                                             </span>
-                                        </a>
-                                    </div>
+                                    </a>
                                 </div>
-                                <span class="TermContent-counter"></span>
                             </div>
+                            <span class="TermContent-counter"></span>
                         </div>
-                        <div class="TermContent-contexts">
-<!--                            <span></span>-->
-<!--                            <span></span>-->
-<!--                            <span></span>-->
-<!--                            <span></span>-->
-                        </div>
+                    </div>
+                    <div class="TermContent-contexts">
+                        <!--                            <span></span>-->
+                        <!--                            <span></span>-->
+                        <!--                            <span></span>-->
+                        <!--                            <span></span>-->
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <button class="UIButton UIButton--hero btn-create-term" type="button">
-                <span class="UIButton-wrapper"><span>Tạo</span></span>
-            </button>
-        </div>
-
     </div>
+    <div class="row">
+        <button class="UIButton UIButton--hero btn-create-term" type="button">
+            <span class="UIButton-wrapper"><span>Tạo</span></span>
+        </button>
+    </div>
+
+</div>
 </body>
 </html>
