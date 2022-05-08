@@ -1,4 +1,4 @@
 package com.flashcards.dao.database.connection;
 
-public class TermDAO {
+public class CardDAO {
 }

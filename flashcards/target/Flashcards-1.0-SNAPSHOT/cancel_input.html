@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hủy nhập</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/fc92afee28.js" crossorigin="anonymous"></script>
+    <meta property="og:site_name" content="Flashcards">
+    <link rel="shortcut icon" href="https://assets.quizlet.com/a/j/dist/app/i/logo/2021/q-twilight.389092a385cb51d.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="description" content="Tạo thẻ flash trực tuyến giúp cho việc học trở nên nhanh chóng và vui thú!">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="ImportTerms is-showing">
+            <div class="ImportTerms-import">
+                <div class="UIContainer">
+                    <div class="ImportTerms-cancelImportButtonWrap">
+                        <button aria-label="Hủy nhập" class="UILinkButton" type="button">
+                            <span>Hủy nhập</span>
+                        </button>
+                    </div>
+                    <span class="ImportTerms-heading">
+                            <span>Nhập dữ liệu.</span>
+                        </span>
+                    <span class="ImportTerms-instructions">
+                            <span>Chép và dán dữ liệu ở đây (từ Word, Excel, Google Docs, v.v.)</span>
+                        </span>
+                    <form class="ImportTerms-form">
+                            <textarea class="ImportTerms-textarea" placeholder="Từ 1	Định nghĩa 1
+                                                                                Từ 2	Định nghĩa 2
+                                                                                Từ 3	Định nghĩa 3">
+                            </textarea>
+                        <div class="ImportTerms-importButtonWrap">
+                            <button aria-label="Nhập" class="UIButton UIButton--hero" disabled="" type="button">
+                                <span class="UIButton-wrapper"><span>Nhập</span>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="ImportTerms-formGroupWrap">
+                            <div class="ImportTerms-formGroup">
+                                <label class="ImportTerms-formLabel">
+                                    <span>Giữa thuật ngữ và định nghĩa</span>
+                                </label>
+                                <div class="UIDiv UIRadioGroup">
+                                    <label class="UIRadio" for="ui-control-2b68a92d-f9f2-4f43-b79f-ee330727d05a">
+                                        <input class="UIRadio-input"
+                                               id="ui-control-2b68a92d-f9f2-4f43-b79f-ee330727d05a" type="radio"
+                                               value="Delimiter.TAB" checked="">
+                                        <span class="UIRadio-fauxInput"></span>
+                                        <span class="UIRadio-label">
+                                                <span>Tab</span>
+                                            </span>
+                                    </label>
+                                    <label class="UIRadio" for="ui-control-07ffea1a-0708-4747-a227-78a181c121b8">
+                                        <input class="UIRadio-input"
+                                               id="ui-control-07ffea1a-0708-4747-a227-78a181c121b8" type="radio"
+                                               value="Delimiter.COMMA">
+                                        <span class="UIRadio-fauxInput"></span>
+                                        <span class="UIRadio-label">
+                                                <span>Phẩy</span>
+                                            </span>
+                                    </label>
+                                    <label class="UIRadio" for="ui-control-2330653f-074f-4060-a7fd-081e0f0b3646">
+                                        <input class="UIRadio-input"
+                                               id="ui-control-2330653f-074f-4060-a7fd-081e0f0b3646" type="radio"
+                                               value="Delimiter.CUSTOM">
+                                        <span class="UIRadio-fauxInput"></span>
+                                        <span class="UIRadio-label">
+                                                <span class="ImportTerms-formCustomDelimiter">
+                                                    <label class="UIInput">
+                                                        <div class="UIInput-content">
+                                                            <input placeholder="-" class="UIInput-input" type="text"
+                                                                   value="">
+                                                            <span class="UIInput-border"></span>
+                                                        </div>
+                                                        <span class="UIInput-label">
+                                                            <span>Tùy chỉnh</span>
+                                                        </span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="ImportTerms-formGroup">
+                                <label class="ImportTerms-formLabel">
+                                    <span>Giữa các thẻ</span>
+                                </label>
+                                <div class="UIDiv UIRadioGroup">
+                                    <label class="UIRadio" for="ui-control-4be6886c-5d1a-46bf-a26d-8fc3dc1d4ec1">
+                                        <input class="UIRadio-input"
+                                               id="ui-control-4be6886c-5d1a-46bf-a26d-8fc3dc1d4ec1" type="radio"
+                                               value="Delimiter.NEWLINE" checked="">
+                                        <span class="UIRadio-fauxInput"></span>
+                                        <span class="UIRadio-label">
+                                                <span>Dòng mới</span>
+                                            </span>
+                                    </label>
+                                    <label class="UIRadio" for="ui-control-c3da1e51-47fc-4b0e-a523-33e84c9e4654">
+                                        <input class="UIRadio-input"
+                                               id="ui-control-c3da1e51-47fc-4b0e-a523-33e84c9e4654" type="radio"
+                                               value="Delimiter.SEMICOLON">
+                                        <span class="UIRadio-fauxInput"></span>
+                                        <span class="UIRadio-label">
+                                                <span>Chấm phẩy</span>
+                                            </span>
+                                    </label>
+                                    <label class="UIRadio" for="ui-control-cacbba98-fed5-4e29-a12e-474f752a48f5">
+                                        <input class="UIRadio-input"
+                                               id="ui-control-cacbba98-fed5-4e29-a12e-474f752a48f5" type="radio"
+                                               value="Delimiter.CUSTOM">
+                                        <span class="UIRadio-fauxInput"></span>
+                                        <span class="UIRadio-label">
+                                                <span class="ImportTerms-formCustomDelimiter">
+                                                    <label class="UIInput">
+                                                        <div class="UIInput-content">
+                                                            <input placeholder="\n\n" class="UIInput-input" type="text"
+                                                                   value="">
+                                                            <span class="UIInput-border"></span>
+                                                        </div>
+                                                        <span class="UIInput-label">
+                                                            <span>Tùy chỉnh</span>
+                                                        </span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div></div>
+            <div class="ImportTerms-preview">
+                <div></div>
+                <div class="UIContainer">
+                    <h4 class="UIHeading UIHeading--four"><span>Xem trước</span></h4>
+                    <div class="ImportTerms-previewRows"><p>Không có nội dung để xem trước</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

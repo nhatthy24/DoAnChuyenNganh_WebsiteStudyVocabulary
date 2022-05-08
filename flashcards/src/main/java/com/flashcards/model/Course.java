@@ -5,7 +5,9 @@ import java.util.List;
 public class Course {
     private int id;
     private int creatorId;
-    private List<Term> terms;
+    private String courseName;
+    private String description;
+    private List<Card> cards;
 
     public Course() {
     }
@@ -26,11 +28,35 @@ public class Course {
         this.creatorId = creatorId;
     }
 
-    public List<Term> getTerms() {
-        return terms;
+    public List<Card> getTerms() {
+        return cards;
     }
 
-    public void setTerms(List<Term> terms) {
-        this.terms = terms;
+    public void setTerms(List<Card> cards) {
+        this.cards = cards;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public List<Card> getCards() {
+        return cards;
+    }
+
+    public void setCards(List<Card> cards) {
+        this.cards = cards;
     }
 }
