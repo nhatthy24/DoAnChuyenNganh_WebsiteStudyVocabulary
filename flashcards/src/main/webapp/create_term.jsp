@@ -133,7 +133,7 @@
                 <div class="tag__item">
                     <div class="tag__item-header">
                         <div class="tab__item-counter">
-                            <p class="tab__count">1</p>
+                            <p class="tab__count"></p>
                         </div>
                         <div class="tab__item-toolbar">
                             <button class="tab__item-toolbar-btn">
@@ -154,7 +154,7 @@
                         </div>
                         <div class="tab__content-side-definition">
                             <div class="tab__side-definition-editor">
-                                <input class="tab__content-side-editor-input" type="text" name="word">
+                                <input class="tab__content-side-editor-input" type="text" name="mean">
                                 <div class="tab__below-input">
                                     <label class="tab__content-side-label" >ĐỊNH NGHĨA</label>
                                     <button class="tab__language-side">TIẾNG VIỆT</button>
@@ -170,7 +170,7 @@
                 <div class="tag__item">
                     <div class="tag__item-header">
                         <div class="tab__item-counter">
-                            <p class="tab__count">2</p>
+                            <p class="tab__count"></p>
                         </div>
                         <div class="tab__item-toolbar">
                             <button class="tab__item-toolbar-btn">
@@ -191,7 +191,7 @@
                         </div>
                         <div class="tab__content-side-definition">
                             <div class="tab__side-definition-editor">
-                                <input class="tab__content-side-editor-input" type="text" name="word">
+                                <input class="tab__content-side-editor-input" type="text" name="mean">
                                 <div class="tab__below-input">
                                     <label class="tab__content-side-label" >ĐỊNH NGHĨA</label>
                                     <button class="tab__language-side">TIẾNG VIỆT</button>

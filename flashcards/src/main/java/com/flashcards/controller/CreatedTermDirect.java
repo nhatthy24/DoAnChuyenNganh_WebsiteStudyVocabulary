@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 @WebServlet(urlPatterns = "/created-term")
 public class CreatedTermDirect extends HttpServlet {
@@ -20,7 +18,8 @@ public class CreatedTermDirect extends HttpServlet {
         session.setAttribute("title", "Tạo học phần");
         String courseName = req.getParameter("title");
         String description = req.getParameter("description");
-        List<Card> cards = new ArrayList<>();
+        String[] words = req.getParameterValues("word");
+        String[] means = req.getParameterValues("mean");
 
         req.getRequestDispatcher("create_term.jsp").forward(req,resp);
     }

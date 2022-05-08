@@ -23,10 +23,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-
-<jsp:include page="header.jsp"></jsp:include>
-
-<div class="create__term-content">
+    <jsp:include page="header.jsp"></jsp:include>
+    <div class="create__term-content">
     <div class="create__header" id="create__header">
         <div class="create__header-title">
             <h1>Tạo học phần mới</h1>
@@ -42,11 +40,11 @@
         <div class="create__term-infor">
             <div class="create__term-infor-title">
                 <input class="create__term-infor-input" type="text" name="title" placeholder="Nhập tiêu đề">
-                <label class="create__term-infor-label" for="">TIÊU ĐỀ</label>
+                <label class="create__term-infor-label">TIÊU ĐỀ</label>
             </div>
             <div class="create__term-infor-description">
                 <input class="create__term-infor-input" type="text" name="description" placeholder="Thêm mô tả">
-                <label class="create__term-infor-label" for="">MÔ TẢ</label>
+                <label class="create__term-infor-label">MÔ TẢ</label>
             </div>
         </div>
 
@@ -135,7 +133,7 @@
                 <div class="tag__item">
                     <div class="tag__item-header">
                         <div class="tab__item-counter">
-                            <p class="tab__count">1</p>
+                            <p class="tab__count"></p>
                         </div>
                         <div class="tab__item-toolbar">
                             <button class="tab__item-toolbar-btn">
@@ -150,7 +148,7 @@
                         <div class="tab__content-side-word">
                             <input class="tab__content-side-word-input" type="text" name="word">
                             <div class="tab__below-input">
-                                <label class="tab__content-side-label" for="">THUẬT NGỮ</label>
+                                <label class="tab__content-side-label">THUẬT NGỮ</label>
                                 <button class="tab__language-side">TIẾNG ANH</button>
                             </div>
                         </div>
@@ -158,7 +156,7 @@
                             <div class="tab__side-definition-editor">
                                 <input class="tab__content-side-editor-input" type="text" name="word">
                                 <div class="tab__below-input">
-                                    <label class="tab__content-side-label" for="">ĐỊNH NGHĨA</label>
+                                    <label class="tab__content-side-label" >ĐỊNH NGHĨA</label>
                                     <button class="tab__language-side">TIẾNG VIỆT</button>
                                 </div>
                             </div>
@@ -172,7 +170,7 @@
                 <div class="tag__item">
                     <div class="tag__item-header">
                         <div class="tab__item-counter">
-                            <p class="tab__count">2</p>
+                            <p class="tab__count"></p>
                         </div>
                         <div class="tab__item-toolbar">
                             <button class="tab__item-toolbar-btn">
@@ -187,7 +185,7 @@
                         <div class="tab__content-side-word">
                             <input class="tab__content-side-word-input" type="text" name="word">
                             <div class="tab__below-input">
-                                <label class="tab__content-side-label" for="">THUẬT NGỮ</label>
+                                <label class="tab__content-side-label" >THUẬT NGỮ</label>
                                 <button class="tab__language-side">TIẾNG ANH</button>
                             </div>
                         </div>
@@ -195,7 +193,7 @@
                             <div class="tab__side-definition-editor">
                                 <input class="tab__content-side-editor-input" type="text" name="word">
                                 <div class="tab__below-input">
-                                    <label class="tab__content-side-label" for="">ĐỊNH NGHĨA</label>
+                                    <label class="tab__content-side-label" >ĐỊNH NGHĨA</label>
                                     <button class="tab__language-side">TIẾNG VIỆT</button>
                                 </div>
                             </div>
@@ -223,7 +221,7 @@
 
 </div>
 
-<div class="modal" id="modal" style="display: none">
+    <div class="modal" id="modal" style="display: none">
     <div class="modal__overlay">
 
     </div>
@@ -235,8 +233,8 @@
 
 </div>
 
-<script src="./js/header.js"></script>
-<script src="./js/create_term.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/create_term.js"></script>
 
 </body>
 </html>

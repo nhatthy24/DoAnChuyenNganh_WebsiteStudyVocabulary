@@ -12,9 +12,8 @@
                 <!-- right element -->
                 <div class="navbar__left">
                     <div class="navbar__logo">
-                        <img src="./assets/img/logo.png" alt="">
+                        <img src="./img/logo.png" alt="">
                     </div>
-
                     <div class="navbar__menu">
                         <ul class="navbar__menu-list">
                             <li class="navbar__menu-item">
@@ -66,7 +65,7 @@
                                                                 </span>
                                                             <div class="navbar__term-author">
                                                                 <img class="navbar__term-author-img"
-                                                                     src="./assets/img/avatar.jpg" alt="">
+                                                                     src="./img/avatar.jpg" alt="">
                                                                 <span class="navbar__term-author-name">
                                                                         Nguyễn Văn A
                                                                     </span>
@@ -80,7 +79,7 @@
                                                                 </span>
                                                             <div class="navbar__term-author">
                                                                 <img class="navbar__term-author-img"
-                                                                     src="./assets/img/avatar.jpg" alt="">
+                                                                     src="./img/avatar.jpg" alt="">
                                                                 <span class="navbar__term-author-name">
                                                                         Nguyễn Văn A
                                                                     </span>
@@ -94,7 +93,7 @@
                                                                 </span>
                                                             <div class="navbar__term-author">
                                                                 <img class="navbar__term-author-img"
-                                                                     src="./assets/img/avatar.jpg" alt="">
+                                                                     src="./img/avatar.jpg" alt="">
                                                                 <span class="navbar__term-author-name">
                                                                         Nguyễn Văn A
                                                                     </span>
@@ -108,7 +107,7 @@
                                                                 </span>
                                                             <div class="navbar__term-author">
                                                                 <img class="navbar__term-author-img"
-                                                                     src="./assets/img/avatar.jpg" alt="">
+                                                                     src="./img/avatar.jpg" alt="">
                                                                 <span class="navbar__term-author-name">
                                                                         Nguyễn Văn A
                                                                     </span>
@@ -127,7 +126,7 @@
                                         <div class="navbar__library-null" style="display: none">
                                             <div class="navbar__library-null-content">
                                                 <img class="navbar__library-null-img"
-                                                     src="./assets/img/null-term.png" alt="">
+                                                     src="./img/null-term.png" alt="">
 
                                                 <p class="navbar__library-null-text">
                                                     Tìm kiếm một chủ đề hoặc lớp học để tìm các học phần có
@@ -187,7 +186,7 @@
                                         <div class="navbar__library-null">
                                             <div class="navbar__library-null-content">
                                                 <img class="navbar__library-null-img"
-                                                     src="./assets/img/null-folder.png" alt="">
+                                                     src="./img/null-folder.png" alt="">
 
                                                 <p class="navbar__library-null-text">
                                                     Sắp xếp tất cả các học phần đang học cho một môn cụ thể.
@@ -213,7 +212,7 @@
                                                                 </span>
                                                             <div class="navbar__class-author">
                                                                 <img class="navbar__class-author-img"
-                                                                     src="./assets/img/avatar.jpg" alt="">
+                                                                     src="./img/avatar.jpg" alt="">
                                                                 <span class="navbar__class-author-name">
                                                                         Nguyễn Văn A
                                                                     </span>
@@ -233,7 +232,7 @@
                                         <div class="navbar__library-null" style="display: none">
                                             <div class="navbar__library-null-content">
                                                 <img class="navbar__library-null-img"
-                                                     src="./assets/img/null-class.png" alt="">
+                                                     src="./img/null-class.png" alt="">
 
                                                 <p class="navbar__library-null-text">
                                                     Tìm lớp học của giáo viên của bạn trên Quizlet.
@@ -301,12 +300,12 @@
                     </div>
                     <div class="navbar__user" id="navbar__user">
                         <button class="navbar__user-btn">
-                            <img id="navbar__user-btn" src="./assets/img/avatar.jpg" alt="">
+                            <img id="navbar__user-btn" src="./img/avatar.jpg" alt="">
                         </button>
 
                         <div class="navbar__user-menu" id="navbar__user-menu" style="display: none">
                             <div class="navbar__user-header">
-                                <img class="navbar__user-img" src="./assets/img/avatar.jpg" alt="">
+                                <img class="navbar__user-img" src="./img/avatar.jpg" alt="">
                                 <div class="navbar_user-infor">
                                     <p class="navbar__user-name">
                                         Nguyễn Văn A

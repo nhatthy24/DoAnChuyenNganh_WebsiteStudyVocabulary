@@ -1,5 +1,7 @@
 
-
+body{
+    counter-reset: section;
+}
 
 .create__term-content {
     padding-top: 25px;
@@ -482,4 +484,9 @@
 
 .create__term-btn:hover {
    background-color: var(--green-color)
+}
+
+.tab__count:before{
+    counter-increment: section;
+    content: counter(section);
 }
