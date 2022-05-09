@@ -529,3 +529,188 @@
     align-items: center;
     justify-content: center;
 }
+
+.share__dialog{
+    position: absolute;
+    width: 600px;
+}
+
+.share__dialog-header{
+    height: 102px;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue-color-dark);
+    color: var(--white-color);
+}
+
+.share__dialog-header-title{
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+.share__dialog-header-close{
+    border-radius: 50%;
+    border: 1px solid var(--white-color);
+    color: var(--white-color);
+    width: 38px;
+    height: 38px;
+    background-color: transparent;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.share__dialog-content{
+    background-color: var(--white-color);
+    padding: 32px;
+}
+
+
+.share__dialog-content-email{
+    height: 70px;
+    display: flex;
+    position: relative;
+
+}
+
+.share__dialog-content-email-input{
+width:73%;
+}
+
+.share__dialog-content-email-input input{
+    border: none;
+    border-bottom: 2px solid var(--text-color);
+    width:100%;
+    padding-bottom: 5px;
+    outline: none;
+    font-size: 1.7rem;
+    height: 42px;
+    margin-bottom: 7px;
+}
+.share__dialog-content-email-input input:focus{
+    border-bottom: 4px solid var(--yellow-color-dark);
+}
+
+.share__dialog-content-email-input label{
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: var(--text-gray-color);
+    
+}
+
+.share__dialog-content-email-btn{
+    height: 42px;
+    width: 111px;
+    background-color: var(--blue-color);
+    border-radius: 5px;
+    border:none;
+    outline: none;
+    color: white;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.share__dialog-separator{
+    margin-left: -32px;
+    margin-right: -32px;
+    background-color:var(--gray-color);
+    height: 1px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.share__dialog-content-link{    
+    display: flex;
+    height: 42px;
+    position: relative;
+}
+
+.share__dialog-content-link-input{
+    width: 70%;
+}
+
+.share__dialog-content-link-input input{
+    height: 42px;
+    width: 100%;
+    font-size: 1.7rem;
+    border: 2px solid var(--text-color);
+    padding-left: 6px;
+}
+
+.share__dialog-content-link-btn{
+    height: 42px;
+    width: 132px;
+    background-color: var(--blue-color);
+    border-radius: 5px;
+    border:none;
+    outline: none;
+    color: white;
+    font-size: 1.7rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.share__dialog-content-social{
+    text-decoration: none;
+}
+.share__dialog-content-face{
+    margin-bottom: 10px;
+}
+
+.share__dialog-content-face,
+.share__dialog-content-twitter{
+    height: 74px;
+    border: 2px solid var(--gray-color-light);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+}
+
+
+.share__dialog-content-face:hover,
+.share__dialog-content-twitter:hover{
+    cursor: pointer;
+}
+
+.share__dialog-content-face-icon{
+    color: var(--blue-color-dark);
+    font-size: 3rem;
+}
+
+.share__dialog-content-face-title,
+.share__dialog-content-twitter-title{
+    font-size: 1.8rem;
+    font-weight: 550;
+    color: var(--text-color);
+}
+
+
+.share__dialog-content-twitter{
+
+}
+
+.share__dialog-content-twitter-icon{
+    color: var(--green-color-light);
+    font-size: 3rem;
+
+}
+
+.share__dialog-content-twitter-title{
+
+}

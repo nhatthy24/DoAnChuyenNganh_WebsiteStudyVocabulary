@@ -482,7 +482,7 @@
                     </div>
 
                     <div class="term__card-item">
-                        <button class="term__card-word-text term__card-text"  onclick="flipWordToDefinition(this)">
+                        <button class="term__card-word-text term__card-text" onclick="flipWordToDefinition(this)">
                             Goodbye
                         </button>
                         <button class="term__card-definition-text term__card-text" onclick="flipDefinitionToWord(this)">
@@ -505,7 +505,7 @@
                                 /
                             </span>
                             <span class="card__control-progress-index-total" id="total-slide">
-                                
+
                             </span>
                         </div>
                         <button class="card__control-next-btn">
@@ -543,10 +543,12 @@
                     <a href="#" class="term__information-tool-item term__information-tool-edit">
                         <i class="fas fa-pen"></i>
                     </a>
-                    <button class="term__information-tool-item term__information-tool-share">
+                    <button class="term__information-tool-item term__information-tool-share"
+                        id="term__information-tool-share">
                         <i class="bi bi-upload"></i>
                     </button>
-                    <button class="term__information-tool-item term__information-tool-infor">
+                    <button class="term__information-tool-item term__information-tool-infor"
+                        id="term__information-tool-infor">
                         <i class="fas fa-info"></i>
                     </button>
                     <button class="term__information-tool-item term__information-tool-menu">
@@ -661,6 +663,84 @@
                 Thêm hoặc xóa thuật ngữ
             </button>
         </div>
+    </div>
+
+    <div class="share__dialog" id="share__dialog" style="display: none;">
+        <div class="share__dialog-header">
+            <div class="share__dialog-header-title">
+                Chia sẻ học phần
+            </div>
+            <button class="share__dialog-header-close" id="share__dialog-close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="share__dialog-content">
+            <div class="share__dialog-content-email">
+                <div class="share__dialog-content-email-input">
+                    <input type="email" placeholder="Địa chỉ email của bạn bè">
+                    <label>CHIA SẺ LIÊN KẾT QUA EMAIL</label>
+                </div>
+                <div class="share__dialog-content-email-btn">
+                    Gửi email
+                </div>
+            </div>
+
+            <div class="share__dialog-separator"></div>
+
+            <div class="share__dialog-content-link">
+                <div class="share__dialog-content-link-input">
+                    <input type="email" placeholder="Địa chỉ email của bạn bè">
+                </div>
+                <div class="share__dialog-content-link-btn">
+                    Chép liên kết
+                </div>
+            </div>
+
+            <div class="share__dialog-separator"></div>
+
+            <a href="#" class="share__dialog-content-social">
+                <div class="share__dialog-content-face">
+                    <div class="share__dialog-content-face-icon">
+                        <i class="fab fa-facebook-square"></i>
+                    </div>
+                    <div class="share__dialog-content-face-title">
+                        Chia sẻ trên Facebook
+                    </div>
+                    <div></div>
+                </div>
+            </a>
+            <a href="#" class="share__dialog-content-social">
+                <div class="share__dialog-content-twitter">
+                    <div class="share__dialog-content-twitter-icon">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="share__dialog-content-twitter-title">
+                        Chia sẻ trên Twitter
+                    </div>
+                    <div></div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="information__dialog" id="information__dialog" style="display: none;">
+
+    </div>
+
+    <div class="modal" id="modal" style="display: none">
+        <div class="modal__overlay">
+
+        </div>
+
+        <div class="modal__body">
+            <div class="modal__inner" id="modal__inner">
+               
+
+                
+            </div>
+        </div>
+
     </div>
 
     <script src="./assets/js/header.js"></script>

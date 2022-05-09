@@ -14,20 +14,22 @@ const nextBtn = document.querySelector('.card__control-next-btn');
 $(document).ready(function () {
     switchCard(currentSlide);
     setTotalSlides();
+    openShareDialog();
+    closeShareDialog();
 })
 
 function flipWordToDefinition(btn) {
     const parentElement = btn.parentElement;
     parentElement.classList.add('term__card-item--rotate');
- 
-    
+
+
 }
 function flipDefinitionToWord(btn) {
     const parentElement = btn.parentElement;
     parentElement.classList.remove('term__card-item--rotate');
-  
+
 }
- 
+
 
 function checkButtonAbility() {
 
@@ -84,5 +86,32 @@ function switchCard(currentSlide) {
     slides[currentSlide - 1].style.display = 'block';
 }
 
-  
+
+function openShareDialog() {
+    const btnOpen = document.getElementById("term__information-tool-share");
+    const shareDialog = document.getElementById("share__dialog");
+    const modal = document.getElementById("modal");
+    const modalInner = document.getElementById("modal__inner");
+
+    btnOpen.onclick = () => {
+        modalInner.appendChild(shareDialog);
+        shareDialog.style.display = 'block';
+        modal.style.display = 'block';
+    }
+}
+
+function closeShareDialog(){
+    const btnClose  = document.getElementById("share__dialog-close-btn");
+    const shareDialog = document.getElementById("share__dialog");
+    const modal = document.getElementById("modal");
+    const modalInner = document.getElementById("modal__inner");
+
+    btnClose.onclick = () =>{
+        modalInner.removeChild(shareDialog);
+        shareDialog.style.display = 'none';
+        modal.style.display = 'none';
+    }
+}
+
+
 
