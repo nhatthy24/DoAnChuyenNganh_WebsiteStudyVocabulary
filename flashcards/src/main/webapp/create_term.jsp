@@ -213,7 +213,7 @@
             </div>
 
             <div class="create__term-add-btn">
-                <button class="create__term-btn">Tạo</button>
+                <button class="create__term-btn" type="submit">Tạo</button>
             </div>
         </div>
 

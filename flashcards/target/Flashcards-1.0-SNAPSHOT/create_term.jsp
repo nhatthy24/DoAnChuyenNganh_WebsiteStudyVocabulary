@@ -154,7 +154,7 @@
                         </div>
                         <div class="tab__content-side-definition">
                             <div class="tab__side-definition-editor">
-                                <input class="tab__content-side-editor-input" type="text" name="word">
+                                <input class="tab__content-side-editor-input" type="text" name="mean">
                                 <div class="tab__below-input">
                                     <label class="tab__content-side-label" >ĐỊNH NGHĨA</label>
                                     <button class="tab__language-side">TIẾNG VIỆT</button>
@@ -191,7 +191,7 @@
                         </div>
                         <div class="tab__content-side-definition">
                             <div class="tab__side-definition-editor">
-                                <input class="tab__content-side-editor-input" type="text" name="word">
+                                <input class="tab__content-side-editor-input" type="text" name="mean">
                                 <div class="tab__below-input">
                                     <label class="tab__content-side-label" >ĐỊNH NGHĨA</label>
                                     <button class="tab__language-side">TIẾNG VIỆT</button>
@@ -213,7 +213,7 @@
             </div>
 
             <div class="create__term-add-btn">
-                <button class="create__term-btn">Tạo</button>
+                <button class="create__term-btn" type="submit">Tạo</button>
             </div>
         </div>
 

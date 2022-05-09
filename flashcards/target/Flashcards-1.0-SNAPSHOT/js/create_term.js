@@ -44,7 +44,7 @@ $(".add__tab-btn").click(function () {
         "                        </div>\n" +
         "                        <div class=\"tab__content-side-definition\">\n" +
         "                            <div class=\"tab__side-definition-editor\">\n" +
-        "                                <input class=\"tab__content-side-editor-input\" type=\"text\" name=\"word\">\n" +
+        "                                <input class=\"tab__content-side-editor-input\" type=\"text\" name=\"mean\">\n" +
         "                                <div class=\"tab__below-input\">\n" +
         "                                    <label class=\"tab__content-side-label\" >ĐỊNH NGHĨA</label>\n" +
         "                                    <button class=\"tab__language-side\">TIẾNG VIỆT</button>\n" +

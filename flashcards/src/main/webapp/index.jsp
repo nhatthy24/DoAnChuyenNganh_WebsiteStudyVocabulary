@@ -5,6 +5,7 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 <h1><%= "Hello World!" %>
 </h1>
 <br/>

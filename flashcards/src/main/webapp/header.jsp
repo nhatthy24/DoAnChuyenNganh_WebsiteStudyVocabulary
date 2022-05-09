@@ -258,7 +258,7 @@
                             <div class="navbar__create-menu" id="navbar__create-menu" style="display: none">
                                 <ul class="navbar__create-menu-list">
                                     <li class="navbar__create-menu-item">
-                                        <a href="#" class="navbar__create-menu-link">
+                                        <a href="created-term" class="navbar__create-menu-link">
                                             <i class="far fa-clone"></i>
                                             <span class="navbar__create-menu-text">
                                                     Học phần
