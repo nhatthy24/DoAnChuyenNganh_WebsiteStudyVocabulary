@@ -9,13 +9,17 @@ const slides = document.querySelectorAll('.term__card-item');
 const preBtn = document.querySelector('.card__control-prev-btn');
 const nextBtn = document.querySelector('.card__control-next-btn');
 
-
+const modal = document.getElementById("modal");
+const modalInner = document.getElementById("modal__inner");
 
 $(document).ready(function () {
     switchCard(currentSlide);
     setTotalSlides();
     openShareDialog();
     closeShareDialog();
+    openAddClassFolderDialog();
+    closeAddClassFolderDialog();
+    switchToAddClassFolderContent();
 })
 
 function flipWordToDefinition(btn) {
@@ -90,8 +94,6 @@ function switchCard(currentSlide) {
 function openShareDialog() {
     const btnOpen = document.getElementById("term__information-tool-share");
     const shareDialog = document.getElementById("share__dialog");
-    const modal = document.getElementById("modal");
-    const modalInner = document.getElementById("modal__inner");
 
     btnOpen.onclick = () => {
         modalInner.appendChild(shareDialog);
@@ -100,18 +102,120 @@ function openShareDialog() {
     }
 }
 
-function closeShareDialog(){
-    const btnClose  = document.getElementById("share__dialog-close-btn");
+function closeShareDialog() {
+    const btnClose = document.getElementById("share__dialog-close-btn");
     const shareDialog = document.getElementById("share__dialog");
-    const modal = document.getElementById("modal");
-    const modalInner = document.getElementById("modal__inner");
 
-    btnClose.onclick = () =>{
+    btnClose.onclick = () => {
         modalInner.removeChild(shareDialog);
         shareDialog.style.display = 'none';
         modal.style.display = 'none';
     }
 }
+
+function openAddClassFolderDialog() {
+    const btnOpen = document.getElementById("add__term-to-folder-class-btn");
+    const addClassFolderDialog = document.getElementById("add__term-to-folder-class");
+    
+    btnOpen.onclick = () => {
+        modalInner.appendChild(addClassFolderDialog);
+        addClassFolderDialog.style.display = 'block';
+        modal.style.display = 'block';
+    }
+}
+
+function closeAddClassFolderDialog() {
+    const btnClose = document.getElementById("add__term-to-folder-class-close-btn");
+    const addClassFolderDialog = document.getElementById("add__term-to-folder-class");
+
+
+    btnClose.onclick = () => {
+        modalInner.removeChild(addClassFolderDialog);
+        addClassFolderDialog.style.display = 'none';
+        modal.style.display = 'none';
+    }
+}
+
+function switchToAddClassFolderContent() {
+    const btnClassContent = document.getElementById('add__term-switch-btn-class');
+    const btnFolderContent = document.getElementById('add__term-switch-btn-folder');
+
+    const classContent = document.getElementById('add__term-to-class');
+    const folderContent = document.getElementById('add__term-to-folder');
+
+    btnClassContent.onclick = () => {
+        btnFolderContent.classList.remove('add__term-switch-btn-item--active');
+        btnClassContent.classList.add('add__term-switch-btn-item--active');
+        classContent.style.display = 'block';
+        folderContent.style.display = 'none';
+    }
+    btnFolderContent.onclick = () => {
+        btnClassContent.classList.remove('add__term-switch-btn-item--active');
+        btnFolderContent.classList.add('add__term-switch-btn-item--active');
+        classContent.style.display = 'none';
+        folderContent.style.display = 'block';
+    }
+}
+
+
+function editWord(btn) {
+    const wordItem = btn.parentElement.parentElement;
+    const wordInput = wordItem.querySelectorAll('.term__detail-item-input');
+    if (!btn.classList.contains('term__detail-item-control-btn--active')) {
+        for (let i = 0; i < wordInput.length; i++) {
+            wordInput[i].classList.add('term__detail-item-input--active');
+            wordInput[i].readOnly = false;
+        }
+
+        btn.classList.add('term__detail-item-control-btn--active');
+    } else {
+        for (let i = 0; i < wordInput.length; i++) {
+            wordInput[i].classList.remove('term__detail-item-input--active');
+            wordInput[i].readOnly = true;
+        }
+        btn.classList.remove('term__detail-item-control-btn--active');
+    }
+}
+
+function deleteTerm() {
+    const confirmDeleteDialog = document.getElementById('confirm__delete-term');
+
+    modalInner.appendChild(confirmDeleteDialog);
+    confirmDeleteDialog.style.display = 'block';
+    modal.style.display = 'block';
+}
+
+function closeDeleteDialog() {
+    const confirmDeleteDialog = document.getElementById('confirm__delete-term');
+
+    modalInner.removeChild(confirmDeleteDialog);
+    confirmDeleteDialog.style.display = 'none';
+    modal.style.display = 'none';
+}
+
+function speechWord(btn) {
+    const wordItem = btn.parentElement.parentElement;
+    const word = wordItem.querySelector('.term__detail-item-word-text').value;
+
+    say(word);
+}
+
+
+function say(m) {
+    var msg = new SpeechSynthesisUtterance();
+    var voices = window.speechSynthesis.getVoices();
+    msg.voice = voices[1];
+    msg.voiceURI = "native";
+    msg.volume = 1;
+    msg.rate = 1;
+    msg.pitch = 0.8;
+    msg.text = m;
+    msg.lang = 'en-US';
+    speechSynthesis.speak(msg);
+}
+
+
+
 
 
 

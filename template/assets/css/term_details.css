@@ -261,7 +261,7 @@
     width: 36px;
     height: 36px;
     padding: 9px;
-    display: inline-block;
+    /* display: inline-block; */
     text-decoration: none;
     font-size: 1.4rem;
     border-radius: 50%;
@@ -482,10 +482,26 @@
     box-shadow: -1px -1px 19px -15px rgba(0, 0, 0, 0.37);
 }
 
+.term__detail-item-input{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-bottom: 4px;
+}
+
+.term__detail-item-input--active{
+    border-bottom: 2px solid var(--text-color);
+}
+
+.term__detail-item-input--active:focus {
+    border-bottom: 4px solid var(--yellow-color-dark);
+}
+
 .term__detail-item-word {
     width: 250px;
     font-size: 1.5rem;
     font-weight: 300;
+    padding-right: 20px;
 }
 
 .term__detail-item-definition {
@@ -506,6 +522,10 @@
     height: 35px;
     color: var(--text-gray-color);
     border-radius: 50%;
+}
+
+.term__detail-item-control-btn--active{
+    color: var(--yellow-color-dark);
 }
 
 .term__detail-item-control-btn:hover {
@@ -535,7 +555,7 @@
     width: 600px;
 }
 
-.share__dialog-header{
+.dialog__header{
     height: 102px;
     padding: 32px;
     display: flex;
@@ -545,13 +565,13 @@
     color: var(--white-color);
 }
 
-.share__dialog-header-title{
+.dialog__header-title{
     font-size: 3rem;
     font-weight: 500;
     color: var(--white-color);
 }
 
-.share__dialog-header-close{
+.dialog__header-close{
     border-radius: 50%;
     border: 1px solid var(--white-color);
     color: var(--white-color);
@@ -714,3 +734,168 @@ width:73%;
 .share__dialog-content-twitter-title{
 
 }
+
+
+.add__term-to-folder-class{
+    width: 600px;
+}
+
+.dialog__content-add-to-class-folder{
+    padding: 32px;
+    background-color: var(--gray-color);
+}
+
+.add__term-switch-btn{
+    border: 2px solid var(--gray-color-light);
+    border-radius: 3px;
+    display: flex;
+    width: fit-content;
+}
+
+.add__term-switch-btn-item{
+    height: 38px;
+    border: none;
+    background-color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 0 20px;
+    color: var(--green-color-light)
+}
+
+.add__term-switch-btn-item:hover
+{
+    cursor: pointer;
+    color:var(--yellow-color);
+}
+
+.add__term-switch-btn-item--active{
+    background-color: var(--yellow-color-dark);
+    color: var(--text-color);
+}
+
+.add__term-new-btn{
+    height: 83px;
+    margin: 24px 0;
+    width: 100%;
+    border: none;
+    background-color: var(--white-color);
+}
+
+.add__term-new-btn-text{
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-bottom: 4px solid var(--green-color-light);
+    padding: 8px 3px;
+}
+
+.add__term-to-list{
+
+}
+
+
+.add__term-to-list-item{
+    min-height: 80px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: var(--white-color);
+    margin-top: 8px;
+}
+
+ 
+
+.add__term-to-list-item-title{
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.add__term-to-list-item-btn{
+    height: 40px;
+    width: 52px;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add__term-to-list-item-btn-plus:hover{
+    cursor: pointer;
+    color: var(--yellow-color-dark)
+}
+
+.add__term-to-list-item-btn-plus{
+    background-color: var(--white-color);
+    border: 2px solid var(--gray-color-light);
+}
+
+.add__term-to-list-item-btn-minus{
+    background-color: var(--yellow-color-dark);
+    border: none;
+
+}
+
+
+.confirm__delete-term{
+    width: 600px;
+}
+
+.confirm__delete-term-content{
+    background-color: var(--white-color);
+    padding: 32px;
+
+}
+
+.confirm__delete-term-name{
+    font-size: 3rem;
+    font-weight: 600;
+
+}
+
+.confirm__delete-term-description{
+    margin-top: 24px;
+    font-size: 1.6rem;
+    font-weight: 350;
+
+}
+
+.confirm__delete-term-question{
+margin-top: 24px;
+font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.confirm__delete-term-btn{
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.confirm__delete-term-btn button{
+    height: 70px;
+    width: 45%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--white-color);
+    border: none;
+    border-radius: 3px;
+}
+
+.confirm__delete-term-btn button:hover{
+    opacity: 0.9;
+}
+
+.confirm__delete-term-btn-cancel{
+
+    background-color: var(--text-color);
+}
+
+.confirm__delete-term-btn-confirm{
+    background-color: var(--red-color-light);
+}
+
+
