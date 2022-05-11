@@ -2,6 +2,8 @@
 
 const currentElement = document.getElementById('current-slide');
 const totalElement = document.getElementById('total-slide');
+const confirmDeleteDialog = document.getElementById('confirm__delete-term');
+
 
 let currentSlide = parseInt(currentElement.innerHTML);
 let totalSlide = parseInt(totalElement.innerHTML);
@@ -178,7 +180,6 @@ function editWord(btn) {
 }
 
 function deleteTerm() {
-    const confirmDeleteDialog = document.getElementById('confirm__delete-term');
 
     modalInner.appendChild(confirmDeleteDialog);
     confirmDeleteDialog.style.display = 'block';
@@ -186,7 +187,6 @@ function deleteTerm() {
 }
 
 function closeDeleteDialog() {
-    const confirmDeleteDialog = document.getElementById('confirm__delete-term');
 
     modalInner.removeChild(confirmDeleteDialog);
     confirmDeleteDialog.style.display = 'none';
@@ -197,22 +197,11 @@ function speechWord(btn) {
     const wordItem = btn.parentElement.parentElement;
     const word = wordItem.querySelector('.term__detail-item-word-text').value;
 
-    say(word);
+    speech(word);
 }
 
 
-function say(m) {
-    var msg = new SpeechSynthesisUtterance();
-    var voices = window.speechSynthesis.getVoices();
-    msg.voice = voices[1];
-    msg.voiceURI = "native";
-    msg.volume = 1;
-    msg.rate = 1;
-    msg.pitch = 0.8;
-    msg.text = m;
-    msg.lang = 'en-US';
-    speechSynthesis.speak(msg);
-}
+
 
 
 

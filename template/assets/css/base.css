@@ -3,6 +3,7 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: rgb(48,53,69);
+    --black-background: #303545;
     --blue-color:#4255FF;
     --blue-color-dark: #423ED8;
     --blue-color-light: rgb(168,177,255);
@@ -10,7 +11,7 @@
     --text-gray-color: #858996;
     --gray-color-light: #D9DDE8;
     --border-gray-color: #e0e1e2;
-    --green-color-light: rgb(103,207,208);
+    --green-color-light: #3ccfcf;
     --green-color: #52A8A7;
     --yellow-color: rgb(247,220,97);
     --yellow-color-dark: #f1c606;
@@ -29,6 +30,8 @@ html{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+
+ 
 
 .modal{
     position: fixed;
@@ -57,7 +60,35 @@ html{
   
 }
 
- 
+
+.term__card-item--slide-next {
+    animation: slideCardNext 0.1s ease-in-out;
+}
+
+.term__card-item--slide-prev{
+    animation: slideCardPrev 0.1s ease-in-out;
+}
+
+@keyframes slideCardNext {
+    from {
+        transform: translateX(-150px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideCardPrev {
+    from {
+        transform: translateX(150px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
 
 button:hover{
     cursor: pointer;
