@@ -3,23 +3,30 @@
 const modal = document.getElementById("modal");
 const modalInner = document.getElementById("modal__inner");
 const editWordDialog = document.getElementById("edit__word-dialog");
+const settingDialog = document.getElementById('setting__learning-dialog');
+const btnOpenSpeaker = document.getElementById('setting__open-speaker');
+const btnCloseSpeaker = document.getElementById('setting__close-speaker');
+
 let inputWord = document.getElementById('edit__word-dialog-item-input-word');
 let inputDefinition = document.getElementById('edit__word-dialog-item-input-definition');
 
 var actionFlip = null;
 var actionExchange = null;
+var isSpeech = false;
+
 
 
 const cards = document.querySelectorAll('.card__item');
 const btnPreCard = document.querySelector('.card__toolbar-nav-left');
 const btnNextCard = document.querySelector('.card__toolbar-nav-right');
 const btnStart = document.getElementById('control__main-action-start');
-const toolbar = document.getElementById('card__toolbar');
+const toolBar = document.getElementById('card__toolbar');
 const repeatCardBtn = document.getElementById('card__item-repeat-btn');
 
 let currentCard = 1;
 const totalIndex = cards.length;
-
+var wordLearnedElement = document.getElementById('counter__word-learned');
+wordLearnedElement.innerHTML = `${totalIndex-1} thuật ngữ`
 
 
 function preCard() {
@@ -29,7 +36,6 @@ function preCard() {
             currentCard = 1;
         }
         switchCard(currentCard, 'previous');
-        // cards[currentCard - 1].classList.add('term__card-item--slide-prev')
     }
 }
 
@@ -40,11 +46,9 @@ function nextCard() {
             currentCard = totalIndex;
         }
         switchCard(currentCard, 'next');
-        // cards[currentCard - 1].classList.add('term__card-item--slide-next')
     }
 
 }
-
 
 
 
@@ -66,9 +70,7 @@ function exchangeWordToDefinition() {
                         addRotateCard(flipBtn.parentElement);
                     }
                 }
-            } else {
-
-            }
+            } 
         }
     }
 }
@@ -147,9 +149,17 @@ function switchCard(currentCard, direction) {
         removeRotateCard(cards[i]);
     }
     cards[currentCard - 1].style.display = 'block';
+
+
     if (currentCard === cards.length) {
-        toolbar.style.display = 'none';
-    }
+        toolBar.style.display = 'none';
+    };
+
+    if (isSpeech) {
+        const word = cards[currentCard - 1].querySelector('.card__item-side-word').innerHTML.trim();
+        speech(word);
+    };
+
     if (direction != null) {
         if (direction === 'previous') {
             cards[currentCard - 1].classList.add('term__card-item--slide-prev');
@@ -196,6 +206,10 @@ function startLearning() {
         currentCard = 0;
         startLearning();
     } else {
+        if (isSpeech) {
+            const word = cards[currentCard - 1].querySelector('.card__item-side-word').innerHTML.trim();
+            speech(word);
+        };
         actionFlip = setTimeout(function () {
             addRotateCard(cards[currentCard - 1]);
         }, 2000);
@@ -251,6 +265,44 @@ function repeatCard() {
     }
 }
 
+
+function openSettingDialog() {
+    const settingBtn = document.getElementById('control__main-action-option');
+
+    settingBtn.onclick = () => {
+        modalInner.appendChild(settingDialog);
+        modal.style.display = 'block';
+        settingDialog.style.display = 'block';
+    }
+}
+
+function closeSettingDialog() {
+    const closeBtn = document.getElementById('setting__learning-dialog-close-btn');
+    closeBtn.onclick = () => {
+        modalInner.removeChild(settingDialog);
+        modal.style.display = 'none';
+        settingDialog.style.display = 'none';
+    }
+}
+
+function openSpeaker() {
+    btnOpenSpeaker.onclick = () => {
+        btnOpenSpeaker.classList.add('setting__dialog-body-btn--active');
+        btnCloseSpeaker.classList.remove('setting__dialog-body-btn--active');
+        isSpeech = true;
+    }
+}
+
+function closeSpeaker() {
+    btnCloseSpeaker.onclick = () => {
+        btnCloseSpeaker.classList.add('setting__dialog-body-btn--active');
+        btnOpenSpeaker.classList.remove('setting__dialog-body-btn--active');
+        isSpeech = false;
+    }
+}
+
+
+
 switchCard(currentCard);
 exchangeCard();
 exchangeWordToDefinition();
@@ -261,3 +313,7 @@ nextCard();
 progressControl();
 startEvent();
 repeatCard();
+openSettingDialog();
+closeSettingDialog();
+openSpeaker();
+closeSpeaker();

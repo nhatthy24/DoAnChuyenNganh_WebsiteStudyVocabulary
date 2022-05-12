@@ -212,6 +212,33 @@ body{
     color: var(--yellow-color-dark);
 }
 
+.card__item-control-star-btn{
+    position: relative;
+}
+
+.card__item-control-star-btn:hover::after{
+    content: 'Gắn sao và học riêng thẻ này';
+    position: absolute;
+    width: 190px;
+    height: 30px;
+    background-color: var(--blue-color-dark);
+    color: var(--white-color);
+    font-size: 1.3rem;
+    display: flex;
+    right:45px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.card__item-control-star-btn:hover::before{
+    content: '';
+    position: absolute;
+    border: 8px solid;
+    right: 29px;
+    border-color:  transparent transparent transparent  var(--blue-color-dark);
+}
+
 .card__item-hint {
     height: 48px;
     background-color: var(--black-background);
@@ -477,6 +504,125 @@ body{
 .edit__word-dialog-save-btn:hover{
     background-color: var(--green-color);
 }
+
+.setting__learning-dialog{
+    width: 600px;
+}
+
+.dialog__header{
+    height: 102px;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue-color-dark);
+    color: var(--white-color);
+}
+
+.dialog__header-title{
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+.dialog__header-close{
+    border-radius: 50%;
+    border: 1px solid var(--white-color);
+    color: var(--white-color);
+    width: 38px;
+    height: 38px;
+    background-color: transparent;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.setting__dialog-body{
+    padding: 32px;
+    background-color: var(--white-color);
+}
+
+.setting__dialog-body-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.setting__dialog-body-item{
+    width: 45%;
+}
+
+.setting__dialog-body-item-title{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    letter-spacing: 1.2px;
+    margin-bottom: 13px;
+}
+
+.setting__dialog-body-item-content{
+
+}
+
+.setting__dialog-body-group-btn{
+    display: flex;
+    height: 42px;
+    border: 2px solid var(--gray-color-light);
+    border-radius: 3px;
+    width:fit-content;
+}
+
+.setting__dialog-body-btn-item{
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:var(--green-color-light);
+    padding: 0 15px;
+}
+
+.setting__dialog-body-btn--active{
+    background-color: var(--yellow-color-dark);
+    color: var(--text-color);
+}
+
+.setting__dialog-body-btn-item:not(.setting__dialog-body-btn--active):hover{
+    color: var(--yellow-color-dark);
+}
+
+.setting__dialog-body-select{
+    height: 42px;
+    border: 2px solid var(--gray-color-light);
+    border-radius: 3px;
+    padding: 0 10px;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:var(--green-color-light);
+}
+
+
+.setting__dialog-body-select option{
+    color: var(--text-color);
+    font-weight: 500;
+}
+.setting__dialog-body-select:hover{
+    cursor: pointer;
+    color: var(--yellow-color-dark);
+}
+
+.setting__dialog-body-row-separator{
+    height: 1px;
+    background-color: var(--border-gray-color);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: -32px;
+    margin-right: -32px;
+}
+
+
+
 
 
 

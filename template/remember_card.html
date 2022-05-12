@@ -487,6 +487,9 @@
                             <button class="card__item-control-btn card__item-control-speech-btn">
                                 <i class="fas fa-volume-up"></i>
                             </button>
+                            <button class="card__item-control-btn card__item-control-star-btn">
+                                <i class="fas fa-star"></i>
+                            </button>
                         </div>
                         <div class="card__item-hint">
                             <span class="card__item-hint-text">
@@ -502,6 +505,9 @@
                         <div class="card__item-control">
                             <button class="card__item-control-btn card__item-control-edit-btn">
                                 <i class="fas fa-pencil-alt"></i>
+                            </button>
+                            <button class="card__item-control-btn card__item-control-star-btn">
+                                <i class="fas fa-star"></i>
                             </button>
                         </div>
                         <div class="card__item-hint">
@@ -525,6 +531,9 @@
                             <button class="card__item-control-btn card__item-control-speech-btn">
                                 <i class="fas fa-volume-up"></i>
                             </button>
+                            <button class="card__item-control-btn card__item-control-star-btn">
+                                <i class="fas fa-star"></i>
+                            </button>
                         </div>
                         <div class="card__item-hint">
                             <span class="card__item-hint-text">
@@ -541,6 +550,9 @@
                             <button class="card__item-control-btn card__item-control-edit-btn">
                                 <i class="fas fa-pencil-alt"></i>
                             </button>
+                            <button class="card__item-control-btn card__item-control-star-btn">
+                                <i class="fas fa-star"></i>
+                            </button>
                         </div>
                         <div class="card__item-hint">
                             <span class="card__item-hint-text">
@@ -553,7 +565,7 @@
                 <div class="card__item">
                     <div class="card__item-word card__item-text">
                         <div class="card__item-side card__item-side-word">
-                           Limit
+                            Limit
                         </div>
                         <div class="card__item-control">
                             <button class="card__item-control-btn card__item-control-edit-btn">
@@ -561,6 +573,9 @@
                             </button>
                             <button class="card__item-control-btn card__item-control-speech-btn">
                                 <i class="fas fa-volume-up"></i>
+                            </button>
+                            <button class="card__item-control-btn card__item-control-star-btn">
+                                <i class="fas fa-star"></i>
                             </button>
                         </div>
                         <div class="card__item-hint">
@@ -577,6 +592,9 @@
                         <div class="card__item-control">
                             <button class="card__item-control-btn card__item-control-edit-btn">
                                 <i class="fas fa-pencil-alt"></i>
+                            </button>
+                            <button class="card__item-control-btn card__item-control-star-btn">
+                                <i class="fas fa-star"></i>
                             </button>
                         </div>
                         <div class="card__item-hint">
@@ -600,6 +618,9 @@
                             <button class="card__item-control-btn card__item-control-speech-btn">
                                 <i class="fas fa-volume-up"></i>
                             </button>
+                            <button class="card__item-control-btn card__item-control-star-btn">
+                                <i class="fas fa-star"></i>
+                            </button>
                         </div>
                         <div class="card__item-hint">
                             <span class="card__item-hint-text">
@@ -615,6 +636,9 @@
                         <div class="card__item-control">
                             <button class="card__item-control-btn card__item-control-edit-btn">
                                 <i class="fas fa-pencil-alt"></i>
+                            </button>
+                            <button class="card__item-control-btn card__item-control-star-btn">
+                                <i class="fas fa-star"></i>
                             </button>
                         </div>
                         <div class="card__item-hint">
@@ -632,7 +656,7 @@
                             alt="">
                         <h3 class="card__item-special-title-text">
                             Chúc mừng! Bạn đã ôn tập tất cả các thuật ngữ.
-                        </h2>
+                            </h2>
                     </div>
                     <div class="card__item-special-content">
                         <div class="card__item-special-content-item" style="margin-top: 0">
@@ -641,7 +665,8 @@
                             </div>
                             <div class="card__item-special-description">
                                 <h4 class="card__item-special-description-title">Hoàn thành thẻ ghi nhớ</h4>
-                                <span class="card__item-special-description-text">2 thuật ngữ</span>
+                                <span class="card__item-special-description-text"
+                                id="counter__word-learned">2 thuật ngữ</span>
                             </div>
                         </div>
                         <div class="card__item-special-content-item">
@@ -649,8 +674,10 @@
                                 <i class="bi bi-arrow-right-circle-fill"></i>
                             </div>
                             <div class="card__item-special-description">
-                                <h4 class="card__item-special-description-title">Hãy duy trì động lực với chế độ Học</h4>
-                                <span class="card__item-special-description-text">Ôn luyện để cải thiện kỹ năng của bạn</span>
+                                <h4 class="card__item-special-description-title">Hãy duy trì động lực với chế độ Học
+                                </h4>
+                                <span class="card__item-special-description-text">Ôn luyện để cải thiện kỹ năng của
+                                    bạn</span>
                             </div>
                         </div>
                         <div class="card__item-special-btn">
@@ -683,6 +710,7 @@
                     </button>
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -720,9 +748,64 @@
         </div>
     </div>
 
+    <div class="setting__learning-dialog" id="setting__learning-dialog" style="display: none">
+        <div class="dialog__header">
+            <div class="dialog__header-title">
+                Tùy chọn
+            </div>
+            <button class="dialog__header-close" id="setting__learning-dialog-close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="setting__dialog-body">
+            <div class="setting__dialog-body-row">
+                <div class="setting__dialog-body-item">
+                    <div class="setting__dialog-body-item-title">
+                        HỌC THUẬT NGỮ CÓ GẮN DẤU SAO
+                    </div>
+                    <div class="setting__dialog-body-item-content">
+                        <div class="setting__dialog-body-group-btn">
+                            <button class="setting__dialog-body-btn-item setting__dialog-body-btn--active">Tất
+                                cả</button>
+                            <button class="setting__dialog-body-btn-item">Có gắn sao</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="setting__dialog-body-item">
+                    <div class="setting__dialog-body-item-title">
+                        TRẢ LỜI BẰNG
+                    </div>
+                    <div class="setting__dialog-body-item-content">
+                        <select class="setting__dialog-body-select" name="language" id="">
+                            <option value="vi">Tiếng Việt</option>
+                            <option value="en">Tiếng Anh</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="setting__dialog-body-row-separator">
 
+            </div>
 
-    <div class="modal" id="modal" style="display: none;">
+            <div class="setting__dialog-body-row">
+                <div class="setting__dialog-body-item">
+                    <div class="setting__dialog-body-item-title">
+                        ÂM THANH
+                    </div>
+                    <div class="setting__dialog-body-item-content">
+                        <div class="setting__dialog-body-group-btn">
+                            <button class="setting__dialog-body-btn-item"
+                                id="setting__open-speaker">
+                                Bật</button>
+                            <button class="setting__dialog-body-btn-item setting__dialog-body-btn--active" id="setting__close-speaker">Tắt</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal" style="display: none">
         <div class="modal__overlay">
 
         </div>
@@ -733,6 +816,8 @@
             </div>
         </div>
     </div>
+
+
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/remember_card.js"></script>
     <script src="./assets/js/header.js"></script>
