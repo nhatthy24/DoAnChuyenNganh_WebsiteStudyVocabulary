@@ -451,19 +451,19 @@
                     </div>
                 </div>
                 <div class="control__main-actions">
-                    <button class="control__main-action">
+                    <button class="control__main-action" id="control__main-action-start">
                         <i class="fas fa-play"></i>
                         <span class="control__main-action-text">
                             Bắt đầu
                         </span>
                     </button>
-                    <button class="control__main-action">
+                    <button class="control__main-action" id="control__main-action-mix">
                         <i class="bi bi-shuffle"></i>
                         <span class="control__main-action-text">
                             Trộn thẻ
                         </span>
                     </button>
-                    <button class="control__main-action">
+                    <button class="control__main-action" id="control__main-action-option">
                         <i class="fas fa-sliders-h"></i>
                         <span class="control__main-action-text">
                             Tùy chọn
@@ -550,8 +550,121 @@
                         </div>
                     </div>
                 </div>
+                <div class="card__item">
+                    <div class="card__item-word card__item-text">
+                        <div class="card__item-side card__item-side-word">
+                           Limit
+                        </div>
+                        <div class="card__item-control">
+                            <button class="card__item-control-btn card__item-control-edit-btn">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                            <button class="card__item-control-btn card__item-control-speech-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                        </div>
+                        <div class="card__item-hint">
+                            <span class="card__item-hint-text">
+                                Nhấn vào thẻ để xem định nghĩa
+                            </span>
+                            <i class="fas fa-hand-pointer"></i>
+                        </div>
+                    </div>
+                    <div class="card__item-definition card__item-text">
+                        <div class="card__item-side card__item-side-definition">
+                            Giới hạn
+                        </div>
+                        <div class="card__item-control">
+                            <button class="card__item-control-btn card__item-control-edit-btn">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                        </div>
+                        <div class="card__item-hint">
+                            <span class="card__item-hint-text">
+                                Nhấn vào thẻ để xem thuật ngữ
+                            </span>
+                            <i class="fas fa-hand-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card__item">
+                    <div class="card__item-word card__item-text">
+                        <div class="card__item-side card__item-side-word">
+                            Computer
+                        </div>
+                        <div class="card__item-control">
+                            <button class="card__item-control-btn card__item-control-edit-btn">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                            <button class="card__item-control-btn card__item-control-speech-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                        </div>
+                        <div class="card__item-hint">
+                            <span class="card__item-hint-text">
+                                Nhấn vào thẻ để xem định nghĩa
+                            </span>
+                            <i class="fas fa-hand-pointer"></i>
+                        </div>
+                    </div>
+                    <div class="card__item-definition card__item-text">
+                        <div class="card__item-side card__item-side-definition">
+                            Máy tính
+                        </div>
+                        <div class="card__item-control">
+                            <button class="card__item-control-btn card__item-control-edit-btn">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                        </div>
+                        <div class="card__item-hint">
+                            <span class="card__item-hint-text">
+                                Nhấn vào thẻ để xem thuật ngữ
+                            </span>
+                            <i class="fas fa-hand-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card__item card__item-special">
+                    <div class="card__item-special-title">
+                        <img src="https://assets.quizlet.com/a/j/dist/app/i/cards/learn_preview/trophy.0c9b06e0b8da370.svg"
+                            alt="">
+                        <h3 class="card__item-special-title-text">
+                            Chúc mừng! Bạn đã ôn tập tất cả các thuật ngữ.
+                        </h2>
+                    </div>
+                    <div class="card__item-special-content">
+                        <div class="card__item-special-content-item" style="margin-top: 0">
+                            <div class="card__item-special-icon card__item-special-icon--green">
+                                <i class="bi bi-check-circle-fill"></i>
+                            </div>
+                            <div class="card__item-special-description">
+                                <h4 class="card__item-special-description-title">Hoàn thành thẻ ghi nhớ</h4>
+                                <span class="card__item-special-description-text">2 thuật ngữ</span>
+                            </div>
+                        </div>
+                        <div class="card__item-special-content-item">
+                            <div class="card__item-special-icon card__item-special-icon--blue">
+                                <i class="bi bi-arrow-right-circle-fill"></i>
+                            </div>
+                            <div class="card__item-special-description">
+                                <h4 class="card__item-special-description-title">Hãy duy trì động lực với chế độ Học</h4>
+                                <span class="card__item-special-description-text">Ôn luyện để cải thiện kỹ năng của bạn</span>
+                            </div>
+                        </div>
+                        <div class="card__item-special-btn">
+                            <a href="#" class="card__item-special-btn-item">
+                                Tiếp tục với chế độ Học
+                            </a>
+                            <button class="card__item-special-btn-item" id="card__item-repeat-btn">
+                                Lặp lại Thẻ ghi nhớ
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="card__toolbar">
+            <div class="card__toolbar" id="card__toolbar">
                 <div class="card__toolbar-item">
                 </div>
                 <div class="card__toolbar-item">
@@ -587,14 +700,17 @@
             </div>
             <div class="edit__word-dialog-body">
                 <div class="edit__word-dialog-body-item">
-                    <input class="edit__word-dialog-item-input" id="edit__word-dialog-item-input-word" name="word" type="text">
+                    <input class="edit__word-dialog-item-input" id="edit__word-dialog-item-input-word" name="word"
+                        type="text">
                 </div>
                 <div class="edit__word-dialog-body-item">
-                    <input class="edit__word-dialog-item-input" id="edit__word-dialog-item-input-definition" name="definition" type="text">
+                    <input class="edit__word-dialog-item-input" id="edit__word-dialog-item-input-definition"
+                        name="definition" type="text">
                 </div>
             </div>
             <div class="edit__word-dialog-footer">
-                <button class="edit__word-dialog-exit-btn" id="edit__word-dialog-exit-btn" onclick="closeEditWordDialog()">
+                <button class="edit__word-dialog-exit-btn" id="edit__word-dialog-exit-btn"
+                    onclick="closeEditWordDialog()">
                     Hủy
                 </button>
                 <button class="edit__word-dialog-save-btn" id="edit__word-dialog-save-btn">
