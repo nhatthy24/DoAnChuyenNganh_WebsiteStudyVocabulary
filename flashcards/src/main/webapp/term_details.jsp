@@ -26,7 +26,7 @@
     <jsp:include page="header.jsp"></jsp:include>
     <div class="term__container">
         <h1 class="term__title">
-            Tên học phần
+            ${course.courseName}
         </h1>
         <div class="term__content">
             <div class="study__mode">
@@ -82,24 +82,16 @@
 
             <div class="term__card-study">
                 <div class="term__card-list">
+                    <c:forEach items="${cards}" var="c">
                     <div class="term__card-item">
                         <button class="term__card-word-text term__card-text" onclick="flipWordToDefinition(this)">
-                            Hello
+                            ${c.term}
                         </button>
                         <button class="term__card-definition-text term__card-text" onclick="flipDefinitionToWord(this)">
-                            xin chào
+                            ${c.meaning}
                         </button>
                     </div>
-
-                    <div class="term__card-item">
-                        <button class="term__card-word-text term__card-text"  onclick="flipWordToDefinition(this)">
-                            Goodbye
-                        </button>
-                        <button class="term__card-definition-text term__card-text" onclick="flipDefinitionToWord(this)">
-                            Tạm biệt
-                        </button>
-                    </div>
-
+                    </c:forEach>
                 </div>
                 <div class="term__card-control">
                     <div></div>
@@ -197,7 +189,7 @@
             </div>
             <div class="term__information-description">
                 <p class="term__information-description-text">
-                    Một học phần kiểm thử Một học phần kiểm thử Một học phần kiểm thử Một học phần kiểm thử
+                    ${course.description}
                 </p>
             </div>
         </div>
@@ -227,12 +219,13 @@
             </div>
 
             <div class="term__detail-list">
+                <c:forEach var="c" items="${cards}">
                 <div class="term__detail-item">
                     <div class="term__detail-item-word">
-                        Goodbye
+                        ${c.term}
                     </div>
                     <div class="term__detail-item-definition">
-                        Tạm biệt
+                        ${c.meaning}
                     </div>
                     <div class="term__detail-item-control">
                         <button class="term__detail-item-control-btn">
@@ -246,25 +239,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="term__detail-item">
-                    <div class="term__detail-item-word">
-                        Hello
-                    </div>
-                    <div class="term__detail-item-definition">
-                        xin chào
-                    </div>
-                    <div class="term__detail-item-control">
-                        <button class="term__detail-item-control-btn">
-                            <i class="fas fa-star"></i>
-                        </button>
-                        <button class="term__detail-item-control-btn">
-                            <i class="fas fa-volume-up"></i>
-                        </button>
-                        <button class="term__detail-item-control-btn">
-                            <i class="fas fa-pen"></i>
-                        </button>
-                    </div>
-                </div>
+                </c:forEach>
             </div>
 
             <button class="term__detail-edit-btn">

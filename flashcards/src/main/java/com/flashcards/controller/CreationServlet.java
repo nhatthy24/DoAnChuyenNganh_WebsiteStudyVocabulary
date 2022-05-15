@@ -7,15 +7,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/course")
-public class CourseDirect extends HttpServlet {
+@WebServlet(urlPatterns = "/creation")
+public class CreationServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String type = req.getParameter("type");
-        if(type != null){
-            if(type.equalsIgnoreCase("addCourse")){
-                req.setAttribute("type","addCourse");
-
+        System.out.println(type);
+        if(type!=null){
+            if(type.equalsIgnoreCase("term")){
+                System.out.println("Đã vào đk if");
+                req.getRequestDispatcher("create_term.jsp").forward(req,resp);
             }
         }
     }

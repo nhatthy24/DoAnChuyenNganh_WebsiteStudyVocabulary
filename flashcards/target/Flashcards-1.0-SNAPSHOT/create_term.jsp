@@ -30,13 +30,14 @@
             <h1>Tạo học phần mới</h1>
         </div>
         <div class="create__header-action">
-            <button class="create__header-action-btn">
+            <button class="create__header-action-btn" type="submit">
                 Tạo
             </button>
         </div>
     </div>
 
     <div class="create__term-body">
+        <form action="created-term" method="POST" accept-charset="UTF-8">
         <div class="create__term-infor">
             <div class="create__term-infor-title">
                 <input class="create__term-infor-input" type="text" name="title" placeholder="Nhập tiêu đề">
@@ -127,7 +128,6 @@
             </button>
         </div>
 
-
         <div class="create__term-definition">
             <div class="create__term-tag-list">
                 <div class="tag__item">
@@ -216,7 +216,7 @@
                 <button class="create__term-btn" type="submit">Tạo</button>
             </div>
         </div>
-
+        </form>
     </div>
 
 </div>

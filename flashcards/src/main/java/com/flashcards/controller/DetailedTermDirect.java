@@ -12,9 +12,7 @@ import java.io.IOException;
 public class DetailedTermDirect extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session = req.getSession();
-        session.setAttribute("title", "Chi tiết học phần");
-        req.getRequestDispatcher("term_details.jsp").forward(req,resp);
+        super.doGet(req,resp);
     }
 
     @Override
