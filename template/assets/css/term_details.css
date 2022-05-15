@@ -422,6 +422,33 @@
     font-weight: 600;
 }
 
+.term__detail-filter-group-btn{
+    display: flex;
+    border: 1px solid var(--gray-color-light);
+    border-radius: 3px;
+    width:fit-content;
+}
+
+.term__detail-filter-btn{
+    height: 38px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    background-color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--green-color-light)
+}
+
+.term__detail-filter-btn:not(.term__detail-filter-btn--active):hover{
+    color: var(--yellow-color-dark)
+}
+
+.term__detail-filter-btn--active{
+    color: var(--text-color);
+    background-color: var(--yellow-color-dark);
+}
+
 .term__detail-header-sort {}
 
 .term__detail-header-sort-select {

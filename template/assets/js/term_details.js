@@ -201,6 +201,14 @@ function speechWord(btn) {
 }
 
 
+function tickStar(btn){
+    if(btn.classList.contains('term__detail-item-control-btn--active')){
+        btn.classList.remove('term__detail-item-control-btn--active');
+    }else{
+        btn.classList.add('term__detail-item-control-btn--active');
+    }
+}
+
 
 
 

@@ -601,6 +601,15 @@
                 <div class="term__detail-header-title">
                     Thuật ngữ trong học phần này (2)
                 </div>
+
+                <div class="term__detail-filter-group-btn">
+                    <button class="term__detail-filter-btn term__detail-filter-btn--active" id="filter-all-card">
+                        Tất cả
+                    </button>
+                    <button class="term__detail-filter-btn" id="filter-star-card">
+                        Gắn dấu sao (2)
+                    </button>
+                </div>
                 <div class="term__detail-header-sort">
                     <select class="term__detail-header-sort-select">
                         <option value="">Thứ tự gốc</option>
@@ -628,7 +637,7 @@
                         <input type="text" value="Tạm biệt" class="term__detail-item-input" readonly>
                     </div>
                     <div class="term__detail-item-control">
-                        <button class="term__detail-item-control-btn">
+                        <button class="term__detail-item-control-btn" onclick="tickStar(this)">
                             <i class="fas fa-star"></i>
                         </button>
                         <button class="term__detail-item-control-btn" onclick="speechWord(this)">
@@ -647,7 +656,7 @@
                         <input type="text" value="Xin chào" class="term__detail-item-input" readonly>
                     </div>
                     <div class="term__detail-item-control">
-                        <button class="term__detail-item-control-btn">
+                        <button class="term__detail-item-control-btn" onclick="tickStar(this)">
                             <i class="fas fa-star"></i>
                         </button>
                         <button class="term__detail-item-control-btn" onclick="speechWord(this)">
