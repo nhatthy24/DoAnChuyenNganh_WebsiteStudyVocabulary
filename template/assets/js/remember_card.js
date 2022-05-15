@@ -6,17 +6,25 @@ const editWordDialog = document.getElementById("edit__word-dialog");
 const settingDialog = document.getElementById('setting__learning-dialog');
 const btnOpenSpeaker = document.getElementById('setting__open-speaker');
 const btnCloseSpeaker = document.getElementById('setting__close-speaker');
+const selectChangeAnswerLanguage = document.getElementById('change__answer-language');
+const btnMix = document.getElementById('control__main-action-mix');
+const btnLearnCardStar = document.getElementById('setting__list-card-star-btn');
+const bntLearnCardAll = document.getElementById('setting__list-card-all-btn');
 
 let inputWord = document.getElementById('edit__word-dialog-item-input-word');
 let inputDefinition = document.getElementById('edit__word-dialog-item-input-definition');
 
 var actionFlip = null;
+var actionFlip2 = null;
 var actionExchange = null;
 var isSpeech = false;
+var answerLanguage = 'vi';
+var isStartLearning = false;
+var isLearnStarCard = false;
 
 
 
-const cards = document.querySelectorAll('.card__item');
+var cards = document.querySelectorAll('.card__item');
 const btnPreCard = document.querySelector('.card__toolbar-nav-left');
 const btnNextCard = document.querySelector('.card__toolbar-nav-right');
 const btnStart = document.getElementById('control__main-action-start');
@@ -24,9 +32,13 @@ const toolBar = document.getElementById('card__toolbar');
 const repeatCardBtn = document.getElementById('card__item-repeat-btn');
 
 let currentCard = 1;
-const totalIndex = cards.length;
 var wordLearnedElement = document.getElementById('counter__word-learned');
-wordLearnedElement.innerHTML = `${totalIndex-1} thuật ngữ`
+
+
+
+function setTotalProgress() {
+    wordLearnedElement.innerHTML = `${cards.length - 1} thuật ngữ`
+}
 
 
 function preCard() {
@@ -42,14 +54,13 @@ function preCard() {
 function nextCard() {
     btnNextCard.onclick = () => {
         currentCard += 1;
-        if (currentCard > totalIndex) {
-            currentCard = totalIndex;
+        if (currentCard > cards.length) {
+            currentCard = cards.length;
         }
         switchCard(currentCard, 'next');
     }
 
 }
-
 
 
 function exchangeWordToDefinition() {
@@ -59,6 +70,8 @@ function exchangeWordToDefinition() {
                 const flipBtn = cards[i].querySelector('.card__item-word');
                 const btnEdit = flipBtn.querySelector('.card__item-control-edit-btn');
                 const btnSpeech = flipBtn.querySelector('.card__item-control-speech-btn');
+                const btnStar = flipBtn.querySelector('.card__item-control-star-btn');
+                const btnStars = cards[i].querySelectorAll('.card__item-control-star-btn');
                 const word = cards[i].querySelector('.card__item-side-word').innerHTML.trim();
                 const definition = cards[i].querySelector('.card__item-side-definition').innerHTML.trim();
                 flipBtn.onclick = (e) => {
@@ -66,11 +79,13 @@ function exchangeWordToDefinition() {
                         openEditWordDialog(word, definition);
                     } else if (e.target === btnSpeech) {
                         speech(word);
+                    } else if (e.target === btnStar) {
+                        tickStarCard(btnStar, btnStars, cards[i]);
                     } else {
-                        addRotateCard(flipBtn.parentElement);
+                        rotateWordToDefinition(flipBtn.parentElement);
                     }
                 }
-            } 
+            }
         }
     }
 }
@@ -81,13 +96,20 @@ function exchangeDefinitionToWord() {
         if (cards[i].style.display == 'block') {
             const flipBtn = cards[i].querySelector('.card__item-definition');
             const btnEdit = flipBtn.querySelector('.card__item-control-edit-btn');
+            const btnStar = flipBtn.querySelector('.card__item-control-star-btn');
+            const btnStars = cards[i].querySelectorAll('.card__item-control-star-btn');
             const word = cards[i].querySelector('.card__item-side-word').innerHTML.trim();
             const definition = cards[i].querySelector('.card__item-side-definition').innerHTML.trim();
             flipBtn.onclick = (e) => {
                 if (e.target === btnEdit) {
                     openEditWordDialog(word, definition);
+                } else if (e.target === btnStar) {
+                    tickStarCard(btnStar, btnStars, cards[i]);
                 } else {
-                    removeRotateCard(flipBtn.parentElement);
+                    rotateDefinitionToWord(flipBtn.parentElement);
+                    if (isSpeech) {
+                        speech(word)
+                    };
                 }
             }
         }
@@ -146,18 +168,26 @@ function exchangeCard() {
 function switchCard(currentCard, direction) {
     for (let i = 0; i < cards.length; i++) {
         cards[i].style.display = 'none';
-        removeRotateCard(cards[i]);
+        cards[currentCard - 1].classList.remove('term__card-item--rotate');
     }
     cards[currentCard - 1].style.display = 'block';
 
 
     if (currentCard === cards.length) {
         toolBar.style.display = 'none';
+    } else {
+        toolBar.style.display = 'flex';
     };
 
     if (isSpeech) {
-        const word = cards[currentCard - 1].querySelector('.card__item-side-word').innerHTML.trim();
-        speech(word);
+        var wordEn = cards[currentCard - 1].querySelector('.card__item-side-word').innerHTML.trim();
+        if (isStartLearning) {
+            speechWord(wordEn);
+        } else {
+            if (answerLanguage === 'vi') {
+                speech(wordEn);
+            }
+        }
     };
 
     if (direction != null) {
@@ -186,7 +216,8 @@ function progressControl() {
 }
 
 function openEditWordDialog(word, definition) {
-
+    btnStart.classList.remove('control__main-action--active');
+    stopLearning();
     modalInner.appendChild(editWordDialog);
     modal.style.display = 'block';
     editWordDialog.style.display = 'block'
@@ -206,22 +237,27 @@ function startLearning() {
         currentCard = 0;
         startLearning();
     } else {
-        if (isSpeech) {
-            const word = cards[currentCard - 1].querySelector('.card__item-side-word').innerHTML.trim();
-            speech(word);
+
+        if (isSpeech && currentCard === 1) {
+            var wordEn = cards[currentCard - 1].querySelector('.card__item-side-word').innerHTML.trim() || '';
+            speechWord(wordEn);
         };
+
         actionFlip = setTimeout(function () {
-            addRotateCard(cards[currentCard - 1]);
+            cards[currentCard - 1].classList.add('term__card-item--rotate');
         }, 2000);
+
         actionExchange = setInterval(function () {
             if (currentCard < cards.length) {
-                setTimeout(() => {
-                    if (currentCard !== cards.length) {
-                        addRotateCard(cards[currentCard - 1]);
-                    }
-                }, 2000);
+
                 currentCard += 1;
                 switchCard(currentCard, 'next');
+                actionFlip2 = setTimeout(function () {
+                    if (currentCard !== cards.length) {
+                        cards[currentCard - 1].classList.add('term__card-item--rotate');
+                    }
+                }, 2000);
+
             }
         }, 4000);
     }
@@ -230,9 +266,12 @@ function startLearning() {
 
 function stopLearning() {
     clearTimeout(actionFlip);
+    clearTimeout(actionFlip2);
     clearInterval(actionExchange);
     actionFlip = null;
+    actionFlip2 = null;
     actionExchange = null;
+    isStartLearning = false;
 }
 
 
@@ -241,6 +280,7 @@ function startEvent() {
         if (!btnStart.classList.contains('control__main-action--active')) {
             btnStart.classList.add('control__main-action--active');
             startLearning();
+            isStartLearning = true;
         } else {
             btnStart.classList.remove('control__main-action--active');
             stopLearning();
@@ -254,7 +294,6 @@ function repeatCard() {
     repeatCardBtn.onclick = () => {
         if (!btnStart.classList.contains('control__main-action--active')) {
             currentCard = 1;
-            toolbar.style.display = 'block';
             stopLearning();
             switchCard(currentCard);
         } else {
@@ -268,11 +307,13 @@ function repeatCard() {
 
 function openSettingDialog() {
     const settingBtn = document.getElementById('control__main-action-option');
-
     settingBtn.onclick = () => {
         modalInner.appendChild(settingDialog);
         modal.style.display = 'block';
         settingDialog.style.display = 'block';
+        btnStart.classList.remove('control__main-action--active');
+        stopLearning();
+        btnMix.classList.remove('control__main-action--active');
     }
 }
 
@@ -282,6 +323,7 @@ function closeSettingDialog() {
         modalInner.removeChild(settingDialog);
         modal.style.display = 'none';
         settingDialog.style.display = 'none';
+        switchCard(currentCard);
     }
 }
 
@@ -302,6 +344,144 @@ function closeSpeaker() {
 }
 
 
+function changeAnswerLanguage() {
+    selectChangeAnswerLanguage.onchange = () => {
+        if (selectChangeAnswerLanguage.value === 'en') {
+            answerLanguage = 'en';
+        } else {
+            answerLanguage = 'vi';
+        }
+        cards[currentCard - 1].classList.remove('term__card-item--rotate');
+        setRotateInitialCards();
+    }
+}
+
+function setRotateInitialCards() {
+    var cardWords = document.querySelectorAll('.card__item-word');
+    var cardDefinitions = document.querySelectorAll('.card__item-definition');
+    if (answerLanguage === 'en') {
+        for (let i = 0; i < cardWords.length; i++) {
+            cardWords[i].classList.add('term__card-item--rotate');
+            cardDefinitions[i].classList.remove('term__card-item--rotate');
+        }
+    } else {
+        for (let i = 0; i < cardWords.length; i++) {
+            cardWords[i].classList.remove('term__card-item--rotate');
+            cardDefinitions[i].classList.add('term__card-item--rotate');
+
+        }
+
+    }
+}
+
+function rotateWordToDefinition(cardItem) {
+    if (answerLanguage === 'vi') {
+        addRotateCard(cardItem);
+    } else {
+        removeRotateCard(cardItem);
+    }
+}
+
+function rotateDefinitionToWord(cardItem) {
+    if (answerLanguage === 'vi') {
+        removeRotateCard(cardItem);
+    } else {
+        addRotateCard(cardItem);
+    }
+}
+
+
+function speechWord(wordEn) {
+    if (answerLanguage === 'vi') {
+        speech(wordEn);
+    } else {
+        setTimeout(() => {
+            speech(wordEn);
+        }, 2000);
+    }
+}
+
+
+function mixCardsEvent() {
+    btnMix.onclick = () => {
+        var temListCards;
+        if (isLearnStarCard) {
+            temListCards = document.querySelectorAll('.card__item-tick-star, .card__item-special');
+        } else {
+            temListCards = document.querySelectorAll('.card__item');
+        }
+        btnStart.classList.remove('control__main-action--active');
+        stopLearning();
+        currentCard = 1;
+        if (!btnMix.classList.contains('control__main-action--active')) {
+            btnMix.classList.add('control__main-action--active');
+            randomOrderCards(temListCards);
+            switchCard(currentCard);
+        } else {
+            btnMix.classList.remove('control__main-action--active');
+            cards = temListCards;
+            switchCard(currentCard);
+        }
+    }
+}
+
+function randomOrderCards(listCard) {
+    var temListCardsArray = Array.from(listCard);
+    for (let i = temListCardsArray.length - 2; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        [temListCardsArray[i], temListCardsArray[j]] = [temListCardsArray[j], temListCardsArray[i]];
+    }
+    cards = temListCardsArray;
+    switchCard(currentCard);
+}
+
+function tickStarCard(btnStar, btnStars, cardItem) {
+    if (!btnStar.classList.contains('card__item-control-star-btn--active')) {
+        btnStars.forEach(function (btn) {
+            btn.classList.add('card__item-control-star-btn--active');
+        })
+        cardItem.classList.add('card__item-tick-star');
+    } else {
+        btnStars.forEach(function (btn) {
+            btn.classList.remove('card__item-control-star-btn--active');
+        })
+        cardItem.classList.remove('card__item-tick-star');
+    }
+}
+
+function learnCardStar() {
+    btnLearnCardStar.onclick = () => {
+        isLearnStarCard = true;
+        if (!btnLearnCardStar.classList.contains('setting__dialog-body-btn--active')) {
+            btnLearnCardStar.classList.add('setting__dialog-body-btn--active');
+
+        };
+        if (bntLearnCardAll.classList.contains('setting__dialog-body-btn--active')) {
+            bntLearnCardAll.classList.remove('setting__dialog-body-btn--active');
+        }
+        cards = document.querySelectorAll('.card__item-tick-star, .card__item-special');
+        currentCard = 1;
+        setTotalProgress();
+    }
+}
+
+function learnCardAll() {
+    bntLearnCardAll.onclick = () => {
+        isLearnStarCard = false;
+        if (!bntLearnCardAll.classList.contains('setting__dialog-body-btn--active')) {
+            bntLearnCardAll.classList.add('setting__dialog-body-btn--active');
+        };
+        if (btnLearnCardStar.classList.contains('setting__dialog-body-btn--active')) {
+            btnLearnCardStar.classList.remove('setting__dialog-body-btn--active');
+        }
+        cards = document.querySelectorAll('.card__item');
+        currentCard = 1;
+        setTotalProgress();
+    }
+}
+
+
+
 
 switchCard(currentCard);
 exchangeCard();
@@ -317,3 +497,9 @@ openSettingDialog();
 closeSettingDialog();
 openSpeaker();
 closeSpeaker();
+changeAnswerLanguage();
+setRotateInitialCards();
+mixCardsEvent();
+setTotalProgress();
+learnCardStar();
+learnCardAll();

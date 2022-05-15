@@ -474,8 +474,8 @@
 
         </div>
         <div class="layout__content">
-            <div class="card__items">
-                <div class="card__item">
+            <div class="card__items" id="list__card-items">
+                <div class="card__item card__item-tick-star">
                     <div class="card__item-word card__item-text">
                         <div class="card__item-side card__item-side-word">
                             Hello
@@ -487,7 +487,7 @@
                             <button class="card__item-control-btn card__item-control-speech-btn">
                                 <i class="fas fa-volume-up"></i>
                             </button>
-                            <button class="card__item-control-btn card__item-control-star-btn">
+                            <button class="card__item-control-btn card__item-control-star-btn card__item-control-star-btn--active">
                                 <i class="fas fa-star"></i>
                             </button>
                         </div>
@@ -506,7 +506,7 @@
                             <button class="card__item-control-btn card__item-control-edit-btn">
                                 <i class="fas fa-pencil-alt"></i>
                             </button>
-                            <button class="card__item-control-btn card__item-control-star-btn">
+                            <button class="card__item-control-btn card__item-control-star-btn card__item-control-star-btn--active">
                                 <i class="fas fa-star"></i>
                             </button>
                         </div>
@@ -544,7 +544,7 @@
                     </div>
                     <div class="card__item-definition card__item-text">
                         <div class="card__item-side card__item-side-definition">
-                            Tạm biệt
+                           Tạm biệt
                         </div>
                         <div class="card__item-control">
                             <button class="card__item-control-btn card__item-control-edit-btn">
@@ -562,10 +562,11 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="card__item">
                     <div class="card__item-word card__item-text">
                         <div class="card__item-side card__item-side-word">
-                            Limit
+                            University
                         </div>
                         <div class="card__item-control">
                             <button class="card__item-control-btn card__item-control-edit-btn">
@@ -587,7 +588,7 @@
                     </div>
                     <div class="card__item-definition card__item-text">
                         <div class="card__item-side card__item-side-definition">
-                            Giới hạn
+                           Đại học
                         </div>
                         <div class="card__item-control">
                             <button class="card__item-control-btn card__item-control-edit-btn">
@@ -665,8 +666,8 @@
                             </div>
                             <div class="card__item-special-description">
                                 <h4 class="card__item-special-description-title">Hoàn thành thẻ ghi nhớ</h4>
-                                <span class="card__item-special-description-text"
-                                id="counter__word-learned">2 thuật ngữ</span>
+                                <span class="card__item-special-description-text" id="counter__word-learned">2 thuật
+                                    ngữ</span>
                             </div>
                         </div>
                         <div class="card__item-special-content-item">
@@ -765,9 +766,9 @@
                     </div>
                     <div class="setting__dialog-body-item-content">
                         <div class="setting__dialog-body-group-btn">
-                            <button class="setting__dialog-body-btn-item setting__dialog-body-btn--active">Tất
-                                cả</button>
-                            <button class="setting__dialog-body-btn-item">Có gắn sao</button>
+                            <button class="setting__dialog-body-btn-item
+                             setting__dialog-body-btn--active" id="setting__list-card-all-btn">Tất cả</button>
+                            <button class="setting__dialog-body-btn-item" id="setting__list-card-star-btn">Có gắn sao</button>
                         </div>
                     </div>
                 </div>
@@ -776,7 +777,7 @@
                         TRẢ LỜI BẰNG
                     </div>
                     <div class="setting__dialog-body-item-content">
-                        <select class="setting__dialog-body-select" name="language" id="">
+                        <select class="setting__dialog-body-select" name="language" id="change__answer-language">
                             <option value="vi">Tiếng Việt</option>
                             <option value="en">Tiếng Anh</option>
                         </select>
@@ -794,10 +795,10 @@
                     </div>
                     <div class="setting__dialog-body-item-content">
                         <div class="setting__dialog-body-group-btn">
-                            <button class="setting__dialog-body-btn-item"
-                                id="setting__open-speaker">
+                            <button class="setting__dialog-body-btn-item" id="setting__open-speaker">
                                 Bật</button>
-                            <button class="setting__dialog-body-btn-item setting__dialog-body-btn--active" id="setting__close-speaker">Tắt</button>
+                            <button class="setting__dialog-body-btn-item setting__dialog-body-btn--active"
+                                id="setting__close-speaker">Tắt</button>
                         </div>
                     </div>
                 </div>

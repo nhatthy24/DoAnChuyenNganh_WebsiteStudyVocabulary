@@ -150,9 +150,17 @@ body{
     transform-style: preserve-3d;
 }
 
-.card__item-definition {
-    transform: rotateX(180deg);
+.card__item-tick-star{
+    border: 3px solid var(--yellow-color)
 }
+
+/* .card__item-word{
+    transform: rotateX(180deg);
+} */
+
+/* .card__item-definition {
+    transform: rotateX(180deg);
+} */
 
 .term__card-item--rotate {
     transform: rotateX(180deg);
@@ -216,7 +224,7 @@ body{
     position: relative;
 }
 
-.card__item-control-star-btn:hover::after{
+.card__item-control-star-btn:hover::before{
     content: 'Gắn sao và học riêng thẻ này';
     position: absolute;
     width: 190px;
@@ -225,18 +233,16 @@ body{
     color: var(--white-color);
     font-size: 1.3rem;
     display: flex;
-    right:45px;
+    right:30px;
+    top: 4px;
     align-items: center;
     justify-content: center;
     font-weight: 500;
 }
 
-.card__item-control-star-btn:hover::before{
-    content: '';
-    position: absolute;
-    border: 8px solid;
-    right: 29px;
-    border-color:  transparent transparent transparent  var(--blue-color-dark);
+
+.card__item-control-star-btn--active{
+    color: var(--yellow-color-dark);
 }
 
 .card__item-hint {
