@@ -602,19 +602,19 @@
                     Thuật ngữ trong học phần này (2)
                 </div>
 
-                <div class="term__detail-filter-group-btn">
-                    <button class="term__detail-filter-btn term__detail-filter-btn--active" id="filter-all-card">
+                <div class="term__detail-filter-group-btn" id="term__detail-filter-group-btn">
+                    <button class="term__detail-filter-btn term__detail-filter-btn--active" id="filter-all-card-btn">
                         Tất cả
                     </button>
-                    <button class="term__detail-filter-btn" id="filter-star-card">
+                    <button class="term__detail-filter-btn" id="filter-star-card-btn">
                         Gắn dấu sao (2)
                     </button>
                 </div>
                 <div class="term__detail-header-sort">
-                    <select class="term__detail-header-sort-select">
-                        <option value="">Thứ tự gốc</option>
-                        <option value="">Bảng chử cái</option>
-                        <option value="">Thông số của bạn</option>
+                    <select class="term__detail-header-sort-select" id="term__detail-header-sort-select">
+                        <option value="initial">Thứ tự gốc</option>
+                        <option value="alphabetically">Bảng chử cái</option>
+                        <option value="other">Thông số của bạn</option>
                     </select>
                 </div>
             </div>
@@ -628,7 +628,7 @@
 
             </div>
 
-            <div class="term__detail-list">
+            <div class="term__detail-list" id="term__detail-list">
                 <div class="term__detail-item">
                     <div class="term__detail-item-word">
                         <input type="text" value="Goodbye" class="term__detail-item-input term__detail-item-word-text" readonly>
@@ -637,7 +637,7 @@
                         <input type="text" value="Tạm biệt" class="term__detail-item-input" readonly>
                     </div>
                     <div class="term__detail-item-control">
-                        <button class="term__detail-item-control-btn" onclick="tickStar(this)">
+                        <button class="term__detail-item-control-btn term__detail-star-btn--active" onclick="tickStar(this)">
                             <i class="fas fa-star"></i>
                         </button>
                         <button class="term__detail-item-control-btn" onclick="speechWord(this)">
@@ -654,6 +654,25 @@
                     </div>
                     <div class="term__detail-item-definition">
                         <input type="text" value="Xin chào" class="term__detail-item-input" readonly>
+                    </div>
+                    <div class="term__detail-item-control">
+                        <button class="term__detail-item-control-btn" onclick="tickStar(this)">
+                            <i class="fas fa-star"></i>
+                        </button>
+                        <button class="term__detail-item-control-btn" onclick="speechWord(this)">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        <button class="term__detail-item-control-btn" onclick="editWord(this)">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="term__detail-item">
+                    <div class="term__detail-item-word">
+                        <input type="text" value="Apple" class="term__detail-item-input term__detail-item-word-text" readonly>
+                    </div>
+                    <div class="term__detail-item-definition">
+                        <input type="text" value="Quả táo" class="term__detail-item-input" readonly>
                     </div>
                     <div class="term__detail-item-control">
                         <button class="term__detail-item-control-btn" onclick="tickStar(this)">

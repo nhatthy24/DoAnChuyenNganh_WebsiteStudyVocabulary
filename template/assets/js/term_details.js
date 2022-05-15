@@ -7,9 +7,15 @@ const confirmDeleteDialog = document.getElementById('confirm__delete-term');
 
 let currentSlide = parseInt(currentElement.innerHTML);
 let totalSlide = parseInt(totalElement.innerHTML);
+let isFilterStar = false;
 const slides = document.querySelectorAll('.term__card-item');
 const preBtn = document.querySelector('.card__control-prev-btn');
 const nextBtn = document.querySelector('.card__control-next-btn');
+const btnFilterStar = document.getElementById('filter-star-card-btn');
+const btnFilterAll = document.getElementById('filter-all-card-btn');
+const groupBtnFilter = document.getElementById('term__detail-filter-group-btn');
+const selectSort = document.getElementById('term__detail-header-sort-select');
+var listTermDetail = document.getElementById('term__detail-list');
 
 const modal = document.getElementById("modal");
 const modalInner = document.getElementById("modal__inner");
@@ -118,7 +124,7 @@ function closeShareDialog() {
 function openAddClassFolderDialog() {
     const btnOpen = document.getElementById("add__term-to-folder-class-btn");
     const addClassFolderDialog = document.getElementById("add__term-to-folder-class");
-    
+
     btnOpen.onclick = () => {
         modalInner.appendChild(addClassFolderDialog);
         addClassFolderDialog.style.display = 'block';
@@ -201,18 +207,130 @@ function speechWord(btn) {
 }
 
 
-function tickStar(btn){
-    if(btn.classList.contains('term__detail-item-control-btn--active')){
-        btn.classList.remove('term__detail-item-control-btn--active');
-    }else{
-        btn.classList.add('term__detail-item-control-btn--active');
+function tickStar(btn) {
+    if (btn.classList.contains('term__detail-star-btn--active')) {
+        btn.classList.remove('term__detail-star-btn--active');
+    } else {
+        btn.classList.add('term__detail-star-btn--active');
+    }
+    showFilterBtn();
+}
+
+
+function filterStarCard() {
+    btnFilterStar.onclick = () => {
+        if (!btnFilterStar.classList.contains('term__detail-filter-btn--active')) {
+            btnFilterStar.classList.add('term__detail-filter-btn--active');
+            btnFilterAll.classList.remove('term__detail-filter-btn--active');
+            getListFilterStarCard();
+            isFilterStar = true;
+        }
+
+    }
+}
+
+function filterAllCard() {
+    btnFilterAll.onclick = () => {
+        if (!btnFilterAll.classList.contains('term__detail-filter-btn--active')) {
+            btnFilterAll.classList.add('term__detail-filter-btn--active');
+            btnFilterStar.classList.remove('term__detail-filter-btn--active');
+            getListFilterAllCard();
+            isFilterStar = false;
+        }
+
+    }
+
+}
+
+function getListFilterStarCard() {
+    const listCard = document.querySelectorAll('.term__detail-item');
+    for (let i = 0; i < listCard.length; i++) {
+
+        if (listCard[i].querySelector('.term__detail-item-control-btn').classList.contains('term__detail-star-btn--active')) {
+            listCard[i].style.display = 'flex';
+        } else {
+            listCard[i].style.display = 'none';
+        }
     }
 }
 
 
+function getListFilterAllCard() {
+    const listCard = document.querySelectorAll('.term__detail-item');
+    for (let i = 0; i < listCard.length; i++) {
+        listCard[i].style.display = 'flex';
+    }
+}
 
+function showFilterBtn() {
+    const listCard = document.querySelectorAll('.term__detail-item');
+    let count = 0;
+    for (let i = 0; i < listCard.length; i++) {
+        if (listCard[i].querySelector('.term__detail-item-control-btn').classList.contains('term__detail-star-btn--active')) {
+            count++;
+        }
+    }
+    if (count === 0) {
+        groupBtnFilter.style.display = 'none';
+    } else {
+        groupBtnFilter.style.display = 'flex';
+        btnFilterStar.innerText = `Gắn dấu sao (${count})`;
+    }
+}
 
+function sortCardByAlphabetically() {
+    const listCard = document.querySelectorAll('.term__detail-item');
+    let listCardSort = [];
+    for (let i = 0; i < listCard.length; i++) {
+        listCardSort.push(listCard[i]);
+    }
+    listCardSort.sort((a, b) => {
+        if (a.querySelector('.term__detail-item-word-text').value < b.querySelector('.term__detail-item-word-text').value) {
+            return -1;
+        } else {
+            return 1;
+        }
+    })
 
+    for (let i = 0; i < listCardSort.length; i++) {
+        listCardSort[i].style.order = i;
+    }
+    if (isFilterStar) {
+        getListFilterStarCard();
+    } else {
+        getListFilterAllCard();
+    }
+}
+
+function sortCardInitial() {
+    const listCard = document.querySelectorAll('.term__detail-item');
+    for (let i = 0; i < listCard.length; i++) {
+
+        listCard[i].style.order = i;
+    }
+    if (isFilterStar) {
+        getListFilterStarCard();
+    } else {
+        getListFilterAllCard();
+    }
+}
+
+function sortEvents() {
+    selectSort.onchange = () => {
+        if (selectSort.value === 'alphabetically') {
+            sortCardByAlphabetically();
+        } else if (selectSort.value === 'initial') {
+            sortCardInitial();
+        } else {
+
+        }
+    }
+}
+
+showFilterBtn();
+filterStarCard();
+filterAllCard();
+sortEvents();
 
 
 

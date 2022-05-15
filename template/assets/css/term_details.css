@@ -494,7 +494,10 @@
     margin-bottom: 15px;
 }
 
-.term__detail-list {}
+.term__detail-list {
+    display: flex;
+    flex-direction: column;
+}
 
 .term__detail-item {
     width: 100%;
@@ -552,6 +555,10 @@
 }
 
 .term__detail-item-control-btn--active{
+    color: var(--yellow-color-dark);
+}
+
+.term__detail-star-btn--active{
     color: var(--yellow-color-dark);
 }
 
