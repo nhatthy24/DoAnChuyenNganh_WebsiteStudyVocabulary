@@ -1,0 +1,634 @@
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.container__remember-card {
+    padding: 0 28px;
+    background-color: var(--gray-color);
+    height: calc(100vh - 63px);
+    display: flex;
+}
+
+.layout__controls {
+    width: 195px;
+    position: fixed;
+    bottom: 0;
+    top: 63px;
+    box-shadow: rgb(0 0 0 / 5%) 0px 0px 5px, rgb(0 0 0 / 10%) 0px 0px 6px;
+    ;
+}
+
+
+
+.control__back {
+    padding: 8px 16px;
+}
+
+.control__back-btn {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.control__back-btn i {
+    color: var(--green-color-light);
+}
+
+.control__back-btn-text {
+    margin-left: 10px;
+    font-weight: 500;
+    color: var(--text-color)
+}
+
+.control__main {
+    padding: 16px;
+}
+
+.control__main-title {
+    height: 35px;
+    margin: 24px 0 40px 0;
+}
+
+.control__main-title i {
+    font-size: 1.6rem;
+    color: var(--blue-color-dark);
+    margin-right: 8px;
+}
+
+.control__main-title-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    opacity: 0.8;
+    letter-spacing: 3px;
+}
+
+.control__main-progress {}
+
+.control__main-progress-bar {
+    height: 12px;
+    width: 100%;
+    background-color: var(--blue-color-light);
+}
+
+.control__main-progress-bar-fill {
+    height: 12px;
+    width: 50%;
+    background-color: var(--blue-color-dark);
+}
+
+.control__main-progress-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+.control__main-progress-value {
+    display: flex;
+}
+
+.control__main-actions {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+}
+
+.control__main-action {
+    height: 42px;
+    width: 100%;
+    border: 2px solid var(--border-gray-color);
+    border-radius: 3px;
+    background-color: var(--white-color);
+    margin-top: 16px;
+    color: var(--green-color-light);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.control__main-action:hover{
+    color: var(--yellow-color-dark);
+}
+
+.control__main-action--active{
+    background-color: var(--yellow-color-dark);
+    border: none;
+    color: var(--text-color);
+
+}
+.control__main-action--active:hover{
+    color: var(--text-color);
+}
+
+.control__main-action-text {}
+
+.layout__content {
+    padding: 24px;
+    position: relative;
+    width: calc(100% - 195px);
+    left: 195px;
+}
+
+.card__items {
+    position: relative;
+    width: 100%;
+    height: 420px;
+}
+
+.card__item {
+    background-color: var(--white-color);
+    width: 100%;
+    height: 420px;
+    position: absolute;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card__item-tick-star{
+    border: 3px solid var(--yellow-color)
+}
+
+/* .card__item-word{
+    transform: rotateX(180deg);
+} */
+
+/* .card__item-definition {
+    transform: rotateX(180deg);
+} */
+
+.term__card-item--rotate {
+    transform: rotateX(180deg);
+}
+
+.card__item-text {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.card__item-text:hover {
+    cursor: pointer;
+}
+
+.card__item-side {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 60px 32px 108px 32px;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    align-items: center;
+}
+
+.card__item-control {
+    padding: 20px;
+    position: absolute;
+    right: 0;
+}
+
+.card__item-control-btn {
+    height: 36px;
+    width: 36px;
+    padding: 9px;
+    font-size: 1.5rem;
+    border: none;
+    position: relative;
+    background-color: transparent;
+}
+
+.card__item-control-btn::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    top: 2px;
+    right: 3px;
+}
+
+.card__item-control-btn:hover {
+    color: var(--yellow-color-dark);
+}
+
+.card__item-control-star-btn{
+    position: relative;
+}
+
+.card__item-control-star-btn:hover::before{
+    content: 'Gắn sao và học riêng thẻ này';
+    position: absolute;
+    width: 190px;
+    height: 30px;
+    background-color: var(--blue-color-dark);
+    color: var(--white-color);
+    font-size: 1.3rem;
+    display: flex;
+    right:30px;
+    top: 4px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+
+.card__item-control-star-btn--active{
+    color: var(--yellow-color-dark);
+}
+
+.card__item-hint {
+    height: 48px;
+    background-color: var(--black-background);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__item-hint {
+    color: var(--yellow-color-dark);
+}
+
+.card__item-hint-text {
+    color: var(--white-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 1.1px;
+    margin-right: 4px;
+}
+
+.card__item-special{
+    background-color:transparent;
+    height:515px;
+    padding: 48px 24px;    
+}
+
+.card__item-special-title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card__item-special-title-text{
+    font-size: 2.3rem;
+}
+
+.card__item-special-content{
+    background-color: var(--white-color);
+    border-radius: 5px;
+    box-shadow: 0px 0px 14px -6px #b1b1b1;
+    padding: 24px;
+    width: 586px;
+    margin: 0 auto;
+}
+
+.card__item-special-content-item{
+    display: flex;
+    height: 44px;
+    margin-top: 40px;
+}
+
+.card__item-special-icon{
+
+}
+
+.card__item-special-icon i{
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+.card__item-special-icon--green{
+    color: var(--green-color);
+}
+
+.card__item-special-icon--blue{ 
+    color: var(--blue-color-dark);
+}
+
+.card__item-special-description{
+}
+
+.card__item-special-description-title{
+    margin: 0;
+    font-size: 1.6rem;
+    margin-bottom: 7px;
+
+}
+
+.card__item-special-description-text{
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.card__item-special-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.card__item-special-btn-item{
+    margin: 20px 10px 0 10px;
+    height: 34px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0 15px;
+    border-radius: 3px;
+}
+
+.card__item-special-btn a{
+    color:var(--white-color);
+    background-color: var(--blue-color)
+}
+
+.card__item-special-btn button{
+    background-color: transparent;
+    border: 1px solid var(--border-gray-color);
+}
+
+
+.card__toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.card__toolbar-navigation {
+    width: 253px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__toolbar-btn {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+    color: var(--green-color-light);
+    background-color: var(--white-color);
+    border: none;
+    position: relative;
+}
+
+.card__toolbar-btn.card__toolbar-btn-disabled{
+    color: var(--gray-color-light);
+    cursor: default;
+}
+
+.card__toolbar-btn:not(.card__toolbar-btn-disabled):hover {
+    background-color: var(--yellow-color-dark);
+    color: var(--text-color);
+}
+
+.card__toolbar-reverse-btn:hover::before {
+    content: "";
+    border: 8px solid;
+    top: 32px;
+    right: 10px;
+    border-color: transparent transparent var(--blue-color-dark) transparent;
+    position: absolute;
+}
+
+.card__toolbar-reverse-btn:hover::after {
+    content: "Đảo mặt trước và sau của thẻ";
+    height: 30px;
+    width: 190px;
+    position: absolute;
+    right: 0;
+    background-color: var(--blue-color-dark);
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 550;
+    top: 47px;
+
+}
+
+.edit__word-dialog{
+    position: relative;
+    width: 600px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    padding: 32px;
+}
+
+
+.edit__word-dialog-close-btn{
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+    font-weight: 300;
+    color: var(--gray-color-light);
+}
+
+.edit__word-dialog-close-btn:hover{
+    color: var(--yellow-color-dark);
+}
+
+.edit__word-dialog-content{
+
+}
+
+.edit__word-dialog-header{
+   
+}
+
+.edit__word-dialog-title{
+    font-size: 3rem;
+    color: var(--text-color)
+}
+
+.edit__word-dialog-body{
+    margin-top: 50px;
+}
+
+.edit__word-dialog-body-item{
+    margin-bottom: 40px;
+}
+
+.edit__word-dialog-item-input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--text-color);
+    padding: 5px 0;
+    font-size: 1.7rem;
+    outline: none;
+}
+
+.edit__word-dialog-item-input:focus{
+    border-bottom: 4px solid var(--yellow-color-dark);
+}
+
+
+.edit__word-dialog-footer{
+    display: flex;
+    justify-content:flex-end;
+}
+
+.edit__word-dialog-footer button{
+    height: 42px;
+}
+
+.edit__word-dialog-exit-btn{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--green-color-light);
+    background-color: transparent;
+    border: none;
+}
+
+.edit__word-dialog-exit-btn:hover{
+    color: var(--yellow-color-dark);
+}
+
+.edit__word-dialog-save-btn{
+    width: 110px;
+    border: none;
+    background-color: var(--green-color-light);
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 3px;
+    margin-left: 30px;
+}
+
+.edit__word-dialog-save-btn:hover{
+    background-color: var(--green-color);
+}
+
+.setting__learning-dialog{
+    width: 600px;
+}
+
+.dialog__header{
+    height: 102px;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue-color-dark);
+    color: var(--white-color);
+}
+
+.dialog__header-title{
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--white-color);
+}
+
+.dialog__header-close{
+    border-radius: 50%;
+    border: 1px solid var(--white-color);
+    color: var(--white-color);
+    width: 38px;
+    height: 38px;
+    background-color: transparent;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.setting__dialog-body{
+    padding: 32px;
+    background-color: var(--white-color);
+}
+
+.setting__dialog-body-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.setting__dialog-body-item{
+    width: 45%;
+}
+
+.setting__dialog-body-item-title{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    letter-spacing: 1.2px;
+    margin-bottom: 13px;
+}
+
+.setting__dialog-body-item-content{
+
+}
+
+.setting__dialog-body-group-btn{
+    display: flex;
+    height: 42px;
+    border: 2px solid var(--gray-color-light);
+    border-radius: 3px;
+    width:fit-content;
+}
+
+.setting__dialog-body-btn-item{
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:var(--green-color-light);
+    padding: 0 15px;
+}
+
+.setting__dialog-body-btn--active{
+    background-color: var(--yellow-color-dark);
+    color: var(--text-color);
+}
+
+.setting__dialog-body-btn-item:not(.setting__dialog-body-btn--active):hover{
+    color: var(--yellow-color-dark);
+}
+
+.setting__dialog-body-select{
+    height: 42px;
+    border: 2px solid var(--gray-color-light);
+    border-radius: 3px;
+    padding: 0 10px;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:var(--green-color-light);
+}
+
+
+.setting__dialog-body-select option{
+    color: var(--text-color);
+    font-weight: 500;
+}
+.setting__dialog-body-select:hover{
+    cursor: pointer;
+    color: var(--yellow-color-dark);
+}
+
+.setting__dialog-body-row-separator{
+    height: 1px;
+    background-color: var(--border-gray-color);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: -32px;
+    margin-right: -32px;
+}
+
+
+
+
+
+

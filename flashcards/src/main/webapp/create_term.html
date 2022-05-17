@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tạo học phần</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/create_term.css">
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/create_term.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese"
         rel="stylesheet">
 
@@ -445,90 +445,52 @@
                 </div>
                 <div class="create__term-permission-right">
                     <div class="create__term-permission-view">
-                        <p class="create__term-permission-title">Hiển thị với mọi người</p>
-                        <button class="create__term-permission-btn">Thay đổi</button>
+                        <p class="create__term-permission-title"  id="term__permission-view-title">Hiển thị với mọi người</p>
+                        <button class="create__term-permission-btn" id="term__permission-btn-view">Thay đổi</button>
                     </div>
                     <div class="create__term-permission-edit">
-                        <p class="create__term-permission-title">Chỉ tôi có quyền sửa đổi</p>
-                        <button class="create__term-permission-btn">Thay đổi</button>
+                        <p class="create__term-permission-title" id="term__permission-edit-title">Chỉ tôi có quyền sửa đổi</p>
+                        <button class="create__term-permission-btn" id="term__permission-btn-edit">Thay đổi</button>
                     </div>
                     <button class="create__term-permission-wrap create__term-permission-btn">
                         <i class="fas fa-exchange-alt"></i>
                     </button>
 
-                    <div class="term__permission-dialog" id="term__permission-dialog" style="display: none">
-                        <div class="permission__dialog-header">
-                            <h3 class="permission__dialog-title">
-                                Tuỳ chọn
-                            </h3>
-                            <button class="permission__dialog-close-btn">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                        <div class="permission__dialog-body">
-                            <div class="permission__dialog-row">
-                                <div class="permission__dialog-item">
-                                    <p class="permission__dialog-item-title">
-                                        HIỂN THỊ VỚI
-                                    </p>
-                                    <select class="permission__dialog-options">
-                                        <option value="0">Mọi người</option>
-                                        <option value="1">Một số lớp học</option>
-                                        <option value="2">Người có mật khẩu</option>
-                                        <option value="3">Chỉ tôi</option>
-                                    </select>
-                                    <p class="permission__dialog-item-description">
-                                        Mọi người dùng Quizlet có thể sử dụng học phần này
-                                    </p>
-                                    
-                                </div>
-                                <div class="permission__dialog-item">
-                                    <p class="permission__dialog-item-title">
-                                          AI CÓ THỂ SỬA
-                                    </p>
-                                    <select class="permission__dialog-options">
-                                        <option value="0">Mọi người</option>
-                                        <option value="1">Một số lớp học</option>
-                                        <option value="2">Người có mật khẩu</option>
-                                        <option value="3">Chỉ tôi</option>
-                                    </select>
-
-                                    <p class="permission__dialog-item-description">
-                                        Mọi người dùng Quizlet có thể sử dụng học phần này
-                                    </p>
-                                </div>
-                            </div>
-
-                            <button class="permission__dialog-save-btn">Lưu</button>
-                       
-                        </div>
-                    </div>
 
                 </div>
             </div>
+
             <div class="create__term-upload">
-                <button class="create__term-upload-btn">
-                    <h4 class="create__term-upload-title">Thêm hồ sơ và gắn nhãn</h4>
-                    <p class="create__term-upload-descr">
-                        Kéo và thả ảnh bất kỳ hoặc
-                        <span>chọn một hình ảnh</span>
-                    </p>
-                </button>
+                <form>
+                    <input type="file" name="file" class="create__term-upload-input" id="chossen-image">
+                    <label for="chossen-image">
+                        <div class="create__term-upload-btn">
+                            <h4 class="create__term-upload-title">Thêm hồ sơ và gắn nhãn</h4>
+                            <p class="create__term-upload-descr">
+                                Kéo và thả ảnh bất kỳ hoặc
+                                <span>chọn một hình ảnh</span>
+                            </p>
+                        </div>
+                    </label>
+                </form>
             </div>
 
 
             <div class="create__term-definition">
-                <div class="create__term-tag-list">
+                <div class="create__term-tag-list" id="create__term-tag-list">
                     <div class="tag__item">
                         <div class="tag__item-header">
                             <div class="tab__item-counter">
-                                <p class="tab__count">1</p>
+                                <p class="tab__count">
+                                    1
+                                </p>
                             </div>
                             <div class="tab__item-toolbar">
                                 <button class="tab__item-toolbar-btn">
                                     <i class="fas fa-grip-lines"></i>
                                 </button>
-                                <button class="tab__item-toolbar-btn">
+                                <button class="tab__item-toolbar-btn tab__item-toolbar-btn-delete"
+                                    onclick="deleteTag(this)">
                                     <i class="fas fa-trash-alt"></i>
                                 </button>
                             </div>
@@ -549,10 +511,16 @@
                                         <button class="tab__language-side">TIẾNG VIỆT</button>
                                     </div>
                                 </div>
-                                <div class="tab__side-img">
-                                    <i class="far fa-image"></i>
-                                    <p class="tab__side-img-text">HÌNH ẢNH</p>
-                                </div>
+
+                                <label>
+                                    <input type="file" class="tab__side-img-file">
+                                    <div class="tab__side-img">
+                                        <i class="far fa-image"></i>
+                                        <p class="tab__side-img-text">HÌNH ẢNH</p>
+                                    </div>
+                                </label>
+
+
                             </div>
                         </div>
                     </div>
@@ -565,7 +533,8 @@
                                 <button class="tab__item-toolbar-btn">
                                     <i class="fas fa-grip-lines"></i>
                                 </button>
-                                <button class="tab__item-toolbar-btn">
+                                <button class="tab__item-toolbar-btn tab__item-toolbar-btn-delete"
+                                    onclick="deleteTag(this)">
                                     <i class="fas fa-trash-alt"></i>
                                 </button>
                             </div>
@@ -586,17 +555,21 @@
                                         <button class="tab__language-side">TIẾNG VIỆT</button>
                                     </div>
                                 </div>
-                                <div class="tab__side-img">
-                                    <i class="far fa-image"></i>
-                                    <p class="tab__side-img-text">HÌNH ẢNH</p>
-                                </div>
+
+                                <label>
+                                    <input type="file" class="tab__side-img-file">
+                                    <div class="tab__side-img">
+                                        <i class="far fa-image"></i>
+                                        <p class="tab__side-img-text">HÌNH ẢNH</p>
+                                    </div>
+                                </label>
+
                             </div>
-                            <span class="TermContent-counter"></span>
                         </div>
                     </div>
                 </div>
                 <div class="create__term-add-tag">
-                    <button class="add__tab-btn">
+                    <button class="add__tab-btn" id="add__tab-btn">
                         <span>+ THÊM THẺ</span>
                     </button>
                 </div>
@@ -610,21 +583,120 @@
 
     </div>
 
-    <div class="modal" id="modal" style="display: none">
+    <div class="modal" id="modal__permission" style="display: none">
         <div class="modal__overlay">
 
         </div>
-        <div class="modal__body">
-            <div class="modal__inner" id=modal__inner>
 
+        <div class="modal__body">
+            <div class="modal__inner" id="modal__inner">
+                <div class="term__permission-dialog">
+                    <div class="permission__dialog-header">
+                        <h3 class="permission__dialog-title">
+                            Tuỳ chọn
+                        </h3>
+                        <button class="permission__dialog-close-btn" id="permission__dialog-close-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="permission__dialog-body">
+                        <div class="permission__dialog-row">
+                            <div class="permission__dialog-item">
+                                <p class="permission__dialog-item-title">
+                                    HIỂN THỊ VỚI
+                                </p>
+                                <select class="permission__dialog-options" id="permission__dialog-view"
+                                    onchange="changePermissionView()">
+                                    <option value="0">Mọi người</option>
+                                    <option value="1">Một số lớp học</option>
+                                    <option value="2">Người có mật khẩu</option>
+                                    <option value="3">Chỉ tôi</option>
+                                </select>
+
+                                <div class="permission__dialog-view-details">
+                                    <div class="permission__dialog-view-details-item">
+                                        <p class="permission__dialog-item-description"
+                                            id="permission__dialog-item-view-description">
+                                            Mọi người dùng Quizlet có thể sử dụng học phần này
+                                        </p>
+
+                                        <div class="permission__dialog-view" id="permission__dialog-view-class">
+                                            <div class="permission__dialog-view-item">
+                                                <label class="permission__dialog-label-class">
+                                                    <input type="checkbox" name="class-permission" class="permission__dialog-view-class-input" value="1">
+                                                    <span>DH18DTB</span>
+                                                </label>
+                                                <label class="permission__dialog-label-class">
+                                                    <input type="checkbox" name="class-permission" class="permission__dialog-view-class-input" value="2">
+                                                    <span>DH18DTA</span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="permission__dialog-view" id="permission__dialog-view-password">
+                                            <div class="permission__dialog-view-item">
+                                                <input type="password" placeholder="Tạo mật khẩu"
+                                                 id="permission__password-view">
+                                                <label class="permission__dialog-label-password">MẬT KHẨU</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="permission__dialog-item">
+                                <p class="permission__dialog-item-title">
+                                    AI CÓ THỂ SỬA
+                                </p>
+                                <select class="permission__dialog-options"
+                                 id="permission__dialog-edit" onchange="changePermissionEdit()">
+                                    <option value="1">Một số lớp học</option>
+                                    <option value="2">Người có mật khẩu</option>
+                                    <option value="3">Chỉ tôi</option>
+                                </select>
+
+                                <div class="permission__dialog-view-details">
+                                    <div class="permission__dialog-view-details-item">
+                                        <p class="permission__dialog-item-description"
+                                            id="permission__dialog-item-edit-description">
+                                            Chỉ có bạn mới chỉnh sửa được học phần này
+                                        </p>
+
+                                        <div class="permission__dialog-view" id="permission__dialog-edit-class">
+                                            <div class="permission__dialog-view-item">
+                                                <label class="permission__dialog-label-class">
+                                                    <input type="checkbox" name="class"  class="permission__dialog-edit-class-input" value="1">
+                                                    <span>DH18DTB</span>
+                                                </label>
+                                                <label class="permission__dialog-label-class">
+                                                    <input type="checkbox" name="class" class="permission__dialog-edit-class-input" value="2">
+                                                    <span>DH18DTA</span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="permission__dialog-view" id="permission__dialog-edit-password">
+                                            <div class="permission__dialog-view-item">
+                                                <input type="password" placeholder="Tạo mật khẩu" id="permission__password-edit">
+                                                <label class="permission__dialog-label-password">MẬT KHẨU</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="permission__dialog-save-btn" id="permission__dialog-submit-btn">Lưu</button>
+
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
 
 
-    <script src="./js/header.js"></script>
-    <script src="./js/create_term.js"></script>
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/create_term.js"></script>
 
 </body>
 
