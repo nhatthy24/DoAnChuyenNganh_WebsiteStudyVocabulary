@@ -594,7 +594,6 @@
     background-color: var(--white-color);
     height: 468px;
     border-radius: 8px;
-    display: none;
     text-align: center;
     padding-top: 42px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
@@ -673,7 +672,15 @@
 }
 
 
-
+.confetti{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    pointer-events: none;
+    display: block;
+}
 
 
 

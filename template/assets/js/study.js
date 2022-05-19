@@ -133,7 +133,8 @@ function switchItem() {
         setMessageCorrect('Chọn định nghĩa đúng');
         setMultipleChoiceAnswer();
         answerEvents();
-        writeAnswerEvents();
+        listenEventWriteAnswer();
+        skipWriteAnswerEvents();
         if (isSpeech && isViLanguageAnswer) {
             setTimeout(() => {
                 speech(getCurrentWord());
@@ -146,6 +147,8 @@ function switchItem() {
             footerControl.style.display = 'flex';
         } else {
             itemChampion.style.display = 'block';
+            initConfetti();
+            render();
         }
     }
 }
@@ -187,42 +190,26 @@ function answerEvents() {
     }
 }
 
-
-function writeAnswerEvents() {
+function listenEventWriteAnswer() {
     const btnEnter = listItems[currentItem].querySelector('.answer__write-btn--enter');
-    const btnCancel = listItems[currentItem].querySelector('.answer__write-btn--cancel');
-    let inputAnswer = listItems[currentItem].querySelector('.answer__write-input');
-    let currentDefinition = getCurrentAnswer();
-    btnEnter.onclick = () => {
-        let valueInput = inputAnswer.value.trim();
-        hiddenEnterInputArea(listItems[currentItem]);
-        if (valueInput.length > 0) {
-            if (isEqualString(valueInput, currentDefinition)) {
-                showBlockCorrectWriteAnswer(listItems[currentItem], getRandomElementArray(msCorrect), valueInput);
-                inputAnswer.value = '';
-                currentItem++;
-                setTimeout(() => {
-                    setProgressBar(currentItem, listItems.length);
-                    switchItem();
-                }, 1500);
-            } else {
-                inputAnswer.value = '';
-                showBlockIncorrectWriteAnswer(listItems[currentItem], getRandomElementArray(msIncorrect), valueInput);
-                setTimeout(() => {
-                    showBlockCorrectWriteAnswer(listItems[currentItem], 'Đáp án đúng', currentDefinition)
-                }, 300);
-                footerControl.style.display = 'flex';
-                isSkipCard = false;
+
+    if (!isMultipleChoiceAnswer) {
+        document.onkeyup = (e) => {
+            if (e.keyCode == 13) {
+                btnEnter.onclick();
             }
-        } else {
-            inputAnswer.value = '';
-            showBlockSkipWriteAnswer(listItems[currentItem]);
-            showBlockCorrectWriteAnswer(listItems[currentItem], 'Đáp án đúng', currentDefinition);
-            footerControl.style.display = 'flex';
-            isSkipCard = true;
         }
     }
 
+    btnEnter.onclick = () => {
+        writeAnswerEvents();
+    }
+}
+
+function skipWriteAnswerEvents() {
+    const btnCancel = listItems[currentItem].querySelector('.answer__write-btn--cancel');
+    let inputAnswer = listItems[currentItem].querySelector('.answer__write-input');
+    let currentDefinition = getCurrentAnswer();
     btnCancel.onclick = () => {
         inputAnswer.value = '';
         hiddenEnterInputArea(listItems[currentItem]);
@@ -231,8 +218,45 @@ function writeAnswerEvents() {
         footerControl.style.display = 'flex';
         isSkipCard = true;
     }
-
+    showWriteAnswer();
 }
+
+
+function writeAnswerEvents() {
+
+    let inputAnswer = listItems[currentItem].querySelector('.answer__write-input');
+    let currentDefinition = getCurrentAnswer();
+
+    let valueInput = inputAnswer.value.trim();
+    hiddenEnterInputArea(listItems[currentItem]);
+    if (valueInput.length > 0) {
+        if (isEqualString(valueInput, currentDefinition)) {
+            showBlockCorrectWriteAnswer(listItems[currentItem], getRandomElementArray(msCorrect), valueInput);
+            inputAnswer.value = '';
+            currentItem++;
+            setTimeout(() => {
+                setProgressBar(currentItem, listItems.length);
+                switchItem();
+            }, 2000);
+        } else {
+            inputAnswer.value = '';
+            showBlockIncorrectWriteAnswer(listItems[currentItem], getRandomElementArray(msIncorrect), valueInput);
+            setTimeout(() => {
+                showBlockCorrectWriteAnswer(listItems[currentItem], 'Đáp án đúng', currentDefinition)
+            }, 300);
+            footerControl.style.display = 'flex';
+            isSkipCard = false;
+        }
+    } else {
+        inputAnswer.value = '';
+        showBlockSkipWriteAnswer(listItems[currentItem]);
+        showBlockCorrectWriteAnswer(listItems[currentItem], 'Đáp án đúng', currentDefinition);
+        footerControl.style.display = 'flex';
+        isSkipCard = true;
+    }
+}
+
+
 
 function showBlockCorrectWriteAnswer(element, title, rightValue) {
     let titleE = element.querySelector('.answer__write-title-correct');
@@ -351,13 +375,13 @@ function continueLearning() {
                 resultMultipleChoice.style.display = 'none';
             }
         } else {
-            showWriteAnswer();
             if (isSkipCard) {
                 currentItem++;
                 setProgressBar(currentItem, listItems.length);
             } else {
                 moveElementToEndArray(currentItem, listItems);
             }
+            showWriteAnswer();
         }
         switchItem();
     }
@@ -586,7 +610,8 @@ getAllListAnswer();
 switchItem();
 answerEvents();
 continueLearning();
-writeAnswerEvents();
+listenEventWriteAnswer()
+skipWriteAnswerEvents();
 learnAgain();
 openOptionDialog();
 closeOptionDialog();
