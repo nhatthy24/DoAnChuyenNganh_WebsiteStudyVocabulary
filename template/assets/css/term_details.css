@@ -437,7 +437,7 @@
     background-color: var(--white-color);
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--green-color-light)
+    color: var(--green-color)
 }
 
 .term__detail-filter-btn:not(.term__detail-filter-btn--active):hover{
@@ -760,7 +760,7 @@ width:73%;
 }
 
 .share__dialog-content-twitter-icon{
-    color: var(--green-color-light);
+    color: var(--green-color);
     font-size: 3rem;
 
 }
@@ -793,7 +793,7 @@ width:73%;
     font-size: 1.4rem;
     font-weight: 500;
     padding: 0 20px;
-    color: var(--green-color-light)
+    color: var(--green-color)
 }
 
 .add__term-switch-btn-item:hover
@@ -818,7 +818,7 @@ width:73%;
 .add__term-new-btn-text{
     font-size: 1.5rem;
     font-weight: 500;
-    border-bottom: 4px solid var(--green-color-light);
+    border-bottom: 4px solid var(--green-color);
     padding: 8px 3px;
 }
 

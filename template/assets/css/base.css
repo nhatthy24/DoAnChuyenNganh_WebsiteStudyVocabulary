@@ -12,8 +12,9 @@
     --text-gray-color-dark: #586380;
     --gray-color-light: #D9DDE8;
     --border-gray-color: #e0e1e2;
-    --green-color-light: #6cd8e6;
-    --green-color: #52A8A7;
+    --green-color: #6cd8e6;
+    --green-color-dark: #52A8A7;
+    --green-color-light: #c1eaf0;
     --green-background-color: #f2fbf6;
     --yellow-color: rgb(247,220,97);
     --yellow-color-dark: #f1c606;
@@ -21,6 +22,8 @@
     --orange-color: #EB8724;
     --red-color-light: #ea7058;
     --red-color: #b82322;
+    --pink-color-light: #F5CECA;
+    
 }
 
 *{

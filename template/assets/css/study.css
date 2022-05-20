@@ -258,7 +258,7 @@
 }
 
 .study__item-answer-title-text--correct {
-    color: var(--green-color-light);
+    color: var(--green-color);
 }
 
 .study__item-answer-content {
@@ -291,7 +291,7 @@
 }
 
 .study__item-answer-content-btn--correctly {
-    border: 2px solid var(--green-color-light);
+    border: 2px solid var(--green-color);
     background-color: var(--green-background-color);
 }
 
@@ -302,7 +302,7 @@
 
 .study__item-answer-content-btn--correctly>.study__item-answer-content-btn-index {
     background-color: transparent;
-    color: var(--green-color);
+    color: var(--green-color-dark);
     font-size: 2.5rem;
 }
 
@@ -423,7 +423,7 @@
 }
 
 .answer__write-title-correct {
-    color: var(--green-color-light);
+    color: var(--green-color);
 }
 
 .answer__write-block {
@@ -440,7 +440,7 @@
 }
 
 .answer__write-block-correct {
-    border-color: var(--green-color-light);
+    border-color: var(--green-color);
     background-color: var(--green-background-color);
 }
 
@@ -459,7 +459,7 @@
 }
 
 .answer__write-correct-answer-icon--correct {
-    color: var(--green-color-light);
+    color: var(--green-color);
 }
 
 .answer__write-correct-answer-icon--incorrect {
@@ -507,7 +507,7 @@
 .item__successful-header-progress-bar {
     height: 12px;
     width: 100%;
-    background-color: var(--green-color-light);
+    background-color: var(--green-color);
     border-radius: 20px;
     margin-top: 15px;
 }
@@ -807,7 +807,7 @@
 .modal__body-content-item-btn {
     border: none;
     background-color:transparent;
-    color: var(--green-color);
+    color: var(--green-color-dark);
     font-size: 1.5rem;
     font-weight: 500;
     padding: 0 15px;
