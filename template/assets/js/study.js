@@ -127,6 +127,7 @@ function switchItem() {
             listItems[i].classList.remove('study__body-list-item--show');
         }
     }
+
     if (currentItem < listItems.length) {
         listItems[currentItem].classList.remove('study__body-list-item--hidden');
         listItems[currentItem].classList.add('study__body-list-item--show');
@@ -140,6 +141,7 @@ function switchItem() {
                 speech(getCurrentWord());
             }, 200)
         }
+
     } else {
         if (isMultipleChoiceAnswer) {
             setResultMultipleChoice();
@@ -156,6 +158,21 @@ function switchItem() {
 
 function answerEvents() {
     let listBtnAnswer = listItems[currentItem].querySelectorAll('.study__item-answer-content-btn');
+    document.onkeyup = (e) => {
+        if (e.keyCode === 49) {
+            listBtnAnswer[0].onclick();
+        }
+        if (e.keyCode === 50) {
+            listBtnAnswer[1].onclick();
+        }
+        if (e.keyCode === 51) {
+            listBtnAnswer[2].onclick();
+        }
+        if (e.keyCode === 52) {
+            listBtnAnswer[3].onclick();
+        }
+        // console.log(e.keyCode);
+    }
     for (let i = 0; i < listBtnAnswer.length; i++) {
         listBtnAnswer[i].onclick = () => {
             if (listBtnAnswer[i].querySelector('.study__item-answer-content-btn-text').innerHTML.trim() == getCurrentAnswer()) {
@@ -170,7 +187,7 @@ function answerEvents() {
                 setTimeout(() => {
                     setProgressBar(currentItem, listItems.length);
                     switchItem();
-                }, 1000);
+                }, 2000);
             } else {
                 setBtnIncorrect(listBtnAnswer[i]);
                 setMessageIncorrect(null);
@@ -218,7 +235,7 @@ function skipWriteAnswerEvents() {
         footerControl.style.display = 'flex';
         isSkipCard = true;
     }
-    showWriteAnswer();
+    // showWriteAnswer();
 }
 
 
@@ -368,7 +385,9 @@ function continueLearning() {
             if (currentItem < listItems.length) {
                 setMessageIncorrect('Chọn định nghĩa đúng');
                 moveElementToEndArray(currentItem, listItems);
+
             } else {
+                assignItem();
                 showWriteAnswer();
                 currentItem = 0;
                 setProgressBar(currentItem, listItems.length);
@@ -493,6 +512,7 @@ function learnAgain() {
         currentItem = 0;
         setProgressBar(currentItem, listItems.length);
         isMultipleChoiceAnswer = true;
+        assignItem();
         showMultipleChoice();
         setMultipleChoiceAnswer();
         switchItem();
@@ -612,6 +632,7 @@ answerEvents();
 continueLearning();
 listenEventWriteAnswer()
 skipWriteAnswerEvents();
+showMultipleChoice();
 learnAgain();
 openOptionDialog();
 closeOptionDialog();
