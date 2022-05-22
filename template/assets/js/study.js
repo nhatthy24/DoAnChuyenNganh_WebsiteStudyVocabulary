@@ -18,6 +18,8 @@ const btnAnswerLangVi = document.getElementById('language__answer-vi');
 const btnAnswerLangEn = document.getElementById('language__answer-en');
 const btnOpenSpeak = document.getElementById('open__speech-word');
 const btnCloseSpeak = document.getElementById('close__speech-word');
+const headerMenu = document.getElementById('study__header-list-items');
+const btnHeaderMenu = document.getElementById('study__header-menu-btn');
 
 let isMultipleChoiceAnswer = true;
 let isSkipCard = false;
@@ -624,6 +626,15 @@ function setupForEnAnswer() {
 }
 
 
+function toggleHeaderMenu(){
+    
+    console.log('hhello')
+    btnHeaderMenu.onclick = () => {
+        headerMenu.classList.toggle('study__header-list-items--active');
+    }
+}
+
+
 
 assignItem();
 getAllListAnswer();
@@ -643,3 +654,4 @@ closeSpeak();
 speakEventClick();
 changeViLanguage();
 changeEnLanguage();
+toggleHeaderMenu();

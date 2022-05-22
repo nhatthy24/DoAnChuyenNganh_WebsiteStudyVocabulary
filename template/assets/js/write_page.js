@@ -13,7 +13,15 @@ var btnContinueIncorrect = document.getElementById('write__card-item-incorrect-c
 var blockResult = document.getElementById('write__card-item-result');
 var bntReStart = document.getElementById('write__card-result-restart-btn');
 var listItems = document.querySelectorAll('.write__card-item');
-
+var modal = document.getElementById('modal');
+var btnOpenDialog = document.getElementById('control__main-action-option');
+var btnCloseDialog = document.getElementById('modal__header-close-btn');
+const btnFilterAll = document.getElementById('filter__learn-all');
+const btnFilterStar = document.getElementById('filter__learn-star');
+const btnAnswerLangVi = document.getElementById('language__answer-vi');
+const btnAnswerLangEn = document.getElementById('language__answer-en');
+const btnOpenSpeak = document.getElementById('open__speech-word');
+const btnCloseSpeak = document.getElementById('close__speech-word');
 
 let currentItem = 0;
 let incorrectAnswerCount = 0;
@@ -49,7 +57,7 @@ function checkAnswer() {
                 continueWriteIncorrect();
             }
         } else {
-            inputAnswer.value = '';
+            inputAnswer.value = "";
             inputAnswer.focus();
             displayFeaturesWhenUnknown(listItems[currentItem]);
             listIncorrectAnswer.push(currentItem);
@@ -63,7 +71,7 @@ function unknownEvent() {
     let inputAnswer = listItems[currentItem].querySelector('.write__card-item-answer-input');
     let btnUnknown = listItems[currentItem].querySelector('.write__card-item-unknown-btn');
     btnUnknown.onclick = () => {
-        inputAnswer.value = '';
+        inputAnswer.value = "";
         inputAnswer.focus();
         displayFeaturesWhenUnknown(listItems[currentItem]);
         listIncorrectAnswer.push(currentItem);
@@ -80,7 +88,7 @@ function checkWriteRepeat() {
                 inputAnswer.disabled = true;
                 setTimeout(() => {
                     inputAnswer.disabled = false;
-                    inputAnswer.value = '';
+                    inputAnswer.value = "";
                     incorrectAnswerCount++;
                     setProgressBarIncorrect(incorrectAnswerCount, listItems.length);
                     setProgressBarRest(listItems.length - correctAnswerCount - incorrectAnswerCount, listItems.length);
@@ -90,6 +98,28 @@ function checkWriteRepeat() {
             }
         }
     }
+}
+
+
+function switchItem() {
+    for (let i = 0; i < listItems.length; i++) {
+        listItems[i].style.display = 'none';
+        hiddenFeaturesWhenUnknown(listItems[i]);
+    }
+
+    if (currentItem < listItems.length) {
+        listItems[currentItem].style.display = 'block';
+        let inputAnswer = listItems[currentItem].querySelector('.write__card-item-answer-input');
+        inputAnswer.value = "";
+        inputAnswer.focus();
+        checkAnswer();
+        blockIncorrectAnswer.style.display = 'none';
+    } else {
+        blockIncorrectAnswer.style.display = 'none';
+        setBlockResult();
+    }
+    isUnknown = false;
+    unknownEvent();
 }
 
 
@@ -120,27 +150,6 @@ function getCurrentDefinition() {
     return listItems[currentItem].querySelector('.write__card-item-question-definition-text').innerHTML.trim();
 }
 
-function switchItem() {
-    for (let i = 0; i < listItems.length; i++) {
-        listItems[i].style.display = 'none';
-        hiddenFeaturesWhenUnknown(listItems[i]);
-    }
-
-    if (currentItem < listItems.length) {
-        listItems[currentItem].style.display = 'block';
-        let inputAnswer = listItems[currentItem].querySelector('.write__card-item-answer-input');
-        inputAnswer.value = '';
-        inputAnswer.focus();
-        checkAnswer();
-        blockIncorrectAnswer.style.display = 'none';
-    } else {
-        blockIncorrectAnswer.style.display = 'none';
-        setBlockResult();
-    }
-    isUnknown = false;
-    unknownEvent();
-    checkWriteRepeat();
-}
 
 
 function displayFeaturesWhenUnknown(item) {
@@ -254,8 +263,23 @@ function setProgressBarCorrect(correct, total) {
 }
 
 
+function openOptionDialog(){
+    btnOpenDialog.onclick = () => {
+        modal.style.display = 'block';
+    }
+}
+
+function closeOptionDialog(){
+    btnCloseDialog.onclick = () => {
+        modal.style.display = 'none';
+    }
+}
+
+
 switchItem();
 checkAnswer();
 unknownEvent();
 reStartWrite();
 setProgressBarRest(listItems.length, listItems.length);
+openOptionDialog();
+closeOptionDialog();

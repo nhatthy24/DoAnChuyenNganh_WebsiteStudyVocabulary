@@ -52,13 +52,18 @@
 .study__header-list-items {
     position: absolute;
     list-style: none;
-    border: 1px solid red;
     left: 35px;
     width: 230px;
     padding: 8px 0;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
     top: 60px;
     border-radius: 8px;
+    display: none;
+    background-color: var(--white-color)
+}
+
+.study__header-list-items--active{
+    display: block;
 }
 
 .study__header-list-item {}
