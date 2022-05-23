@@ -13,6 +13,8 @@ const bntLearnCardAll = document.getElementById('setting__list-card-all-btn');
 
 let inputWord = document.getElementById('edit__word-dialog-item-input-word');
 let inputDefinition = document.getElementById('edit__word-dialog-item-input-definition');
+let inputCard_id = document.getElementById('edit__word-dialog-item-input-card-id');
+let inputCourse_id = document.getElementById('edit__word-dialog-item-input-course-id');
 
 var actionFlip = null;
 var actionFlip2 = null;
@@ -74,9 +76,11 @@ function exchangeWordToDefinition() {
                 const btnStars = cards[i].querySelectorAll('.card__item-control-star-btn');
                 const word = cards[i].querySelector('.card__item-side-word').innerHTML.trim();
                 const definition = cards[i].querySelector('.card__item-side-definition').innerHTML.trim();
+                const card_id = cards[i].querySelector('.card__item-card-id').innerHTML.trim();
+                const course_id = cards[i].querySelector('.card__item-course-id').innerHTML.trim();
                 flipBtn.onclick = (e) => {
                     if (e.target === btnEdit) {
-                        openEditWordDialog(word, definition);
+                        openEditWordDialog(word, definition,card_id,course_id);
                     } else if (e.target === btnSpeech) {
                         speech(word);
                     } else if (e.target === btnStar) {
@@ -215,7 +219,7 @@ function progressControl() {
     progressBar.style.width = (currentCard / (cards.length - 1)) * 100 + '%';
 }
 
-function openEditWordDialog(word, definition) {
+function openEditWordDialog(word, definition,card_id, course_id) {
     btnStart.classList.remove('control__main-action--active');
     stopLearning();
     modalInner.appendChild(editWordDialog);
@@ -223,6 +227,8 @@ function openEditWordDialog(word, definition) {
     editWordDialog.style.display = 'block'
     inputWord.value = word;
     inputDefinition.value = definition;
+    inputCard_id.value=card_id;
+    inputCourse_id.value=course_id;
 }
 
 function closeEditWordDialog() {
@@ -480,7 +486,18 @@ function learnCardAll() {
     }
 }
 
-
+function updateFlashCard() {
+    var inputWord = document.getElementById('edit__word-dialog-item-input-word').value;
+    var inputDefinition = document.getElementById('edit__word-dialog-item-input-definition').value;
+    var card_id = document.getElementById('edit__word-dialog-item-input-card-id').value;
+    var course_id = document.getElementById('edit__word-dialog-item-input-course-id').value;
+    var urlReplace='?type=edit&term='+inputWord+'&meaning='+inputDefinition+'&card_id='+card_id+'&course_id='+course_id;
+    location.replace(urlReplace);
+}
+function updateStarCardState(user_id, card_id){
+    var urlReplace='?type=insertstar&user_id='+user_id+'&card_id='+card_id;
+    location.replace(urlReplace);
+}
 
 
 switchCard(currentCard);

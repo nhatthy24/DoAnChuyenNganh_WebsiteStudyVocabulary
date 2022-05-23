@@ -7,6 +7,7 @@ public class Card {
     private int creator;
     private String image;
     private int courseId;
+    private boolean markedCard;
 
     public Card() {
     }
@@ -57,5 +58,13 @@ public class Card {
 
     public void setCourseId(int courseId) {
         this.courseId = courseId;
+    }
+
+    public boolean isMarkedCard() {
+        return markedCard;
+    }
+
+    public void setMarkedCard(boolean markedCard) {
+        this.markedCard = markedCard;
     }
 }
