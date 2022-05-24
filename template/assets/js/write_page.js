@@ -28,7 +28,31 @@ let incorrectAnswerCount = 0;
 let correctAnswerCount = 0;
 let listIncorrectAnswer = [];
 let isUnknown = false;
+let isViLanguageAnswer = true;
+let isSpeech = false;
 
+
+function filterAllItems() {
+    btnFilterAll.onclick = () => {
+        if (!btnFilterAll.classList.contains('modal__body-content-item-btn--active')) {
+            btnFilterAll.classList.add('modal__body-content-item-btn--active');
+            btnFilterStar.classList.remove('modal__body-content-item-btn--active');
+            listItems = document.querySelectorAll('.write__card-item');
+            reStartWrite();
+        }
+    }
+}
+
+function filterStarItems() {
+    btnFilterStar.onclick = () => {
+        if (!btnFilterStar.classList.contains('modal__body-content-item-btn--active')) {
+            btnFilterStar.classList.add('modal__body-content-item-btn--active');
+            btnFilterAll.classList.remove('modal__body-content-item-btn--active');
+            listItems = document.querySelectorAll('.write__card-item--star');
+            reStartWrite();
+        }
+    }
+}
 
 function checkAnswer() {
     let inputAnswer = listItems[currentItem].querySelector('.write__card-item-answer-input');
@@ -114,12 +138,18 @@ function switchItem() {
         inputAnswer.focus();
         checkAnswer();
         blockIncorrectAnswer.style.display = 'none';
+        if (isSpeech && isViLanguageAnswer) {
+            setTimeout(() => {
+                speech(getCurrentWord());
+            }, 200)
+        }
     } else {
         blockIncorrectAnswer.style.display = 'none';
         setBlockResult();
     }
     isUnknown = false;
     unknownEvent();
+    speechEvents();
 }
 
 
@@ -139,7 +169,11 @@ function isEqualString(a, b) {
 
 
 function getCurrentAnswer() {
-    return getCurrentDefinition();
+    if (isViLanguageAnswer) {
+        return getCurrentDefinition();
+    } else {
+        return getCurrentWord();
+    }
 }
 
 function getCurrentWord() {
@@ -168,6 +202,7 @@ function displayFeaturesWhenUnknown(item) {
     separatorOne.style.display = 'block';
     btnUnknown.style.display = 'none';
     btnAnswer.style.display = 'none';
+    btnAnswer.disabled = true;
 }
 
 function hiddenFeaturesWhenUnknown(item) {
@@ -186,6 +221,7 @@ function hiddenFeaturesWhenUnknown(item) {
     separatorOne.style.display = 'none';
     btnUnknown.style.display = 'block';
     btnAnswer.style.display = 'block';
+    btnAnswer.disabled = false;
 }
 
 function setBlockIncorrectAnswer(question, answer, wrongAnswer) {
@@ -229,21 +265,110 @@ function setBlockResult() {
     }
 }
 
-function reStartWrite() {
+function reStartWriteEvents() {
     bntReStart.onclick = () => {
-        blockResult.style.display = 'none';
-        currentItem = 0;
-        correctAnswerCount = 0;
-        incorrectAnswerCount = 0;
-        listIncorrectAnswer = [];
-        setProgressBarRest(listItems.length - currentItem, listItems.length);
-        setProgressBarIncorrect(incorrectAnswerCount, listItems.length);
-        setProgressBarCorrect(correctAnswerCount, listItems.length);
+        reStartWrite();
         switchItem();
+
+    }
+}
+
+function reStartWrite() {
+    blockResult.style.display = 'none';
+    currentItem = 0;
+    correctAnswerCount = 0;
+    incorrectAnswerCount = 0;
+    listIncorrectAnswer = [];
+    setProgressBarRest(listItems.length - currentItem, listItems.length);
+    setProgressBarIncorrect(incorrectAnswerCount, listItems.length);
+    setProgressBarCorrect(correctAnswerCount, listItems.length);
+}
+
+
+
+function setUpForEnAnswer() {
+    let wordElements = document.querySelectorAll('.write__card-item-question-word');
+    let definitionElements = document.querySelectorAll('.write__card-item-question-definition');
+    let labelAnswer = document.querySelectorAll('.write__card-item-answer-label');
+    for (let i = 0; i < wordElements.length; i++) {
+        let tem1 = wordElements[i].querySelector('.write__card-item-question-content');
+        let tem2 = definitionElements[i].querySelector('.write__card-item-question-content');
+        wordElements[i].removeChild(tem1);
+        definitionElements[i].removeChild(tem2);
+        wordElements[i].appendChild(tem2);
+        definitionElements[i].appendChild(tem1);
+        labelAnswer[i].innerHTML = 'NHẬP TIẾNG ANH';
+    }
+}
+
+function setUpForViAnswer() {
+    let wordElements = document.querySelectorAll('.write__card-item-question-word');
+    let definitionElements = document.querySelectorAll('.write__card-item-question-definition');
+    let labelAnswer = document.querySelectorAll('.write__card-item-answer-label');
+    for (let i = 0; i < wordElements.length; i++) {
+        let tem1 = wordElements[i].querySelector('.write__card-item-question-content');
+        let tem2 = definitionElements[i].querySelector('.write__card-item-question-content');
+        wordElements[i].removeChild(tem1);
+        definitionElements[i].removeChild(tem2);
+        wordElements[i].appendChild(tem2);
+        definitionElements[i].appendChild(tem1);
+        labelAnswer[i].innerHTML = 'NHẬP TIẾNG VIỆT';
     }
 }
 
 
+function changeViLanguage() {
+    btnAnswerLangVi.onclick = () => {
+        if (!btnAnswerLangVi.classList.contains('modal__body-content-item-btn--active')) {
+            btnAnswerLangVi.classList.add('modal__body-content-item-btn--active');
+            btnAnswerLangEn.classList.remove('modal__body-content-item-btn--active');
+            isViLanguageAnswer = true;
+            setUpForViAnswer();
+            reStartWrite();
+        }
+    }
+}
+
+function changeEnLanguage() {
+    btnAnswerLangEn.onclick = () => {
+        if (!btnAnswerLangEn.classList.contains('modal__body-content-item-btn--active')) {
+            btnAnswerLangEn.classList.add('modal__body-content-item-btn--active');
+            btnAnswerLangVi.classList.remove('modal__body-content-item-btn--active');
+            isViLanguageAnswer = false;
+            setUpForEnAnswer();
+            reStartWrite();
+        }
+    }
+}
+
+
+function openSpeak() {
+    btnOpenSpeak.onclick = () => {
+        if (!btnOpenSpeak.classList.contains('modal__body-content-item-btn--active')) {
+            btnOpenSpeak.classList.add('modal__body-content-item-btn--active');
+            btnCloseSpeak.classList.remove('modal__body-content-item-btn--active');
+            isSpeech = true;
+        }
+    }
+}
+
+function closeSpeak() {
+    btnCloseSpeak.onclick = () => {
+        if (!btnCloseSpeak.classList.contains('modal__body-content-item-btn--active')) {
+            btnCloseSpeak.classList.add('modal__body-content-item-btn--active');
+            btnOpenSpeak.classList.remove('modal__body-content-item-btn--active');
+            isSpeech = false;
+        }
+    }
+}
+
+
+function speechEvents(){
+    let btn = listItems[currentItem].querySelector('.write__card-item-question-content-btn');
+    btn.onclick = () => {
+        speech(getCurrentWord());
+    }
+}
 
 
 
@@ -263,23 +388,33 @@ function setProgressBarCorrect(correct, total) {
 }
 
 
-function openOptionDialog(){
+function openOptionDialog() {
     btnOpenDialog.onclick = () => {
         modal.style.display = 'block';
     }
 }
 
-function closeOptionDialog(){
+function closeOptionDialog() {
     btnCloseDialog.onclick = () => {
         modal.style.display = 'none';
+        switchItem();
     }
 }
+
+
 
 
 switchItem();
 checkAnswer();
 unknownEvent();
-reStartWrite();
+reStartWriteEvents();
 setProgressBarRest(listItems.length, listItems.length);
 openOptionDialog();
 closeOptionDialog();
+filterAllItems();
+filterStarItems();
+changeViLanguage();
+changeEnLanguage();
+openSpeak();
+closeSpeak();
+speechEvents();

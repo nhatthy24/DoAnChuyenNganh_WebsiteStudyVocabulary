@@ -628,7 +628,6 @@ function setupForEnAnswer() {
 
 function toggleHeaderMenu(){
     
-    console.log('hhello')
     btnHeaderMenu.onclick = () => {
         headerMenu.classList.toggle('study__header-list-items--active');
     }
