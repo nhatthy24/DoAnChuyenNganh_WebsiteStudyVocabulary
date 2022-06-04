@@ -1,0 +1,79 @@
+@media (max-width:38.75rem) {
+    .AssemblyButtonBase--medium {
+        font-size: .75rem;
+        -webkit-letter-spacing: normal;
+        -moz-letter-spacing: normal;
+        -ms-letter-spacing: normal;
+        letter-spacing: normal;
+        line-height: 1.3333333333333333;
+    }
+}
+
+@media (max-width:38.75rem) {
+    .AssemblyButtonBase--medium {
+        font-size: .75rem;
+        -webkit-letter-spacing: normal;
+        -moz-letter-spacing: normal;
+        -ms-letter-spacing: normal;
+        letter-spacing: normal;
+        line-height: 1.3333333333333333;
+    }
+}
+
+@media (max-width:38.75rem) {
+    .AssemblyButtonBase--medium {
+        font-size: .75rem;
+        -webkit-letter-spacing: normal;
+        -moz-letter-spacing: normal;
+        -ms-letter-spacing: normal;
+        letter-spacing: normal;
+        line-height: 1.3333333333333333;
+    }
+}
+
+@media (max-width:38.75rem) {
+    .f1i2nkrh {
+        border-top: none;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 0 1.5rem 1.5rem;
+    }
+
+    .f1i2nkrh>:not(:first-child) {
+        margin: 1rem 0 0;
+    }
+}
+
+@keyframes fadeInFlyInModal-o126043d {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(calc(var(--modal-margin)*-1));
+        -ms-transform: translateY(calc(var(--modal-margin)*-1));
+        transform: translateY(calc(var(--modal-margin)*-1));
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOutOverlay-ohebfrr {
+    0% {
+        background: var(--backdrop-opacity);
+    }
+
+    to {
+        background: none;
+    }
+}
+
+@keyframes fadeOutOverlay-ohebfrr {
+    0% {
+        background: var(--backdrop-opacity);
+    }
+
+    to {
+        background: none;
+    }
+}
