@@ -10,9 +10,16 @@ const selectChangeAnswerLanguage = document.getElementById('change__answer-langu
 const btnMix = document.getElementById('control__main-action-mix');
 const btnLearnCardStar = document.getElementById('setting__list-card-star-btn');
 const bntLearnCardAll = document.getElementById('setting__list-card-all-btn');
+const btnPreCard = document.querySelector('.card__toolbar-nav-left');
+const btnNextCard = document.querySelector('.card__toolbar-nav-right');
+const btnStart = document.getElementById('control__main-action-start');
+const toolBar = document.getElementById('card__toolbar');
+const repeatCardBtn = document.getElementById('card__item-repeat-btn');
 
 let inputWord = document.getElementById('edit__word-dialog-item-input-word');
 let inputDefinition = document.getElementById('edit__word-dialog-item-input-definition');
+var cards = document.querySelectorAll('.card__item');
+var wordLearnedElement = document.getElementById('counter__word-learned');
 
 var actionFlip = null;
 var actionFlip2 = null;
@@ -21,18 +28,7 @@ var isSpeech = false;
 var answerLanguage = 'vi';
 var isStartLearning = false;
 var isLearnStarCard = false;
-
-
-
-var cards = document.querySelectorAll('.card__item');
-const btnPreCard = document.querySelector('.card__toolbar-nav-left');
-const btnNextCard = document.querySelector('.card__toolbar-nav-right');
-const btnStart = document.getElementById('control__main-action-start');
-const toolBar = document.getElementById('card__toolbar');
-const repeatCardBtn = document.getElementById('card__item-repeat-btn');
-
 let currentCard = 1;
-var wordLearnedElement = document.getElementById('counter__word-learned');
 
 
 
@@ -168,7 +164,9 @@ function exchangeCard() {
 function switchCard(currentCard, direction) {
     for (let i = 0; i < cards.length; i++) {
         cards[i].style.display = 'none';
-        cards[currentCard - 1].classList.remove('term__card-item--rotate');
+        if (cards[currentCard - 1].classList.contains('term__card-item--rotate')) {
+            cards[currentCard - 1].classList.remove('term__card-item--rotate');
+        }
     }
     cards[currentCard - 1].style.display = 'block';
 
@@ -449,6 +447,7 @@ function tickStarCard(btnStar, btnStars, cardItem) {
     }
 }
 
+
 function learnCardStar() {
     btnLearnCardStar.onclick = () => {
         isLearnStarCard = true;
@@ -479,8 +478,6 @@ function learnCardAll() {
         setTotalProgress();
     }
 }
-
-
 
 
 switchCard(currentCard);

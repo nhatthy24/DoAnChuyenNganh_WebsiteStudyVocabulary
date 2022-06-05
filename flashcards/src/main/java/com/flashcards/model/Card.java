@@ -67,6 +67,7 @@ public class Card {
     public void setMarkedCard(boolean markedCard) {
         this.markedCard = markedCard;
     }
+<<<<<<< HEAD
 
     @Override
     public String toString() {
@@ -80,4 +81,6 @@ public class Card {
                 ", markedCard=" + markedCard +
                 '}';
     }
+=======
+>>>>>>> fe6626d1eeba426964f461d9c721e45006d983b3
 }
