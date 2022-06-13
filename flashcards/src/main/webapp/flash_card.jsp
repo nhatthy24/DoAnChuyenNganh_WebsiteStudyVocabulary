@@ -132,7 +132,11 @@
                         <button class="card__item-control-btn card__item-control-edit-btn">
                             <i class="fas fa-pencil-alt"></i>
                         </button>
+<<<<<<< HEAD
                         <button class="card__item-control-btn card__item-control-star-btn">
+=======
+                        <button onclick="updateStarCardState(${fi.creator},${fi.id})" class="card__item-control-btn card__item-control-star-btn  ${fi.markedCard ? 'card__item-control-star-btn--active' : ''}">
+>>>>>>> fe6626d1eeba426964f461d9c721e45006d983b3
                             <i class="fas fa-star"></i>
                         </button>
                     </div>

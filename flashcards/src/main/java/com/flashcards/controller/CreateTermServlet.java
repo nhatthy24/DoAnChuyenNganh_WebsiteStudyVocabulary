@@ -4,17 +4,23 @@ import com.flashcards.dao.database.connection.CardDAO;
 import com.flashcards.dao.database.connection.CourseDAO;
 import com.flashcards.model.Card;
 import com.flashcards.model.Course;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
+import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
 
+@MultipartConfig
 @WebServlet(urlPatterns = "/created-term")
 public class CreateTermServlet extends HttpServlet {
     @Override
@@ -26,17 +32,19 @@ public class CreateTermServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
         session.setAttribute("title", "Tạo học phần");
+        int courseId = randomId();
+        System.out.println(courseId);
         String courseName = req.getParameter("title");
         String description = req.getParameter("description");
         String[] words = req.getParameterValues("word");
         String[] means = req.getParameterValues("mean");
-        boolean isInsert = CourseDAO.insertCourse(courseName, description, 1);
+//        String[] images = req.getParameterValues("image");
+        boolean isInsert = CourseDAO.insertCourse(courseId, courseName, description, 1);
         if(isInsert){
             System.out.println("Tạo học phần thành công");
             if(words != null && means != null){
                 System.out.println("Kiểm tra words và means != null");
                 int count=0;
-                int courseId= CourseDAO.loadCourseId();
                 for(int i=0; i< words.length; i++){
                     if(CardDAO.insertCard(words[i],means[i],null,courseId, 1 )){
                         count++;
@@ -44,9 +52,8 @@ public class CreateTermServlet extends HttpServlet {
                 }
                 if(count == words.length){
                   // nếu đúng thì chuyển sang trang chi tiết
-                    // load dữ liệu trang chi tiết
-                    Course course = CourseDAO.loadCourseById(CourseDAO.loadCourseId());
-                    List<Card> cards = CardDAO.loadListCardByCourseId(CourseDAO.loadCourseId());
+                    Course course = CourseDAO.loadCourseById(courseId);
+                    List<Card> cards = CardDAO.loadListCardByCourseId(courseId);
                     req.setAttribute("course", course);
                     req.setAttribute("cards", cards);
                     System.out.println(course);
@@ -55,8 +62,26 @@ public class CreateTermServlet extends HttpServlet {
                 }
             }
         } else{
-            System.out.println("Chưa tạo thành công");
+//            System.out.println("Chưa tạo thành công");
             req.getRequestDispatcher("create_term.jsp").forward(req,resp);
         }
+    }
+    private int randomId(){
+        Date dateTime = new Date();
+        // ngay
+        int day = dateTime.getDay();
+        int month = dateTime.getMonth();
+        int year = dateTime.getYear();
+        int date = day;
+        date |= month<<5;
+        date |= year<<9;
+        // gio
+        int hour = dateTime.getHours();
+        int minute = dateTime.getMinutes();
+        int second = dateTime.getSeconds();
+        int time = hour;
+        time |= minute<<5;
+        time |= second<<11;
+        return day+time;
     }
 }

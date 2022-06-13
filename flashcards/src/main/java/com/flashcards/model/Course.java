@@ -59,4 +59,15 @@ public class Course {
     public void setCards(List<Card> cards) {
         this.cards = cards;
     }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "id=" + id +
+                ", creatorId=" + creatorId +
+                ", courseName='" + courseName + '\'' +
+                ", description='" + description + '\'' +
+                ", cards=" + cards +
+                '}';
+    }
 }

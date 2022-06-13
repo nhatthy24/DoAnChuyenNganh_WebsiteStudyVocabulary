@@ -2,31 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7261b689-f461-45a3-922e-8eaeaa80307a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../flashcards/src/main/webapp/css/flash_card.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flashcards/src/main/webapp/flash_card.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flashcards/src/main/webapp/js/flash_card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flashcards/src/main/webapp/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/src/main/webapp/create_term.html" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/src/main/webapp/create_term.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/src/main/java/com/flashcards/controller/CreateTermServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/src/main/java/com/flashcards/controller/CreateTermServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/src/main/java/com/flashcards/dao/database/connection/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/src/main/java/com/flashcards/dao/database/connection/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/src/main/java/com/flashcards/dao/database/connection/CourseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/src/main/java/com/flashcards/dao/database/connection/CourseDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../flashcards/src/main/webapp/create_term.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/src/main/webapp/create_term.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/src/main/webapp/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/src/main/webapp/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/src/main/webapp/css/create_term.css" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/src/main/webapp/css/create_term.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/src/main/webapp/css/term_details.css" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/src/main/webapp/css/term_details.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/src/main/webapp/js/create_term.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/src/main/webapp/js/create_term.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/src/main/webapp/js/term_details.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/src/main/webapp/js/term_details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/src/main/webapp/libary_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/src/main/webapp/libary_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/src/main/webapp/term_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/src/main/webapp/term_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/src/main/webapp/term_details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/src/main/webapp/term_details.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/create_term.html" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/create_term.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/create_term.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/create_term.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/css/create_term.css" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/css/create_term.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/css/term_details.css" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/css/term_details.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/js/create_term.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/js/create_term.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/js/term_details.js" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/js/term_details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/libary_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/libary_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/term_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/term_details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/term_details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/term_details.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../planning/FlashcardsProject.mpp" beforeDir="false" afterPath="$PROJECT_DIR$/../planning/FlashcardsProject.mpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/Flashcards/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/CreateTermServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/CreationServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/DetailedTermDirect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/FlashCardDirect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/CardDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/CourseDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/DBCPDataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/MarkedCardDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/TermInCourseDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/UserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/model/Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/model/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/until/CharacterEncodingFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/lib/activation-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/lib/commons-dbcp-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/lib/commons-pool-1.5.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/lib/javax.mail-1.6.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/lib/javax.mail-api-1.6.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/lib/mysql-connector-java-5.1.48.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/cancel_input.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/create_term.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/create_term.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/css/create_term.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/css/flash_card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/css/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/css/term_details.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/flash_card.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/flash_card.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/flash_cardy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/img/avatar.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/img/null-class.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/img/null-folder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/img/null-term.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/js/create_term.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/js/flash_card.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/js/header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/js/term_details.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/libary_details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/term_details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/Flashcards-1.0-SNAPSHOT/term_details.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/Flashcards/HelloServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/controller/CreateTermServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/controller/CreationServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/controller/DetailedTermDirect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/controller/FlashCardDirect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/dao/database/connection/CardDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/dao/database/connection/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/dao/database/connection/CourseDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/dao/database/connection/DBCPDataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/dao/database/connection/MarkedCardDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/dao/database/connection/TermInCourseDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/dao/database/connection/UserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/model/Card.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/model/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flashcards/target/classes/com/flashcards/until/CharacterEncodingFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_term.html" beforeDir="false" afterPath="$PROJECT_DIR$/create_term.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1652781572918</updated>
       <workItem from="1652781577712" duration="169000" />
+      <workItem from="1653560690891" duration="3234000" />
     </task>
     <servers />
   </component>

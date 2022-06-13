@@ -67,4 +67,20 @@ public class Card {
     public void setMarkedCard(boolean markedCard) {
         this.markedCard = markedCard;
     }
+<<<<<<< HEAD
+
+    @Override
+    public String toString() {
+        return "Card{" +
+                "id=" + id +
+                ", term='" + term + '\'' +
+                ", meaning='" + meaning + '\'' +
+                ", creator=" + creator +
+                ", image='" + image + '\'' +
+                ", courseId=" + courseId +
+                ", markedCard=" + markedCard +
+                '}';
+    }
+=======
+>>>>>>> fe6626d1eeba426964f461d9c721e45006d983b3
 }
