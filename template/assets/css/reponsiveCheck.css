@@ -142,7 +142,7 @@
 }
 
 @media (max-width:38.75rem) {
-    .bmbcei7 {
+    .print-tests {
         margin-left: .5rem;
     }
 }
@@ -258,39 +258,39 @@
 }
 
 @media (max-width:64rem) {
-    .s1t6zpc1 {
+    .article {
         padding: 1.5rem 2rem;
     }
 }
 
 @media (max-width:48rem) {
-    .s1t6zpc1 {
-        border-radius: var(--s1t6zpc1-13);
+    .article {
+        border-radius: var(--article-13);
         padding: 1rem;
     }
 }
 
 @media (max-width:48rem) {
-    .t1ebba9t {
+    .listitem_written_result_none {
         right: 1rem;
         top: 1rem;
     }
 }
 
 @media (max-width:48rem) {
-    .a5hy006 {
+    .listitem_article-definition-sub {
         padding-top: 2rem;
     }
 }
 
 @media (max-width:38.75rem) {
-    .a5hy006 {
+    .listitem_article-definition-sub {
         padding-top: 0;
     }
 }
 
 @media (max-width:38.75rem) {
-    .l1chmkuz {
+    .listitem_article-definition-sub-sc {
         font-size: .75rem;
         -webkit-letter-spacing: normal;
         -moz-letter-spacing: normal;
@@ -301,7 +301,7 @@
 }
 
 @media (min-width:64.0625rem) and (max-width:81.25rem) {
-    .a1f2m6c4.StudyModesLayout_sb {
+    .smLayout.StudyModesLayout_sb {
         -webkit-transform: translate3d(4.6875rem, 0, 0);
         -ms-transform: translate3d(4.6875rem, 0, 0);
         transform: translate3d(4.6875rem, 0, 0);
@@ -309,7 +309,7 @@
 }
 
 @media (max-width:38.75rem) {
-    .l1uezfp3 {
+    .listitem_written_result-sub-sc {
         font-size: .875rem;
         -webkit-letter-spacing: normal;
         -moz-letter-spacing: normal;
@@ -320,13 +320,13 @@
 }
 
 @media (max-width:48rem) {
-    .l1uezfp3 {
+    .listitem_written_result-sub-sc {
         padding-bottom: 1rem;
     }
 }
 
 @media (max-width:38.75rem) {
-    .l1uezfp3 {
+    .listitem_written_result-sub-sc {
         padding-bottom: 1rem;
     }
 }
@@ -338,7 +338,7 @@
 }
 
 @media (max-width:38.75rem) {
-    .listitem_written_article.s1t6zpc1 {
+    .listitem_written_article.article {
         min-height: unset;
     }
 }
@@ -378,7 +378,7 @@
 }
 
 @media (max-width:38.75rem) {
-    .hbcu5v.list_question {
+    .screen-content.list_question {
         font-size: .75rem;
         -webkit-letter-spacing: normal;
         -moz-letter-spacing: normal;
@@ -389,7 +389,7 @@
 }
 
 @media (max-width:38.75rem) {
-    .l40xoye {
+    .sectionSB-sub-div-definition {
         font-size: .75rem;
         -webkit-letter-spacing: normal;
         -moz-letter-spacing: normal;
@@ -400,7 +400,7 @@
 }
 
 @media screen {
-    .p1v5oq0n {
+    .print-content {
         left: -10000;
         position: absolute;
         visibility: hidden;
@@ -408,18 +408,18 @@
 }
 
 @media print {
-    .p1v5oq0n {
+    .print-content {
         position: static;
         visibility: visible;
     }
 
-    .h1btwfkc {
+    .my-questions {
         display: none;
     }
 }
 
 @media screen {
-    .h1btwfkc {
+    .my-questions {
         display: block;
     }
 }
