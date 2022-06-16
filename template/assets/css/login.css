@@ -1,0 +1,181 @@
+.ps-32 {
+    padding-left: 32px;
+}
+
+.pe-32 {
+    padding-right: 32px;
+}
+
+.pb-64{
+    padding-bottom: 64px;
+}
+
+.title-img-cover {
+    margin: 48px;
+    font-size: 4.2rem;
+    width: 300px;
+    height: 168px;
+    line-height: 5rem;
+    color: #3b4c9b;
+}
+
+.logo-img-cover {
+    margin: 48px;
+    color: var(--white-color);
+    font-size: 2.6rem;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.container__left {
+    flex: 50%;
+    background-image: url(https://assets.quizlet.com/a/j/dist/app/i/signup/QZ_Auth_Light@2x.5e1b6810231a443.png);
+    background-size: cover;
+    background-position: 50%;
+}
+
+.container__right {
+    width: 50%;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.exit-btn {
+    position: fixed;
+    right: 32px;
+}
+
+.exit-btn i {
+    font-size: 25px;
+    color: var(--text-color);
+}
+
+.tablist {
+    display: flex;
+    margin: 48px 0 32px 0;
+}
+
+.tablist__item {
+    margin-right: 32px;
+
+}
+
+.tablist__item-link {
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-gray-color-dark)
+}
+
+.tablist__item-link--active {
+    color: var(--text-color);
+    position: relative;
+}
+
+.tablist__item-link--active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--yellow-color-dark);
+}
+
+
+.social-login {
+    margin-top: 50px;
+}
+
+.social-login__item {}
+
+.social-login__item-link {
+    display: flex;
+    width: 100%;
+    border: 2px solid var(--border-gray-color);
+    border-radius: 4px;
+    padding: 0 24px;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.social-login__item-text {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.login-form {
+    margin-top: 32px;
+}
+
+.login-form__item {
+    margin-top: 26px;
+}
+
+.login-form-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-bottom: 8px;
+    font-size: 18px;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.login-form-input::placeholder {
+    color: var(--gray-color-light)
+}
+
+.login-form-input:focus {
+    border-bottom: 4px solid var(--yellow-color-dark);
+}
+
+.login-form-input--error {
+    border-bottom: 2px solid var(--red-color-light) !important;
+}
+
+.login-form-input--error:focus{
+    border-bottom: 4px solid var(--red-color-light) !important;
+}
+
+.login-form-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-gray-color);
+    display: block;
+    margin-top: 4px;
+}
+
+.login-form-label--error{
+    color: var(--red-color-light);
+}
+
+.route-forget-password {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.route-forget-password__item {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--green-color);
+}
+
+.login-submit-btn{
+    width: 100%;
+    height: 60px;
+    margin-top: 12px;
+    background-color: var(--green-color);
+    border: none;
+    border-radius: 4px;
+    color: var(--white-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
