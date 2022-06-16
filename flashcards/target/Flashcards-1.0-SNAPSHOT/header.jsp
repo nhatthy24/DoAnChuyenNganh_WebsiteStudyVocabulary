@@ -12,7 +12,7 @@
                 <!-- right element -->
                 <div class="navbar__left">
                     <div class="navbar__logo">
-                        <img src="./img/logo.png" alt="">
+                        <img src="./img/logo2.png" alt="">
                     </div>
                     <div class="navbar__menu">
                         <ul class="navbar__menu-list">
