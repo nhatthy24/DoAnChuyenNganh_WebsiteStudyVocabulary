@@ -4,14 +4,16 @@ import org.apache.commons.dbcp.BasicDataSource;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 
 public class DBCPDataSource {
-
+	
     private static BasicDataSource ds = new BasicDataSource();
     private static Connection connection;
+    private static String sqlDB;
     static {
         ds.setDriverClassName(Config.DB_DRIVER);
         ds.setUrl(Config.CONNECTION_URL);
@@ -23,8 +25,9 @@ public class DBCPDataSource {
         ds.setMaxOpenPreparedStatements(100);
     }
 
-    private DBCPDataSource() {
+    public DBCPDataSource() {
         super();
+        sqlDB = Config.CONNECTION_URL;
     }
 
     public static Connection getConnection() throws SQLException {
@@ -41,5 +44,17 @@ public class DBCPDataSource {
     public static PreparedStatement preparedStatement(String sql) throws SQLException {
         return getConnection().prepareStatement(sql);
     }
+    
+    public  void thucThiSQL(String sql) throws Exception{
+		Connection connect = getConnection();
+		Statement stmt = connect.createStatement();
+		stmt.executeUpdate(sql);
+	}
+	public ResultSet chonDuLieu(String sql) throws Exception{
+		Connection connect = getConnection();
+		Statement stmt = connect.createStatement();
+		ResultSet rs=	stmt.executeQuery(sql);
+		return rs;
+	}
 
 }

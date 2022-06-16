@@ -49,7 +49,7 @@ public class CourseDAO {
     }
 
     public static void main(String[] args) {
-//        System.out.println(insertCourse(12546,"Học phần 2", "Mô tả học phần 2", 1));
-        System.out.println(loadCourseById(123456));
+        System.out.println(insertCourse(12546,"Học phần 2", "Mã học phần 2", 1));
+//        System.out.println(loadCourseById(123456));
     }
 }
