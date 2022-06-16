@@ -100,10 +100,10 @@ header {
     animation: fadeInFlyInModal-o126043d .3s ease;
 }
 
-.ohebfrr {
+.rmp {
     -webkit-tap-highlight-color: rgb(255 255 255/0);
-    -webkit-animation: fadeOutOverlay-ohebfrr .3s ease;
-    animation: fadeOutOverlay-ohebfrr .3s ease;
+    -webkit-animation: fadeOutOverlay-rmp .3s ease;
+    animation: fadeOutOverlay-rmp .3s ease;
     bottom: 0;
     left: 0;
     overflow-y: auto;
@@ -131,7 +131,7 @@ header {
     text-align: var(--popup_check_question_navbar-3);
 }
 
-.fz4nps6 {
+.my-pop-none {
     background: linear-gradient(var(--modal-footer-transparent), var(--gray-100-gray-700));
     bottom: 0;
     height: 2rem;
@@ -188,7 +188,7 @@ header {
     cursor: pointer;
 }
 
-.tkk0ebs.hlni9so {
+.re-question {
     margin-bottom: 1rem;
 }
 
