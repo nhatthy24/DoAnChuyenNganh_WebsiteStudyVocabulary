@@ -6,12 +6,29 @@ public class User {
     private int id;
     private String email;
     private String password;
-    private Date dateCreated;
+    private String username;
+    private String date;
+    private String role;
 
-    public User() {
+    public User(int newId, String newPassword, String newEmail, String newDate, String newRole, String newUsername) {
+    	super();
+    	this.id = newId;
+    	this.password = newPassword;
+    	this.email = newEmail;
+    	this.date = newDate;
+    	this.role = newRole;
+    	this.username = newUsername;
     }
 
-    public int getId() {
+    public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public int getId() {
         return id;
     }
 
@@ -35,11 +52,26 @@ public class User {
         this.password = password;
     }
 
-    public Date getDateCreated() {
-        return dateCreated;
-    }
+	public String getDate() {
+		return date;
+	}
 
-    public void setDateCreated(Date dateCreated) {
-        this.dateCreated = dateCreated;
-    }
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", email=" + email + ", password=" + password + ", username=" + username + ", date="
+				+ date + ", role=" + role + "]";
+	}
+
 }
