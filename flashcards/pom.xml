@@ -67,13 +67,11 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-<<<<<<< HEAD
         <dependency>
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
             <version>1.6.2</version>
         </dependency>
-=======
         <!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
         <dependency>
             <groupId>commons-fileupload</groupId>
@@ -86,8 +84,6 @@
             <artifactId>commons-io</artifactId>
             <version>2.6</version>
         </dependency>
-
->>>>>>> 40b711dbfe60f20813508a326ddc333b5fe7b693
     </dependencies>
 
     <build>
