@@ -4,6 +4,7 @@ import com.flashcards.dao.database.connection.CardDAO;
 import com.flashcards.dao.database.connection.UserDAO;
 import com.flashcards.dao.database.connection.UserDaoForSetting;
 import com.flashcards.model.Card;
+import com.flashcards.model.User;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -13,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
@@ -88,14 +90,20 @@ public class ForgetPassDirect extends HttpServlet {
                 mex.printStackTrace();
             }
             //end
-            result=UserDaoForSetting.updatePassWord(2,generatePass);
-        }
-        if(result){
-            request.getRequestDispatcher("reset_pass_successfully.jsp").forward(request,response);
-        }else {
+            User user=UserDaoForSetting.loadUserByEmailAddress(email);
+            result=UserDaoForSetting.updatePassWord(user.getId(),generatePass);
+
+            if(result){
+                request.getRequestDispatcher("reset_pass_successfully.jsp").forward(request,response);
+            }else {
+                System.out.println("userName and email"+userName+"/"+email);
+                request.getRequestDispatcher("reset_pass_faild.jsp").forward(request,response);
+            }
+        } else {
             System.out.println("userName and email"+userName+"/"+email);
             request.getRequestDispatcher("reset_pass.jsp").forward(request,response);
-        }
 
+
+    }
     }
 }

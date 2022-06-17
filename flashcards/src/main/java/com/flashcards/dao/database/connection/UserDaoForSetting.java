@@ -34,6 +34,32 @@ public class UserDaoForSetting {
         }
         return user;
     }
+    public static User loadUserByEmailAddress(String emailAddress) {
+        User user = new User();
+        String sql = "SELECT * FROM user WHERE email like ?";
+        try{
+            PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+            preparedStatement.setString(1, emailAddress);
+            synchronized (preparedStatement){
+                ResultSet resultSet = preparedStatement.executeQuery();
+                while(resultSet.next()){
+                    user.setId(resultSet.getInt(1));
+                    user.setPassword(resultSet.getString(2));
+                    user.setEmail(resultSet.getString(3));
+                    user.setDate(resultSet.getString(4));
+                    user.setRole(resultSet.getString(5));
+                    user.setUsername(resultSet.getString(6));
+                    user.setAvatar(resultSet.getString(7));
+
+                }
+                resultSet.close();
+            }
+            preparedStatement.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return user;
+    }
     public static boolean  updateUserName(int userID,String userName){
         String sql = "UPDATE user SET name = ? WHERE userID = ?";
         int update = 0;
@@ -159,7 +185,7 @@ public class UserDaoForSetting {
     }
 
     public static void main(String[] args) {
-        System.out.println(loadUserById(1).toString());
+        System.out.println(loadUserByEmailAddress("duongbanhuan2020@gmail.com").toString());
 //        updateUserName(1,"username");
 //        updateAvartar(1,"link avatar");
 //        updateEmail(1,"user email");
