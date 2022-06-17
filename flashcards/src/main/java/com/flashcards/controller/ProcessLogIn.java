@@ -13,33 +13,33 @@ import com.flashcards.model.User;
 
 @WebServlet(urlPatterns = "/ProcessLogIn")
 public class ProcessLogIn extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	public ProcessLogIn() {
-		super();
-	}
+    public ProcessLogIn() {
+        super();
+    }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		String username = request.getParameter("username");
-		String email = request.getParameter("username");
-		String pass = request.getParameter("password");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        request.getRequestDispatcher("login.jsp").forward(request, response);
+    }
 
-		User kh = new UserDAO().getAccountInformation(username);
-		System.out.println(kh);
-		if (new UserDAO().checkLogIn(username, email, pass)) {
-			HttpSession session = request.getSession();
-			session.setAttribute("user", kh);
-			response.sendRedirect("index.jsp");
-		} else {
-			System.out.println("Loi dang nhap");
-		}
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String username = request.getParameter("username");
+        String email = request.getParameter("username");
+        String pass = request.getParameter("password");
 
-	}
+        User kh = new UserDAO().getAccountInformation(username);
+        System.out.println(kh);
+        if (new UserDAO().checkLogIn(username, email, pass)) {
+            HttpSession session = request.getSession();
+            session.setAttribute("user", kh);
+            response.sendRedirect("index.jsp");
+        } else {
+            System.out.println("Loi dang nhap");
+        }
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		doGet(request, response);
-	}
+    }
 
 }

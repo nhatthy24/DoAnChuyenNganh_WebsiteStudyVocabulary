@@ -12,11 +12,19 @@
     <h1 style="color:red" align="center">ADD CARD DETAIL</h1>
     <div align="center">
         <form action="created-card" method="post" enctype="multipart/form-data">
-            Select Image :
-            <input type="text" name="word">
-            <input type="text" name="mean">
-            <input type="file" name="image">
-            <input type="submit" value="Create Card">
+           <div>
+               1
+               <input type="text" name="word">
+               <input type="text" name="mean">
+               <input type="file" name="image">
+           </div>
+            <div>
+                2
+                <input type="text" name="word">
+                <input type="text" name="mean">
+                <input type="file" name="image">
+            </div>
+            <input type="submit" value="Create list card">
         </form>
     </div>
 </body>

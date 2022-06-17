@@ -13,36 +13,36 @@ import com.flashcards.model.User;
 
 @WebServlet(urlPatterns = "/ProcessSignUp")
 public class ProcessSignUp extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+    private static final long serialVersionUID = 1L;
+
     public ProcessSignUp() {
         super();
         // TODO Auto-generated constructor stub
     }
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
-		response.setCharacterEncoding("utf-8");
-		int id = request.getContentLength();
-		String date = request.getParameter("dateOfBirth");
-		String role = request.getParameter("role");
-		String username = request.getParameter("username");
-		String pass = request.getParameter("password");
-		String email = request.getParameter("email");
-		
-		User kh = new User(id, pass, email, date, role, username);
-		if(new UserDAO().addAccount(kh)) {
-			HttpSession session = request.getSession();
-			session.setAttribute("user", kh);
-			response.sendRedirect("login.jsp");
-		} else {
-			System.out.println("Loi dang ky");
-		}
-	}
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("signup.jsp").forward(request, response);
+    }
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // TODO Auto-generated method stub
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
+        int id = request.getContentLength();
+        String date = request.getParameter("dateOfBirth");
+        String role = request.getParameter("role");
+        String username = request.getParameter("username");
+        String pass = request.getParameter("password");
+        String email = request.getParameter("email");
+
+        User kh = new User(id, pass, email, date, role, username);
+        if (new UserDAO().addAccount(kh)) {
+            HttpSession session = request.getSession();
+            session.setAttribute("user", kh);
+            response.sendRedirect("login.jsp");
+        } else {
+            System.out.println("Loi dang ky");
+        }
+    }
 
 }
