@@ -2,6 +2,7 @@ package com.flashcards.controller;
 
 import com.flashcards.dao.database.connection.CardDAO;
 import com.flashcards.dao.database.connection.UserDAO;
+import com.flashcards.dao.database.connection.UserDaoForSetting;
 import com.flashcards.model.Card;
 import com.flashcards.model.User;
 
@@ -23,29 +24,29 @@ public class SettingUserDirect extends HttpServlet {
         if(type!=null){
             if(type.equalsIgnoreCase("avatar")){
                 String avatarUpdate = request.getParameter("avatarupdate");
-                UserDAO.updateAvartar(2,avatarUpdate);
+                UserDaoForSetting.updateAvartar(2,avatarUpdate);
             }
             if(type.equalsIgnoreCase("delete")){
-                UserDAO.deleteUser(3);
+                UserDaoForSetting.deleteUser(3);
             }
 
 
         }
         String userNameUpdate = request.getParameter("usernameupdate");
         if(userNameUpdate!=null&&!userNameUpdate.equalsIgnoreCase("")){
-            UserDAO.updateUserName(2,userNameUpdate);
+            UserDaoForSetting.updateUserName(2,userNameUpdate);
         }
         String emailUpdate = request.getParameter("emailupdate");
         if(emailUpdate!=null&&!emailUpdate.equalsIgnoreCase("")){
-            UserDAO.updateEmail(2,emailUpdate);
+            UserDaoForSetting.updateEmail(2,emailUpdate);
         }
         String roleIdUpdate = request.getParameter("roleidupdate");
         if(roleIdUpdate!=null){
-            UserDAO.updateRoleId(2,roleIdUpdate);
+            UserDaoForSetting.updateRoleId(2,roleIdUpdate);
         }
-        User user= UserDAO.loadUserById(2);
+        User user= UserDaoForSetting.loadUserById(2);
         request.setAttribute("user", user);
-        int role_id=Integer.parseInt(user.getRole_id());
+        int role_id=Integer.parseInt(user.getRole());
         request.setAttribute("role_id", role_id);
         request.getRequestDispatcher("setting_user.jsp").forward(request, response);
     }

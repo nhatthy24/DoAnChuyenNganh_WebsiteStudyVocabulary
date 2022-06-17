@@ -2,6 +2,7 @@ package com.flashcards.controller;
 
 import com.flashcards.dao.database.connection.CardDAO;
 import com.flashcards.dao.database.connection.UserDAO;
+import com.flashcards.dao.database.connection.UserDaoForSetting;
 import com.flashcards.model.Card;
 
 import javax.mail.*;
@@ -24,70 +25,77 @@ public class ForgetPassDirect extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
         String userName=request.getParameter("user_name");
         String email=request.getParameter("email");
-        String generatePass=UserDAO.generatePassword(8);
+        boolean result=false;
+        if(userName!=null&&email!=null){
+            String generatePass=UserDaoForSetting.generatePassword(8);
 
-        //sending mail start
-        // Recipient's email ID needs to be mentioned.
-        String to =email;
+            //sending mail start
+            // Recipient's email ID needs to be mentioned.
+            String to =email;
 
-        // Sender's email ID needs to be mentioned
-        String from = "trinhtien6236@gmail.com";
+            // Sender's email ID needs to be mentioned
+            String from = "trinhtien6236@gmail.com";
 
-        // Assuming you are sending email from through gmails smtp
-        String host = "smtp.gmail.com";
+            // Assuming you are sending email from through gmails smtp
+            String host = "smtp.gmail.com";
 
-        // Get system properties
-        Properties properties = System.getProperties();
+            // Get system properties
+            Properties properties = System.getProperties();
 
-        // Setup mail server
-        properties.put("mail.smtp.host", host);
-        properties.put("mail.smtp.port", "465");
-        properties.put("mail.smtp.ssl.enable", "true");
-        properties.put("mail.smtp.auth", "true");
+            // Setup mail server
+            properties.put("mail.smtp.host", host);
+            properties.put("mail.smtp.port", "465");
+            properties.put("mail.smtp.ssl.enable", "true");
+            properties.put("mail.smtp.auth", "true");
 
-        // Get the Session object.// and pass username and password
-        Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
+            // Get the Session object.// and pass username and password
+            Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
 
-            protected PasswordAuthentication getPasswordAuthentication() {
-                //use this email for temporary
-                return new PasswordAuthentication("trinhtien6236@gmail.com", "ftnobneiwiizgjwh");
+                protected PasswordAuthentication getPasswordAuthentication() {
+                    //use this email for temporary
+                    return new PasswordAuthentication("trinhtien6236@gmail.com", "ftnobneiwiizgjwh");
 
+                }
+
+            });
+
+            // Used to debug SMTP issues
+            session.setDebug(true);
+
+            try {
+                // Create a default MimeMessage object.
+                MimeMessage message = new MimeMessage(session);
+
+                // Set From: header field of the header.
+                message.setFrom(new InternetAddress(from));
+
+                // Set To: header field of the header.
+                message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+
+                // Set Subject: header field
+                message.setSubject("Update your password");
+
+                // Now set the actual message
+                message.setText("Hello "+userName+", "+"Your new password is:"+ generatePass);
+
+                System.out.println("sending...");
+                // Send message
+                Transport.send(message);
+                System.out.println("Sent message successfully....");
+            } catch (MessagingException mex) {
+                mex.printStackTrace();
             }
-
-        });
-
-        // Used to debug SMTP issues
-        session.setDebug(true);
-
-        try {
-            // Create a default MimeMessage object.
-            MimeMessage message = new MimeMessage(session);
-
-            // Set From: header field of the header.
-            message.setFrom(new InternetAddress(from));
-
-            // Set To: header field of the header.
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-
-            // Set Subject: header field
-            message.setSubject("Update your password");
-
-            // Now set the actual message
-            message.setText("Hello "+userName+", "+"Your new password is:"+ generatePass);
-
-            System.out.println("sending...");
-            // Send message
-            Transport.send(message);
-            System.out.println("Sent message successfully....");
-        } catch (MessagingException mex) {
-            mex.printStackTrace();
+            //end
+            result=UserDaoForSetting.updatePassWord(2,generatePass);
         }
-        //end
-        UserDAO.updatePassWord(2,generatePass);
-        System.out.println("userName and email"+userName+"/"+email);
-        request.getRequestDispatcher("index.jsp").forward(request,response);
+        if(result){
+            request.getRequestDispatcher("reset_pass_successfully.jsp").forward(request,response);
+        }else {
+            System.out.println("userName and email"+userName+"/"+email);
+            request.getRequestDispatcher("reset_pass.jsp").forward(request,response);
+        }
+
     }
 }

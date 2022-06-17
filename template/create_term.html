@@ -310,100 +310,109 @@
                             <button class="navbar__search-btn"><i class="fas fa-search"></i></button>
                             <input type="text" class="navbar__search-input" placeholder="Học phần, câu hỏi">
                         </div>
-                        <div class="navbar__notify">
-                            <button class="navbar__notify-btn"><i class="far fa-bell"></i></button>
+
+                        <div class="navbar__login-null" style="display: none">
+                            <a class="navbar__login-null-btn login-btn" href="">Đăng nhập</a>
+                            <a class="navbar__login-null-btn register-btn" href="">Đăng ký</a>
                         </div>
-                        <div class="navbar__user" id="navbar__user">
-                            <button class="navbar__user-btn">
-                                <img id="navbar__user-btn" src="./assets/img/avatar.jpg" alt="">
-                            </button>
 
-                            <div class="navbar__user-menu" id="navbar__user-menu" style="display: none">
-                                <div class="navbar__user-header">
-                                    <img class="navbar__user-img" src="./assets/img/avatar.jpg" alt="">
-                                    <div class="navbar_user-infor">
-                                        <p class="navbar__user-name">
-                                            Nguyễn Văn A
-                                        </p>
-                                        <p class="navbar__user-email">
-                                            dukhanhqt@gmail.comffffffffff
-                                        </p>
+                        <div class="navbar__login" >
+                            <div class="navbar__notify">
+                                <button class="navbar__notify-btn"><i class="far fa-bell"></i></button>
+                            </div>
+                            <div class="navbar__user" id="navbar__user">
+                                <button class="navbar__user-btn">
+                                    <img id="navbar__user-btn" src="./assets/img/avatar.jpg" alt="">
+                                </button>
+
+                                <div class="navbar__user-menu" id="navbar__user-menu" style="display: none">
+                                    <div class="navbar__user-header">
+                                        <img class="navbar__user-img" src="./assets/img/avatar.jpg" alt="">
+                                        <div class="navbar_user-infor">
+                                            <p class="navbar__user-name">
+                                                Nguyễn Văn A
+                                            </p>
+                                            <p class="navbar__user-email">
+                                                dukhanhqt@gmail.comffffffffff
+                                            </p>
+                                        </div>
                                     </div>
+
+                                    <div class="nav__user-line-spread"></div>
+
+                                    <ul class="navbar__user-items">
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link">
+                                                Hồ sơ
+                                            </a>
+                                        </li>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link">
+                                                Tiến độ
+                                            </a>
+                                        </li>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link">
+                                                <button>
+                                                    Chế độ ban đêm <i class="fas fa-toggle-on"></i>
+                                                </button>
+                                            </a>
+                                        </li>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link">
+                                                Cài đặt
+                                            </a>
+                                        </li>
+
+                                        <div class="nav__user-line-spread"></div>
+
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link">
+                                                Giới thiệu bạn bè
+                                            </a>
+                                        </li>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link">
+                                                Giúp đỡ và phản hồi
+                                            </a>
+                                        </li>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link">
+                                                Ứng dụng di dộng
+                                            </a>
+                                        </li>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link">
+                                                Blog
+                                            </a>
+                                        </li>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link">
+                                                Quyền riêng tư
+                                            </a>
+                                        </li>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link">
+                                                Nâng cấp
+                                            </a>
+                                        </li>
+
+                                        <div class="nav__user-line-spread"></div>
+
+
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link">
+                                                <button>
+                                                    Đăng xuất
+                                                </button>
+                                            </a>
+                                        </li>
+                                    </ul>
+
                                 </div>
-
-                                <div class="nav__user-line-spread"></div>
-
-                                <ul class="navbar__user-items">
-                                    <li class="navbar__user-item">
-                                        <a href="#" class="navbar__user-link">
-                                            Hồ sơ
-                                        </a>
-                                    </li>
-                                    <li class="navbar__user-item">
-                                        <a href="#" class="navbar__user-link">
-                                            Tiến độ
-                                        </a>
-                                    </li>
-                                    <li class="navbar__user-item">
-                                        <a href="#" class="navbar__user-link">
-                                            <button>
-                                                Chế độ ban đêm <i class="fas fa-toggle-on"></i>
-                                            </button>
-                                        </a>
-                                    </li>
-                                    <li class="navbar__user-item">
-                                        <a href="#" class="navbar__user-link">
-                                            Cài đặt
-                                        </a>
-                                    </li>
-
-                                    <div class="nav__user-line-spread"></div>
-
-                                    <li class="navbar__user-item">
-                                        <a href="#" class="navbar__user-link">
-                                            Giới thiệu bạn bè
-                                        </a>
-                                    </li>
-                                    <li class="navbar__user-item">
-                                        <a href="#" class="navbar__user-link">
-                                            Giúp đỡ và phản hồi
-                                        </a>
-                                    </li>
-                                    <li class="navbar__user-item">
-                                        <a href="#" class="navbar__user-link">
-                                            Ứng dụng di dộng
-                                        </a>
-                                    </li>
-                                    <li class="navbar__user-item">
-                                        <a href="#" class="navbar__user-link">
-                                            Blog
-                                        </a>
-                                    </li>
-                                    <li class="navbar__user-item">
-                                        <a href="#" class="navbar__user-link">
-                                            Quyền riêng tư
-                                        </a>
-                                    </li>
-                                    <li class="navbar__user-item">
-                                        <a href="#" class="navbar__user-link">
-                                            Nâng cấp
-                                        </a>
-                                    </li>
-
-                                    <div class="nav__user-line-spread"></div>
-
-
-                                    <li class="navbar__user-item">
-                                        <a href="#" class="navbar__user-link">
-                                            <button>
-                                                Đăng xuất
-                                            </button>
-                                        </a>
-                                    </li>
-                                </ul>
-
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -444,11 +453,13 @@
                 </div>
                 <div class="create__term-permission-right">
                     <div class="create__term-permission-view">
-                        <p class="create__term-permission-title"  id="term__permission-view-title">Hiển thị với mọi người</p>
+                        <p class="create__term-permission-title" id="term__permission-view-title">Hiển thị với mọi người
+                        </p>
                         <button class="create__term-permission-btn" id="term__permission-btn-view">Thay đổi</button>
                     </div>
                     <div class="create__term-permission-edit">
-                        <p class="create__term-permission-title" id="term__permission-edit-title">Chỉ tôi có quyền sửa đổi</p>
+                        <p class="create__term-permission-title" id="term__permission-edit-title">Chỉ tôi có quyền sửa
+                            đổi</p>
                         <button class="create__term-permission-btn" id="term__permission-btn-edit">Thay đổi</button>
                     </div>
                     <button class="create__term-permission-wrap create__term-permission-btn">
@@ -622,11 +633,13 @@
                                         <div class="permission__dialog-view" id="permission__dialog-view-class">
                                             <div class="permission__dialog-view-item">
                                                 <label class="permission__dialog-label-class">
-                                                    <input type="checkbox" name="class-permission" class="permission__dialog-view-class-input" value="1">
+                                                    <input type="checkbox" name="class-permission"
+                                                        class="permission__dialog-view-class-input" value="1">
                                                     <span>DH18DTB</span>
                                                 </label>
                                                 <label class="permission__dialog-label-class">
-                                                    <input type="checkbox" name="class-permission" class="permission__dialog-view-class-input" value="2">
+                                                    <input type="checkbox" name="class-permission"
+                                                        class="permission__dialog-view-class-input" value="2">
                                                     <span>DH18DTA</span>
                                                 </label>
                                             </div>
@@ -635,7 +648,7 @@
                                         <div class="permission__dialog-view" id="permission__dialog-view-password">
                                             <div class="permission__dialog-view-item">
                                                 <input type="password" placeholder="Tạo mật khẩu"
-                                                 id="permission__password-view">
+                                                    id="permission__password-view">
                                                 <label class="permission__dialog-label-password">MẬT KHẨU</label>
                                             </div>
                                         </div>
@@ -646,8 +659,8 @@
                                 <p class="permission__dialog-item-title">
                                     AI CÓ THỂ SỬA
                                 </p>
-                                <select class="permission__dialog-options"
-                                 id="permission__dialog-edit" onchange="changePermissionEdit()">
+                                <select class="permission__dialog-options" id="permission__dialog-edit"
+                                    onchange="changePermissionEdit()">
                                     <option value="1">Một số lớp học</option>
                                     <option value="2">Người có mật khẩu</option>
                                     <option value="3">Chỉ tôi</option>
@@ -663,11 +676,13 @@
                                         <div class="permission__dialog-view" id="permission__dialog-edit-class">
                                             <div class="permission__dialog-view-item">
                                                 <label class="permission__dialog-label-class">
-                                                    <input type="checkbox" name="class"  class="permission__dialog-edit-class-input" value="1">
+                                                    <input type="checkbox" name="class"
+                                                        class="permission__dialog-edit-class-input" value="1">
                                                     <span>DH18DTB</span>
                                                 </label>
                                                 <label class="permission__dialog-label-class">
-                                                    <input type="checkbox" name="class" class="permission__dialog-edit-class-input" value="2">
+                                                    <input type="checkbox" name="class"
+                                                        class="permission__dialog-edit-class-input" value="2">
                                                     <span>DH18DTA</span>
                                                 </label>
                                             </div>
@@ -675,7 +690,8 @@
 
                                         <div class="permission__dialog-view" id="permission__dialog-edit-password">
                                             <div class="permission__dialog-view-item">
-                                                <input type="password" placeholder="Tạo mật khẩu" id="permission__password-edit">
+                                                <input type="password" placeholder="Tạo mật khẩu"
+                                                    id="permission__password-edit">
                                                 <label class="permission__dialog-label-password">MẬT KHẨU</label>
                                             </div>
                                         </div>

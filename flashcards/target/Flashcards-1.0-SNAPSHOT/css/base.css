@@ -5,19 +5,26 @@
     --text-color: rgb(48,53,69);
     --black-background: #303545;
     --blue-color:#4255FF;
-    --blue-color-dark: #423ED8;
+    --blue-color-dark: #4257b2;
     --blue-color-light: rgb(168,177,255);
     --gray-color: #F6F7FB;
     --text-gray-color: #858996;
+    --text-gray-color-dark: #586380;
     --gray-color-light: #D9DDE8;
     --border-gray-color: #e0e1e2;
-    --green-color-light: #3ccfcf;
-    --green-color: #52A8A7;
+    --green-color: #6cd8e6;
+    --green-color-dark: #52A8A7;
+    --green-color-light: #c1eaf0;
+    --verdurous-color: #23b26d;
+    --green-background-color: #f2fbf6;
     --yellow-color: rgb(247,220,97);
     --yellow-color-dark: #f1c606;
     --modal-cover-color: rgba(0,0,0,0.4);
     --orange-color: #EB8724;
-    --red-color-light: #EA7058;
+    --red-color-light: #ea7058;
+    --red-color: #b82322;
+    --pink-color-light: #F5CECA;
+
 }
 
 *{
@@ -31,7 +38,16 @@ html{
     box-sizing: border-box;
 }
 
- 
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.m-0{
+    margin: 0;
+}
+
+
 
 .modal{
     position: fixed;
@@ -57,7 +73,7 @@ html{
     /* height: 382px; */
     margin: 50px auto;
     position: relative;
-  
+
 }
 
 
@@ -90,6 +106,6 @@ html{
 }
 
 
-button:hover{
+button:not(:disabled):hover{
     cursor: pointer;
 }

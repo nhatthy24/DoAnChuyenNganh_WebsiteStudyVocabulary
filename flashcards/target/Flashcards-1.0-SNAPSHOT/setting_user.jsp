@@ -30,7 +30,7 @@
 
 <body class="theme-default">
 <div class="site">
-    <jsp:include page="header.jsp"></jsp:include>
+<%--    <jsp:include page="header.jsp"></jsp:include>--%>
     <div class="DashboardLayout">
         <div class="DashboardLayout-container">
             <div class="DashboardLayout-main">
@@ -812,7 +812,7 @@
                                     Cập nhật tên người dùng của bạn
                                 </h4>
                                 <p class="UIParagraph">
-                                    Tên người dùng hiện tại của bạn là ${user.name}
+                                    Tên người dùng hiện tại của bạn là ${user.username}
                                 </p>
                                 <hr class="UIHorizontalRule" />
                                 <div class="UIDiv">
@@ -853,7 +853,7 @@
                             </div>
                             <div class="SettingsBox-box">
                                 <h4 class="UIHeading UIHeading--four">
-                                    Xóa vĩnh viễn ${user.name}
+                                    Xóa vĩnh viễn ${user.username}
                                 </h4>
                                 <p class="UIParagraph">
                                     Hãy cẩn thận - nút này sẽ xóa toàn bộ dữ liệu và không thể
