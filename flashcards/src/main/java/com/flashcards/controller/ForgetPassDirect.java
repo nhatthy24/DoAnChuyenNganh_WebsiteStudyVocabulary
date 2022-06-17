@@ -1,6 +1,7 @@
 package com.flashcards.controller;
 
 import com.flashcards.dao.database.connection.CardDAO;
+import com.flashcards.dao.database.connection.UserDAO;
 import com.flashcards.model.Card;
 
 import javax.mail.*;
@@ -26,6 +27,7 @@ public class ForgetPassDirect extends HttpServlet {
 
         String userName=request.getParameter("user_name");
         String email=request.getParameter("email");
+        String generatePass=UserDAO.generatePassword(8);
 
         //sending mail start
         // Recipient's email ID needs to be mentioned.
@@ -74,7 +76,7 @@ public class ForgetPassDirect extends HttpServlet {
             message.setSubject("Update your password");
 
             // Now set the actual message
-            message.setText("Hello "+userName+", "+"Your new password is: 88888888");
+            message.setText("Hello "+userName+", "+"Your new password is:"+ generatePass);
 
             System.out.println("sending...");
             // Send message
@@ -84,7 +86,7 @@ public class ForgetPassDirect extends HttpServlet {
             mex.printStackTrace();
         }
         //end
-
+        UserDAO.updatePassWord(2,generatePass);
         System.out.println("userName and email"+userName+"/"+email);
         request.getRequestDispatcher("index.jsp").forward(request,response);
     }

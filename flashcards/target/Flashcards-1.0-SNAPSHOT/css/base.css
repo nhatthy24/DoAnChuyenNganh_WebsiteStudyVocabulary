@@ -1,0 +1,95 @@
+
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: rgb(48,53,69);
+    --black-background: #303545;
+    --blue-color:#4255FF;
+    --blue-color-dark: #423ED8;
+    --blue-color-light: rgb(168,177,255);
+    --gray-color: #F6F7FB;
+    --text-gray-color: #858996;
+    --gray-color-light: #D9DDE8;
+    --border-gray-color: #e0e1e2;
+    --green-color-light: #3ccfcf;
+    --green-color: #52A8A7;
+    --yellow-color: rgb(247,220,97);
+    --yellow-color-dark: #f1c606;
+    --modal-cover-color: rgba(0,0,0,0.4);
+    --orange-color: #EB8724;
+    --red-color-light: #EA7058;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+ 
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    overflow-y: auto;
+    /* height: 100%; */
+}
+
+.modal__overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var( --modal-cover-color);
+    /* z-index: 3; */
+}
+
+.modal__body{
+    width: 600px;
+    /* height: 382px; */
+    margin: 50px auto;
+    position: relative;
+  
+}
+
+
+.term__card-item--slide-next {
+    animation: slideCardNext 0.1s ease-in-out;
+}
+
+.term__card-item--slide-prev{
+    animation: slideCardPrev 0.1s ease-in-out;
+}
+
+@keyframes slideCardNext {
+    from {
+        transform: translateX(-150px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideCardPrev {
+    from {
+        transform: translateX(150px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+button:hover{
+    cursor: pointer;
+}
