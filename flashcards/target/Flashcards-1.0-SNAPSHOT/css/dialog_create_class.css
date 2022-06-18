@@ -1,0 +1,61 @@
+.dialog__create-class {
+    background-color: var(--white-color);
+    border-radius: 10px;
+}
+
+.dialog__create-class-btn-close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+}
+
+.dialog__create-class-content {
+    padding: 32px;
+}
+
+.dialog__create-class-title {
+    margin-top: 0;
+    font-size: 30px;
+    margin-bottom: 32px;
+}
+
+.dialog__create-class-form {
+    margin-bottom: 25px;
+
+}
+
+.dialog__create-class-input {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 6px;
+    outline: none;
+    margin-bottom: 6px;
+    height: 36px;
+}
+
+.dialog__create-class-input:focus {
+    border-bottom: 4px solid var( --yellow-color-dark);
+}
+
+.dialog__create-class-label {
+    color: var(--text-gray-color);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.dialog__create-class-btn {
+    height: 48px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--white-color);
+    background-color: var(--green-color);
+}
