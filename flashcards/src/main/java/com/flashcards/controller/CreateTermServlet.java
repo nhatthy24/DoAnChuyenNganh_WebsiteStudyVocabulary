@@ -31,7 +31,7 @@ public class CreateTermServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        session.setAttribute("title", "Táº¡o há»�c pháº§n");
+        session.setAttribute("title", "Tạo học phần");
         int courseId = randomId();
         System.out.println(courseId);
         String courseName = req.getParameter("title");
@@ -43,7 +43,7 @@ public class CreateTermServlet extends HttpServlet {
         if(isInsert){
             System.out.println("Tạo học phần thành công");
             if(words != null && means != null){
-                System.out.println("Kiểm tra words và  means != null");
+                System.out.println("Kiểm tra words và means != null");
                 int count=0;
                 for(int i=0; i< words.length; i++){
                     if(CardDAO.insertCard(words[i],means[i],null,courseId, 1 )){
