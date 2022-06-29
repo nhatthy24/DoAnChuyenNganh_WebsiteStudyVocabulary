@@ -534,7 +534,7 @@
 
 .tab__side-img i {
     font-size: 1.8rem;
-    color: var(--tex-color);
+    color: var(--text-color);
 }
 
 .tab__side-img p {
@@ -564,7 +564,7 @@
 .add__tab-btn span {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--tex-color);
+    color: var(--text-color);
     /* display: block; */
     padding: 10px 5px 10px 0;
     border-bottom: 5px solid var(--green-color);
