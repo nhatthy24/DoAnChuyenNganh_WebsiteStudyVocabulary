@@ -1,8 +1,8 @@
 package com.flashcards.dao.database.connection;
 
 public class Config {
-    public static final String HOST_NAME = "localhost";
-    public static final String DB_NAME = "flashcardsv3";
+    public static final String HOST_NAME = "localhost3306";
+    public static final String DB_NAME = "flashcards";
     public static final String DB_PORT = "3306";
     public static final String USER_NAME = "root";
     public static final String PASSWORD = "";

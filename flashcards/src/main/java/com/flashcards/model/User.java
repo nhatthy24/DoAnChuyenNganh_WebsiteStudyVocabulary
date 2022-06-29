@@ -6,6 +6,7 @@ public class User {
     private int id;
     private String email;
     private String password;
+    private String avatar;
     private String username;
     private String date;
     private String role;
@@ -18,6 +19,9 @@ public class User {
     	this.date = newDate;
     	this.role = newRole;
     	this.username = newUsername;
+    }
+
+    public User() {
     }
 
     public String getUsername() {
@@ -44,6 +48,15 @@ public class User {
         this.email = email;
     }
 
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -67,6 +80,7 @@ public class User {
 	public void setRole(String role) {
 		this.role = role;
 	}
+
 
 	@Override
 	public String toString() {

@@ -1,6 +1,4 @@
-<%--
-  User: TRAN NHAT THY
---%>
+<%-- User: TRAN NHAT THY --%>
 <%@page import="com.flashcards.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -17,36 +15,45 @@
                     </div>
                     <div class="navbar__menu">
                         <ul class="navbar__menu-list">
-                            <li class="navbar__menu-item"><a href="/"
-                                                             class="navbar__menu-link active"> <span
-                                    class="navbar__menu-text">Trang chủ</span>
-                            </a></li>
+                            <li class="navbar__menu-item"><a href="/" class="navbar__menu-link active">
+                                <span class="navbar__menu-text">Trang chủ</span>
+                            </a>
+                            </li>
                             <li class="navbar__menu-item ">
-                                <button class="navbar__menu-link btn-item"
+                                <button class="navbar__menu-link btn-item" onclick="showLibraryDialog()"
                                         id="navbar__library-btn">
-									<span class="navbar__menu-text"> Thư viện của bạn <i
-                                            class="fas fa-angle-down"></i>
-									</span>
+                                    <span class="navbar__menu-text">
+                                        Thư viện của bạn
+                                        <i class="fas fa-angle-down"></i>
+                                    </span>
                                 </button>
                             </li>
-                            <div class="navbar__library" id="navbar__library"
-                                 style="display: none">
+                            <div class="navbar__library" id="navbar__library" style="display: none">
                                 <div class="navbar__library-header">
                                     <ul class="navbar__library-tab">
                                         <li class="navbar__library-tab-item ">
                                             <button class="navbar__library-tab-btn"
-                                                    id="library__tab-term">Học phần
+                                                    id="library__tab-term"
+                                                    onclick="switchLibraryTab(this)"
+                                            >
+                                                Học phần
                                             </button>
 
                                         </li>
                                         <li class="navbar__library-tab-item active">
                                             <button class="navbar__library-tab-btn"
-                                                    id="library__tab-folder">Thư mục
+                                                    id="library__tab-folder"
+                                                    onclick="switchLibraryTab(this)"
+                                            >
+                                                Thư mục
                                             </button>
                                         </li>
                                         <li class="navbar__library-tab-item">
                                             <button class="navbar__library-tab-btn"
-                                                    id="library__tab-class">Lớp học
+                                                    id="library__tab-class"
+                                                    onclick="switchLibraryTab(this)"
+                                            >
+                                                Lớp học
                                             </button>
                                         </li>
                                     </ul>
@@ -61,45 +68,59 @@
                                             <div class="navbar__library-term">
                                                 <ul class="navbar__library-term-list">
                                                     <li class="navbar__library-term-item">
-                                                        <a href="#"
-                                                           class="navbar__library-term-link"> <span
-                                                                class="navbar__library-term-text"> Học phần 1 </span>
+                                                        <a href="#" class="navbar__library-term-link">
+                                                            <span class="navbar__library-term-text">
+                                                                Học phần 1
+                                                            </span>
                                                             <div class="navbar__term-author">
                                                                 <img class="navbar__term-author-img"
-                                                                     src="./img/avatar.jpg" alt=""> <span
-                                                                    class="navbar__term-author-name"> Nguyễn Văn A </span>
+                                                                     src="./img/avatar.jpg" alt="">
+                                                                <span class="navbar__term-author-name">
+                                                                    Nguyễn Văn A
+                                                                </span>
                                                             </div>
-                                                        </a></li>
+                                                        </a>
+                                                    </li>
                                                     <li class="navbar__library-term-item">
-                                                        <a href="#"
-                                                           class="navbar__library-term-link"> <span
-                                                                class="navbar__library-term-text"> Học phần 1 </span>
+                                                        <a href="#" class="navbar__library-term-link">
+                                                            <span class="navbar__library-term-text">
+                                                                Học phần 1
+                                                            </span>
                                                             <div class="navbar__term-author">
                                                                 <img class="navbar__term-author-img"
-                                                                     src="./img/avatar.jpg" alt=""> <span
-                                                                    class="navbar__term-author-name"> Nguyễn Văn A </span>
-                                                            </div>
-                                                        </a></li>
-                                                    <li class="navbar__library-term-item">
-                                                        <a href="#"
-                                                           class="navbar__library-term-link"> <span
-                                                                class="navbar__library-term-text"> Học phần 1 </span>
-                                                            <div class="navbar__term-author">
-                                                                <img class="navbar__term-author-img"
-                                                                     src="./img/avatar.jpg" alt=""> <span
-                                                                    class="navbar__term-author-name"> Nguyễn Văn A </span>
+                                                                     src="./img/avatar.jpg" alt="">
+                                                                <span class="navbar__term-author-name">
+                                                                    Nguyễn Văn A
+                                                                </span>
                                                             </div>
                                                         </a>
                                                     </li>
                                                     <li class="navbar__library-term-item">
                                                         <a href="#"
                                                            class="navbar__library-term-link">
-                                                            <span
-                                                                    class="navbar__library-term-text"> Học phần 1 </span>
+                                                            <span class="navbar__library-term-text">
+                                                                Học phần 1
+                                                            </span>
                                                             <div class="navbar__term-author">
                                                                 <img class="navbar__term-author-img"
-                                                                     src="./img/avatar.jpg" alt=""> <span
-                                                                    class="navbar__term-author-name"> Nguyễn Văn A </span>
+                                                                     src="./img/avatar.jpg" alt="">
+                                                                <span class="navbar__term-author-name">
+                                                                    Nguyễn Văn A
+                                                                </span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
+                                                    <li class="navbar__library-term-item">
+                                                        <a href="#" class="navbar__library-term-link">
+                                                            <span class="navbar__library-term-text">
+                                                                Học phần 1
+                                                            </span>
+                                                            <div class="navbar__term-author">
+                                                                <img class="navbar__term-author-img"
+                                                                     src="./img/avatar.jpg" alt="">
+                                                                <span class="navbar__term-author-name">
+                                                                    Nguyễn Văn A
+                                                                </span>
                                                             </div>
                                                         </a>
                                                     </li>
@@ -117,9 +138,12 @@
                                                 <img class="navbar__library-null-img"
                                                      src="./img/null-term.png" alt="">
 
-                                                <p class="navbar__library-null-text">Tìm kiếm một chủ đề
-                                                    hoặc lớp học để tìm các học phần có liên quan.</p>
-                                                <a class="navbar__library-null-link" href="#"> Tìm học
+                                                <p class="navbar__library-null-text">Tìm kiếm một
+                                                    chủ đề
+                                                    hoặc lớp học để tìm các học phần có liên quan.
+                                                </p>
+                                                <a class="navbar__library-null-link" href="#"> Tìm
+                                                    học
                                                     phần </a>
                                             </div>
                                         </div>
@@ -132,20 +156,30 @@
 
                                             <div class="navbar__library-folder">
                                                 <ul class="navbar__library-folder-list">
-                                                    <li class="navbar__library-folder-item"><a href="#"
-                                                                                               class="navbar__library-folder-link">
-                                                        <p class="navbar__library-folder-name">hom nay toi
-                                                            dang lam template website cho mon do an cho mon do an
-                                                            chuyen nganh</p>
-                                                        <p class="navbar__library-folder-des">0 học phần</p>
-                                                    </a></li>
-                                                    <li class="navbar__library-folder-item"><a href="#"
-                                                                                               class="navbar__library-folder-link">
-                                                        <p class="navbar__library-folder-name">hom nay toi
-                                                            dang lam template website cho mon do an cho mon do an
-                                                            chuyen nganh</p>
-                                                        <p class="navbar__library-folder-des">0 học phần</p>
-                                                    </a></li>
+                                                    <li class="navbar__library-folder-item">
+                                                        <a href="#"
+                                                           class="navbar__library-folder-link">
+                                                            <p class="navbar__library-folder-name">
+                                                                hom nay toi
+                                                                dang lam template website cho mon do
+                                                                an cho mon do an
+                                                                chuyen nganh</p>
+                                                            <p class="navbar__library-folder-des">0
+                                                                học phần</p>
+                                                        </a>
+                                                    </li>
+                                                    <li class="navbar__library-folder-item">
+                                                        <a href="#"
+                                                           class="navbar__library-folder-link">
+                                                            <p class="navbar__library-folder-name">
+                                                                hom nay toi
+                                                                dang lam template website cho mon do
+                                                                an cho mon do an
+                                                                chuyen nganh</p>
+                                                            <p class="navbar__library-folder-des">0
+                                                                học phần</p>
+                                                        </a>
+                                                    </li>
 
                                                 </ul>
                                             </div>
@@ -160,11 +194,11 @@
                                             <div class="navbar__library-null-content">
                                                 <img class="navbar__library-null-img"
                                                      src="./img/null-folder.png" alt="">
-
-                                                <p class="navbar__library-null-text">Sắp xếp tất cả các
-                                                    học phần đang học cho một môn cụ thể.</p>
-                                                <a class="navbar__library-null-link" href="#"> Tạo thư
-                                                    mục </a>
+                                                <p class="navbar__library-null-text">
+                                                    Sắp xếp tất cả các học phần đang học cho một môn cụ thể.</p>
+                                                <a class="navbar__library-null-link" href="#">
+                                                    Tạo thư mục
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -173,20 +207,23 @@
 
                                     <div id="library-class" class="library__tab-content"
                                          style="display: none">
-
                                         <div class="navbar__library-not-null">
                                             <div class="navbar__library-class">
                                                 <ul class="navbar__library-class-list">
-                                                    <li class="navbar__library-class-item"><a href="#"
-                                                                                              class="navbar__library-class-link"> <span
-                                                            class="navbar__library-class-text"> Lớp học 1 </span>
-                                                        <div class="navbar__class-author">
-                                                            <img class="navbar__class-author-img"
-                                                                 src="./img/avatar.jpg" alt=""> <span
-                                                                class="navbar__class-author-name"> Nguyễn Văn A
-																</span>
-                                                        </div>
-                                                    </a></li>
+                                                    <li class="navbar__library-class-item">
+                                                        <a href="#" class="navbar__library-class-link">
+                                                            <span class="navbar__library-class-text">
+                                                                Lớp học 1
+                                                            </span>
+                                                            <div class="navbar__class-author">
+                                                                <img class="navbar__class-author-img"
+                                                                     src="./img/avatar.jpg" alt="">
+                                                                <span class="navbar__class-author-name">
+                                                                    Nguyễn Văn A
+                                                                </span>
+                                                            </div>
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </div>
 
@@ -204,41 +241,43 @@
 
                                                 <p class="navbar__library-null-text">Tìm lớp học của
                                                     giáo viên của bạn trên Quizlet.</p>
-                                                <a class="navbar__library-null-link" href="#"> Tìm một
-                                                    lớp học </a>
+                                                <a class="navbar__library-null-link" href="#">
+                                                    Tìm một lớp học
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
-
                             </div>
                         </ul>
 
-                        <button class="navbar__menu-btn" id="navbar__menu-create-btn">
-							<span class="navbar__menu-text"> Tạo <i
-                                    class="fas fa-angle-down"></i>
-							</span>
+                        <button class="navbar__menu-btn" onclick="showCreateButton()" id="navbar__menu-create-btn">
+                            <span class="navbar__menu-text">
+                                Tạo <i class="fas fa-angle-down"></i>
+                            </span>
+
                             <div class="navbar__create-menu" id="navbar__create-menu"
                                  style="display: none">
                                 <ul class="navbar__create-menu-list">
-                                    <li class="navbar__create-menu-item"><a
-                                            href="creation?type=term" class="navbar__create-menu-link">
-                                        <i class="far fa-clone"></i> <span
-                                            class="navbar__create-menu-text"> Học phần </span>
-                                    </a></li>
+                                    <li class="navbar__create-menu-item">
+                                        <a href="creation?type=term" class="navbar__create-menu-link">
+                                            <i class="far fa-clone"></i>
+                                            <span class="navbar__create-menu-text">Học phần</span>
+                                        </a>
+                                    </li>
 
-                                    <li class="navbar__create-menu-item"><a href="#"
-                                                                            class="navbar__create-menu-link"> <i
-                                            class="far fa-folder"></i>
-                                        <span class="navbar__create-menu-text"> Thư mục </span>
-                                    </a></li>
-                                    <li class="navbar__create-menu-item"><a href="#"
-                                                                            class="navbar__create-menu-link"> <i
-                                            class="fas fa-user-friends"></i> <span
-                                            class="navbar__create-menu-text"> Lớp </span>
-                                    </a></li>
+                                    <li class="navbar__create-menu-item">
+                                        <a href="javascript:showDialogCreateFolder()" class="navbar__create-menu-link">
+                                            <i class="far fa-folder"></i>
+                                            <span class="navbar__create-menu-text">Thư mục</span>
+                                        </a>
+                                    </li>
+                                    <li class="navbar__create-menu-item">
+                                        <a href="javascript:showDialogCreateClass()" class="navbar__create-menu-link">
+                                            <i class="fas fa-user-friends"></i>
+                                            <span class="navbar__create-menu-text"> Lớp </span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </button>
@@ -258,8 +297,10 @@
 
                     <c:if test="${sessionScope.user==null}">
                         <div class="navbar__login-null">
-                            <a class="navbar__login-null-btn login-btn" href="${pageContext.request.contextPath}/ProcessLogIn">Đăng nhập</a>
-                            <a class="navbar__login-null-btn register-btn" href="${pageContext.request.contextPath}/ProcessSignUp">Đăng ký</a>
+                            <a class="navbar__login-null-btn login-btn"
+                               href="${pageContext.request.contextPath}/ProcessLogIn">Đăng nhập</a>
+                            <a class="navbar__login-null-btn register-btn"
+                               href="${pageContext.request.contextPath}/ProcessSignUp">Đăng ký</a>
                         </div>
                     </c:if>
                     <c:if test="${sessionScope.user!=null}">
@@ -270,7 +311,9 @@
                                 </button>
                             </div>
                             <div class="navbar__user" id="navbar__user">
-                                <button class="navbar__user-btn">
+                                <button class="navbar__user-btn"
+                                        onclick="showAccountDialog()"
+                                >
                                     <img id="navbar__user-btn" src="./img/avatar.jpg" alt="">
                                 </button>
 
@@ -280,21 +323,9 @@
                                         <div class="navbar_user-infor">
                                             <p class="navbar__user-name">
                                                     ${sessionScope.user.username}
-                                                    <%--                                                <%--%>
-                                                    <%--                                                    User us1 = (User) session.getAttribute("user");--%>
-                                                    <%--                                                    if (us1 != null) {--%>
-                                                    <%--                                                        out.print(us1.getUsername());--%>
-                                                    <%--                                                    }--%>
-                                                    <%--                                                %>--%>
                                             </p>
                                             <p class="navbar__user-email">
-                                                    ${sessionScope.user.password}
-                                                    <%--                                                <%--%>
-                                                    <%--                                                    User us2 = (User) session.getAttribute("user");--%>
-                                                    <%--                                                    if (us2 != null) {--%>
-                                                    <%--                                                        out.print(us2.getEmail());--%>
-                                                    <%--                                                    }--%>
-                                                    <%--                                                %>--%>
+                                                    ${sessionScope.user.email}
                                             </p>
                                         </div>
                                     </div>
@@ -302,54 +333,72 @@
                                     <div class="nav__user-line-spread"></div>
 
                                     <ul class="navbar__user-items">
-                                        <li class="navbar__user-item"><a href="#"
-                                                                         class="navbar__user-link"> Hồ sơ </a></li>
-                                        <li class="navbar__user-item"><a href="#"
-                                                                         class="navbar__user-link"> Tiến độ </a></li>
-                                        <li class="navbar__user-item"><a href="#"
-                                                                         class="navbar__user-link">
-                                            <button>
-                                                Chế độ ban đêm <i class="fas fa-toggle-on"></i>
-                                            </button>
-                                        </a></li>
-                                        <li class="navbar__user-item"><a href="#"
-                                                                         class="navbar__user-link"> Cài đặt </a></li>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link"> Hồ sơ </a>
+                                        </li>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link"> Tiến độ </a>
+                                        </li>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link">
+                                                <button>
+                                                    Chế độ ban đêm <i class="fas fa-toggle-on"></i>
+                                                </button>
+                                            </a></li>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link"> Cài đặt </a>
+                                        </li>
 
                                         <div class="nav__user-line-spread"></div>
 
-                                        <li class="navbar__user-item"><a href="#"
-                                                                         class="navbar__user-link"> Giới thiệu bạn
-                                            bè </a>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link"> Giới thiệu bạn bè </a>
                                         </li>
-                                        <li class="navbar__user-item"><a href="#"
-                                                                         class="navbar__user-link"> Giúp đỡ và phản
-                                            hồi </a>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link"> Giúp đỡ và phản hồi </a>
                                         </li>
-                                        <li class="navbar__user-item"><a href="#"
-                                                                         class="navbar__user-link"> Ứng dụng di
-                                            dộng </a>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link"> Ứng dụng di dộng </a>
                                         </li>
-                                        <li class="navbar__user-item"><a href="#"
-                                                                         class="navbar__user-link"> Blog </a></li>
-                                        <li class="navbar__user-item"><a href="#"
-                                                                         class="navbar__user-link"> Quyền riêng tư </a>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link"> Blog </a>
                                         </li>
-                                        <li class="navbar__user-item"><a href="#"
-                                                                         class="navbar__user-link"> Nâng cấp </a></li>
-
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link"> Quyền riêng tư </a>
+                                        </li>
+                                        <li class="navbar__user-item">
+                                            <a href="#" class="navbar__user-link"> Nâng cấp </a>
+                                        </li>
                                         <div class="nav__user-line-spread"></div>
-
-
-                                        <li class="navbar__user-item"><a href="LogOut"
-                                                                         class="navbar__user-link">
-                                            <button>Đăng xuất</button>
-                                        </a></li>
+                                        <li class="navbar__user-item">
+                                            <a href="LogOut" class="navbar__user-link">
+                                                Đăng xuất
+                                            </a>
+                                        </li>
                                     </ul>
 
                                 </div>
                             </div>
                         </div>
                     </c:if>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_create-folder-class" style="display: none">
+        <div class="modal__overlay">
+        </div>
+        <div class="modal__body">
+            <div class="modal__inner" id="modal__inner">
+                <div class="dialog__create-folder">
+                    <div id="dialog-create-folder" style="display: none">
+                        <jsp:include page="dialog_create_folder.jsp"></jsp:include>
+                    </div>
+                    <div id="dialog-create-class" style="display: none">
+                        <jsp:include page="dialog_create_class.jsp"></jsp:include>
+                    </div>
+
                 </div>
             </div>
         </div>
