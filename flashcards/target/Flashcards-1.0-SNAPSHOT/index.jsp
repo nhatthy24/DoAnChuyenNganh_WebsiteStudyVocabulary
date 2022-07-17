@@ -24,7 +24,7 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
-<script src="./js/header.js"></script>
-<script src="./js/create_term.js"></script>
+<script src="js/header.js"></script>
+<script src="js/create_term.js"></script>
 </body>
 </html>
