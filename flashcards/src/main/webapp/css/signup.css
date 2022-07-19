@@ -241,3 +241,25 @@
     text-decoration: none;
     color: var(--green-color);
 }
+
+.wrapper-class {
+    float: left;
+    clear: none;
+  }
+  
+.sub-label {
+    font-size: 1.5em;
+    float: left;
+    clear: none;
+    display: block;
+    padding: 0px 2em 0px 17px;
+    margin: 5px 0px 20px 0px
+  }
+  
+input[type=radio], input.radio {
+    height: 20px;
+    width: 20px;
+    float: left;
+    clear: none;
+    margin: 2px 0 0 2px;
+  }
