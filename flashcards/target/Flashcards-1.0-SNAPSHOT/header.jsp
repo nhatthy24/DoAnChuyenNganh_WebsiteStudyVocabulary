@@ -15,9 +15,10 @@
                     </div>
                     <div class="navbar__menu">
                         <ul class="navbar__menu-list">
-                            <li class="navbar__menu-item"><a href="/" class="navbar__menu-link active">
-                                <span class="navbar__menu-text">Trang chủ</span>
-                            </a>
+                            <li class="navbar__menu-item">
+                                <a href="${pageContext.request.contextPath}/home" class="navbar__menu-link active">
+                                    <span class="navbar__menu-text">Trang chủ</span>
+                                </a>
                             </li>
                             <li class="navbar__menu-item ">
                                 <button class="navbar__menu-link btn-item" onclick="showLibraryDialog()"
@@ -281,7 +282,6 @@
                                 </ul>
                             </div>
                         </button>
-
                     </div>
                 </div>
 
