@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="37c910d2-084a-47f7-b250-33e02878c588" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/document/Class Tổng.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/document/ui design.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/java/com/flashcards/controller/ForgetPassDirect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/java/com/flashcards/controller/SettingUserDirect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/java/com/flashcards/dao/database/connection/UserDaoForSetting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/css/dialog_create_class.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/css/dialog_create_folder.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/css/setting_profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/dialog_create_class.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/dialog_create_folder.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/Flamingo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/Nhim.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/Octobus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/Soi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/Vet.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/blackbird-2781554_960_720.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/blueAndRedFish.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/boat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/buffalo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/butterfly.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/caNoc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/catStandUp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/chimChaoMao.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/deer.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/dog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/duck.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/duckDuck.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/eagle.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/familyAnimal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/fishOn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/foxAndTree.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/frog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/gettyimages-585784370-170667a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/giraffe.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/goldenFish.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/grayLine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/kid-computational-thinking-light.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/kids-learning-5684253.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/lion.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/main.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/monkey.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/octopus-145868_1280.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/orangeCat.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/orangeFish.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/panda.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/parrot.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/penguin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/pig.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/profileAvatarDefault.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/raccon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/racconHi.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/redFish.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/rhino.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/saoBien.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/shark.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/sitDog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/smallCat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/smileDog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/startFish.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/straight-line-icon-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/tigerGray.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/tigerSmall.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/turtle.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/whiteBear.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/img/whiteFox.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/reset_pass.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/reset_pass_faild.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/reset_pass_successfully.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/setting_user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/ForgetPassDirect$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/ForgetPassDirect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/SettingUserDirect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/UserDaoForSetting.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/css/dialog_create_class.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/css/dialog_create_folder.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/css/setting_profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/dialog_create_class.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/dialog_create_folder.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/Flamingo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/Nhim.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/Octobus.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/Soi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/Vet.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/blackbird-2781554_960_720.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/blueAndRedFish.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/boat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/buffalo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/butterfly.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/caNoc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/catStandUp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/chimChaoMao.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/deer.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/dog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/duck.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/duckDuck.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/eagle.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/familyAnimal.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/fishOn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/foxAndTree.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/frog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/gettyimages-585784370-170667a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/giraffe.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/goldenFish.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/grayLine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/kid-computational-thinking-light.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/kids-learning-5684253.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/line.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/lion.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/main.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/monkey.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/octopus-145868_1280.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/orangeCat.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/orangeFish.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/panda.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/parrot.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/penguin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/pig.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/profileAvatarDefault.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/raccon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/racconHi.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/redFish.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/rhino.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/saoBien.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/shark.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/sitDog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/smallCat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/smileDog.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/startFish.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/straight-line-icon-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/tigerGray.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/tigerSmall.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/turtle.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/whiteBear.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/img/whiteFox.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/reset_pass.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/reset_pass_faild.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/reset_pass_successfully.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/setting_user.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/ForgetPassDirect$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/ForgetPassDirect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/SettingUserDirect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/UserDaoForSetting.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/assets/css/dialog_create_class.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template/assets/css/dialog_create_folder.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/document/DetailDesign_v1.0.docx" beforeDir="false" afterPath="$PROJECT_DIR$/document/DetailDesign_v1.0.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/.metadata/.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/.metadata/.plugins/org.eclipse.core.resources/.root/1.tree" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/.metadata/.plugins/org.eclipse.core.resources/.root/2.tree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/.metadata/version.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/src/main/java/com/flashcards/dao/database/connection/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/src/main/java/com/flashcards/dao/database/connection/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/src/main/java/com/flashcards/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/src/main/java/com/flashcards/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/src/main/webapp/create_term.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/create_term.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/src/main/webapp/css/create_term.css" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/css/create_term.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/src/main/webapp/flash_card.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/flash_card.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/src/main/webapp/js/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/js/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/src/main/webapp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/src/main/webapp/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/Flashcards/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/Flashcards/HelloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/CreateCardServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/CreateCardServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/CreateTermServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/CreateTermServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/CreationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/CreationServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/DetailedTermDirect.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/DetailedTermDirect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/DirectServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/DirectServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/FlashCardDirect.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/FlashCardDirect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/LogOut.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/LogOut.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/ProcessLogIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/ProcessLogIn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/ProcessSignUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/ProcessSignUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/StudyCardDirect.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/StudyCardDirect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/WriteDirect.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/controller/WriteDirect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/CardDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/CardDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/CourseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/CourseDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/DBCPDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/DBCPDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/MarkedCardDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/MarkedCardDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/ObjectDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/ObjectDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/dao/database/connection/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/model/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/model/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/model/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/model/Course.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/until/CharacterEncodingFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/until/CharacterEncodingFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/until/UploadFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/WEB-INF/classes/com/flashcards/until/UploadFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/create_term.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/create_term.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/css/create_term.css" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/css/create_term.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/flash_card.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/flash_card.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/js/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/js/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/Flashcards-1.0-SNAPSHOT/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/Flashcards/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/Flashcards/HelloServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/CreateCardServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/CreateCardServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/CreateTermServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/CreateTermServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/CreationServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/CreationServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/DetailedTermDirect.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/DetailedTermDirect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/DirectServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/DirectServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/FlashCardDirect.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/FlashCardDirect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/LogOut.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/LogOut.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/ProcessLogIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/ProcessLogIn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/ProcessSignUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/ProcessSignUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/StudyCardDirect.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/StudyCardDirect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/WriteDirect.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/controller/WriteDirect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/CardDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/CardDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/CourseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/CourseDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/DBCPDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/DBCPDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/MarkedCardDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/MarkedCardDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/ObjectDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/ObjectDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/dao/database/connection/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/model/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/model/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/model/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/model/Course.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/until/CharacterEncodingFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/until/CharacterEncodingFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/until/UploadFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/flashcards/target/classes/com/flashcards/until/UploadFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/assets/css/create_term.css" beforeDir="false" afterPath="$PROJECT_DIR$/template/assets/css/create_term.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/create_term.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/create_term.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2C3yZPsVBxIAt1fwUxSbH2aD5a7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37c910d2-084a-47f7-b250-33e02878c588" name="Default Changelist" comment="" />
+      <created>1658045617691</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658045617691</updated>
+      <workItem from="1658045620236" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

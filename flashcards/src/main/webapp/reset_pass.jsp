@@ -52,7 +52,7 @@
                 <div class="UIDiv SiteSimpleLayout-centered">
                     <h2 class="UIHeading UIHeading--two">Lấy lại mật khẩu</h2>
                     <div class="UIDiv">
-                        <form action="forgetpass" method="get">
+                        <form action="forgetpass" method="post">
                             <p class="UIParagraph">Nhập tên người dùng và địa chỉ email mà bạn đã đăng ký tài khoản.
                                 Chúng tôi sẽ gửi cho bạn mật khẩu mới.</p>
                             <label

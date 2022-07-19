@@ -4,6 +4,7 @@ import com.flashcards.dao.database.connection.CardDAO;
 import com.flashcards.dao.database.connection.CourseDAO;
 import com.flashcards.model.Card;
 import com.flashcards.model.Course;
+import com.flashcards.model.User;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -31,7 +32,8 @@ public class CreateTermServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        session.setAttribute("title", "Táº¡o há»�c pháº§n");
+        session.setAttribute("title", "Tạo học phần");
+        User user = (User) session.getAttribute("user");
         int courseId = randomId();
         System.out.println(courseId);
         String courseName = req.getParameter("title");
@@ -39,14 +41,14 @@ public class CreateTermServlet extends HttpServlet {
         String[] words = req.getParameterValues("word");
         String[] means = req.getParameterValues("mean");
 //        String[] images = req.getParameterValues("image");
-        boolean isInsert = CourseDAO.insertCourse(courseId, courseName, description, 1);
+        boolean isInsert = CourseDAO.insertCourse(courseId, courseName, description, user.getId());
         if(isInsert){
             System.out.println("Tạo học phần thành công");
             if(words != null && means != null){
-                System.out.println("Kiểm tra words và  means != null");
+                System.out.println("Kiểm tra words và means != null");
                 int count=0;
                 for(int i=0; i< words.length; i++){
-                    if(CardDAO.insertCard(words[i],means[i],null,courseId, 1 )){
+                    if(CardDAO.insertCard(words[i],means[i],null,courseId, user.getId())){
                         count++;
                     }
                 }

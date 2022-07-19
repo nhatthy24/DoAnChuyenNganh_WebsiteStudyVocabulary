@@ -21,21 +21,19 @@ import java.util.Properties;
 
 @WebServlet(urlPatterns = "/forgetpass")
 public class ForgetPassDirect extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        String userName=request.getParameter("user_name");
-        String email=request.getParameter("email");
-        boolean result=false;
-        if(userName!=null&&email!=null){
-            String generatePass=UserDaoForSetting.generatePassword(8);
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String userName = request.getParameter("user_name");
+        String email = request.getParameter("email");
+        boolean result = false;
+        if (userName != null && email != null) {
+            String generatePass = UserDaoForSetting.generatePassword(8);
 
             //sending mail start
             // Recipient's email ID needs to be mentioned.
-            String to =email;
+            String to = email;
 
             // Sender's email ID needs to be mentioned
             String from = "trinhtien6236@gmail.com";
@@ -80,7 +78,7 @@ public class ForgetPassDirect extends HttpServlet {
                 message.setSubject("Update your password");
 
                 // Now set the actual message
-                message.setText("Hello "+userName+", "+"Your new password is:"+ generatePass);
+                message.setText("Hello " + userName + ", " + "Your new password is:" + generatePass);
 
                 System.out.println("sending...");
                 // Send message
@@ -90,20 +88,20 @@ public class ForgetPassDirect extends HttpServlet {
                 mex.printStackTrace();
             }
             //end
-            User user=UserDaoForSetting.loadUserByEmailAddress(email);
-            result=UserDaoForSetting.updatePassWord(user.getId(),generatePass);
+            User user = UserDaoForSetting.loadUserByEmailAddress(email);
+            result = UserDaoForSetting.updatePassWord(user.getId(), generatePass);
 
-            if(result){
-                request.getRequestDispatcher("reset_pass_successfully.jsp").forward(request,response);
-            }else {
-                System.out.println("userName and email"+userName+"/"+email);
-                request.getRequestDispatcher("reset_pass_faild.jsp").forward(request,response);
+            if (result) {
+                request.getRequestDispatcher("reset_pass_successfully.jsp").forward(request, response);
+            } else {
+                System.out.println("userName and email" + userName + "/" + email);
+                request.getRequestDispatcher("reset_pass_faild.jsp").forward(request, response);
             }
         } else {
-            System.out.println("userName and email"+userName+"/"+email);
-            request.getRequestDispatcher("reset_pass.jsp").forward(request,response);
+            System.out.println("userName and email" + userName + "/" + email);
+            request.getRequestDispatcher("reset_pass.jsp").forward(request, response);
 
 
-    }
+        }
     }
 }

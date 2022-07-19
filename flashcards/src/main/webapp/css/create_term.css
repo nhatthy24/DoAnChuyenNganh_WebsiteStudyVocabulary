@@ -1,6 +1,7 @@
 
 
 
+
 .create__term-content {
     padding-top: 25px;
     background-color: var(--gray-color);
@@ -33,13 +34,13 @@
     border-radius: 3px;
     font-size: 1.4rem;
     font-weight: 500;
-    background-color: var(--green-color-light);
+    background-color: var(--green-color);
     color: var(--white-color);
 }
 
 .create__header-action-btn:hover {
     cursor: pointer;
-    background-color: var(--green-color);
+    background-color: var(--green-color-dark);
 }
 
 .create__term-body {
@@ -159,15 +160,15 @@
 }
 
 .permission__dialog-options {
-     height: 38px;
-     padding: 5px 10px 5px 12px;
-        width: 180px;
-        outline: none;
-        border: 2px solid var( --gray-color-light);
-        border-radius: 5px;
-        font-size: 1.4rem;
-        color: var(--green-color-light);
-        font-weight: 500;
+    height: 38px;
+    padding: 5px 10px 5px 12px;
+    width: 180px;
+    outline: none;
+    border: 2px solid var( --gray-color-light);
+    border-radius: 5px;
+    font-size: 1.4rem;
+    color: var(--green-color);
+    font-weight: 500;
 }
 
 .permission__dialog-options:hover{
@@ -251,7 +252,7 @@
     padding: 24px;
     height: 70px;
     width: 100%;
-    background-color: var(--green-color-light);
+    background-color: var(--green-color);
     border: none;
     border-radius: 5px;
     color: var(--white-color);
@@ -262,7 +263,7 @@
 
 
 .create__term-add-word {
-    color: var(--green-color-light);
+    color: var(--green-color);
 
 }
 
@@ -302,7 +303,7 @@
 
 .create__term-permission-wrap {
     margin-left: 40px;
-    background-color: var(--green-color-light) !important;
+    background-color: var(--green-color) !important;
     width: 36px;
     height: 36px;
     color: var(--white-color);
@@ -315,7 +316,7 @@
 
 .create__term-permission-wrap:hover {
     cursor: pointer;
-    background-color: var(--green-color);
+    background-color: var(--green-color-dark);
 }
 
 .create__term-upload {}
@@ -360,7 +361,7 @@
 .create__term-upload-descr>span {
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--green-color-light);
+    color: var(--green-color);
 }
 
 .create__term-definition {
@@ -420,7 +421,7 @@
     color: var(--white-color);
     border-radius: 5px;
 }
- 
+
 .tab__item-toolbar-btn-delete:hover::before{
     content: "";
     border: 8px solid;
@@ -493,7 +494,7 @@
     font-size: 1.3rem;
     font-weight: 500;
     padding: 0;
-    color: var(--green-color-light)
+    color: var(--green-color)
 }
 
 .tab__content-side-label {
@@ -534,7 +535,7 @@
 
 .tab__side-img i {
     font-size: 1.8rem;
-    color: var(--tex-color);
+    color: var(--text-color);
 }
 
 .tab__side-img p {
@@ -564,10 +565,10 @@
 .add__tab-btn span {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--tex-color);
+    color: var(--text-color);
     /* display: block; */
     padding: 10px 5px 10px 0;
-    border-bottom: 5px solid var(--green-color-light);
+    border-bottom: 5px solid var(--green-color);
 
 }
 
@@ -575,7 +576,7 @@
 .create__term-btn {
     height: 70px;
     width: 190px;
-    background-color: var(--green-color-light);
+    background-color: var(--green-color);
     color: var(--white-color);
     border-radius: 5px;
     border: none;
@@ -589,7 +590,6 @@
 }
 
 .create__term-btn:hover {
-   background-color: var(--green-color)
+    background-color: var(--green-color-dark)
 }
-
 

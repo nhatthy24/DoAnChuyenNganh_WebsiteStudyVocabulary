@@ -16,24 +16,24 @@
     </button>
     <div class="dialog__create-class-content">
         <h1 class="dialog__create-class-title">Tạo lớp mới</h1>
-
+        <form method="post" action="create-class">
         <div class="dialog__create-class-form">
-            <input type="text" class="dialog__create-class-input" placeholder="Nhập tên lớp">
+            <input type="text" class="dialog__create-class-input" placeholder="Nhập tên lớp" name="cname">
             <label class="dialog__create-class-label">TÊN LỚP</label>
         </div>
         <div class="dialog__create-class-form">
-                                <textarea class="dialog__create-class-input"
-                                          placeholder="Nhập mô tả (tuỳ chọn)"></textarea>
+            <textarea class="dialog__create-class-input"
+                      placeholder="Nhập mô tả (tuỳ chọn)" name="cdescription"></textarea>
             <label class="dialog__create-class-label">MÔ TẢ</label>
         </div>
         <div class="dialog__create-class-form">
-            <input type="text" class="dialog__create-class-input" placeholder="Nhập tên trường">
+            <input type="text" class="dialog__create-class-input" placeholder="Nhập tên trường" name="schoolname">
             <label class="dialog__create-class-label">TRƯỜNG</label>
         </div>
 
-        <button class="dialog__create-class-btn">
+        <button class="dialog__create-class-btn" type="submit">
             Tạo lớp
         </button>
-
+        </form>
     </div>
 </div>

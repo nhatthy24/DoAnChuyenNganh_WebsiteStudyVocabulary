@@ -14,11 +14,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+
 <div class="container">
     <div class="container__left">
         <h1 class="title-img-cover">Học hiệu quả mà thật thoải mái.</h1>
         <div>
-            <h1 class="logo-img-cover">Quizlet</h1>
+            <h1 class="logo-img-cover">Flashcards</h1>
         </div>
     </div>
 
@@ -76,7 +77,7 @@
                     </div>
 
                     <div class="route-forget-password">
-                        <a href="" class="route-forget-password__item">
+                        <a href="reset_pass.jsp" class="route-forget-password__item">
                             Quên mật khẩu?
                         </a>
                     </div>

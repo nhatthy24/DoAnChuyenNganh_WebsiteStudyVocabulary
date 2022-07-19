@@ -11,13 +11,16 @@
                 <!-- right element -->
                 <div class="navbar__left">
                     <div class="navbar__logo">
-                        <img src="./img/logo.png" alt="">
+                        <a href="${pageContext.request.contextPath}/home">
+                            <img src="./img/logo.png" alt="">
+                        </a>
                     </div>
                     <div class="navbar__menu">
                         <ul class="navbar__menu-list">
-                            <li class="navbar__menu-item"><a href="/" class="navbar__menu-link active">
-                                <span class="navbar__menu-text">Trang chủ</span>
-                            </a>
+                            <li class="navbar__menu-item">
+                                <a href="${pageContext.request.contextPath}/home" class="navbar__menu-link active">
+                                    <span class="navbar__menu-text">Trang chủ</span>
+                                </a>
                             </li>
                             <li class="navbar__menu-item ">
                                 <button class="navbar__menu-link btn-item" onclick="showLibraryDialog()"
@@ -384,7 +387,6 @@
             </div>
         </div>
     </div>
-
     <div class="modal" id="modal_create-folder-class" style="display: none">
         <div class="modal__overlay">
         </div>
@@ -397,10 +399,10 @@
                     <div id="dialog-create-class" style="display: none">
                         <jsp:include page="dialog_create_class.jsp"></jsp:include>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 
 </header>
+

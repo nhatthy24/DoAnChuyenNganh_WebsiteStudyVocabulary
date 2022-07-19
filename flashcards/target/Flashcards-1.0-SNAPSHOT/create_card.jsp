@@ -9,6 +9,7 @@
     <title>Tạo thẻ</title>
 </head>
 <body>
+    <jsp:include page="header.jsp"></jsp:include>
     <h1 style="color:red" align="center">ADD CARD DETAIL</h1>
     <div align="center">
         <form action="created-card" method="post" enctype="multipart/form-data">
