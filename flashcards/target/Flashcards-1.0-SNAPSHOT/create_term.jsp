@@ -30,7 +30,7 @@
                     <h1>Tạo học phần mới</h1>
                 </div>
                 <div class="create__header-action">
-                    <button class="create__header-action-btn">
+                    <button  class="create__header-action-btn">
                         Tạo
                     </button>
                 </div>
@@ -49,20 +49,20 @@
 
                 <div class="create__term-permission">
                     <div class="create__term-permission-left">
-                        <button class="create__term-add-word create__term-permission-btn">
+                        <button type="button" class="create__term-add-word create__term-permission-btn">
                             + Nhập từ Word, Excel, Google Docs,v.v.
                         </button>
                     </div>
                     <div class="create__term-permission-right">
                         <div class="create__term-permission-view">
                             <p class="create__term-permission-title"  id="term__permission-view-title">Hiển thị với mọi người</p>
-                            <button class="create__term-permission-btn" id="term__permission-btn-view">Thay đổi</button>
+                            <button type="button" class="create__term-permission-btn" id="term__permission-btn-view">Thay đổi</button>
                         </div>
                         <div class="create__term-permission-edit">
                             <p class="create__term-permission-title" id="term__permission-edit-title">Chỉ tôi có quyền sửa đổi</p>
-                            <button class="create__term-permission-btn" id="term__permission-btn-edit">Thay đổi</button>
+                            <button type="button" class="create__term-permission-btn" id="term__permission-btn-edit">Thay đổi</button>
                         </div>
-                        <button class="create__term-permission-wrap create__term-permission-btn">
+                        <button type="button" class="create__term-permission-wrap create__term-permission-btn">
                             <i class="fas fa-exchange-alt"></i>
                         </button>
                     </div>
@@ -91,10 +91,10 @@
                                     </p>
                                 </div>
                                 <div class="tab__item-toolbar">
-                                    <button class="tab__item-toolbar-btn">
+                                    <button type="button" class="tab__item-toolbar-btn">
                                         <i class="fas fa-grip-lines"></i>
                                     </button>
-                                    <button class="tab__item-toolbar-btn tab__item-toolbar-btn-delete"
+                                    <button type="button" class="tab__item-toolbar-btn tab__item-toolbar-btn-delete"
                                             onclick="deleteTag(this)">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
@@ -105,7 +105,7 @@
                                     <input class="tab__content-side-word-input" type="text" name="word">
                                     <div class="tab__below-input">
                                         <label class="tab__content-side-label">THUẬT NGỮ</label>
-                                        <button class="tab__language-side">TIẾNG ANH</button>
+                                        <button type="button" class="tab__language-side">TIẾNG ANH</button>
                                     </div>
                                 </div>
                                 <div class="tab__content-side-definition">
@@ -113,7 +113,7 @@
                                         <input class="tab__content-side-editor-input" type="text" name="mean">
                                         <div class="tab__below-input">
                                             <label class="tab__content-side-label">ĐỊNH NGHĨA</label>
-                                            <button class="tab__language-side">TIẾNG VIỆT</button>
+                                            <button type="button" class="tab__language-side">TIẾNG VIỆT</button>
                                         </div>
                                     </div>
 
@@ -133,10 +133,10 @@
                                     <p class="tab__count">2</p>
                                 </div>
                                 <div class="tab__item-toolbar">
-                                    <button class="tab__item-toolbar-btn">
+                                    <button type="button" class="tab__item-toolbar-btn">
                                         <i class="fas fa-grip-lines"></i>
                                     </button>
-                                    <button class="tab__item-toolbar-btn tab__item-toolbar-btn-delete"
+                                    <button type="button" class="tab__item-toolbar-btn tab__item-toolbar-btn-delete"
                                             onclick="deleteTag(this)">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
@@ -147,7 +147,7 @@
                                     <input class="tab__content-side-word-input" type="text" name="word">
                                     <div class="tab__below-input">
                                         <label class="tab__content-side-label">THUẬT NGỮ</label>
-                                        <button class="tab__language-side">TIẾNG ANH</button>
+                                        <button type="button" class="tab__language-side">TIẾNG ANH</button>
                                     </div>
                                 </div>
                                 <div class="tab__content-side-definition">
@@ -155,7 +155,7 @@
                                         <input class="tab__content-side-editor-input" type="text" name="mean">
                                         <div class="tab__below-input">
                                             <label class="tab__content-side-label">ĐỊNH NGHĨA</label>
-                                            <button class="tab__language-side">TIẾNG VIỆT</button>
+                                            <button type="button" class="tab__language-side">TIẾNG VIỆT</button>
                                         </div>
                                     </div>
                                     <label>
@@ -171,7 +171,7 @@
                         </div>
                     </div>
                     <div class="create__term-add-tag">
-                        <button class="add__tab-btn" id="add__tab-btn">
+                        <button type="button" class="add__tab-btn" id="add__tab-btn">
                             <span>+ THÊM THẺ</span>
                         </button>
                     </div>
@@ -193,7 +193,7 @@
                         <h3 class="permission__dialog-title">
                             Tuỳ chọn
                         </h3>
-                        <button class="permission__dialog-close-btn" id="permission__dialog-close-btn">
+                        <button type="button" class="permission__dialog-close-btn" id="permission__dialog-close-btn">
                             <i class="fas fa-times"></i>
                         </button>
                     </div>
@@ -288,7 +288,6 @@
             </div>
         </div>
     </div>
-</div>
 
     <script src="./js/header.js"></script>
     <script src="./js/create_term.js"></script>

@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="./assets/css/create_term.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/dialog_create_folder.css">
+    <link rel="stylesheet" href="./assets/css/dialog_create_class.css">
+
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
@@ -316,7 +320,7 @@
                             <a class="navbar__login-null-btn register-btn" href="">Đăng ký</a>
                         </div>
 
-                        <div class="navbar__login" >
+                        <div class="navbar__login">
                             <div class="navbar__notify">
                                 <button class="navbar__notify-btn"><i class="far fa-bell"></i></button>
                             </div>
@@ -417,6 +421,66 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="modal" id="modal" style="display: none">
+            <div class="modal__overlay">
+            </div>
+
+            <div class="modal__body">
+                <div class="modal__inner" id="modal__inner">
+                    <!-- <div class="dialog__create-folder">
+                    
+                        <button class="dialog__create-folder-btn-close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <div class="dialog__create-folder-content">
+                            <h1 class="dialog__create-folder-title">Tạo thư mục mới</h1>
+
+                            <div class="dialog__create-folder-input">
+                                <input type="text" class="dialog__create-folder-input-text" placeholder="Nhập tiêu đề">
+                            </div>
+
+                            <div class="dialog__create-folder-area">
+                                <textarea class="dialog__create-folder-area-text" placeholder="Nhập mô tả"></textarea>
+                            </div>
+
+                        </div>
+                        <div class="dialog__create-folder-separate"></div>
+
+                        <div class="dialog__create-folder-btn">
+                            <button class="dialog__create-folder-btn-create">Tạo thư mục</button>
+                        </div>
+                    </div> -->
+                    <div class="dialog__create-class">
+                        <button class="dialog__create-class-btn-close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <div class="dialog__create-class-content">
+                            <h1 class="dialog__create-class-title">Tạo lớp mới</h1>
+
+                            <div class="dialog__create-class-form">
+                                <input type="text" class="dialog__create-class-input" placeholder="Nhập tên lớp">
+                                <label class="dialog__create-class-label">TÊN LỚP</label>
+                            </div>
+                            <div class="dialog__create-class-form">
+                                <textarea class="dialog__create-class-input"
+                                    placeholder="Nhập mô tả (tuỳ chọn)" row="1"></textarea>
+                                <label class="dialog__create-class-label">MÔ TẢ</label>
+                            </div>
+                            <div class="dialog__create-class-form">
+                                <input type="text" class="dialog__create-class-input" placeholder="Nhập tên trường">
+                                <label class="dialog__create-class-label">TRƯỜNG</label>
+                            </div>
+
+                            <button class="dialog__create-class-btn">
+                                Tạo lớp
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     </header>
 
@@ -595,9 +659,7 @@
 
     <div class="modal" id="modal__permission" style="display: none">
         <div class="modal__overlay">
-
         </div>
-
         <div class="modal__body">
             <div class="modal__inner" id="modal__inner">
                 <div class="term__permission-dialog">

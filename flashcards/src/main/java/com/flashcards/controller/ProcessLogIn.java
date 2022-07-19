@@ -35,6 +35,7 @@ public class ProcessLogIn extends HttpServlet {
         if (new UserDAO().checkLogIn(username, email, pass)) {
             HttpSession session = request.getSession();
             session.setAttribute("user", kh);
+            session.setAttribute("user_id", kh.getId());
             response.sendRedirect("index.jsp");
         } else {
             System.out.println("Loi dang nhap");

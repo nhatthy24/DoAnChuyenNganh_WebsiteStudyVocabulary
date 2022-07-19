@@ -77,7 +77,7 @@
                     </div>
 
                     <div class="route-forget-password">
-                        <a href="" class="route-forget-password__item">
+                        <a href="reset_pass.jsp" class="route-forget-password__item">
                             Quên mật khẩu?
                         </a>
                     </div>
