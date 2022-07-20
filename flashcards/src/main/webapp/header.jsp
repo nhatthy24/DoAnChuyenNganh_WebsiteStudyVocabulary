@@ -11,7 +11,9 @@
                 <!-- right element -->
                 <div class="navbar__left">
                     <div class="navbar__logo">
-                        <img src="./img/logo.png" alt="">
+                        <a href="${pageContext.request.contextPath}/home">
+                            <img src="./img/logo.png" alt="">
+                        </a>
                     </div>
                     <div class="navbar__menu">
                         <ul class="navbar__menu-list">
@@ -346,7 +348,7 @@
                                                 </button>
                                             </a></li>
                                         <li class="navbar__user-item">
-                                            <a href="#" class="navbar__user-link"> Cài đặt </a>
+                                            <a href="settinguser" class="navbar__user-link"> Cài đặt </a>
                                         </li>
 
                                         <div class="nav__user-line-spread"></div>
@@ -385,7 +387,6 @@
             </div>
         </div>
     </div>
-
     <div class="modal" id="modal_create-folder-class" style="display: none">
         <div class="modal__overlay">
         </div>
@@ -398,10 +399,10 @@
                     <div id="dialog-create-class" style="display: none">
                         <jsp:include page="dialog_create_class.jsp"></jsp:include>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 
 </header>
+

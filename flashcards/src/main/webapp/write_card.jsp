@@ -28,11 +28,11 @@
 </head>
 
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+<%--<jsp:include page="header.jsp"></jsp:include>--%>
 <div class="container__write">
     <div class="layout__control">
         <div class="control__back">
-            <a href="term_details.html" class="control__back-link">
+            <a href="detail-term?course_id=${course_id}" class="control__back-link">
                 <i class="fas fa-chevron-left"></i>
                 <span class="control__back-btn-text">Trở về</span>
             </a>

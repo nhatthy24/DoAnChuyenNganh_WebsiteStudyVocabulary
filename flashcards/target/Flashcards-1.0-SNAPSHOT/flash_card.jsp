@@ -27,13 +27,13 @@
 </head>
 
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+<%--<jsp:include page="header.jsp"></jsp:include>--%>
 
 <!-- main content -->
 <div class="container__remember-card">
     <div class="layout__controls">
         <div class="control__back">
-            <a href="#" class="control__back-btn">
+            <a href="detail-term?course_id=${course_id}" class="control__back-btn">
                 <i class="fas fa-angle-left"></i>
                 <span class="control__back-btn-text">Trở về</span>
             </a>
@@ -113,7 +113,7 @@
                         <button class="card__item-control-btn card__item-control-speech-btn">
                             <i class="fas fa-volume-up"></i>
                         </button>
-                        <button onclick="updateStarCardState(${fi.creator},${fi.id})" class="card__item-control-btn card__item-control-star-btn ${fi.markedCard ? 'card__item-control-star-btn--active' : ''}">
+                        <button onclick="updateStarCardState(${fi.creator},${fi.id},${course_id})" class="card__item-control-btn card__item-control-star-btn ${fi.markedCard ? 'card__item-control-star-btn--active' : ''}">
                             <i class="fas fa-star"></i>
                         </button>
                     </div>
@@ -132,7 +132,7 @@
                         <button class="card__item-control-btn card__item-control-edit-btn">
                             <i class="fas fa-pencil-alt"></i>
                         </button>
-                        <button onclick="updateStarCardState(${fi.creator},${fi.id})" class="card__item-control-btn card__item-control-star-btn  ${fi.markedCard ? 'card__item-control-star-btn--active' : ''}">
+                        <button onclick="updateStarCardState(${fi.creator},${fi.id},${course_id})" class="card__item-control-btn card__item-control-star-btn  ${fi.markedCard ? 'card__item-control-star-btn--active' : ''}">
                             <i class="fas fa-star"></i>
                         </button>
                     </div>

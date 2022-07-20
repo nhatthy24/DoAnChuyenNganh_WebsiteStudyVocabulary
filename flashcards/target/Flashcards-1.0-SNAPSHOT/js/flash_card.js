@@ -494,8 +494,8 @@ function updateFlashCard() {
     var urlReplace='?type=edit&term='+inputWord+'&meaning='+inputDefinition+'&card_id='+card_id+'&course_id='+course_id;
     location.replace(urlReplace);
 }
-function updateStarCardState(user_id, card_id){
-    var urlReplace='?type=insertstar&user_id='+user_id+'&card_id='+card_id;
+function updateStarCardState(user_id, card_id,course_id){
+    var urlReplace='?type=insertstar&user_id='+user_id+'&card_id='+card_id+'&course_id='+course_id;
     location.replace(urlReplace);
 }
 
