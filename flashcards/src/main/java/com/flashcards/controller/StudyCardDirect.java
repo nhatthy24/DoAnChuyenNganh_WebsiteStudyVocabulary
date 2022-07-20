@@ -18,8 +18,9 @@ public class StudyCardDirect  extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<Card> cards= CardDAO.loadListCardByCourseId(1);
-        List<Card> cardsmarked= CardDAO.loadListCardWithMarkedByCourseId(1);
+        int course_id = Integer.parseInt(request.getParameter("course_id"));
+        List<Card> cards= CardDAO.loadListCardByCourseId(course_id);
+        List<Card> cardsmarked= CardDAO.loadListCardWithMarkedByCourseId(course_id);
 
         for(Card c:cards){
             for (Card cm:cardsmarked){
@@ -28,7 +29,7 @@ public class StudyCardDirect  extends HttpServlet {
                 }
             }
         }
-
+        request.setAttribute("course_id",course_id);
         request.setAttribute("title","Học");
         request.setAttribute("cards", cards);
         request.setAttribute("cardsmarked", cardsmarked);

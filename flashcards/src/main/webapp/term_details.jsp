@@ -35,7 +35,7 @@
                 </div>
                 <ul class="study__mode-content">
                     <li class="study__mode-item">
-                        <a href="#" class="study__mode-link">
+                        <a href="flashcard?course_id=${course.id}" class="study__mode-link">
                             <i class="bi bi-back"></i>
                             <span class="study__mode-text">
                                 Thẻ ghi nhớ
@@ -43,7 +43,7 @@
                         </a>
                     </li>
                     <li class="study__mode-item">
-                        <a href="#" class="study__mode-link">
+                        <a href="studycard?course_id=${course.id}" class="study__mode-link">
                             <i class="bi bi-info-circle"></i>
                             <span class="study__mode-text">
                                 Học
@@ -51,7 +51,7 @@
                         </a>
                     </li>
                     <li class="study__mode-item">
-                        <a href="#" class="study__mode-link">
+                        <a href="writecard?course_id=${course.id}" class="study__mode-link">
                             <i class="fas fa-pen-nib"></i>
                             <span class="study__mode-text">
                                 Viết

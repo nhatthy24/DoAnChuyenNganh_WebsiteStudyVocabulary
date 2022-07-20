@@ -28,8 +28,8 @@ public class FlashCardDirect extends HttpServlet {
                 int course_id = Integer.parseInt(request.getParameter("course_id"));
                 CardDAO.updateCard(card_id,course_id,term,meaning);
 
-                List<Card> cards= CardDAO.loadListCardByCourseId(1);
-                List<Card> cardsmarked= CardDAO.loadListCardWithMarkedByCourseId(1);
+                List<Card> cards= CardDAO.loadListCardByCourseId(course_id);
+                List<Card> cardsmarked= CardDAO.loadListCardWithMarkedByCourseId(course_id);
 
                 for(Card c:cards){
                     for (Card cm:cardsmarked){
@@ -38,7 +38,7 @@ public class FlashCardDirect extends HttpServlet {
                         }
                     }
                 }
-
+                request.setAttribute("course_id",course_id);
                 request.setAttribute("count",cards.size());
                 request.setAttribute("title","Thẻ ghi nhớ");
                 request.setAttribute("cards", cards);
@@ -47,8 +47,9 @@ public class FlashCardDirect extends HttpServlet {
             if(type.equalsIgnoreCase("insertstar")){
                 int user_id = Integer.parseInt(request.getParameter("user_id"));
                 int card_id = Integer.parseInt(request.getParameter("card_id"));
+                int course_id = Integer.parseInt(request.getParameter("course_id"));
 
-                List<Card> cardsmarked= CardDAO.loadListCardWithMarkedByCourseId(1);
+                List<Card> cardsmarked= CardDAO.loadListCardWithMarkedByCourseId(course_id);
                 //check card hasMarked
                 boolean hasMarked=false;
                 for (Card cm:cardsmarked){
@@ -62,8 +63,8 @@ public class FlashCardDirect extends HttpServlet {
                 }else {
                     MarkedCardDAO.insertMarkedCard(user_id, card_id);
                 }
-                List<Card> cards= CardDAO.loadListCardByCourseId(1);
-                List<Card> cardsmarked2= CardDAO.loadListCardWithMarkedByCourseId(1);
+                List<Card> cards= CardDAO.loadListCardByCourseId(course_id);
+                List<Card> cardsmarked2= CardDAO.loadListCardWithMarkedByCourseId(course_id);
 
                 for(Card c:cards){
                     for (Card cm:cardsmarked2){
@@ -74,7 +75,7 @@ public class FlashCardDirect extends HttpServlet {
                 }
 
 
-
+                request.setAttribute("course_id",course_id);
                 request.setAttribute("count",cards.size());
                 request.setAttribute("title","Thẻ ghi nhớ");
                 request.setAttribute("cards", cards);
@@ -82,8 +83,9 @@ public class FlashCardDirect extends HttpServlet {
             }
 
         }else {
-            List<Card> cards= CardDAO.loadListCardByCourseId(1);
-            List<Card> cardsmarked= CardDAO.loadListCardWithMarkedByCourseId(1);
+            int course_id = Integer.parseInt(request.getParameter("course_id"));
+            List<Card> cards= CardDAO.loadListCardByCourseId(course_id);
+            List<Card> cardsmarked= CardDAO.loadListCardWithMarkedByCourseId(course_id);
 
             for(Card c:cards){
                 for (Card cm:cardsmarked){
@@ -92,7 +94,7 @@ public class FlashCardDirect extends HttpServlet {
                     }
                 }
             }
-
+            request.setAttribute("course_id",course_id);
             request.setAttribute("count",cards.size());
             request.setAttribute("title","Thẻ ghi nhớ");
             request.setAttribute("cards", cards);

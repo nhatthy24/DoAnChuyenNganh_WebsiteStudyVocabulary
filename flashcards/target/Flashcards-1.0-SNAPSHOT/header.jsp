@@ -348,7 +348,7 @@
                                                 </button>
                                             </a></li>
                                         <li class="navbar__user-item">
-                                            <a href="#" class="navbar__user-link"> Cài đặt </a>
+                                            <a href="settinguser" class="navbar__user-link"> Cài đặt </a>
                                         </li>
 
                                         <div class="nav__user-line-spread"></div>

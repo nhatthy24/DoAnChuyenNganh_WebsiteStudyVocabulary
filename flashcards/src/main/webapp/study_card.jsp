@@ -73,7 +73,7 @@
 
         <div class="study__header-description">
             <a href="" class="study__header-description-link">
-                Name of the Term
+
             </a>
         </div>
 
@@ -81,7 +81,7 @@
             <button class="study__header-control-btn" id="study__header-control-option-btn">
                 Tùy chọn
             </button>
-            <a href="term_details.html" class="study__header-control-btn">
+            <a href="detail-term?course_id=${course_id}" class="study__header-control-btn">
                 <i class="fas fa-times"></i>
             </a>
         </div>
