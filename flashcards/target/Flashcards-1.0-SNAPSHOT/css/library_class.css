@@ -1,0 +1,440 @@
+.class__content-separate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.class__content-separate-label {
+    font-size: 13px;
+    margin-right: 8px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.class__content-separate-line {
+    height: 1px;
+    width: 87%;
+    background-color: var(--border-gray-color)
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+.class__container {
+    padding: 0 40px;
+    background-color: var(--gray-color);
+    min-height: calc(100vh - 63px);
+}
+
+.class__header {
+    padding: 40px 0 0;
+    height: 154px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--border-gray-color);
+    margin: 0 40px;
+}
+
+.class__header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.class__header-top-left {
+    display: flex;
+    align-items: center;
+}
+
+.class__header-top-left-icon {
+    font-size: 40px;
+    color: var(--text-gray-color);
+    margin-right: 12px;
+}
+
+.class__header-top-left-title {
+    margin: 0;
+    font-size: 38px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.class__header-top-right {
+    display: flex;
+}
+
+.class__header-top-right-btn {
+    height: 36px;
+    width: 36px;
+    display: flex;
+    background-color: var(--white-color);
+    border: 2px solid var(--gray-color-light);
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    font-size: 15px;
+    color: var(--text-gray-color-dark);
+    border-radius: 30px;
+    position: relative;
+    font-weight: 500;
+}
+
+.class__header-top-right-btn:hover:before {
+    content: "";
+    border: 8px solid;
+    top: 31px;
+    border-color: transparent transparent var(--blue-color-dark) transparent;
+    position: absolute;
+}
+
+.class__header-top-right-btn:hover:after {
+    position: absolute;
+    height: 30px;
+    top: 45px;
+    background-color: var(--blue-color-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: var(--white-color);
+    border-radius: 5px;
+}
+
+.class__header-top-right-add-term:hover:after {
+    content: 'Thêm học phần';
+    width: 100px;
+    right: -10px;
+}
+
+.class__header-top-right-add-people:hover:after {
+    content: 'Thêm thành viên';
+    width: 100px;
+    right: -10px;
+}
+
+.class__header-top-right-add-folder:hover:after {
+    content: 'Thêm thư mục';
+    width: 100px;
+    right: -10px;
+}
+
+.class__header-top-right-edit:hover:after {
+    content: 'Sửa';
+    width: 40px;
+}
+
+.class__header-top-right-delete:hover:after {
+    content: 'Xóa';
+    width: 40px;
+
+}
+
+.class__header-tab {}
+
+.class__header-tab-item {
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-gray-color);
+    padding: 6px 3px;
+    margin-right: 15px;
+    border: none;
+    position: relative;
+}
+
+.class__header-tab-item:hover {
+    color: var(--blue-color);
+}
+
+.class__header-tab-item:hover:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 2px solid var(--blue-color-dark);
+    bottom: -2px;
+    left: 0;
+}
+
+.class__header-tab-item--active:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 2px solid var(--blue-color-dark);
+    bottom: -2px;
+    left: 0;
+}
+
+.class__header-tab-item--active {
+    color: var(--text-color);
+}
+
+.class__content {
+    padding: 40px;
+    display: flex;
+}
+
+.class__dashboard-main {
+    width: 75%;
+    padding-right: 40px;
+}
+
+.class__content-null {
+    padding: 32px;
+    text-align: center;
+}
+
+.class__content-null-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 28px;
+}
+
+.class__content-null-description {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.class__content-null-link {
+    display: flex;
+    border: none;
+    background-color: var(--green-color);
+    color: var(--white-color);
+    height: 42px;
+    width: 150px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 30px auto;
+}
+
+.class__dashboard-adz {
+    width: 25%;
+}
+
+.class__content-detail {}
+
+.class__content-detail-title {
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: 450;
+    margin: 0;
+}
+
+.class__content-detail-item {
+    display: flex;
+    margin-top: 18px;
+}
+
+.class__content-detail-item-icon {
+    font-size: 16px;
+    color: var(--text-gray-color);
+    margin-right: 12px;
+}
+
+.class__content-detail-item-text {
+    margin: 0;
+    font-size: 15px;
+    color: var(--text-color);
+    font-weight: 440;
+}
+
+
+.class__content-folder {}
+
+.class__content-folder-card {
+    padding: 12px 20px;
+    background-color: var(--white-color);
+    height: 74px;
+    border-radius: 5px;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.class__content-folder-card-link {
+    width: 96%;
+}
+
+.class__content-folder-card-content {
+    width: 100%;
+}
+
+.class__content-folder-card-count {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.class__content-folder-card-name {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.class__content-folder-card-icon {
+    color: var(--text-gray-color);
+    font-size: 25px;
+    margin-right: 8px;
+}
+
+.class__content-folder-card-name-text {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.class__content-folder-card-action {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+}
+
+.class__content-folder-card-action:hover {
+    color: var(--red-color-light);
+}
+
+
+
+.class__content-term {}
+
+.class__content-term-card {
+    height: 80px;
+    padding: 12px 20px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.class__content-term-card-link {
+    width: 96%;
+}
+
+
+.class__content-term-card-count {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-right: 20px;
+}
+
+.class__content-term-card-author {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--green-color);
+    margin-right: 20px;
+}
+
+.class__content-term-card-class {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-gray-color);
+}
+
+.class__content-term-card-name {}
+
+
+
+.class__content-term-card-name-text {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+.class__content-term-card-action {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+.class__content-term-card-action:hover {
+    color: var(--red-color-light)
+}
+
+
+
+
+.class__content-member-share {
+    padding: 32px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+
+.class__content-member-share-title {
+    font-size: 30px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.class__content-member-share-description {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.class__content-member-share-input {
+    background-color: var(--white-color);
+    color: var(--text-color);
+    border: none;
+    height: 52px;
+    width: 700px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.class__content-member-share-copy {
+    border: none;
+    height: 42px;
+    width: 120px;
+    background-color: var(--green-color);
+    border-radius: 5px;
+    color: var(--white-color);
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 24px;
+}
+
+
+
+.class__content-member-card {
+    background-color: var(--white-color);
+    height: 84px;
+    display: flex;
+    padding: 12px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+
+}
+
+.class__content-member-card-avatar {
+    width: 60px;
+    margin-right: 20px;
+}
+
+.class__content-member-card-infor {}
+
+.class__content-member-card-infor-role {
+    font-size: 15px;
+    margin: 9px 0;
+    font-weight: 500;
+    color: var(--text-gray-color);
+}
+
+.class__content-member-card-infor-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 9px 0;
+}

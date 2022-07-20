@@ -151,7 +151,7 @@
                          alt="">
                     <h3 class="card__item-special-title-text">
                         Chúc mừng! Bạn đã ôn tập tất cả các thuật ngữ.
-                        </h2>
+                        </h3>
                 </div>
                 <div class="card__item-special-content">
                     <div class="card__item-special-content-item" style="margin-top: 0">
