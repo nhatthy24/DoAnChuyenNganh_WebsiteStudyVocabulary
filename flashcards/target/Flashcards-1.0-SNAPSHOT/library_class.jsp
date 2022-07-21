@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/library_class.css">
+    <link rel="stylesheet" href="./css/dialog/base.css">
+    <link rel="stylesheet" href="./css/dialog/add_term.css">
+    <link rel="stylesheet" href="./css/dialog/confirm_delete.css">
+    <link rel="stylesheet" href="./css/dialog/add_member.css">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese"
           rel="stylesheet">
 
@@ -41,25 +46,31 @@
                 </p>
             </div>
             <div class="class__header-top-right">
-                <a href="" class="class__header-top-right-btn class__header-top-right-add-term">
+                <button onclick="openDialogAddTermToClass()"
+                        class="class__header-top-right-btn class__header-top-right-add-term">
                     <i class="bi bi-plus-lg"></i>
-                </a>
-                <a href="" class="class__header-top-right-btn class__header-top-right-add-people">
+                </button>
+                <button onclick="openDialogAddMember()"
+                        class="class__header-top-right-btn class__header-top-right-add-people">
                     <i class="bi bi-person-plus"></i>
-                </a>
-                <a href="" class="class__header-top-right-btn class__header-top-right-add-folder">
+                </button>
+                <button onclick="openDialogAddFolderToClass()"
+                        class="class__header-top-right-btn class__header-top-right-add-folder">
                     <i class="bi bi-folder-plus"></i>
-                </a>
-                <a href="" class="class__header-top-right-btn class__header-top-right-edit">
+                </button>
+                <button onclick="openDialogEditClass()"
+                        class="class__header-top-right-btn class__header-top-right-edit">
                     <i class="bi bi-pencil"></i>
-                </a>
-                <button class="class__header-top-right-btn class__header-top-right-delete">
+                </button>
+                <button onclick="openDialogConfirmDeleteClass()"
+                        class="class__header-top-right-btn class__header-top-right-delete">
                     <i class="bi bi-trash"></i>
                 </button>
             </div>
         </div>
         <div class="class__header-tab">
-            <button id="class__tab-term-btn" onclick="switchTermTab(this)" class="class__header-tab-item class__header-tab-item--active">
+            <button id="class__tab-term-btn" onclick="switchTermTab(this)"
+                    class="class__header-tab-item class__header-tab-item--active">
                 Các học phần
             </button>
             <button id="class__tab-member-btn" onclick="switchMemberTab(this)" class="class__header-tab-item ">
@@ -254,8 +265,164 @@
     </div>
 </div>
 
-<script src="./js/header.js"></script>
-<script src="./js/library_class.js"></script>
+<div class="modal" id="modal" style="display: none">
+    <div class="modal__overlay">
+
+    </div>
+
+    <div class="modal__body">
+        <div class="modal__inner" id="modal__inner">
+
+            <div id="modal__without-edit-class" style="display: none">
+
+                <div class="modal__header">
+                    <div class="modal__header-title">
+                        <span class="modal__header-title-text" id="modal_title">
+                            Tùy chọn
+                        </span>
+                    </div>
+                    <button onclick="closeModalLibraryClass()" class="modal__header-close-btn">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+
+                <div class="modal__body-content" id="modal__body-content">
+                    <div class="dialog__add-term" id="dialog__add-term" style="display: none">
+                        <div class="dialog__add-term-row">
+                            <div class="dialog__add-term-redirect">
+                                <a href="#" class="dialog__add-term-redirect-link">
+                                    + TẠO HỌC PHẦN MỚI
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dialog__add-term-row">
+                            <div class="dialog__add-term-item">
+                                <p class="dialog__add-term-item-name">
+                                    Tien hoa Một học phần kiểm thử Một học phần kiểm thử Một học phần kiểm thử
+                                </p>
+                                <button class="dialog__add-term-item-btn dialog__add-term-item-btn--plus">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+
+                            <div class="dialog__add-term-item">
+                                <p class="dialog__add-term-item-name">
+                                    Tien hoa Một học phần kiểm thử Một học phần kiểm thử Một học phần kiểm thử
+                                </p>
+                                <a href="" class="dialog__add-term-item-btn dialog__add-term-item-btn--minus">
+                                    <i class="bi bi-dash-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dialog__confirm-delete" id="dialog__confirm-delete" style="display: none">
+                        <p class="dialog__confirm-delete-name">
+                            Lớp học
+                        </p>
+                        <p class="dialog__confirm-delete-description">
+                            Bạn chuẩn bị xoá lớp này. Không ai có thể truy cập vào lớp này nữa.
+                        </p>
+                        <p class="dialog__confirm-delete-description">
+                            Bạn có chắc chắn không? Bạn sẽ không được hoàn tác.
+                        </p>
+
+                        <div class="dialog__confirm-delete-action">
+                            <button class="dialog__confirm-delete-cancel-btn dialog__confirm-delete-action-btn">
+                                Hủy
+                            </button>
+                            <button class="dialog__confirm-delete-submit-btn dialog__confirm-delete-action-btn">
+                                Xóa lớp
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="dialog__add-term" id="dialog__add-folder" style="display: none">
+                        <div class="dialog__add-term-row">
+                            <div class="dialog__add-term-redirect">
+                                <a href="#" class="dialog__add-term-redirect-link">
+                                    + TẠO THƯ MỤC MỚI
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dialog__add-term-row">
+                            <div class="dialog__add-term-item">
+                                <p class="dialog__add-term-item-name">
+                                    Thư mục
+                                </p>
+                                <button class="dialog__add-term-item-btn dialog__add-term-item-btn--plus">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+
+                            <div class="dialog__add-term-item">
+                                <p class="dialog__add-term-item-name">
+                                    Thư mục khác
+                                </p>
+                                <a href="" class="dialog__add-term-item-btn dialog__add-term-item-btn--minus">
+                                    <i class="bi bi-dash-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dialog__add-member" id="dialog__add-member" style="display: none">
+                        <p class="dialog__add-member-description">
+                            Để mời thành viên tham gia lớp học này, hãy nhập tên người dùng hoặc email Quizlet của họ
+                            bên dưới (phân tách bằng dấu phẩy hoặc ngắt dòng).
+                        </p>
+                        <div class="dialog__add-member-action">
+                            <div class="dialog__add-member-action-left">
+                                <input class="dialog__add-member-action-input" type="text"
+                                       placeholder="Nhập tên người dùng hoặc email">
+                                <label class="dialog__add-member-action-label">MỜI THÀNH VIÊN</label>
+                            </div>
+                            <button class="dialog__add-member-action-btn">
+                                Gửi lời mời
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal__with-edit-class" style="display: none">
+                <div class="dialog__create-class">
+                    <button onclick="closeModalLibraryClass()" class="dialog__create-class-btn-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div class="dialog__create-class-content">
+                        <h1 class="dialog__create-class-title">Sửa lớp</h1>
+                        <form method="post" action="create-class">
+                            <div class="dialog__create-class-form">
+                                <input type="text" class="dialog__create-class-input" placeholder="Nhập tên lớp"
+                                       name="cname">
+                                <label class="dialog__create-class-label">TÊN LỚP</label>
+                            </div>
+                            <div class="dialog__create-class-form">
+            <textarea class="dialog__create-class-input"
+                      placeholder="Nhập mô tả (tuỳ chọn)" name="cdescription"></textarea>
+                                <label class="dialog__create-class-label">MÔ TẢ</label>
+                            </div>
+                            <div class="dialog__create-class-form">
+                                <input type="text" class="dialog__create-class-input" placeholder="Nhập tên trường"
+                                       name="schoolname">
+                                <label class="dialog__create-class-label">TRƯỜNG</label>
+                            </div>
+
+                            <button class="dialog__create-class-btn" type="submit">
+                                Lưu
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/header.js"></script>
+    <script src="./js/library_class.js"></script>
 
 </body>
 

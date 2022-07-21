@@ -1,5 +1,3 @@
-
-
 a {
     text-decoration: none;
 }
@@ -69,19 +67,15 @@ a {
 .folder__header-tool-btn:hover:before {
     content: "";
     border: 8px solid;
-    top: 28px;
+    top: 32px;
     border-color: transparent transparent var(--blue-color-dark) transparent;
     position: absolute;
 }
 
-
-.folder__header-tool-btn--add:hover:after {
-    content: "Thêm học phần";
+.folder__header-tool-btn:hover:after {
     position: absolute;
     height: 30px;
-    width: 100px;
-    right: -10px;
-    top: 40px;
+    top: 45px;
     background-color: var(--blue-color-dark);
     display: flex;
     justify-content: center;
@@ -90,40 +84,35 @@ a {
     font-weight: 550;
     color: var(--white-color);
     border-radius: 5px;
+}
+
+.folder__header-tool-btn--add:hover:after {
+    content: "Thêm học phần";
+    width: 100px;
+    right: -10px;
+
+}
+
+.folder__header-tool-btn--learn:hover:after {
+    content: "Học";
+    width: 40px;
+}
+
+.folder__header-tool-btn--share:hover:after{
+    content: "Chia sẻ";
+    width: 55px;
 }
 
 .folder__header-tool-btn--edit:hover:after {
     content: "Sửa";
-    position: absolute;
-    height: 30px;
     width: 40px;
     right: -2px;
-    top: 40px;
-    background-color: var(--blue-color-dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: 550;
-    color: var(--white-color);
-    border-radius: 5px;
 }
 
 .folder__header-tool-btn--delete:hover:after {
     content: "Xóa";
-    position: absolute;
-    height: 30px;
-    width: 50px;
-    right: -10px;
-    top: 40px;
-    background-color: var(--blue-color-dark);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: 550;
-    color: var(--white-color);
-    border-radius: 5px;
+    width: 40px;
+    right: -2px;
 }
 
 .folder__header-title {
@@ -294,4 +283,9 @@ a {
 
 .folder__card-footer-delete-btn:hover {
     color: var(--red-color-light);
+}
+
+
+.dialog__edit-folder{
+    background-color: var(--gray-color);
 }

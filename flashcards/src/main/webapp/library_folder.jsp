@@ -19,6 +19,12 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/library_folder.css">
+    <link rel="stylesheet" href="./css/dialog/base.css">
+    <link rel="stylesheet" href="./css/dialog/add_term.css">
+    <link rel="stylesheet" href="./css/dialog/learn_folder.css">
+    <link rel="stylesheet" href="./css/dialog/confirm_delete.css">
+    <link rel="stylesheet" href="./css/dialog_create_folder.css">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese"
           rel="stylesheet">
 
@@ -47,13 +53,22 @@
                 </p>
             </div>
             <div class="folder__header-right">
-                <a class="folder__header-tool-btn folder__header-tool-btn--add" href="">
+                <button onclick="openDialogAddTerm()" class="folder__header-tool-btn folder__header-tool-btn--add">
                     <i class="bi bi-plus-lg"></i>
+                </button>
+                <button onclick="openDialogLearn()" class="folder__header-tool-btn folder__header-tool-btn--learn">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                </button>
+
+                <a class="folder__header-tool-btn folder__header-tool-btn--share" href="">
+                    <i class="bi bi-upload"></i>
                 </a>
-                <a class="folder__header-tool-btn folder__header-tool-btn--edit" href="">
+
+                <button onclick="openDialogEdit()" class="folder__header-tool-btn folder__header-tool-btn--edit">
                     <i class="bi bi-pencil"></i>
-                </a>
-                <button class="folder__header-tool-btn folder__header-tool-btn--delete">
+                </button>
+                <button onclick="openDialogConfirmDelete()"
+                        class="folder__header-tool-btn folder__header-tool-btn--delete">
                     <i class="bi bi-trash"></i>
                 </button>
             </div>
@@ -202,6 +217,144 @@
         </div>
     </div>
 </div>
+
+<div class="modal" id="modal" style="display: none">
+    <div class="modal__overlay">
+
+    </div>
+
+    <div class="modal__body">
+        <div class="modal__inner" id="modal__inner">
+            <div id="modal__without-edit" style="display: none">
+                <div class="modal__header">
+                    <div class="modal__header-title">
+                        <span class="modal__header-title-text" id="modal_title">
+                            Tùy chọn
+                        </span>
+                    </div>
+                    <button onclick="closeModalLibraryFolder()" class="modal__header-close-btn">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+
+                <div class="modal__body-content" id="modal__body-content">
+                    <div class="dialog__add-term" id="dialog__add-term" style="display: none">
+                        <div class="dialog__add-term-row">
+                            <div class="dialog__add-term-redirect">
+                                <a href="#" class="dialog__add-term-redirect-link">
+                                    + TẠO HỌC PHẦN MỚI
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dialog__add-term-row">
+                            <div class="dialog__add-term-item">
+                                <p class="dialog__add-term-item-name">
+                                    Tien hoa Một học phần kiểm thử Một học phần kiểm thử Một học phần kiểm thử
+                                </p>
+                                <button class="dialog__add-term-item-btn dialog__add-term-item-btn--plus">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+
+                            <div class="dialog__add-term-item">
+                                <p class="dialog__add-term-item-name">
+                                    Tien hoa Một học phần kiểm thử Một học phần kiểm thử Một học phần kiểm thử
+                                </p>
+                                <a href="" class="dialog__add-term-item-btn dialog__add-term-item-btn--minus">
+                                    <i class="bi bi-dash-lg"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dialog__learn-folder" id="dialog__learn-folder" style="display: none">
+                        <div class="dialog__learn-folder-content">
+                            <a href="" class="dialog__learn-folder-link">
+                                <img src="./img/library_folder/dialog_learn/learn.png" alt=""
+                                     class="dialog__learn-folder-link-img">
+                                <p class="dialog__learn-folder-content-name">Thẻ ghi nhớ</p>
+                            </a>
+                            <a href="" class="dialog__learn-folder-link">
+                                <img src="./img/library_folder/dialog_learn/write.png" alt=""
+                                     class="dialog__learn-folder-link-img">
+                                <p class="dialog__learn-folder-content-name">Viết</p>
+                            </a>
+                            <a href="" class="dialog__learn-folder-link">
+                                <img src="./img/library_folder/dialog_learn/speaker.png" alt=""
+                                     class="dialog__learn-folder-link-img">
+                                <p class="dialog__learn-folder-content-name">Chính tả</p>
+                            </a>
+                            <a href="" class="dialog__learn-folder-link">
+                                <img src="./img/library_folder/dialog_learn/check.png" alt=""
+                                     class="dialog__learn-folder-link-img">
+                                <p class="dialog__learn-folder-content-name">Kiểm tra</p>
+                            </a>
+                            <a href="" class="dialog__learn-folder-link">
+                                <img src="./img/library_folder/dialog_learn/ghe_the.png" alt=""
+                                     class="dialog__learn-folder-link-img">
+                                <p class="dialog__learn-folder-content-name">Ghép thẻ</p>
+                            </a>
+                            <a href="" class="dialog__learn-folder-link">
+                                <img src="./img/library_folder/dialog_learn/thien_thach.png" alt=""
+                                     class="dialog__learn-folder-link-img">
+                                <p class="dialog__learn-folder-content-name">Thiên thạch</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="dialog__confirm-delete" id="dialog__confirm-delete" style="display: none">
+                        <p class="dialog__confirm-delete-name">
+                            Thư mục mới
+                        </p>
+                        <p class="dialog__confirm-delete-description">
+                            Xóa thư mục là thao tác VĨNH VIỄN. Bạn không thể hoàn tác.
+                        </p>
+                        <p class="dialog__confirm-delete-description">
+                            Bạn chắc chắn muốn xóa thư mục này? Học phần trong thư mục này sẽ không bị xoá.
+                        </p>
+
+                        <div class="dialog__confirm-delete-action">
+                            <button class="dialog__confirm-delete-cancel-btn dialog__confirm-delete-action-btn">
+                                Hủy
+                            </button>
+                            <button class="dialog__confirm-delete-submit-btn dialog__confirm-delete-action-btn">
+                                Xóa thư mục
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal__with-edit" style="display: none">
+                <div class="dialog__create-folder">
+                    <button onclick="closeModalLibraryFolder()" class="dialog__create-folder-btn-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <form>
+                        <div class="dialog__create-folder-content">
+                            <h1 class="dialog__create-folder-title">Tạo thư mục mới</h1>
+                            <div class="dialog__create-folder-input">
+                                <input type="text" name="fname" class="dialog__create-folder-input-text" placeholder="Nhập tiêu đề">
+                            </div>
+                            <div class="dialog__create-folder-area">
+                                <textarea class="dialog__create-folder-area-text" placeholder="Nhập mô tả" name="fdescription"></textarea>
+                            </div>
+                        </div>
+                        <div class="dialog__create-folder-separate"></div>
+
+                        <div class="dialog__create-folder-btn">
+                            <button class="dialog__create-folder-btn-create" type="submit">Lưu thư mục</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <script src="./js/header.js"></script>
+<script src="./js/library_folder.js"></script>
 </body>
 
