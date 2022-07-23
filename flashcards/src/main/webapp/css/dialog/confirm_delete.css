@@ -1,0 +1,52 @@
+
+
+.dialog__confirm-delete{
+    margin: -32px;
+    background-color: var(--white-color);
+    padding: 32px;
+}
+
+.dialog__confirm-delete-name{
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.dialog__confirm-delete-description{
+    font-size: 16px;
+    color: var(--text-color);
+    margin: 0px 5px 0 5px;
+    line-height: 1.8;
+}
+
+.dialog__confirm-delete-action{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 47% 47%;
+    grid-column-gap: 30px;
+}
+
+.dialog__confirm-delete-action-btn{
+    height: 56px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    color: var(--white-color);
+}
+
+.dialog__confirm-delete-cancel-btn{
+    background-color: var( --black-background);
+}
+
+.dialog__confirm-delete-cancel-btn:hover{
+    opacity: .8;
+}
+
+.dialog__confirm-delete-submit-btn{
+    background-color: var(--red-color-light);
+}
+
+.dialog__confirm-delete-submit-btn:hover{
+    opacity: .8;
+}

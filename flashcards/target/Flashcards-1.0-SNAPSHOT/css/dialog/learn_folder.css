@@ -1,0 +1,31 @@
+.dialog__learn-folder-content {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 25px;
+    grid-row-gap: 20px;
+}
+
+.dialog__learn-folder-link {
+    background-color: var(--white-color);
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+    text-align: center;
+    height: 160px;
+    border-bottom: 5px solid var(--green-color);
+}
+
+.dialog__learn-folder-link:hover>.dialog__learn-folder-content-name {
+    color: var(--yellow-color);
+}
+
+.dialog__learn-folder-link:hover {
+    border-color: var(--yellow-color);
+}
+
+.dialog__learn-folder-link-img {}
+
+.dialog__learn-folder-content-name {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--green-color);
+}
