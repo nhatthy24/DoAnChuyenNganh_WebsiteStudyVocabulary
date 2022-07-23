@@ -38,7 +38,7 @@ public class ProcessLogIn extends HttpServlet {
             session.setAttribute("user_id", kh.getId());
             response.sendRedirect("index.jsp");
         } else {
-            System.out.println("Loi dang nhap");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
         }
 
     }

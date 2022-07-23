@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title}</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/responsive.css">
@@ -27,7 +27,7 @@
 </head>
 
 <body>
-<%--<jsp:include page="header.jsp"></jsp:include>--%>
+<jsp:include page="header.jsp"></jsp:include>
 
 <!-- main content -->
 <div class="container__remember-card">
@@ -92,58 +92,60 @@
     <div class="layout__content">
         <div class="card__items" id="list__card-items">
             <c:forEach var="fi" items="${cards}">
-            <div class="card__item ${fi.markedCard ? 'card__item-tick-star' : ''}">
-                <div class="card__item-word card__item-text">
-                    <div class="card__item-side card__item-side-word">
-                            ${fi.term}
-                    </div>
-                    <div style="display:none;" class="card__item-card-id" id="card_id">
-                            ${fi.id}
-                    </div>
-                    <div style="display: none" class="card__item-course-id">
-                            ${fi.courseId}
-                    </div>
-                    <div style="display: none" class="card__item-creator-id" id="creator_id">
-                            ${fi.creator}
-                    </div>
-                    <div class="card__item-control">
-                        <button class="card__item-control-btn card__item-control-edit-btn">
-                            <i class="fas fa-pencil-alt"></i>
-                        </button>
-                        <button class="card__item-control-btn card__item-control-speech-btn">
-                            <i class="fas fa-volume-up"></i>
-                        </button>
-                        <button onclick="updateStarCardState(${fi.creator},${fi.id},${course_id})" class="card__item-control-btn card__item-control-star-btn ${fi.markedCard ? 'card__item-control-star-btn--active' : ''}">
-                            <i class="fas fa-star"></i>
-                        </button>
-                    </div>
-                    <div class="card__item-hint">
+                <div class="card__item ${fi.markedCard ? 'card__item-tick-star' : ''}">
+                    <div class="card__item-word card__item-text">
+                        <div class="card__item-side card__item-side-word">
+                                ${fi.term}
+                        </div>
+                        <div style="display:none;" class="card__item-card-id" id="card_id">
+                                ${fi.id}
+                        </div>
+                        <div style="display: none" class="card__item-course-id">
+                                ${fi.courseId}
+                        </div>
+                        <div style="display: none" class="card__item-creator-id" id="creator_id">
+                                ${fi.creator}
+                        </div>
+                        <div class="card__item-control">
+                            <button class="card__item-control-btn card__item-control-edit-btn">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                            <button class="card__item-control-btn card__item-control-speech-btn">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                            <button onclick="updateStarCardState(${fi.creator},${fi.id},${course_id})"
+                                    class="card__item-control-btn card__item-control-star-btn ${fi.markedCard ? 'card__item-control-star-btn--active' : ''}">
+                                <i class="fas fa-star"></i>
+                            </button>
+                        </div>
+                        <div class="card__item-hint">
                             <span class="card__item-hint-text">
                                 Nhấn vào thẻ để xem định nghĩa
                             </span>
-                        <i class="fas fa-hand-pointer"></i>
+                            <i class="fas fa-hand-pointer"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="card__item-definition card__item-text">
-                    <div class="card__item-side card__item-side-definition">
-                            ${fi.meaning}
-                    </div>
-                    <div class="card__item-control">
-                        <button class="card__item-control-btn card__item-control-edit-btn">
-                            <i class="fas fa-pencil-alt"></i>
-                        </button>
-                        <button onclick="updateStarCardState(${fi.creator},${fi.id},${course_id})" class="card__item-control-btn card__item-control-star-btn  ${fi.markedCard ? 'card__item-control-star-btn--active' : ''}">
-                            <i class="fas fa-star"></i>
-                        </button>
-                    </div>
-                    <div class="card__item-hint">
+                    <div class="card__item-definition card__item-text">
+                        <div class="card__item-side card__item-side-definition">
+                                ${fi.meaning}
+                        </div>
+                        <div class="card__item-control">
+                            <button class="card__item-control-btn card__item-control-edit-btn">
+                                <i class="fas fa-pencil-alt"></i>
+                            </button>
+                            <button onclick="updateStarCardState(${fi.creator},${fi.id},${course_id})"
+                                    class="card__item-control-btn card__item-control-star-btn  ${fi.markedCard ? 'card__item-control-star-btn--active' : ''}">
+                                <i class="fas fa-star"></i>
+                            </button>
+                        </div>
+                        <div class="card__item-hint">
                             <span class="card__item-hint-text">
                                 Nhấn vào thẻ để xem thuật ngữ
                             </span>
-                        <i class="fas fa-hand-pointer"></i>
+                            <i class="fas fa-hand-pointer"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
             </c:forEach>
             <div class="card__item card__item-special">
                 <div class="card__item-special-title">
@@ -151,7 +153,7 @@
                          alt="">
                     <h3 class="card__item-special-title-text">
                         Chúc mừng! Bạn đã ôn tập tất cả các thuật ngữ.
-                        </h3>
+                    </h3>
                 </div>
                 <div class="card__item-special-content">
                     <div class="card__item-special-content-item" style="margin-top: 0">
@@ -244,7 +246,8 @@
                     onclick="closeEditWordDialog()">
                 Hủy
             </button>
-            <button type="button" onclick="updateFlashCard()" class="edit__word-dialog-save-btn" id="edit__word-dialog-save-btn">
+            <button type="button" onclick="updateFlashCard()" class="edit__word-dialog-save-btn"
+                    id="edit__word-dialog-save-btn">
                 Lưu
             </button>
         </div>
@@ -269,9 +272,11 @@
                 <div class="setting__dialog-body-item-content">
                     <div class="setting__dialog-body-group-btn">
                         <button class="setting__dialog-body-btn-item
-                             setting__dialog-body-btn--active" id="setting__list-card-all-btn">Tất cả</button>
+                             setting__dialog-body-btn--active" id="setting__list-card-all-btn">Tất cả
+                        </button>
                         <button class="setting__dialog-body-btn-item" id="setting__list-card-star-btn">Có gắn
-                            sao</button>
+                            sao
+                        </button>
                     </div>
                 </div>
             </div>
@@ -299,9 +304,11 @@
                 <div class="setting__dialog-body-item-content">
                     <div class="setting__dialog-body-group-btn">
                         <button class="setting__dialog-body-btn-item" id="setting__open-speaker">
-                            Bật</button>
+                            Bật
+                        </button>
                         <button class="setting__dialog-body-btn-item setting__dialog-body-btn--active"
-                                id="setting__close-speaker">Tắt</button>
+                                id="setting__close-speaker">Tắt
+                        </button>
                     </div>
                 </div>
             </div>

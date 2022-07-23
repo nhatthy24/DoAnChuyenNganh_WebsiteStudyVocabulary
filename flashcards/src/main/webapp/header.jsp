@@ -319,7 +319,7 @@
                                     <img id="navbar__user-btn" src="./img/avatar.jpg" alt="">
                                 </button>
 
-                                <div class="navbar__user-menu" id="navbar__user-menu">
+                                <div class="navbar__user-menu" id="navbar__user-menu" style="display: none">
                                     <div class="navbar__user-header">
                                         <img class="navbar__user-img" src="./img/avatar.jpg" alt="">
                                         <div class="navbar_user-infor">
