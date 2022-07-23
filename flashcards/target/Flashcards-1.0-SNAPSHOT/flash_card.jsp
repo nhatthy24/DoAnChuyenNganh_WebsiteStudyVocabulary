@@ -176,7 +176,7 @@
                         </div>
                     </div>
                     <div class="card__item-special-btn">
-                        <a href="#" class="card__item-special-btn-item">
+                        <a href="studycard?course_id=${course_id}" class="card__item-special-btn-item">
                             Tiếp tục với chế độ Học
                         </a>
                         <button class="card__item-special-btn-item" id="card__item-repeat-btn">
