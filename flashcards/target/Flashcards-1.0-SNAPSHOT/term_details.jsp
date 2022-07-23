@@ -1,6 +1,3 @@
-<%--
-  User: TRAN NHAT THY
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
@@ -200,7 +197,7 @@
     <div class="term__detail">
         <div class="term__detail-header">
             <div class="term__detail-header-title">
-                Thuật ngữ trong học phần này (2)
+                Thuật ngữ trong học phần này (${cards.size()})
             </div>
 
             <div class="term__detail-filter-group-btn" id="term__detail-filter-group-btn">
@@ -253,44 +250,6 @@
                     </div>
                 </div>
             </c:forEach>
-            <%--                <div class="term__detail-item">--%>
-            <%--                    <div class="term__detail-item-word">--%>
-            <%--                        <input type="text" value="Hello" class="term__detail-item-input term__detail-item-word-text" readonly>--%>
-            <%--                    </div>--%>
-            <%--                    <div class="term__detail-item-definition">--%>
-            <%--                        <input type="text" value="Xin chào" class="term__detail-item-input" readonly>--%>
-            <%--                    </div>--%>
-            <%--                    <div class="term__detail-item-control">--%>
-            <%--                        <button class="term__detail-item-control-btn" onclick="tickStar(this)">--%>
-            <%--                            <i class="fas fa-star"></i>--%>
-            <%--                        </button>--%>
-            <%--                        <button class="term__detail-item-control-btn" onclick="speechWord(this)">--%>
-            <%--                            <i class="fas fa-volume-up"></i>--%>
-            <%--                        </button>--%>
-            <%--                        <button class="term__detail-item-control-btn" onclick="editWord(this)">--%>
-            <%--                            <i class="fas fa-pen"></i>--%>
-            <%--                        </button>--%>
-            <%--                    </div>--%>
-            <%--                </div>--%>
-            <%--                <div class="term__detail-item">--%>
-            <%--                    <div class="term__detail-item-word">--%>
-            <%--                        <input type="text" value="Apple" class="term__detail-item-input term__detail-item-word-text" readonly>--%>
-            <%--                    </div>--%>
-            <%--                    <div class="term__detail-item-definition">--%>
-            <%--                        <input type="text" value="Quả táo" class="term__detail-item-input" readonly>--%>
-            <%--                    </div>--%>
-            <%--                    <div class="term__detail-item-control">--%>
-            <%--                        <button class="term__detail-item-control-btn" onclick="tickStar(this)">--%>
-            <%--                            <i class="fas fa-star"></i>--%>
-            <%--                        </button>--%>
-            <%--                        <button class="term__detail-item-control-btn" onclick="speechWord(this)">--%>
-            <%--                            <i class="fas fa-volume-up"></i>--%>
-            <%--                        </button>--%>
-            <%--                        <button class="term__detail-item-control-btn" onclick="editWord(this)">--%>
-            <%--                            <i class="fas fa-pen"></i>--%>
-            <%--                        </button>--%>
-            <%--                    </div>--%>
-            <%--                </div>--%>
         </div>
 
         <button class="term__detail-edit-btn">

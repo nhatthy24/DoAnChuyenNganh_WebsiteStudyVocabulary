@@ -23,14 +23,14 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 <div class="term__container">
-<%--    <c:forEach items="${courses}" var="course">--%>
+    <c:forEach items="${courses}" var="course">
     <div class="folder__card">
         <div class="folder__card-header">
             <a href="#" class="folder__card-title">
-                course.courseName
+                ${course.courseName}
             </a>
             <p class="folder__card-count">
-                course.cards.size()thuật ngữ
+            ${course.cards.size()}thuật ngữ
             </p>
         </div>
         <div class="folder__card-footer">
@@ -39,7 +39,7 @@
                     <i class="fa-regular fa-user"></i>
                 </div>
                 <div class="folder__card-footer-author-name">
-                    course.creatorName
+                     ${course.creatorName}
                 </div>
             </div>
             <div class="folder__card-footer-delete">
@@ -49,7 +49,7 @@
             </div>
         </div>
     </div>
-<%--    </c:forEach>--%>
+    </c:forEach>
 </div>
 <script src="./js/create_term.js"></script>
 <script src="./js/library_folder.js"></script>
