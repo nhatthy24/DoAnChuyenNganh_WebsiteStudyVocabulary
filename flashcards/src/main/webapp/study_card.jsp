@@ -261,7 +261,7 @@
 
                 </div>
                 <div class="item__champion-control">
-                    <a href="term_details.html" class="item__champion-control-btn item__champion-control-btn--left">
+                    <a href="detail-term?course_id=${course_id}" class="item__champion-control-btn item__champion-control-btn--left">
                             <span class="item__champion-control-btn-text">
                                 Học xong
                             </span>

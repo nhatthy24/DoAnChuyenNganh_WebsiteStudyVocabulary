@@ -69,7 +69,7 @@ public class ForgetPassDirect extends HttpServlet {
                 MimeMessage message = new MimeMessage(session);
 
                 // Set From: header field of the header.
-                message.setFrom(new InternetAddress(from));
+                message.setFrom(new InternetAddress(from,"Flashcards"));
 
                 // Set To: header field of the header.
                 message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));

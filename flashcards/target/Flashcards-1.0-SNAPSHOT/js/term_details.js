@@ -1,5 +1,3 @@
-
-
 const currentElement = document.getElementById('current-slide');
 const totalElement = document.getElementById('total-slide');
 const confirmDeleteDialog = document.getElementById('confirm__delete-term');
@@ -17,7 +15,7 @@ const groupBtnFilter = document.getElementById('term__detail-filter-group-btn');
 const selectSort = document.getElementById('term__detail-header-sort-select');
 var listTermDetail = document.getElementById('term__detail-list');
 
-const modal = document.getElementById("modal");
+const modal_term = document.getElementById("modal");
 const modalInner = document.getElementById("modal__inner");
 
 $(document).ready(function () {
@@ -36,6 +34,7 @@ function flipWordToDefinition(btn) {
 
 
 }
+
 function flipDefinitionToWord(btn) {
     const parentElement = btn.parentElement;
     parentElement.classList.remove('term__card-item--rotate');
@@ -60,7 +59,7 @@ function checkButtonAbility() {
 }
 
 function setTotalSlides() {
-    totalElement.innerHTML = slides.length;
+    totalElement.innerHTML = slides.length + "";
 }
 
 
@@ -90,7 +89,6 @@ nextBtn.onclick = () => {
 }
 
 
-
 function switchCard(currentSlide) {
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = 'none';
@@ -106,7 +104,7 @@ function openShareDialog() {
     btnOpen.onclick = () => {
         modalInner.appendChild(shareDialog);
         shareDialog.style.display = 'block';
-        modal.style.display = 'block';
+        modal_term.style.display = 'block';
     }
 }
 
@@ -117,7 +115,7 @@ function closeShareDialog() {
     btnClose.onclick = () => {
         modalInner.removeChild(shareDialog);
         shareDialog.style.display = 'none';
-        modal.style.display = 'none';
+        modal_term.style.display = 'none';
     }
 }
 
@@ -128,7 +126,7 @@ function openAddClassFolderDialog() {
     btnOpen.onclick = () => {
         modalInner.appendChild(addClassFolderDialog);
         addClassFolderDialog.style.display = 'block';
-        modal.style.display = 'block';
+        modal_term.style.display = 'block';
     }
 }
 
@@ -140,7 +138,7 @@ function closeAddClassFolderDialog() {
     btnClose.onclick = () => {
         modalInner.removeChild(addClassFolderDialog);
         addClassFolderDialog.style.display = 'none';
-        modal.style.display = 'none';
+        modal_term.style.display = 'none';
     }
 }
 
@@ -189,14 +187,14 @@ function deleteTerm() {
 
     modalInner.appendChild(confirmDeleteDialog);
     confirmDeleteDialog.style.display = 'block';
-    modal.style.display = 'block';
+    modal_term.style.display = 'block';
 }
 
 function closeDeleteDialog() {
 
     modalInner.removeChild(confirmDeleteDialog);
     confirmDeleteDialog.style.display = 'none';
-    modal.style.display = 'none';
+    modal_term.style.display = 'none';
 }
 
 function speechWord(btn) {

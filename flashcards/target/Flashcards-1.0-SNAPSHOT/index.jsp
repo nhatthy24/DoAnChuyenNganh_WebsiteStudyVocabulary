@@ -22,7 +22,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-<div class="container">
+<div class="term__container">
 <%--    <c:forEach items="${courses}" var="course">--%>
     <div class="folder__card">
         <div class="folder__card-header">

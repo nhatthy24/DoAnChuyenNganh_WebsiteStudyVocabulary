@@ -34,6 +34,12 @@
     <div class="DashboardLayout">
         <div class="DashboardLayout-container">
             <div class="DashboardLayout-main">
+                <div style="margin-left: 29px;margin-top: 28px" class="control__back">
+                    <a href="home" class="control__back-btn">
+                        <i style="color: #c1eaf0" class="fas fa-angle-left"></i>
+                        <span style="color: black" class="control__back-btn-text">Trở về</span>
+                    </a>
+                </div>
                 <main
                         class="page"
                         id="page"
