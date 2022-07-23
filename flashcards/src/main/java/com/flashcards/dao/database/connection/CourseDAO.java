@@ -3,6 +3,8 @@ package com.flashcards.dao.database.connection;
 import com.flashcards.model.Course;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CourseDAO {
     public static boolean insertCourse(int courseId, String courseName, String description, int creator) {
@@ -49,7 +51,35 @@ public class CourseDAO {
     }
 
     public static void main(String[] args) {
-        System.out.println(insertCourse(12546,"Học phần 2", "Mã học phần 2", 1));
+//        System.out.println(insertCourse(12546,"Học phần 2", "Mã học phần 2", 1));
 //        System.out.println(loadCourseById(123456));
+        System.out.println(loadCourseByCreatorId(1));
+    }
+
+    public static List<Course> loadCourseByCreatorId(int user_id) {
+        List<Course> courses = new ArrayList<>();
+        String sql = "SELECT * FROM course WHERE Creator=?";
+        try{
+            PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+            preparedStatement.setInt(1, user_id);
+            synchronized (preparedStatement){
+                ResultSet resultSet = preparedStatement.executeQuery();
+                while(resultSet.next()){
+                    Course course = new Course();
+                    course.setId(resultSet.getInt(1));
+                    course.setCourseName(resultSet.getString(2));
+                    course.setDescription(resultSet.getString(3));
+                    course.setCreatorId(resultSet.getInt(4));
+                    course.setCards(CardDAO.loadListCardByCourseId(resultSet.getInt(1)));
+                    course.setCreatorName(UserDAO.loadUserById(resultSet.getInt(4)).getUsername());
+                    courses.add(course);
+                }
+                resultSet.close();
+            }
+            preparedStatement.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return courses;
     }
 }

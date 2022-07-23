@@ -2,13 +2,36 @@ package com.flashcards.dao.database.connection;
 
 import com.flashcards.model.User;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import com.flashcards.dao.database.connection.*;
 
 public class UserDAO implements ObjectDAO {
 
-	// them tai khoan
+    public static User loadUserById(int creatorId) {
+    	User user = new User();
+    	String sql = "SELECT `Name`, Avatar FROM `user` WHERE UserID=?";
+		try {
+			PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+			preparedStatement.setInt(1,creatorId);
+			synchronized (preparedStatement){
+				ResultSet resultSet = preparedStatement.executeQuery();
+				while (resultSet.next()){
+					user.setUsername(resultSet.getString(1));
+					user.setAvatar(resultSet.getString(2));
+				}
+				resultSet.close();
+			}
+			preparedStatement.close();
+		} catch (SQLException throwables) {
+			throwables.printStackTrace();
+		}
+		return user;
+    }
+
+    // them tai khoan
 	@Override
 	public boolean addAccount(Object obj) {
 		User kh = (User) obj;

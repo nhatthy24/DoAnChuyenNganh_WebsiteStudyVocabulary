@@ -1,4 +1,6 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/create_term.css">
+    <link rel="stylesheet" href="./css/library_folder.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese"
@@ -19,11 +22,37 @@
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+<div class="container">
+<%--    <c:forEach items="${courses}" var="course">--%>
+    <div class="folder__card">
+        <div class="folder__card-header">
+            <a href="#" class="folder__card-title">
+                course.courseName
+            </a>
+            <p class="folder__card-count">
+                course.cards.size()thuật ngữ
+            </p>
+        </div>
+        <div class="folder__card-footer">
+            <div class="folder__card-footer-author">
+                <div class="folder__card-footer-author-icon">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="folder__card-footer-author-name">
+                    course.creatorName
+                </div>
+            </div>
+            <div class="folder__card-footer-delete">
+                <a href="" class="folder__card-footer-delete-btn">
+                    <i class="bi bi-trash"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+<%--    </c:forEach>--%>
+</div>
 <script src="./js/create_term.js"></script>
+<script src="./js/library_folder.js"></script>
 <script src="./js/header.js"></script>
 </body>
 </html>

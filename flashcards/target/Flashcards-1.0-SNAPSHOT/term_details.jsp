@@ -60,14 +60,14 @@
                     </li>
 
 
-                    <li class="study__mode-item">
-                        <a href="#" class="study__mode-link">
-                            <i class="fas fa-volume-up"></i>
-                            <span class="study__mode-text">
-                                Chính tả
-                            </span>
-                        </a>
-                    </li>
+<%--                    <li class="study__mode-item">--%>
+<%--                        <a href="#" class="study__mode-link">--%>
+<%--                            <i class="fas fa-volume-up"></i>--%>
+<%--                            <span class="study__mode-text">--%>
+<%--                                Chính tả--%>
+<%--                            </span>--%>
+<%--                        </a>--%>
+<%--                    </li>--%>
 
                     <li class="study__mode-item">
                         <a href="#" class="study__mode-link">
@@ -126,14 +126,14 @@
         <div class="term__information">
             <div class="term__information-header">
                 <div class="term__information-author">
-                    <img class="term__information-author-avatar" src="./assets/img/avatar.jpg" alt="">
+                    <img class="term__information-author-avatar" src="${creator.avatar}" alt="${creator.username}">
 
                     <div class="term__information-author-info">
                         <p class="term__information-author-info-text">
                             Tạo bởi
                         </p>
                         <p class="term__information-author-info-name">
-                            Nguyễn Văn A
+                            ${creator.username}
                         </p>
                     </div>
                 </div>
@@ -201,7 +201,7 @@
         <div class="term__detail">
             <div class="term__detail-header">
                 <div class="term__detail-header-title">
-                    Thuật ngữ trong học phần này (2)
+                    Thuật ngữ trong học phần này (${cards.size()})
                 </div>
 
                 <div class="term__detail-filter-group-btn" id="term__detail-filter-group-btn">

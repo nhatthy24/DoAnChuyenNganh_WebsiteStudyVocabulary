@@ -8,6 +8,7 @@ public class Course {
     private String courseName;
     private String description;
     private List<Card> cards;
+    private String creatorName;
 
     public Course() {
     }
@@ -60,11 +61,20 @@ public class Course {
         this.cards = cards;
     }
 
+    public String getCreatorName() {
+        return creatorName;
+    }
+
+    public void setCreatorName(String creatorName) {
+        this.creatorName = creatorName;
+    }
+
     @Override
     public String toString() {
         return "Course{" +
                 "id=" + id +
                 ", creatorId=" + creatorId +
+                ", creatorName=" + creatorName +
                 ", courseName='" + courseName + '\'' +
                 ", description='" + description + '\'' +
                 ", cards=" + cards +
