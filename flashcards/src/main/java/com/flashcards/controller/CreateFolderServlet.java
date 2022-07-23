@@ -1,6 +1,8 @@
 package com.flashcards.controller;
 
 import com.flashcards.dao.database.connection.FolderDAO;
+import com.flashcards.dao.database.connection.UserDAO;
+import com.flashcards.model.Folder;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +22,10 @@ public class CreateFolderServlet extends HttpServlet {
         String folderDescription = request.getParameter("fdescription");
         boolean isCreate = FolderDAO.insertFolder(folderName, folderDescription, user_id);
         if(isCreate){
-            System.out.println("Đã tạo học phần thành công");
+            Folder folder = FolderDAO.loadNewestFolder();
+            request.setAttribute("title", "Thư mục");
+            request.setAttribute("folder",folder);
+            request.getRequestDispatcher("library_folder.jsp").forward(request, response);
         }
     }
 

@@ -36,7 +36,8 @@ public class ProcessLogIn extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("user", kh);
             session.setAttribute("user_id", kh.getId());
-            response.sendRedirect("index.jsp");
+//            response.sendRedirect("index.jsp");
+            response.sendRedirect("home");
         } else {
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }

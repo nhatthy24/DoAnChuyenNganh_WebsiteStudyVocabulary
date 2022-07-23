@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>${title} ${classroom.title}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/base.css">
@@ -42,7 +42,7 @@
             <div class="class__header-top-left">
                 <i class="bi bi-people class__header-top-left-icon"></i>
                 <p class="class__header-top-left-title">
-                    Lớp học
+                    Lớp học ${classroom.title}
                 </p>
             </div>
             <div class="class__header-top-right">
@@ -83,7 +83,8 @@
         <div class="class__dashboard-main">
 
             <div id="class__content-terms" class="class__content-terms">
-                <div class="class__content-null" style="display: none;">
+                <c:if test="${classroom.folders.size()==0 && classroom.courses.size()==0}">
+                <div class="class__content-null">
                     <p class="class__content-null-title">
                         Lớp học này chưa có học phần nào
                     </p>
@@ -94,7 +95,8 @@
                         Thêm học phần
                     </a>
                 </div>
-
+                </c:if>
+                <c:if test="${classroom.folders.size()!=0 && classroom.courses.size()!=0}">
                 <div>
                     <div class="class__content-separate">
                             <span class="class__content-separate-label">
@@ -186,23 +188,24 @@
                         </div>
                     </div>
                 </div>
+                </c:if>
             </div>
 
             <div id="class__content-member" class="class__content-member" style="display: none">
-                <div class="class__content-member-share">
-                    <p class="class__content-member-share-title">
-                        Chia sẻ liên kết này với các bạn cùng lớp của bạn
-                    </p>
-                    <p class="class__content-member-share-description">
-                        Bất kỳ ai có URL đều có thể đăng ký và tự động tham gia lớp của bạn
-                    </p>
-                    <input type="text" value="https://quizlet.com/join/evRCqk6fR?i=4d0ln1&x=1rqt"
-                           class="class__content-member-share-input" readonly><br>
+<%--                <div class="class__content-member-share">--%>
+<%--                    <p class="class__content-member-share-title">--%>
+<%--                        Chia sẻ liên kết này với các bạn cùng lớp của bạn--%>
+<%--                    </p>--%>
+<%--                    <p class="class__content-member-share-description">--%>
+<%--                        Bất kỳ ai có URL đều có thể đăng ký và tự động tham gia lớp của bạn--%>
+<%--                    </p>--%>
+<%--                    <input type="text" value="https://quizlet.com/join/evRCqk6fR?i=4d0ln1&x=1rqt"--%>
+<%--                           class="class__content-member-share-input" readonly><br>--%>
 
-                    <button class="class__content-member-share-copy">
-                        Chép liên kết
-                    </button>
-                </div>
+<%--                    <button class="class__content-member-share-copy">--%>
+<%--                        Chép liên kết--%>
+<%--                    </button>--%>
+<%--                </div>--%>
 
                 <div class="class__content-separate">
                         <span class="class__content-separate-label">
@@ -221,7 +224,7 @@
                                 Quản trị viên lớp học
                             </p>
                             <p class="class__content-member-card-infor-name">
-                                Khanh_Du5
+                                ${classroom.creator}
                             </p>
                         </div>
                     </div>
@@ -239,25 +242,33 @@
                 <div class="class__content-detail-item">
                     <i class="bi bi-building class__content-detail-item-icon"></i>
                     <p class="class__content-detail-item-text">
-                        Nông Lâm University, Ho Chi Minh City
+                        ${classroom.school}
                     </p>
                 </div>
                 <div class="class__content-detail-item">
                     <i class="bi bi-stickies class__content-detail-item-icon"></i>
                     <p class="class__content-detail-item-text">
-                        0 học phần
+                        <c:if test="${classroom.folders.size()==0}"> 0 thư mục</c:if>
+                        <c:if test="${classroom.folders.size()!=0}"> ${classroom.folders.size()} thư mục</c:if>
+                    </p>
+                </div>
+                <div class="class__content-detail-item">
+                    <i class="bi bi-stickies class__content-detail-item-icon"></i>
+                    <p class="class__content-detail-item-text">
+                        <c:if test="${classroom.courses.size()==0}"> 0 học phần</c:if>
+                        <c:if test="${classroom.courses.size()!=0}"> ${classroom.courses.size()} học phần</c:if>
                     </p>
                 </div>
                 <div class="class__content-detail-item">
                     <i class="bi bi-person class__content-detail-item-icon"></i>
                     <p class="class__content-detail-item-text">
-                        1 thành viên
+                        ${classroom.members.size()} thành viên
                     </p>
                 </div>
                 <div class="class__content-detail-item">
                     <i class="bi bi-info-circle class__content-detail-item-icon"></i>
                     <p class="class__content-detail-item-text">
-                        This API provides the largest webcomics data in the world to create a comic
+                        ${classroom.description}
                     </p>
                 </div>
             </div>
@@ -329,11 +340,11 @@
                         </p>
 
                         <div class="dialog__confirm-delete-action">
-                            <button class="dialog__confirm-delete-cancel-btn dialog__confirm-delete-action-btn">
+                            <button onclick="closeModalLibraryClass()" class="dialog__confirm-delete-cancel-btn dialog__confirm-delete-action-btn">
                                 Hủy
                             </button>
                             <button class="dialog__confirm-delete-submit-btn dialog__confirm-delete-action-btn">
-                                Xóa lớp
+                                <a href="delete-class?class_id=${classroom.classID}" style="color: #fff">Xóa lớp</a>
                             </button>
                         </div>
                     </div>
@@ -394,21 +405,24 @@
                     </button>
                     <div class="dialog__create-class-content">
                         <h1 class="dialog__create-class-title">Sửa lớp</h1>
-                        <form method="post" action="create-class">
+                        <form method="post" action="edit-class">
                             <div class="dialog__create-class-form">
                                 <input type="text" class="dialog__create-class-input" placeholder="Nhập tên lớp"
-                                       name="cname">
+                                       name="cname" value="${classroom.title}">
                                 <label class="dialog__create-class-label">TÊN LỚP</label>
                             </div>
                             <div class="dialog__create-class-form">
-            <textarea class="dialog__create-class-input"
-                      placeholder="Nhập mô tả (tuỳ chọn)" name="cdescription"></textarea>
+                                <textarea class="dialog__create-class-input"
+                                    placeholder="Nhập mô tả (tuỳ chọn)" name="cdescription">${classroom.description}</textarea>
                                 <label class="dialog__create-class-label">MÔ TẢ</label>
                             </div>
                             <div class="dialog__create-class-form">
                                 <input type="text" class="dialog__create-class-input" placeholder="Nhập tên trường"
-                                       name="schoolname">
+                                       name="schoolname" value="${classroom.school}">
                                 <label class="dialog__create-class-label">TRƯỜNG</label>
+                            </div>
+                            <div>
+                                <input type="number" name="cid" value="${classroom.classID}" hidden>
                             </div>
 
                             <button class="dialog__create-class-btn" type="submit">
@@ -420,7 +434,7 @@
             </div>
         </div>
     </div>
-
+</div>
     <script src="./js/header.js"></script>
     <script src="./js/library_class.js"></script>
 

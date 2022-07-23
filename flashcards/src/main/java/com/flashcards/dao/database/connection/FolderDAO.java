@@ -1,7 +1,11 @@
 package com.flashcards.dao.database.connection;
 
+import com.flashcards.model.Folder;
+
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class FolderDAO {
 
@@ -61,5 +65,75 @@ public class FolderDAO {
             throwables.printStackTrace();
         }
         return false;
+    }
+    // xóa thư mục có học phần
+    public static boolean deleteFolderHasCourse(int folderID){
+        String sql = "DELETE FROM course_in_folder WHERE folder=?";
+        int update = 0;
+        try{
+            PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+            preparedStatement.setInt(1, folderID);
+            synchronized (preparedStatement){
+                update = preparedStatement.executeUpdate();
+            }
+            preparedStatement.close();
+            return update == 1;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
+    }
+
+    // load thư mục mới nhất
+    public static Folder loadNewestFolder() {
+        String sql = "SELECT * FROM folder ORDER BY FolderID DESC LIMIT 1";
+        Folder folder = new Folder();
+        try{
+            Statement statement = DBCPDataSource.getStatement();
+            synchronized (statement){
+                ResultSet resultSet = statement.executeQuery(sql);
+                while (resultSet.next()){
+                    folder.setFolderId(resultSet.getInt(1));
+                    folder.setTitle(resultSet.getString(2));
+                    folder.setDescription(resultSet.getString(3));
+                    folder.setCreatorID(resultSet.getInt(4));
+                    folder.setCreator(UserDAO.loadUserById(resultSet.getInt(4)).getUsername());
+                }
+                resultSet.close();
+            }
+            statement.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return folder;
+    }
+
+    // load thư mục từ id của thư mục
+    public static Folder loadFolderById(int id) {
+        Folder folder = new Folder();
+        String sql = "SELECT * FROM folder WHERE FolderID="+id;
+        try{
+            Statement statement = DBCPDataSource.getStatement();
+            synchronized (statement){
+                ResultSet resultSet = statement.executeQuery(sql);
+                while (resultSet.next()){
+                    folder.setFolderId(resultSet.getInt(1));
+                    folder.setTitle(resultSet.getString(2));
+                    folder.setDescription(resultSet.getString(3));
+                    folder.setCreatorID(resultSet.getInt(4));
+                    folder.setCourseList(CourseDAO.loadCourseInFolder(id));
+                    folder.setCreator(UserDAO.loadUserById(resultSet.getInt(4)).getUsername());
+                }
+                resultSet.close();
+            }
+            statement.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return folder;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(loadFolderById(2));
     }
 }
