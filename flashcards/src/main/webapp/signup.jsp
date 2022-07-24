@@ -24,7 +24,7 @@
 
     <div class="container__right">
         <div>
-            <a class="exit-btn" href="${pageContext.request.contextPath}/home">
+            <a class="exit-btn" href="${pageContext.request.contextPath}/">
                 <i class="fas fa-times"></i>
             </a>
         </div>
@@ -97,12 +97,13 @@
                         >
                     </div>
                     <div class="signup__form-item">
-                        <label id="signup-label-role" class="signup__form-item-label">VUI LÒNG CHỌN VAI TRÒ CỦA BẠN</label>
+                        <label id="signup-label-role" class="signup__form-item-label">VUI LÒNG CHỌN VAI TRÒ CỦA
+                            BẠN</label>
                         <div class="wrapper-class">
-                           <input type="radio" class="radio" name="x" value="Teacher-1" id="Teacher-1" />
-                           <label for="Teacher-1" class="sub-label">Giáo viên</label>
-                           <input type="radio" class="radio" name="x" value="Student-0" id="Student-0" />
-                           <label for="Student-0" class="sub-label">Sinh viên</label>
+                            <input type="radio" class="radio" name="x" value="Teacher-1" id="Teacher-1"/>
+                            <label for="Teacher-1" class="sub-label">Giáo viên</label>
+                            <input type="radio" class="radio" name="x" value="Student-0" id="Student-0"/>
+                            <label for="Student-0" class="sub-label">Sinh viên</label>
                         </div>
                     </div>
 
