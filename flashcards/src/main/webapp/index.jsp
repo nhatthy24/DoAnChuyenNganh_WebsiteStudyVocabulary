@@ -26,7 +26,7 @@
     <c:forEach items="${courses}" var="course">
     <div class="folder__card">
         <div class="folder__card-header">
-            <a href="#" class="folder__card-title">
+            <a href="detail-term?course_id=${course.id}" class="folder__card-title">
                 ${course.courseName}
             </a>
             <p class="folder__card-count">
