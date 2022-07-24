@@ -85,12 +85,12 @@
             <%--                </div>--%>
             <div class="create__term-definition">
                 <div class="create__term-tag-list" id="create__term-tag-list">
-                    <c:forEach items="${cards}" var="card">
+                    <c:forEach items="${cards}" var="card" varStatus="loop">
                         <div class="tag__item">
                             <div class="tag__item-header">
                                 <div class="tab__item-counter">
                                     <p class="tab__count">
-                                        1
+                                            ${loop.index + 1}
                                     </p>
                                 </div>
                                 <div class="tab__item-toolbar">
