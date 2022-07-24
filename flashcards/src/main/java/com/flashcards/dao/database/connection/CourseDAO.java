@@ -55,7 +55,8 @@ public class CourseDAO {
 //        System.out.println(insertCourse(12546,"Học phần 2", "Mã học phần 2", 1));
 //        System.out.println(loadCourseById(123456));
 //        System.out.println(loadCourseByCreatorId(1));
-        System.out.println(loadCourseInFolder(2));
+//        System.out.println(loadCourseInFolder(2));
+        System.out.println(loadCourseHome());
     }
 
     public static List<Course> loadCourseByCreatorId(int user_id) {

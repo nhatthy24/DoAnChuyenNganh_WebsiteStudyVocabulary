@@ -16,16 +16,18 @@ public class Home extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("title","Trang chủ");
         HttpSession session = request.getSession();
-        List<Course> courses = new ArrayList<>();
+
         if(session.getAttribute("user_id")!=null){
             int user_id = (int) session.getAttribute("user_id");
-            courses = CourseDAO.loadCourseByCreatorId(user_id);
+            List<Course> courses = CourseDAO.loadCourseByCreatorId(user_id);
+            request.setAttribute("courses", courses);
+            request.getRequestDispatcher("index.jsp").forward(request,response);
         } else if(session.getAttribute("user_id")==null){
-            courses = CourseDAO.loadCourseHome();
+            List<Course> courses = CourseDAO.loadCourseHome();
+            request.setAttribute("courses", courses);
+            request.getRequestDispatcher("index.jsp").forward(request,response);
         }
-        System.out.println("Đo dai cua courses: "+courses.size());
-        request.setAttribute("courses", courses);
-        request.getRequestDispatcher("index.jsp").forward(request,response);
+
     }
 
     @Override

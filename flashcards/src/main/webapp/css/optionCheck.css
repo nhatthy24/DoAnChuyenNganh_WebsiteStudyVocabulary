@@ -1,0 +1,1389 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+*,
+:after,
+:before {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit
+}
+
+.UIButton {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.285714285714286;
+    max-width: 100%;
+    padding: .75rem 1.5rem;
+    transition: all .12s cubic-bezier(.47, 0, .745, .715);
+    width: auto
+}
+
+.UIButton:focus:not(:active):not(:hover) {
+    color: rgba(255, 255, 255, .5)
+}
+
+.UIButton:focus {
+    outline: none
+}
+
+.UIButton+.UIButton,
+.UIButton+[class^=UI],
+[class^=UI]+.UIButton {
+    margin-left: 1.5rem
+}
+
+.UIButton[aria-disabled=true],
+.UIButton[disabled] {
+    cursor: default
+}
+
+.UIButton .UIIcon+* {
+    margin-left: .625rem
+}
+
+.UIButton::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+.UIButton-wrapper {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    white-space: pre-wrap;
+    width: 100%
+}
+
+.UIButton--fill {
+    display: flex;
+    width: 100%
+}
+
+.UIButton--fill+.UIButton--fill,
+.UIButton--fill+[class^=UI],
+[class^=UI]+.UIButton--fill {
+    margin-left: 0 !important;
+    margin-top: 1.5rem
+}
+
+.UIButton--inverted:focus:not(:active):not(:hover) {
+    color: rgba(255, 255, 255, .5)
+}
+
+.UIButton--invertedWhite:focus:not(:active):not(:hover) {
+    color: var(--ui_color_primary_indigo_transparent_50)
+}
+
+.UIButton--social:focus:not(:active):not(:hover) {
+    color: var(--ui_color_gray_30_transparent_50)
+}
+
+.UIButton--borderless:focus:not(:active):not(:hover) {
+    color: var(--ui_color_default_foreground_transparent_50)
+}
+
+.UIButton--white {
+    background: var(--ui_color_white_background) !important;
+    box-shadow: 0 0 .25rem 0 var(--ui_color_gray_90_background)
+}
+
+.UIButton--white:focus:not(:active):not(:hover) {
+    color: rgba(60, 207, 207, .5)
+}
+
+.UIButton--whiteBorder {
+    background: var(--ui_color_white_background) !important;
+    border: .125rem solid var(--ui_color_gray_80_foreground)
+}
+
+.UIButton--whiteBorder:focus:not(:active):not(:hover) {
+    color: rgba(60, 207, 207, .5)
+}
+
+.UIButton--whiteBorderless {
+    background: var(--ui_color_white_background) !important
+}
+
+.UIButton--whiteBorderless:focus:not(:active):not(:hover) {
+    color: rgba(60, 207, 207, .5)
+}
+
+.UIButton--basic:focus:not(:active):not(:hover) {
+    color: var(--ui_color_gray_30_transparent_50)
+}
+
+.UIButton--suggestion {
+    color: var(--ui_color_default_foreground);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625
+}
+
+.UIButton--suggestion:focus:not(:active):not(:hover) {
+    color: var(--ui_color_gray_30_transparent_50)
+}
+
+.UIButton--suggestion .UIButton-wrapper {
+    justify-content: left
+}
+
+.UIButton--whiteBorderRounded {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625
+}
+
+.UIButton--whiteBorderRounded:focus:not(:active):not(:hover) {
+    color: var(--ui_color_gray_30_transparent_50)
+}
+
+.UIButton--whiteText {
+    border: .125rem solid var(--ui_color_gray_80_foreground)
+}
+
+.UIButton--whiteText:focus:not(:active):not(:hover) {
+    color: var(--ui_color_default_foreground_transparent_50)
+}
+
+.UIButton--hero {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: .0625rem;
+    line-height: 1.222222222222222;
+    padding: 1.5rem 5rem
+}
+
+.UIButton--hero.UIButton--fill {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem
+}
+
+.UICheckbox {
+    *zoom: 1;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    width: 100%
+}
+
+.UICheckbox:after,
+.UICheckbox:before {
+    content: "";
+    display: table
+}
+
+.UICheckbox:after {
+    clear: both
+}
+
+.UICheckbox+.UICheckbox,
+.UICheckbox+[class^=UI],
+[class^=UI]+.UICheckbox {
+    margin-top: 1.5rem
+}
+
+.UICheckbox[aria-disabled=true] {
+    cursor: default
+}
+
+.UICheckbox-input {
+    bottom: 0;
+    cursor: inherit;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%
+}
+
+.UICheckbox-fauxInput {
+    border: .125rem solid var(--ui_color_gray_60);
+    display: block;
+    float: left;
+    height: 1.25rem;
+    position: relative;
+    transform: translateY(.1875rem);
+    transition: all .12s cubic-bezier(.47, 0, .745, .715);
+    width: 1.25rem
+}
+
+.UICheckbox-input:checked~.UICheckbox-fauxInput {
+    border-color: #ffcd1f
+}
+
+.UICheckbox[aria-invalid=true] .UICheckbox-fauxInput {
+    border-color: #ff725b
+}
+
+.UICheckbox[aria-invalid=false] .UICheckbox-fauxInput {
+    border-color: #23b26d
+}
+
+.UICheckbox[aria-disabled=true] .UICheckbox-fauxInput {
+    border-color: var(--ui_color_disabled)
+}
+
+.UICheckbox-fauxInput:after {
+    border: .125rem solid #ffcd1f;
+    border-width: 0 0 .125rem .125rem;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: initial;
+    content: "";
+    height: 25%;
+    left: 25%;
+    margin-left: -.0625rem;
+    margin-top: -.125rem;
+    opacity: 0;
+    position: absolute;
+    top: 37.5%;
+    transform: rotate(-55deg);
+    transition: all .12s cubic-bezier(.47, 0, .745, .715);
+    width: 50%
+}
+
+.UICheckbox-input:checked~.UICheckbox-fauxInput:after {
+    opacity: 1
+}
+
+.UICheckbox[aria-invalid=true] .UICheckbox-fauxInput:after {
+    border-color: #ff725b
+}
+
+.UICheckbox[aria-invalid=false] .UICheckbox-fauxInput:after {
+    border-color: #23b26d
+}
+
+.UICheckbox[aria-disabled=true] .UICheckbox-fauxInput:after {
+    border-color: var(--ui_color_disabled)
+}
+
+.UICheckbox-label {
+    color: var(--ui_color_default_foreground);
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625;
+    margin-left: 2.5rem;
+    transition: all .12s cubic-bezier(.47, 0, .745, .715);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.UICheckbox[aria-disabled=true] .UICheckbox-label {
+    color: var(--ui_color_disabled)
+}
+
+.UICheckbox[aria-invalid=true] .UICheckbox-label {
+    color: #ff725b
+}
+
+
+.UIColumn {
+    margin-top: 0 !important
+}
+
+.UIColumn--d12 {
+    width: 99.99%
+}
+
+.UIColumn--d12:nth-child(n) {
+    clear: none;
+    float: left;
+    margin-right: 32px
+}
+
+.UIColumn--d12:last-child {
+    margin-right: 0
+}
+
+.UIColumn--d12:nth-child(1n) {
+    float: right;
+    margin-right: 0
+}
+
+.UIColumn--d12:nth-child(1n+1) {
+    clear: left
+}
+
+.UIColumn--d11 {
+    width: calc(91.6575% - 2.66667px)
+}
+
+.UIColumn--d11:nth-child(n) {
+    clear: none;
+    float: left;
+    margin-right: 32px
+}
+
+.UIColumn--d11:last-child {
+    margin-right: 0
+}
+
+.UIColumn--d11:nth-child(12n) {
+    float: right;
+    margin-right: 0
+}
+
+.UIColumn--d11:nth-child(12n+1) {
+    clear: left
+}
+
+.UIColumn--d10 {
+    width: calc(83.325% - 5.33333px)
+}
+
+.UIColumn--d10:nth-child(n) {
+    clear: none;
+    float: left;
+    margin-right: 32px
+}
+
+.UIColumn--d10:last-child {
+    margin-right: 0
+}
+
+.UIColumn--d10:nth-child(6n) {
+    float: right;
+    margin-right: 0
+}
+
+.UIColumn--d10:nth-child(6n+1) {
+    clear: left
+}
+
+.UIColumn--d9 {
+    width: calc(74.9925% - 8px)
+}
+
+.UIColumn--d9:nth-child(n) {
+    clear: none;
+    float: left;
+    margin-right: 32px
+}
+
+.UIColumn--d9:last-child {
+    margin-right: 0
+}
+
+.UIColumn--d9:nth-child(4n) {
+    float: right;
+    margin-right: 0
+}
+
+.UIColumn--d9:nth-child(4n+1) {
+    clear: left
+}
+
+.UIColumn--d8 {
+    width: calc(66.66% - 10.66667px)
+}
+
+.UIColumn--d8:nth-child(n) {
+    clear: none;
+    float: left;
+    margin-right: 32px
+}
+
+.UIColumn--d8:last-child {
+    margin-right: 0
+}
+
+.UIColumn--d8:nth-child(3n) {
+    float: right;
+    margin-right: 0
+}
+
+.UIColumn--d8:nth-child(3n+1) {
+    clear: left
+}
+
+.UIColumn--d7 {
+    width: calc(58.3275% - 13.33333px)
+}
+
+.UIColumn--d7:nth-child(n) {
+    clear: none;
+    float: left;
+    margin-right: 32px
+}
+
+.UIColumn--d7:last-child {
+    margin-right: 0
+}
+
+.UIColumn--d7:nth-child(12n) {
+    float: right;
+    margin-right: 0
+}
+
+.UIColumn--d7:nth-child(12n+1) {
+    clear: left
+}
+
+.UIColumn--d6 {
+    width: calc(49.995% - 16px)
+}
+
+.UIColumn--d6:nth-child(n) {
+    clear: none;
+    float: left;
+    margin-right: 32px
+}
+
+.UIColumn--d6:last-child {
+    margin-right: 0
+}
+
+.UIColumn--d6:nth-child(2n) {
+    float: right;
+    margin-right: 0
+}
+
+.UIColumn--d6:nth-child(odd) {
+    clear: left
+}
+
+.UIColumn--d5 {
+    width: calc(41.6625% - 18.66667px)
+}
+
+.UIColumn--d5:nth-child(n) {
+    clear: none;
+    float: left;
+    margin-right: 32px
+}
+
+.UIColumn--d5:last-child {
+    margin-right: 0
+}
+
+.UIColumn--d5:nth-child(12n) {
+    float: right;
+    margin-right: 0
+}
+
+.UIColumn--d5:nth-child(12n+1) {
+    clear: left
+}
+
+.UIColumn--d4 {
+    width: calc(33.33% - 21.33333px)
+}
+
+.UIColumn--d4:nth-child(n) {
+    clear: none;
+    float: left;
+    margin-right: 32px
+}
+
+.UIColumn--d4:last-child {
+    margin-right: 0
+}
+
+.UIColumn--d4:nth-child(3n) {
+    float: right;
+    margin-right: 0
+}
+
+.UIColumn--d4:nth-child(3n+1) {
+    clear: left
+}
+
+.UIColumn--d3 {
+    width: calc(24.9975% - 24px)
+}
+
+.UIColumn--d3:nth-child(n) {
+    clear: none;
+    float: left;
+    margin-right: 32px
+}
+
+.UIColumn--d3:last-child {
+    margin-right: 0
+}
+
+.UIColumn--d3:nth-child(4n) {
+    float: right;
+    margin-right: 0
+}
+
+.UIColumn--d3:nth-child(4n+1) {
+    clear: left
+}
+
+.UIColumn--d2 {
+    width: calc(16.665% - 26.66667px)
+}
+
+.UIColumn--d2:nth-child(n) {
+    clear: none;
+    float: left;
+    margin-right: 32px
+}
+
+.UIColumn--d2:last-child {
+    margin-right: 0
+}
+
+.UIColumn--d2:nth-child(6n) {
+    float: right;
+    margin-right: 0
+}
+
+.UIColumn--d2:nth-child(6n+1) {
+    clear: left
+}
+
+.UIColumn--d1 {
+    width: calc(8.3325% - 29.33333px)
+}
+
+.UIColumn--d1:nth-child(n) {
+    clear: none;
+    float: left;
+    margin-right: 32px
+}
+
+.UIColumn--d1:last-child {
+    margin-right: 0
+}
+
+.UIColumn--d1:nth-child(12n) {
+    float: right;
+    margin-right: 0
+}
+
+.UIColumn--d1:nth-child(12n+1) {
+    clear: left
+}
+
+.UIDiv+.UIDiv,
+.UIDiv+[class^=UI],
+[class^=UI]+.UIDiv {
+    margin-top: 1.5rem
+}
+
+.UIFieldset+.UIFieldset,
+.UIFieldset+[class^=UI],
+[class^=UI]+.UIFieldset {
+    margin-top: 1.5rem
+}
+
+.UIFieldset.UIFieldset--inline {
+    display: inline-block
+}
+
+.UIFieldset.UIFieldset--inline+.UIFieldset.UIFieldset--inline,
+.UIFieldset.UIFieldset--inline+[class^=UI],
+[class^=UI]+.UIFieldset.UIFieldset--inline {
+    margin-left: 1.5rem
+}
+
+.UIFieldset--inline {
+    display: inline-block
+}
+
+.UIFieldset--inline+.UIFieldset--inline,
+.UIFieldset--inline+[class^=UI],
+[class^=UI]+.UIFieldset--inline {
+    margin-left: 1.5rem
+}
+
+.UIFieldset--inline {
+    margin-top: 0 !important
+}
+
+.UIFieldset-legend {
+    display: table;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .0625rem;
+    line-height: 1.333333333333333;
+    padding: 0;
+    width: 100%
+}
+
+.UIFieldset--inline .UIFieldset-legend {
+    display: inline-block;
+    float: left;
+    line-height: 2.375rem;
+    margin-right: 1.5rem;
+    width: auto
+}
+
+.UIFieldset[aria-invalid=true] .UIFieldset-legend {
+    color: #ff725b
+}
+
+.UIFieldset-legendBelow {
+    margin-top: .625rem !important
+}
+
+.UIFieldset-fields+.UIFieldset-fields,
+.UIFieldset-fields+[class^=UI],
+[class^=UI]+.UIFieldset-fields {
+    margin-top: 1rem
+}
+
+.UIFieldset--turnLegendIntoLabel .UIFieldset-fields {
+    margin-top: .625rem !important
+}
+
+.UIFieldset--inline .UIFieldset-fields {
+    display: inline-block;
+    margin-top: 0 !important;
+    vertical-align: middle
+}
+
+.UIHeading--three {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.266666666666667
+}
+
+.UIHeading {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0
+}
+
+.UIHeading+.UIHeading,
+.UIHeading+[class^=UI],
+[class^=UI]+.UIHeading {
+    margin-top: 1.5rem
+}
+
+
+.UIHeading--assembly.UIHeading--three {
+    font-size: 1.5rem;
+    font-weight: var(--typography-heading-weight);
+    letter-spacing: normal;
+    line-height: 1.333333333333333
+}
+
+.UIHorizontalRule {
+    border: none;
+    border-bottom: .0625rem solid var(--ui_divider_color_black);
+    height: 0;
+    margin-bottom: 0;
+    overflow: visible
+}
+
+.UIIconButton {
+    display: inline-block
+}
+
+.UIIconButton+.UIIconButton,
+.UIIconButton+[class^=UI],
+[class^=UI]+.UIIconButton {
+    margin-left: 1.5rem
+}
+
+.UIIconButton .UIButton {
+    border-radius: 50%;
+    margin: 0;
+    padding: 0
+}
+
+.UIIconButton .UIButton-wrapper {
+    padding: .5625rem
+}
+
+.UIIconButton .UIIcon {
+    display: block;
+    height: 1.125rem;
+    pointer-events: none;
+    width: 1.125rem
+}
+
+.UIIconButton .UIIcon--wedge-left {
+    transform: translateX(-1px)
+}
+
+.UIIconButton .UIIcon--wedge-right {
+    transform: translateX(1px)
+}
+
+.UIIcon {
+    fill: currentColor;
+    display: inline-block;
+    height: 1rem;
+    width: 1rem
+}
+
+.ios .UIIcon {
+    -webkit-transform: translateZ(0)
+}
+
+.UIIcon.UIIcon--small {
+    height: .75rem;
+    width: .75rem
+}
+
+.UIIcon.UIIcon--medium {
+    height: 1rem;
+    width: 1rem
+}
+
+.UIIcon.UIIcon--large {
+    height: 1.25rem;
+    width: 1.25rem
+}
+
+.UIIcon.UIIcon--xlarge {
+    height: 1.5rem;
+    width: 1.5rem
+}
+
+.UIIcon.UIIcon--xxlarge {
+    height: 2rem;
+    width: 2rem
+}
+
+.UIInlineForm-input .UIButton:enabled {
+    color: #3ccfcf
+}
+
+.UIInput {
+    cursor: pointer;
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.444444444444444
+}
+
+.UIInput+.UIInput,
+.UIInput+[class^=UI],
+[class^=UI]+.UIInput {
+    margin-top: 1.5rem
+}
+
+.UIInput[aria-disabled=true] {
+    cursor: default
+}
+
+.UIInput-content {
+    align-items: flex-start;
+    border-radius: .25rem;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    width: 100%
+}
+
+.UIInput-addOnContent {
+    align-self: flex-end;
+    cursor: default;
+    display: flex;
+    padding-left: .625rem;
+    white-space: nowrap
+}
+
+.UIInput--boxed .UIInput-addOnContent {
+    display: block;
+    padding-left: 0;
+    position: absolute;
+    right: .625rem;
+    top: calc(50% - .5rem)
+}
+
+.UIInput.has-addOnContentOnNewLine .UIInput-addOnContent {
+    cursor: text;
+    padding-left: 0;
+    width: 100%
+}
+
+.UIInput-addOnContentInner {
+    cursor: default;
+    margin-left: auto
+}
+
+.UIInput-border {
+    align-self: flex-end;
+    box-shadow: 0 .125rem 0 0 var(--ui_color_gray_30);
+    display: block;
+    height: .25rem;
+    transition: all .12s cubic-bezier(.47, 0, .745, .715);
+    width: 100%
+}
+
+.UIInput-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: initial;
+    border: none;
+    border-radius: .25rem;
+    box-shadow: none;
+    color: var(--ui_color_gray_20);
+    cursor: text;
+    filter: none;
+    flex: 1 1 auto;
+    font: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    outline: none;
+    padding-bottom: .375rem;
+    text-align: inherit;
+    white-space: pre-wrap;
+    width: 100%;
+    word-break: break-word
+}
+
+.UIInput-input::-webkit-input-placeholder {
+    color: var(--ui_color_gray_70_foreground)
+}
+
+.UIInput-input:-moz-placeholder,
+.UIInput-input::-moz-placeholder {
+    color: var(--ui_color_gray_70_foreground)
+}
+
+.UIInput-input:-ms-input-placeholder {
+    color: var(--ui_color_gray_70_foreground)
+}
+
+.UIInput-input::-ms-input-placeholder {
+    color: var(--ui_color_gray_70_foreground)
+}
+
+.UIInput-input:-internal-autofill-previewed,
+.UIInput-input:-internal-autofill-selected {
+    -webkit-text-fill-color: var(--ink-200-neutral-300)
+}
+
+.UIInput-input:-webkit-autofill,
+.UIInput-input:-webkit-autofill:focus,
+.UIInput-input:-webkit-autofill:hover {
+    box-shadow: 0 0 0 var(--input-browser-autocomplete-bg-shadow) var(--neutral-100) inset !important;
+    -webkit-box-shadow: 0 0 0 var(--input-browser-autocomplete-bg-shadow) var(--neutral-100) inset !important
+}
+
+.UIInput.has-addOnContent:not(.has-addOnContentOnNewLine) .UIInput-input {
+    flex-basis: 0
+}
+
+.UIInput.has-addOnContent:not(.has-addOnContentOnNewLine).UIInput--boxed .UIInput-input {
+    padding-right: 2rem
+}
+
+.ie11 .UIInput.has-addOnContent:not(.has-addOnContentOnNewLine) .UIInput-input,
+.ie-edge .UIInput.has-addOnContent:not(.has-addOnContentOnNewLine) .UIInput-input {
+    flex-basis: auto !important
+}
+
+.UIInput-input.UIInput-autoExpandInput.is-focused~.UIInput-border,
+.UIInput-input:focus~.UIInput-border {
+    box-shadow: 0 .25rem 0 0 #ffcd1f
+}
+
+.UIInput[aria-invalid=true] .UIInput-input~.UIInput-border {
+    box-shadow: 0 .125rem 0 0 #ff725b
+}
+
+.UIInput[aria-invalid=true] .UIInput-input.UIInput-autoExpandInput.is-focused~.UIInput-border,
+.UIInput[aria-invalid=true] .UIInput-input:focus~.UIInput-border {
+    box-shadow: 0 .25rem 0 0 #ff725b
+}
+
+.UIInput[aria-invalid=false] .UIInput-input~.UIInput-border {
+    box-shadow: 0 .125rem 0 0 #23b26d
+}
+
+.UIInput[aria-invalid=false] .UIInput-input.UIInput-autoExpandInput.is-focused~.UIInput-border,
+.UIInput[aria-invalid=false] .UIInput-input:focus~.UIInput-border {
+    box-shadow: 0 .25rem 0 0 #23b26d
+}
+
+.UIInput[aria-disabled=true] .UIInput-input {
+    color: var(--ui_color_disabled);
+    cursor: default
+}
+
+.UIInput[aria-disabled=true] .UIInput-input::selection {
+    color: var(--ui_color_revert)
+}
+
+.UIInput[aria-disabled=true] .UIInput-input~.UIInput-border {
+    box-shadow: 0 .125rem 0 0 var(--ui_color_disabled)
+}
+
+.UIInput.UIInput--boxed .UIInput-input,
+.UIInput[aria-readonly=true] .UIInput-input {
+    border: .125rem solid var(--ui_color_revert);
+    padding: .75rem;
+    transition: none .12s cubic-bezier(.47, 0, .745, .715);
+    transition-property: border-color
+}
+
+.UIInput.UIInput--boxed .UIInput-input:focus,
+.UIInput[aria-readonly=true] .UIInput-input:focus {
+    border-color: #ffcd1f
+}
+
+.UIInput.UIInput--boxed[aria-invalid=false] .UIInput-input {
+    border-color: #23b26d
+}
+
+.UIInput.UIInput--boxed[aria-invalid=true] .UIInput-input {
+    border-color: #ff725b
+}
+
+.UIInput.UIInput--boxed .UIInput-input~.UIInput-border,
+.UIInput[aria-readonly=true] .UIInput-input~.UIInput-border {
+    box-shadow: none !important
+}
+
+.UIInput-input::-webkit-inner-spin-button,
+.UIInput-input::-webkit-outer-spin-button,
+.UIInput-input::-webkit-search-cancel-button,
+.UIInput-input::-webkit-search-decoration,
+.UIInput-input::-webkit-search-results-button,
+.UIInput-input::-webkit-search-results-decoration {
+    display: none
+}
+
+.UIInput-label {
+    color: var(--ui_color_gray_60);
+    display: block;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .0625rem;
+    line-height: 1.333333333333333;
+    margin-top: .625rem;
+    text-align: inherit;
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.UIInput-label>a {
+    text-transform: none
+}
+
+.UIInput[aria-invalid=true]:not([aria-disabled=true]) .UIInput-label {
+    color: #ff725b
+}
+
+.UIInput[aria-invalid=false]:not([aria-disabled=true]) .UIInput-label {
+    color: #23b26d
+}
+
+.UIInput.UIInput--boxed .UIInput-label {
+    margin-bottom: .625rem;
+    margin-top: 0
+}
+
+.UIInput-labelRow {
+    color: var(--ui_color_gray_60);
+    display: flex;
+    font-size: .75rem;
+    font-weight: 600;
+    justify-content: space-between;
+    letter-spacing: .0625rem;
+    line-height: 1.333333333333333;
+    margin-top: .625rem;
+    text-align: inherit;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.UIInput-labelRowLeft {
+    align-self: flex-start
+}
+
+.UIInput-labelRowRigth {
+    align-self: flex-end
+}
+
+.UIKeyboardInput {
+    border: .125rem solid var(--ui_color_gray_60);
+    border-radius: var(--radius-small);
+    color: var(--ui_color_gray_60);
+    display: inline-block;
+    font-family: inherit;
+    font-size: .75rem;
+    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: .05375rem;
+    line-height: 1.333333333333333;
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+    padding: .0625rem .25rem .125rem
+}
+
+.UIKeyboardInput.UIKeyboardInput--large {
+    font-size: 1rem;
+    font-weight: 400;
+    font-weight: 600;
+    line-height: 1.1875
+}
+
+.UILinkButton {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
+    border-bottom: .3125rem solid #3ccfcf;
+    color: var(--ui_color_default_foreground);
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    font-size: .9375rem;
+    font-weight: 700;
+    letter-spacing: .075rem;
+    line-height: 1.2;
+    max-width: 100%;
+    padding: 0 0 .75rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .12s cubic-bezier(.47, 0, .745, .715);
+    vertical-align: middle;
+    width: auto
+}
+
+.UILinkButton+.UILinkButton,
+.UILinkButton+[class^=UI],
+[class^=UI]+.UILinkButton {
+    margin-left: 1.5rem
+}
+
+.UILinkButton:visited {
+    color: var(--ui_color_default_foreground)
+}
+
+.UILinkButton:active,
+.UILinkButton:focus,
+.UILinkButton:hover {
+    border-bottom-color: #ffcd1f;
+    color: #ffcd1f
+}
+
+.UILinkButton[aria-disabled=true],
+.UILinkButton[disabled] {
+    cursor: default
+}
+
+.UILinkButton .UIIcon {
+    vertical-align: middle
+}
+
+.UILinkButton--fill,
+.UILinkButton--hero {
+    display: block;
+    margin-left: 0 !important;
+    width: 100%
+}
+
+.UILinkButton--alert {
+    border-bottom-color: #ff725b
+}
+
+.UILinkButton--revert {
+    border-bottom-color: var(--ui_color_revert)
+}
+
+.UILink {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: initial;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    font: inherit;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.285714285714286;
+    margin-top: 0;
+    outline: none;
+    padding: 0;
+    transition: all .12s cubic-bezier(.47, 0, .745, .715)
+}
+
+.UILink,
+.UILink:visited {
+    color: #3ccfcf
+}
+
+body.colorRefresh-setPageOnly .UILink,
+body.colorRefresh-setPageOnly .UILink:visited {
+    color: var(--gray-800-gray-200)
+}
+
+.UILink:focus:not(:active):not(:hover) {
+    color: rgba(60, 207, 207, .5)
+}
+
+.UILink[aria-disabled=true],
+.UILink[disabled] {
+    color: var(--ui_color_disabled);
+    cursor: default
+}
+
+.UILink::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+.UIModalBodySeparator {
+    margin-left: -2rem;
+    margin-right: -2rem
+}
+
+.UIModalBody {
+    padding: 2rem;
+    position: relative
+}
+
+.UIModalBody.is-fullWidth {
+    padding: 0 !important
+}
+
+.UIModalHeader {
+    background-color: var(--ui_modal_header_color);
+    color: #fff;
+    padding: 2rem
+}
+
+.UIModalHeader.UIModalHeader--thin {
+    padding: 1.5rem 2rem
+}
+
+.UIModalHeader-wrapper {
+    position: relative
+}
+
+.UIModalHeader-close+.UIModalHeader-childrenWrapper {
+    padding-right: 2.5rem
+}
+
+.UIModalHeader-closeIconButton {
+    position: absolute;
+    right: 0
+}
+
+.UIModalHeader-closeIconButton .UIButton {
+    padding: .125rem
+}
+
+.UIModalHeader-closeIconButton .UIIcon {
+    height: 1.25rem;
+    width: 1.25rem
+}
+
+.UIModalHeader-mobileCloseButton {
+    position: absolute;
+    right: 0;
+    top: calc(50% - .5rem - 2px)
+}
+
+.UIModalHeader-mobileCloseIcon {
+    height: 1rem;
+    width: 1rem
+}
+
+.UIModal-container {
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1101
+}
+
+.UIModal-box {
+    animation: fadeOutFlyOutModal .3s ease;
+    animation-fill-mode: forwards;
+    border-radius: .25rem;
+    color: var(--ui_color_default_foreground);
+    left: 50%;
+    margin-bottom: 2.8125rem;
+    margin-top: 2.8125rem;
+    max-width: 100%;
+    outline: none;
+    position: relative;
+    top: 0;
+    transform: translateX(-50%);
+    width: 37.5rem;
+    z-index: 1101
+}
+
+.theme-default .UIModal-box,
+.theme-night .UIModal-box {
+    box-shadow: 0 .25rem 1rem 0 rgba(0, 0, 0, .16)
+}
+
+.UIModal--borderRounded .UIModal-box {
+    border-radius: var(--radius-small)
+}
+
+.UIModal--small .UIModal-box {
+    width: 28.75rem
+}
+
+.UIModal--large .UIModal-box {
+    width: 46.875rem
+}
+
+.UIModal--fullScreen .UIModal-box {
+    animation-name: fadeOutModal;
+    height: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+    max-height: 100%;
+    overflow: auto;
+    width: 100%
+}
+
+.UIModal.does-takeoverForWebview .UIModal-box {
+    border-radius: 0
+}
+
+.ie11 .UIModal-box,
+.ie .UIModal-box {
+    top: -1px
+}
+
+.UIModal.is-white .UIModal-box {
+    background: var(--ui_modal_body_color_white)
+}
+
+.UIModal.is-gray .UIModal-box {
+    background: var(--ui_modal_body_color_gray)
+}
+
+.UIModal.is-open .UIModal-box {
+    animation-name: fadeInFlyInModal
+}
+
+.UIRow {
+    *zoom: 1
+}
+
+.UIRow:after,
+.UIRow:before {
+    content: "";
+    display: table
+}
+
+.UIRow:after {
+    clear: both
+}
+
+.UIRow+.UIRow,
+.UIRow+[class^=UI],
+[class^=UI]+.UIRow {
+    margin-top: 1.5rem
+}
+
+.UIToggle {
+    border: .125rem solid var(--ui_color_gray_80_foreground);
+    border-radius: .25rem;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+    vertical-align: top
+}
+
+.UIToggle+.UIToggle,
+.UIToggle+[class^=UI],
+[class^=UI]+.UIToggle {
+    margin-top: 1.5rem
+}
+
+.UIToggle[aria-disabled=true] {
+    border-color: var(--ui_color_disabled_border);
+    cursor: default
+}
+
+.UIToggle-option {
+    border-left: .125rem solid var(--ui_color_gray_80_foreground);
+    display: inline-block;
+    margin-top: 0 !important;
+    position: relative
+}
+
+.UIToggle-option:first-child {
+    border-left: none
+}
+
+.UIToggle[aria-disabled=true] .UIToggle-option {
+    border-left-color: var(--ui_color_disabled_border)
+}
+
+.UIToggle-optionInput {
+    bottom: 0;
+    cursor: inherit;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%
+}
+
+.UIToggle-optionLabel {
+    background-color: var(--ui_color_white_background);
+    color: #3ccfcf;
+    display: inline-block;
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.285714285714286;
+    margin-top: 0 !important;
+    padding: .625rem 1rem;
+    transition: all .12s cubic-bezier(.47, 0, .745, .715);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+
+.UIToggle-optionLabel:after,
+.UIToggle-optionLabel:before {
+    background-color: #ffcd1f;
+    bottom: 0;
+    content: "";
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transition: all .12s cubic-bezier(.47, 0, .745, .715);
+    width: .125rem;
+    z-index: var(--z-index-1)
+}
+
+.UIToggle-optionLabel:before {
+    left: -.125rem
+}
+
+.UIToggle-optionLabel:after {
+    right: -.125rem
+}

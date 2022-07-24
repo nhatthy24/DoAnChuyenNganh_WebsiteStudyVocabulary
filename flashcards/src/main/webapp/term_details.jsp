@@ -66,7 +66,7 @@
 <%--                    </li>--%>
 
                 <li class="study__mode-item">
-                    <a href="#" class="study__mode-link">
+                    <a href="check-card?course_id=${course.id}" class="study__mode-link">
                         <i class="bi bi-file-earmark-check-fill"></i>
                         <span class="study__mode-text">
                                 Kiểm tra
