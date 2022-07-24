@@ -1,5 +1,3 @@
-
-
 function scrollHeader() {
     const headerCreate = document.getElementById("create__header");
 
@@ -43,21 +41,22 @@ function closeDialogPermission() {
 
 
 function addTagItem() {
-    const btnAddTag = document.getElementById("add__tab-btn");
     const listTag = document.getElementById("create__term-tag-list");
+    const newTab = listTag.lastElementChild;
+    listTag.appendChild(newTab.cloneNode(true));
+    clearValueInputLastTag();
+    setIndexToTag();
+    preventDeleteItem();
 
-    btnAddTag.onclick = () => {
-        const newTab = listTag.lastElementChild;
-        const wordNewTab = newTab.getElementsByClassName("tab__content-side-word-input")[0];
-        const meanNewTab = newTab.getElementsByClassName("tab__content-side-editor-input")[0];
-        wordNewTab.value = "";
-        meanNewTab.value = "";
-        listTag.appendChild(newTab.cloneNode(true));
-        setIndexToTag();
-        preventDeleteItem();
-    }
+}
 
-
+function clearValueInputLastTag() {
+    const listTags = document.getElementById("create__term-tag-list");
+    const newTab = listTags.lastElementChild;
+    const wordNewTab = newTab.getElementsByClassName("tab__content-side-word-input")[0];
+    const meanNewTab = newTab.getElementsByClassName("tab__content-side-editor-input")[0];
+    wordNewTab.value = "";
+    meanNewTab.value = "";
 }
 
 
@@ -219,7 +218,7 @@ function isEnterPasswordView() {
 
     if (passwordView.value < 1 && permissionView === '2') {
         return false;
-    }else{
+    } else {
         return true;
     }
 }
@@ -231,11 +230,10 @@ function isEnterPasswordEdit() {
 
     if (passwordEdit.value < 1 && permissionEdit === '2') {
         return false;
-    }else{
+    } else {
         return true;
     }
 }
-
 
 
 function isSelectedClassView() {
@@ -243,7 +241,7 @@ function isSelectedClassView() {
     let classSelect = document.querySelectorAll("#permission__dialog-view-class input[type=checkbox]:checked");
     if (classSelect.length < 1 && permissionView === '1') {
         return false;
-    }else{
+    } else {
         return true;
     }
 }
@@ -257,17 +255,17 @@ function onChangeClassView() {
     }
 }
 
-function isSelectClassEdit(){
+function isSelectClassEdit() {
     var permissionEdit = document.getElementById("permission__dialog-edit").value;
     let classSelect = document.querySelectorAll("#permission__dialog-edit-class input[type=checkbox]:checked");
     if (classSelect.length < 1 && permissionEdit === '1') {
         return false;
-    }else{
+    } else {
         return true;
     }
 }
 
-function onChangeClassEdit(){
+function onChangeClassEdit() {
     let classItem = document.querySelectorAll('.permission__dialog-edit-class-input');
     for (let i = 0; i < classItem.length; i++) {
         classItem[i].onchange = function () {

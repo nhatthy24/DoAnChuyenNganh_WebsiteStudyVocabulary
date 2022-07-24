@@ -171,7 +171,7 @@
                         </div>
                     </div>
                     <div class="create__term-add-tag">
-                        <button type="button" class="add__tab-btn" id="add__tab-btn">
+                        <button onclick="addTagItem()" type="button" class="add__tab-btn" id="add__tab-btn">
                             <span>+ THÊM THẺ</span>
                         </button>
                     </div>
