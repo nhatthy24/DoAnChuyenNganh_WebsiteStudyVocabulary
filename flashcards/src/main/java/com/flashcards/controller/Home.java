@@ -7,6 +7,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "Home", value = "/home")
@@ -15,14 +16,17 @@ public class Home extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("title","Trang chủ");
         HttpSession session = request.getSession();
-        if(session!=null){
+
+        if(session.getAttribute("user_id")!=null){
             int user_id = (int) session.getAttribute("user_id");
             List<Course> courses = CourseDAO.loadCourseByCreatorId(user_id);
             request.setAttribute("courses", courses);
-            System.out.println("Đo dai cua courses: "+courses.size());
+            request.getRequestDispatcher("index.jsp").forward(request,response);
+        } else if(session.getAttribute("user_id")==null){
+            List<Course> courses = CourseDAO.loadCourseHome();
+            request.setAttribute("courses", courses);
+            request.getRequestDispatcher("index.jsp").forward(request,response);
         }
-        System.out.println("Vao day khi chua dang nhap");
-        request.getRequestDispatcher("index.jsp").forward(request,response);
     }
 
     @Override

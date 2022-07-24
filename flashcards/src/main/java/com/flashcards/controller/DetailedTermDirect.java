@@ -25,6 +25,7 @@ public class DetailedTermDirect extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setAttribute("title","Chi tiết học phần");
         int courseId = Integer.parseInt(req.getParameter("course_id"));
         Course course = CourseDAO.loadCourseById(courseId);
         User creator = UserDAO.loadUserById(course.getCreatorId());

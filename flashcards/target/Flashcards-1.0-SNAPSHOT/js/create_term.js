@@ -48,6 +48,10 @@ function addTagItem() {
 
     btnAddTag.onclick = () => {
         const newTab = listTag.lastElementChild;
+        const wordNewTab = newTab.getElementsByClassName("tab__content-side-word-input")[0];
+        const meanNewTab = newTab.getElementsByClassName("tab__content-side-editor-input")[0];
+        wordNewTab.value = "";
+        meanNewTab.value = "";
         listTag.appendChild(newTab.cloneNode(true));
         setIndexToTag();
         preventDeleteItem();

@@ -1,10 +1,14 @@
 package com.flashcards.model;
 
+import java.util.List;
+
 public class Folder {
     private int folderId;
     private String title;
     private String description;
     private int creatorID;
+    private String creator;
+    private List<Course> courseList;
 
     public Folder(){}
 
@@ -39,4 +43,33 @@ public class Folder {
     public void setCreatorID(int creatorID) {
         this.creatorID = creatorID;
     }
+
+    public List<Course> getCourseList() {
+        return courseList;
+    }
+
+    public void setCourseList(List<Course> courseList) {
+        this.courseList = courseList;
+    }
+
+    @Override
+    public String toString() {
+        return "Folder{" +
+                "folderId=" + folderId +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", creatorID=" + creatorID +
+                ", creator='" + creator + '\'' +
+                ", courseList=" + courseList +
+                '}';
+    }
+
+    public String getCreator() {
+        return creator;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
+    }
+
 }

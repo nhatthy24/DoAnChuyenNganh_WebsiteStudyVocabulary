@@ -25,7 +25,7 @@
 
     <div class="container__right">
         <div>
-            <a class="exit-btn" href="${pageContext.request.contextPath}/home">
+            <a class="exit-btn" href="${pageContext.request.contextPath}/">
                 <i class="fas fa-times"></i>
             </a>
         </div>

@@ -1,7 +1,12 @@
 package com.flashcards.dao.database.connection;
 
+import com.flashcards.model.Classroom;
+import com.flashcards.model.Folder;
+
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class ClassroomDAO {
 
@@ -62,5 +67,57 @@ public class ClassroomDAO {
             throwables.printStackTrace();
         }
         return false;
+    }
+
+    public static Classroom loadNewstClass() {
+        Classroom classroom = new Classroom();
+        String sql = "SELECT * FROM class ORDER BY ClassID DESC LIMIT 1";
+        try{
+            Statement statement = DBCPDataSource.getStatement();
+            synchronized (statement){
+                ResultSet resultSet = statement.executeQuery(sql);
+                while (resultSet.next()){
+                    classroom.setClassID(resultSet.getInt(1));
+                    classroom.setTitle(resultSet.getString(2));
+                    classroom.setDescription(resultSet.getString(3));
+                    classroom.setSchool(resultSet.getString(4));
+                    classroom.setCreator(UserDAO.loadUserById(resultSet.getInt(5)).getUsername());
+                    classroom.addMembers(UserDAO.loadUserById(resultSet.getInt(5)));
+                }
+                resultSet.close();
+            }
+            statement.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return classroom;
+    }
+
+    public static Classroom loadClassById(int class_id) {
+        Classroom classroom = new Classroom();
+        String sql = "SELECT * FROM class WHERE ClassID="+class_id;
+        try{
+            Statement statement = DBCPDataSource.getStatement();
+            synchronized (statement){
+                ResultSet resultSet = statement.executeQuery(sql);
+                while (resultSet.next()){
+                    classroom.setClassID(resultSet.getInt(1));
+                    classroom.setTitle(resultSet.getString(2));
+                    classroom.setDescription(resultSet.getString(3));
+                    classroom.setSchool(resultSet.getString(4));
+                    classroom.setCreator(UserDAO.loadUserById(resultSet.getInt(5)).getUsername());
+                    classroom.addMembers(UserDAO.loadUserById(resultSet.getInt(5)));
+                }
+                resultSet.close();
+            }
+            statement.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return classroom;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(deleteClassroom(1));
     }
 }

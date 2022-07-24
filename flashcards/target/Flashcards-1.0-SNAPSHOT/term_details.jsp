@@ -66,7 +66,7 @@
 <%--                    </li>--%>
 
                 <li class="study__mode-item">
-                    <a href="#" class="study__mode-link">
+                    <a href="check-card?course_id=${course.id}" class="study__mode-link">
                         <i class="bi bi-file-earmark-check-fill"></i>
                         <span class="study__mode-text">
                                 Kiểm tra
@@ -138,7 +138,7 @@
                         id="add__term-to-folder-class-btn">
                     <i class="fas fa-plus"></i>
                 </button>
-                <a href="#" class="term__information-tool-item term__information-tool-edit">
+                <a href="edit-term-page?course_id=${course.id}" class="term__information-tool-item term__information-tool-edit">
                     <i class="fas fa-pen"></i>
                 </a>
                 <button class="term__information-tool-item term__information-tool-share"
@@ -253,7 +253,7 @@
         </div>
 
         <button class="term__detail-edit-btn">
-            Thêm hoặc xóa thuật ngữ
+            <a href="edit-term-page?course_id=${course.id}" style="color: #fff">Thêm hoặc xóa thuật ngữ</a>
         </button>
     </div>
 </div>

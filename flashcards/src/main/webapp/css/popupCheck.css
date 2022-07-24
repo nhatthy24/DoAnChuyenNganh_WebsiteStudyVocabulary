@@ -1,0 +1,195 @@
+header {
+    display: block;
+}
+
+::selection {
+    background: #c5f1f1;
+}
+
+::-moz-selection {
+    background: #c5f1f1;
+}
+
+.AssemblyIcon {
+    fill: currentColor;
+    color: inherit;
+    display: inline-block;
+}
+
+.AssemblyIcon--medium {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+
+.AssemblyButtonBase:focus:not([disabled], [aria-disabled=true]) {
+    border: .0625rem solid #a8b1ff;
+}
+
+.AssemblyPrimaryButton--default:hover:not([disabled], [aria-disabled=true]) {
+    background: #423ed8;
+}
+
+.AssemblyPrimaryButton--default:active:not([disabled], [aria-disabled=true]) {
+    background: #1f1c8b;
+}
+
+.AssemblyPrimaryButton--default:visited:not([disabled], [aria-disabled=true]) {
+    color: #fff;
+}
+
+.AssemblyPrimaryButton--default:disabled {
+    background: var(--gray-400-gray-600);
+}
+
+.AssemblySecondaryButton {
+    background: var(--gray-100-twilight-900);
+    border: .0625rem solid #d9dde8;
+    color: var(--gray-600-gray-200);
+}
+
+.AssemblySecondaryButton:hover:not([disabled], [aria-disabled=true]) {
+    background: var(--gray-300-gray-700);
+}
+
+.AssemblySecondaryButton:active:not([disabled], [aria-disabled=true]) {
+    background: var(--gray-400-gray-800);
+}
+
+.AssemblySecondaryButton:visited:not([disabled], [aria-disabled=true]) {
+    color: var(--gray-600-gray-200);
+}
+
+.AssemblySecondaryButton:disabled {
+    background: var(--gray-100-twilight-900);
+    border: .0625rem solid var(--gray-400-gray-600);
+    color: var(--gray-400-gray-600);
+}
+
+.hlni9so {
+    font-size: 2rem;
+    font-weight: 700;
+    -webkit-letter-spacing: normal;
+    -moz-letter-spacing: normal;
+    -ms-letter-spacing: normal;
+    letter-spacing: normal;
+    line-height: 1.25;
+}
+
+.mnlifen {
+    background: var(--gray-100-gray-700);
+    border-radius: 1rem;
+    box-shadow: 0 .25rem 1rem 0 var(--shadow-with-opacity);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: var(--modal-margin) auto;
+    outline: none;
+    overflow-y: hidden;
+    position: relative;
+    width: var(--modal-width);
+}
+
+
+.o126043d {
+    -webkit-animation: fadeInFlyInModal-o126043d .3s ease;
+    animation: fadeInFlyInModal-o126043d .3s ease;
+}
+
+.rmp {
+    -webkit-tap-highlight-color: rgb(255 255 255/0);
+    -webkit-animation: fadeOutOverlay-rmp .3s ease;
+    animation: fadeOutOverlay-rmp .3s ease;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1100;
+}
+
+
+.popup_check_question_navbar {
+    -webkit-box-align: var(--popup_check_question_navbar-0);
+    -ms-flex-align: var(--popup_check_question_navbar-0);
+    -webkit-align-items: var(--popup_check_question_navbar-0);
+    align-items: var(--popup_check_question_navbar-0);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: inherit;
+    margin: 2rem 2rem 0;
+    text-align: var(--popup_check_question_navbar-3);
+}
+
+.my-pop-none {
+    background: linear-gradient(var(--modal-footer-transparent), var(--gray-100-gray-700));
+    bottom: 0;
+    height: 2rem;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.popup_check {
+    -webkit-box-pack: var(--popup_check-2);
+    -ms-flex-pack: var(--popup_check-2);
+    border-top: var(--popup_check-0);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: var(--popup_check-2);
+    justify-content: var(--popup_check-2);
+    padding: var(--popup_check-1);
+}
+
+.popup_check :not(:first-child) {
+    margin: 0 0 0 1rem;
+}
+
+.s1sxiitf {
+    overflow-y: auto;
+}
+
+.c13e2cpr {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: var(--c13e2cpr-0);
+    border-radius: 2rem;
+    color: var(--gray-600-gray-200);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2rem;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 2rem;
+    z-index: 101;
+}
+
+.c13e2cpr svg {
+    cursor: pointer;
+}
+
+.re-question {
+    margin-bottom: 1rem;
+}
+
+
