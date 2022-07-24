@@ -21,6 +21,7 @@ public class Home extends HttpServlet {
             request.setAttribute("courses", courses);
             System.out.println("Đo dai cua courses: "+courses.size());
         }
+        System.out.println("Vao day khi chua dang nhap");
         request.getRequestDispatcher("index.jsp").forward(request,response);
     }
 
