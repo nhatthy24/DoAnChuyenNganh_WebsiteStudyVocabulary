@@ -66,25 +66,44 @@
                 <div class="signup-form">
                     <div class="signup__form-item">
                         <label id="signup-label-birthday" class="signup__form-item-label">NGÀY SINH</label>
-                        <input id="signup-input-birthday" type="date" name="dateOfBirth" class="signup__form-item-input"
+                        <input id="signup-input-birthday" type="date" value="${date}" name="dateOfBirth"
+                               class="signup__form-item-input"
                                onblur="checkValidBirthday(this)"
                         >
                     </div>
                     <div class="signup__form-item">
-                        <label id="signup-label-email"
-                               class="signup__form-item-label">EMAIL</label>
+
+                        <c:choose>
+                            <c:when test="${requestScope.emailExists.length()>0}">
+                                <label id="signup-label-email"
+                                       class="signup__form-item-label signup__form-item-label--error">${emailExists}</label>
+                            </c:when>
+                            <c:otherwise>
+                                <label id="signup-label-email" class="signup__form-item-label">EMAIL</label>
+                            </c:otherwise>
+                        </c:choose>
                         <input id="signup-input-email" type="email" name="email"
                                class="signup__form-item-input"
                                placeholder="user@gmail.com"
                                spellcheck="false"
+                               value="${email}"
                                onkeyup="checkValidEmail(this)"
                         >
                     </div>
                     <div class="signup__form-item">
-                        <label id="signup-label-username" class="signup__form-item-label">TÊN NGƯỜI DÙNG</label>
+                        <c:choose>
+                            <c:when test="${requestScope.usernameExists.length()>0}">
+                                <label id="signup-label-username"
+                                       class="signup__form-item-label signup__form-item-label--error">${usernameExists}</label>
+                            </c:when>
+                            <c:otherwise>
+                                <label id="signup-label-username" class="signup__form-item-label">TÊN NGƯỜI DÙNG</label>
+                            </c:otherwise>
+                        </c:choose>
                         <input id="signup-input-username" type="text" name="username" class="signup__form-item-input"
                                placeholder="dudu123"
                                spellcheck="false"
+                               value="${username}"
                                onkeyup="checkValidUsername(this)"
                         >
                     </div>
@@ -100,9 +119,9 @@
                         <label id="signup-label-role" class="signup__form-item-label">VUI LÒNG CHỌN VAI TRÒ CỦA
                             BẠN</label>
                         <div class="wrapper-class">
-                            <input type="radio" class="radio" name="x" value="Teacher-1" id="Teacher-1"/>
+                            <input type="radio" class="radio" name="role" value="1" id="Teacher-1"/>
                             <label for="Teacher-1" class="sub-label">Giáo viên</label>
-                            <input type="radio" class="radio" name="x" value="Student-0" id="Student-0"/>
+                            <input type="radio" class="radio" name="role" value="0" id="Student-0"/>
                             <label for="Student-0" class="sub-label">Sinh viên</label>
                         </div>
                     </div>

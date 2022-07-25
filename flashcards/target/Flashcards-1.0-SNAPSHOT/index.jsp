@@ -41,7 +41,8 @@
                         <div class="folder__card-footer">
                             <div class="folder__card-footer-author">
                                 <div class="folder__card-footer-author-icon">
-                                    <i class="fa-regular fa-user"></i>
+                                    <img class="navbar__term-author-img"
+                                         src="${course.getAvatarCreator()}" alt="">
                                 </div>
                                 <div class="folder__card-footer-author-name">
                                         ${course.creatorName}

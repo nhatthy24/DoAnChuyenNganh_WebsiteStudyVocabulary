@@ -35,14 +35,30 @@ public class ProcessSignUp extends HttpServlet {
         String pass = request.getParameter("password");
         String email = request.getParameter("email");
 
-        User kh = new User(id, pass, email, date, role, username);
-        if (new UserDAO().addAccount(kh)) {
-            HttpSession session = request.getSession();
-            session.setAttribute("user", kh);
-            response.sendRedirect("login.jsp");
+        if (new UserDAO().checkEmailExists(email)) {
+            request.setAttribute("emailExists", "TÀI KHOẢN EMAIL ĐÃ TỒN TẠI");
+            request.setAttribute("email", email);
+            request.setAttribute("username", username);
+            request.setAttribute("date", date);
+            request.getRequestDispatcher("signup.jsp").forward(request, response);
+        } else if (new UserDAO().checkUsernameExists(username)) {
+            request.setAttribute("usernameExists", "TÊN NGƯỜI DÙNG ĐÃ TỒN TẠI");
+            request.setAttribute("email", email);
+            request.setAttribute("username", username);
+            request.setAttribute("date", date);
+            request.getRequestDispatcher("signup.jsp").forward(request, response);
         } else {
-            System.out.println("Loi dang ky");
+            User kh = new User(id, pass, email, date, role, username);
+            if (new UserDAO().addAccount(kh)) {
+                HttpSession session = request.getSession();
+                session.setAttribute("user", kh);
+                response.sendRedirect("login.jsp");
+            } else {
+                System.out.println("Loi dang ky");
+                request.getRequestDispatcher("signup.jsp").forward(request, response);
+            }
         }
+
     }
 
 }

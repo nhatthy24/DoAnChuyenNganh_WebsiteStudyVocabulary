@@ -56,14 +56,14 @@
                     </a>
                 </li>
 
-<%--                    <li class="study__mode-item">--%>
-<%--                        <a href="#" class="study__mode-link">--%>
-<%--                            <i class="fas fa-volume-up"></i>--%>
-<%--                            <span class="study__mode-text">--%>
-<%--                                Chính tả--%>
-<%--                            </span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
+                <%--                    <li class="study__mode-item">--%>
+                <%--                        <a href="#" class="study__mode-link">--%>
+                <%--                            <i class="fas fa-volume-up"></i>--%>
+                <%--                            <span class="study__mode-text">--%>
+                <%--                                Chính tả--%>
+                <%--                            </span>--%>
+                <%--                        </a>--%>
+                <%--                    </li>--%>
 
                 <li class="study__mode-item">
                     <a href="check-card?course_id=${course.id}" class="study__mode-link">
@@ -103,8 +103,8 @@
                                 /
                             </span>
                         <span class="card__control-progress-index-total" id="total-slide">
-                                ${cards.size()}
-                            </span>
+                            ${cards.size()}
+                        </span>
                     </div>
                     <button class="card__control-next-btn">
                         <i class="fas fa-arrow-right"></i>
@@ -135,53 +135,20 @@
 
             <div class="term__information-tool">
                 <button class="term__information-tool-item term__information-tool-add"
-                        id="add__term-to-folder-class-btn">
+                        id="add__term-to-folder-class-btn" onclick="openAddClassFolderDialog()">
                     <i class="fas fa-plus"></i>
                 </button>
-                <a href="edit-term-page?course_id=${course.id}" class="term__information-tool-item term__information-tool-edit">
+                <a href="edit-term-page?course_id=${course.id}"
+                   class="term__information-tool-item term__information-tool-edit">
                     <i class="fas fa-pen"></i>
                 </a>
                 <button class="term__information-tool-item term__information-tool-share"
-                        id="term__information-tool-share">
+                        id="term__information-tool-share" onclick="openShareDialog()">
                     <i class="bi bi-upload"></i>
                 </button>
-                <button class="term__information-tool-item term__information-tool-infor"
-                        id="term__information-tool-infor">
-                    <i class="fas fa-info"></i>
+                <button class="term__information-tool-item term__information-tool-infor" onclick="deleteTerm()">
+                    <i class="bi bi-trash"></i>
                 </button>
-                <button class="term__information-tool-item term__information-tool-menu">
-                    <i class="fas fa-ellipsis-h"></i>
-
-                    <ul class="term__information-tool-menu-list">
-                        <div class="menu__arrow"></div>
-                        <li class="term__information-tool-menu-item">
-                            <a href="#" class="term__information-tool-menu-link">
-                                <i class="far fa-clone"></i>
-                                <span class="term__information-tool-menu-text">
-                                        Lưu và chỉnh sửa
-                                    </span>
-                            </a>
-
-                        </li>
-                        <li class="term__information-tool-menu-item">
-                            <a href="#" class="term__information-tool-menu-link">
-                                <i class="fas fa-copy"></i>
-                                <span class="term__information-tool-menu-text">
-                                        Nhúng
-                                    </span>
-                            </a>
-                        </li>
-                        <li class="term__information-tool-menu-item">
-                            <a class="term__information-tool-menu-link" onclick="deleteTerm()">
-                                <i class="bi bi-trash"></i>
-                                <span class="term__information-tool-menu-text">
-                                        Xóa
-                                    </span>
-                            </a>
-                        </li>
-                    </ul>
-                </button>
-
 
             </div>
         </div>
@@ -191,7 +158,6 @@
             </p>
         </div>
     </div>
-
 
 
     <div class="term__detail">
@@ -258,188 +224,6 @@
     </div>
 </div>
 
-<div class="add__term-to-folder-class" id="add__term-to-folder-class" style="display: none">
-    <div class="dialog__header">
-        <div class="dialog__header-title">
-            Thêm vào lớp học hoặc thư mục
-        </div>
-        <button class="dialog__header-close" id="add__term-to-folder-class-close-btn">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-
-    <div class="dialog__content-add-to-class-folder">
-
-        <div class="add__term-switch-btn">
-            <button class="add__term-switch-btn-item add__term-switch-btn-item--active"
-                    id="add__term-switch-btn-class">Thêm vào lớp
-                học
-            </button>
-            <button class="add__term-switch-btn-item" id="add__term-switch-btn-folder">Thêm vào thư mục</button>
-        </div>
-
-        <div class="add__term-to-class" id="add__term-to-class">
-            <button class="add__term-new-btn">
-                    <span class="add__term-new-btn-text">
-                        <i class="fas fa-plus"></i>
-                        TẠO MỘT LỚP MỚI
-                    </span>
-            </button>
-
-            <div class="add__term-to-list">
-                <div class="add__term-to-list-item">
-                    <div class="add__term-to-list-item-title">
-                        Lớp học 1
-                    </div>
-                    <button class="add__term-to-list-item-btn add__term-to-list-item-btn-plus">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                </div>
-                <div class="add__term-to-list-item">
-                    <div class="add__term-to-list-item-title">
-                        Lớp học 2
-                    </div>
-                    <button class="add__term-to-list-item-btn add__term-to-list-item-btn-plus">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                </div>
-                <div class="add__term-to-list-item">
-                    <div class="add__term-to-list-item-title">
-                        Lớp học 2
-                    </div>
-                    <button class="add__term-to-list-item-btn add__term-to-list-item-btn-minus">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="add__term-to-folder" id="add__term-to-folder" style="display: none">
-            <button class="add__term-new-btn">
-
-                    <span class="add__term-new-btn-text">
-                        <i class="fas fa-plus"></i>
-                        TAO MỘT THƯ MỤC MỚI
-                    </span>
-            </button>
-
-            <div class="add__term-to-list">
-                <div class="add__term-to-list-item">
-                    <div class="add__term-to-list-item-title">
-                        Folder 2
-                    </div>
-                    <button class="add__term-to-list-item-btn add__term-to-list-item-btn-plus">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                </div>
-                <div class="add__term-to-list-item">
-                    <div class="add__term-to-list-item-title">
-                        Folder 1
-                    </div>
-                    <button class="add__term-to-list-item-btn add__term-to-list-item-btn-minus">
-                        <i class="fas fa-minus"></i>
-                    </button>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="share__dialog" id="share__dialog" style="display: none;">
-    <div class="dialog__header">
-        <div class="dialog__header-title">
-            Chia sẻ học phần
-        </div>
-        <button class="dialog__header-close" id="share__dialog-close-btn">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-    <div class="share__dialog-content">
-        <div class="share__dialog-content-email">
-            <div class="share__dialog-content-email-input">
-                <input type="email" placeholder="Địa chỉ email của bạn bè">
-                <label>CHIA SẺ LIÊN KẾT QUA EMAIL</label>
-            </div>
-            <div class="share__dialog-content-email-btn">
-                Gửi email
-            </div>
-        </div>
-
-        <div class="share__dialog-separator"></div>
-
-        <div class="share__dialog-content-link">
-            <div class="share__dialog-content-link-input">
-                <input type="email" placeholder="Địa chỉ email của bạn bè">
-            </div>
-            <div class="share__dialog-content-link-btn">
-                Chép liên kết
-            </div>
-        </div>
-
-        <div class="share__dialog-separator"></div>
-
-        <a href="#" class="share__dialog-content-social">
-            <div class="share__dialog-content-face">
-                <div class="share__dialog-content-face-icon">
-                    <i class="fab fa-facebook-square"></i>
-                </div>
-                <div class="share__dialog-content-face-title">
-                    Chia sẻ trên Facebook
-                </div>
-                <div></div>
-            </div>
-        </a>
-        <a href="#" class="share__dialog-content-social">
-            <div class="share__dialog-content-twitter">
-                <div class="share__dialog-content-twitter-icon">
-                    <i class="fab fa-twitter"></i>
-                </div>
-                <div class="share__dialog-content-twitter-title">
-                    Chia sẻ trên Twitter
-                </div>
-                <div></div>
-            </div>
-        </a>
-
-    </div>
-</div>
-
-<div class="information__dialog" id="information__dialog" style="display: none;">
-</div>
-
-<div class="confirm__delete-term" id="confirm__delete-term" style="display: none">
-    <div class="dialog__header">
-        <div class="dialog__header-title">
-            Xóa học phần này
-        </div>
-        <button class="dialog__header-close" onclick="closeDeleteDialog()">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-    <div class="confirm__delete-term-content">
-        <div class="confirm__delete-term-name">
-            Tên học phần
-        </div>
-        <div class="confirm__delete-term-description">
-            Bạn sắp xoá học phần này và toàn bộ dữ liệu trong đó. Không ai có thể truy cập vào học phần này nữa.
-        </div>
-        <div class="confirm__delete-term-question">
-            Bạn có chắc chắn không? Bạn sẽ không được hoàn tác.
-        </div>
-        <div class="confirm__delete-term-btn">
-            <button class="confirm__delete-term-btn-cancel" onclick="closeDeleteDialog()">
-                Hủy bỏ
-            </button>
-            <button class="confirm__delete-term-btn-confirm">
-                <a href="delete-term?course_id=${course.id}" style="text-decoration: none; color: #fff">
-                Xóa học phần
-                </a>
-            </button>
-        </div>
-
-    </div>
-</div>
 
 <div class="modal" id="modal" style="display: none">
     <div class="modal__overlay">
@@ -448,7 +232,186 @@
 
     <div class="modal__body">
         <div class="modal__inner" id="modal__inner">
+            <div class="confirm__delete-term" id="confirm__delete-term" style="display: none">
+                <div class="dialog__header">
+                    <div class="dialog__header-title">
+                        Xóa học phần này
+                    </div>
+                    <button class="dialog__header-close" onclick="closeDeleteDialog()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="confirm__delete-term-content">
+                    <div class="confirm__delete-term-name">
+                        ${course.courseName}
+                    </div>
+                    <div class="confirm__delete-term-description">
+                        Bạn sắp xoá học phần này và toàn bộ dữ liệu trong đó. Không ai có thể truy cập vào học phần này
+                        nữa.
+                    </div>
+                    <div class="confirm__delete-term-question">
+                        Bạn có chắc chắn không? Bạn sẽ không được hoàn tác.
+                    </div>
+                    <div class="confirm__delete-term-btn">
+                        <button class="confirm__delete-term-btn-cancel" onclick="closeDeleteDialog()">
+                            Hủy bỏ
+                        </button>
+                        <button class="confirm__delete-term-btn-confirm">
+                            <a href="delete-term?course_id=${course.id}" style="text-decoration: none; color: #fff">
+                                Xóa học phần
+                            </a>
+                        </button>
+                    </div>
 
+                </div>
+            </div>
+            <div class="add__term-to-folder-class" id="add__term-to-folder-class" style="display: none">
+                <div class="dialog__header">
+                    <div class="dialog__header-title">
+                        Thêm vào lớp học hoặc thư mục
+                    </div>
+                    <button class="dialog__header-close" onclick="closeAddClassFolderDialog()"
+                            id="add__term-to-folder-class-close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="dialog__content-add-to-class-folder">
+
+                    <div class="add__term-switch-btn">
+                        <button class="add__term-switch-btn-item add__term-switch-btn-item--active"
+                                id="add__term-switch-btn-class">Thêm vào lớp
+                            học
+                        </button>
+                        <button class="add__term-switch-btn-item" id="add__term-switch-btn-folder">Thêm vào thư mục
+                        </button>
+                    </div>
+
+                    <div class="add__term-to-class" id="add__term-to-class">
+                        <button class="add__term-new-btn">
+                    <span class="add__term-new-btn-text">
+                        <i class="fas fa-plus"></i>
+                        TẠO MỘT LỚP MỚI
+                    </span>
+                        </button>
+
+                        <div class="add__term-to-list">
+                            <div class="add__term-to-list-item">
+                                <div class="add__term-to-list-item-title">
+                                    Lớp học 1
+                                </div>
+                                <button class="add__term-to-list-item-btn add__term-to-list-item-btn-plus">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div class="add__term-to-list-item">
+                                <div class="add__term-to-list-item-title">
+                                    Lớp học 2
+                                </div>
+                                <button class="add__term-to-list-item-btn add__term-to-list-item-btn-plus">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div class="add__term-to-list-item">
+                                <div class="add__term-to-list-item-title">
+                                    Lớp học 2
+                                </div>
+                                <button class="add__term-to-list-item-btn add__term-to-list-item-btn-minus">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add__term-to-folder" id="add__term-to-folder" style="display: none">
+                        <button class="add__term-new-btn">
+
+                    <span class="add__term-new-btn-text">
+                        <i class="fas fa-plus"></i>
+                        TAO MỘT THƯ MỤC MỚI
+                    </span>
+                        </button>
+
+                        <div class="add__term-to-list">
+                            <div class="add__term-to-list-item">
+                                <div class="add__term-to-list-item-title">
+                                    Folder 2
+                                </div>
+                                <button class="add__term-to-list-item-btn add__term-to-list-item-btn-plus">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <div class="add__term-to-list-item">
+                                <div class="add__term-to-list-item-title">
+                                    Folder 1
+                                </div>
+                                <button class="add__term-to-list-item-btn add__term-to-list-item-btn-minus">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="share__dialog" id="share__dialog" style="display: none;">
+                <div class="dialog__header">
+                    <div class="dialog__header-title">
+                        Chia sẻ học phần
+                    </div>
+                    <button class="dialog__header-close" onclick="closeShareDialog()" id="share__dialog-close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="share__dialog-content">
+                    <div class="share__dialog-content-email">
+                        <div class="share__dialog-content-email-input">
+                            <input type="email" placeholder="Địa chỉ email của bạn bè">
+                            <label>CHIA SẺ LIÊN KẾT QUA EMAIL</label>
+                        </div>
+                        <div class="share__dialog-content-email-btn">
+                            Gửi email
+                        </div>
+                    </div>
+
+                    <div class="share__dialog-separator"></div>
+
+                    <div class="share__dialog-content-link">
+                        <div class="share__dialog-content-link-input">
+                            <input type="email" placeholder="Địa chỉ email của bạn bè">
+                        </div>
+                        <div class="share__dialog-content-link-btn">
+                            Chép liên kết
+                        </div>
+                    </div>
+
+                    <div class="share__dialog-separator"></div>
+
+                    <a href="#" class="share__dialog-content-social">
+                        <div class="share__dialog-content-face">
+                            <div class="share__dialog-content-face-icon">
+                                <i class="fab fa-facebook-square"></i>
+                            </div>
+                            <div class="share__dialog-content-face-title">
+                                Chia sẻ trên Facebook
+                            </div>
+                            <div></div>
+                        </div>
+                    </a>
+                    <a href="#" class="share__dialog-content-social">
+                        <div class="share__dialog-content-twitter">
+                            <div class="share__dialog-content-twitter-icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="share__dialog-content-twitter-title">
+                                Chia sẻ trên Twitter
+                            </div>
+                            <div></div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>
