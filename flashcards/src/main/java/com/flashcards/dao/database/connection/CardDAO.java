@@ -126,6 +126,25 @@ public class CardDAO {
         return false;
     }
 
+    public static boolean updateCardById(String term, String meaning, int cardId){
+        String sql = "UPDATE card SET Term=?, Meaning=? WHERE CardID=?";
+        int update = 0;
+        try{
+            PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+            preparedStatement.setString(1, term);
+            preparedStatement.setString(2, meaning);
+            preparedStatement.setInt(3, cardId);
+            synchronized (preparedStatement){
+                update = preparedStatement.executeUpdate();
+            }
+            preparedStatement.close();
+            return update == 1;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         List<Card> cards= CardDAO.loadListCardByCourseId(1);
         List<Card> cardsmarked= CardDAO.loadListCardWithMarkedByCourseId(1);

@@ -19,15 +19,17 @@ public class DeleteCourseServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int courseId = Integer.parseInt(request.getParameter("course_id"));
         boolean isDelCourseInFolder = CourseDAO.deleteCourseInFolder(courseId);
+        System.out.println("Xóa môn học trong folder: "+isDelCourseInFolder);
         boolean isDelCourseInClass = CourseDAO.deleteCourseInClass(courseId);
-        if(isDelCourseInFolder && isDelCourseInClass){
-            boolean isDelCard = CardDAO.deleteCardByCourseId(courseId);
-            if(isDelCard){
-                boolean isDelete = CourseDAO.deleteCourse(courseId);
-                System.out.println("Xoa hoc phan thanh cong");
-                request.getRequestDispatcher("home").forward(request, response);
-            }
-        } else
+        System.out.println("Xóa môn học trong class: "+isDelCourseInClass);
+        boolean isDelCard = CardDAO.deleteCardByCourseId(courseId);
+        System.out.println("Xóa cards: "+isDelCard);
+        boolean isDelete = CourseDAO.deleteCourse(courseId);
+        if(isDelete) {
+            System.out.println("Xoa hoc phan thanh cong");
+            request.getRequestDispatcher("home").forward(request, response);
+        } else {
             System.out.println("Chua xoa dc hoc phan");
+        }
     }
 }

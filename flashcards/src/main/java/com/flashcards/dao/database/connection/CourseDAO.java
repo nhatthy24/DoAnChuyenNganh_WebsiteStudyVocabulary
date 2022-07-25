@@ -57,9 +57,10 @@ public class CourseDAO {
 //        System.out.println(loadCourseByCreatorId(1));
 //        System.out.println(loadCourseInFolder(2));
 //        System.out.println(loadCourseHome());
-        for (Course course:loadCourseHomeHasSearch("ew 2")){
-            System.out.println(course.getCourseName());
-        }
+//        for (Course course:loadCourseHomeHasSearch("ew 2")){
+//            System.out.println(course.getCourseName());
+//        }
+        System.out.println(updateCourse("BussinessEdit","Sửa kinh doanh",17453));
     }
 
     public static List<Course> loadCourseByCreatorId(int user_id) {
@@ -242,7 +243,22 @@ public class CourseDAO {
         return false;
     }
 
-    public static boolean updateCourse(String courseName, String description) {
+    public static boolean updateCourse(String courseName, String description, int courseId) {
+        String sql = "UPDATE course SET Title=?, Description=? WHERE CourseID=?";
+        int update = 0;
+        try{
+            PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+            preparedStatement.setString(1, courseName);
+            preparedStatement.setString(2, description);
+            preparedStatement.setInt(3, courseId);
+            synchronized (preparedStatement){
+                update = preparedStatement.executeUpdate();
+            }
+            preparedStatement.close();
+            return update == 1;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         return false;
     }
 }

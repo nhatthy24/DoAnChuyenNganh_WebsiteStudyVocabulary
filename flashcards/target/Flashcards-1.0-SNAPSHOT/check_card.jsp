@@ -208,29 +208,29 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="navbar__right_option">
-                                            <button
-                                                    type="button"
-                                                    aria-label="Tùy chọn"
-                                                    class="AssemblyButtonBase AssemblySecondaryButton AssemblyButtonBase--medium AssemblyButtonBase--padding"
-                                                    onclick="openOption()"
-                                            >
-                                                <span>Tùy chọn</span>
-                                            </button>
-                                        </div>
+<%--                                        <div class="navbar__right_option">--%>
+<%--                                            <button--%>
+<%--                                                    type="button"--%>
+<%--                                                    aria-label="Tùy chọn"--%>
+<%--                                                    class="AssemblyButtonBase AssemblySecondaryButton AssemblyButtonBase--medium AssemblyButtonBase--padding"--%>
+<%--                                                    onclick="openOption()"--%>
+<%--                                            >--%>
+<%--                                                <span>Tùy chọn</span>--%>
+<%--                                            </button>--%>
+<%--                                        </div>--%>
                                         <div class="navbar__right_btnReturn">
-                                            <button
-                                                    type="button"
+                                            <button type="button"
                                                     aria-label="Trở về"
-                                                    class="AssemblyButtonBase AssemblyIconButton AssemblyIconButton--secondary AssemblyIconButton--square AssemblyButtonBase--medium AssemblyButtonBase--square"
-                                            >
-                                                <div
-                                                        aria-label="Trở về"
-                                                        class="AssemblyIcon AssemblyIcon--medium"
-                                                        role="img"
-                                                >
-                                                    <i class="fa fa-times" aria-hidden="true" style="font-size: 1.5em;"></i>
-                                                </div>
+                                                    class="AssemblyButtonBase AssemblyIconButton AssemblyIconButton--secondary AssemblyIconButton--square AssemblyButtonBase--medium AssemblyButtonBase--square">
+                                                <a href="detail-term?course_id=${course.id}" style="text-decoration: none;">
+                                                    <div
+                                                            aria-label="Trở về"
+                                                            class="AssemblyIcon AssemblyIcon--medium"
+                                                            role="img"
+                                                    >
+                                                        <i class="fa fa-times" aria-hidden="true" style="font-size: 1.5em;"></i>
+                                                    </div>
+                                                </a>
                                             </button>
                                         </div>
                                     </div>

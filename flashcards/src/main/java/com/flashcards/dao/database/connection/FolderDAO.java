@@ -187,9 +187,9 @@ public class FolderDAO {
         return folders;
     }
     public static void main(String[] args) {
-
-        for(Folder f:loadFolderInClass(1)){
-            System.out.println(f.getTitle());
-        }
+        System.out.println(updateFolder("TOEIC 2020","Từ vựng TOEIC 2020",2));
+//        for(Folder f:loadFolderInClass(1)){
+//            System.out.println(f.getTitle());
+//        }
     }
 }
