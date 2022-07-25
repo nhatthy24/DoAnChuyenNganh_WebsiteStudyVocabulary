@@ -54,6 +54,7 @@ function checkValidEmail(e) {
         }
         isValidEmail = false;
     } else {
+
         labelEmail.innerHTML = "EMAIL";
         labelEmail.classList.remove('signup__form-item-label--error');
         e.classList.remove('signup__form-item-input--error');

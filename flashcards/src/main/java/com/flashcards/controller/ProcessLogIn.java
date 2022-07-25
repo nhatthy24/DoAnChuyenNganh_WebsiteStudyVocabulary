@@ -17,6 +17,7 @@ import com.flashcards.model.Classroom;
 import com.flashcards.model.Course;
 import com.flashcards.model.Folder;
 import com.flashcards.model.User;
+import com.flashcards.until.ValidEmail;
 
 @WebServlet(urlPatterns = "/ProcessLogIn")
 public class ProcessLogIn extends HttpServlet {
@@ -33,18 +34,29 @@ public class ProcessLogIn extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String username = request.getParameter("username");
+//        String username = request.getParameter("username");
         String email = request.getParameter("username");
         String pass = request.getParameter("password");
 
-        User kh = new UserDAO().getAccountInformation(username);
+        boolean isEmail = new ValidEmail().isValid(email);
+
+        boolean isLogin = false;
+        User kh = new User();
+
+        if (isEmail) {
+            isLogin = new UserDAO().checkLoginEmail(email, pass);
+            kh = new UserDAO().getAccountInformationByEmail(email);
+        } else {
+            isLogin = new UserDAO().checkLoginUsername(email, pass);
+            kh = new UserDAO().getAccountInformation(email);
+        }
+
         // header thư viện của tôi
         List<Course> listcourses = CourseDAO.loadCourseByCreatorId(kh.getId());
         List<Folder> listfolders = FolderDAO.loadFolderByCreatorId(kh.getId());
         List<Classroom> listclassrooms = ClassroomDAO.loadClassByCreatorId(kh.getId());
 
-        System.out.println(kh);
-        if (new UserDAO().checkLogIn(username, email, pass)) {
+        if (isLogin) {
             HttpSession session = request.getSession();
             session.setAttribute("user", kh);
             session.setAttribute("user_id", kh.getId());

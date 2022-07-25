@@ -42,7 +42,7 @@
             </div>
             <ul class="study__header-list-items" id="study__header-list-items">
                 <li class="study__header-list-item">
-                    <a class="study__header-list-item-link" href="flashcard">
+                    <a class="study__header-list-item-link" href="flashcard?course_id=${course_id}">
                         <i class="bi bi-back"></i>
                         Thẻ ghi nhớ
                     </a>
@@ -58,7 +58,7 @@
 
                 </li>
                 <li class="study__header-list-item">
-                    <a class="study__header-list-item-link" href="#">
+                    <a class="study__header-list-item-link" href="${pageContext.request.contextPath}/home">
                         Trang chủ
                     </a>
                 </li>

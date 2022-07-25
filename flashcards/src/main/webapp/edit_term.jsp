@@ -24,7 +24,7 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 <div class="create__term-content">
-    <form action="edit-term?course_id=${course.id}" method="post" enctype="multipart/form-data">
+    <form action="created-term" method="post" enctype="multipart/form-data">
         <div class="create__header" id="create__header">
             <div class="create__header-title">
                 <h1>${title}</h1>

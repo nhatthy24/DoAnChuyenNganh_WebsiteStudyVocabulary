@@ -60,7 +60,7 @@ public class CourseDAO {
 //        for (Course course:loadCourseHomeHasSearch("ew 2")){
 //            System.out.println(course.getCourseName());
 //        }
-        System.out.println(updateCourse("BussinessEdit","Sửa kinh doanh",17453));
+        System.out.println(updateCourse("Bussiness","Kinh doanh",17453));
     }
 
     public static List<Course> loadCourseByCreatorId(int user_id) {
@@ -253,6 +253,7 @@ public class CourseDAO {
             preparedStatement.setInt(3, courseId);
             synchronized (preparedStatement){
                 update = preparedStatement.executeUpdate();
+                update = 1;
             }
             preparedStatement.close();
             return update == 1;

@@ -132,7 +132,7 @@
                     </p>
                 </div>
             </div>
-
+            <c:if test="${sessionScope.user.username==creator.username}">
             <div class="term__information-tool">
                 <button class="term__information-tool-item term__information-tool-add"
                         id="add__term-to-folder-class-btn" onclick="openAddClassFolderDialog()">
@@ -142,15 +142,15 @@
                    class="term__information-tool-item term__information-tool-edit">
                     <i class="fas fa-pen"></i>
                 </a>
-                <button class="term__information-tool-item term__information-tool-share"
-                        id="term__information-tool-share" onclick="openShareDialog()">
-                    <i class="bi bi-upload"></i>
-                </button>
+<%--                <button class="term__information-tool-item term__information-tool-share"--%>
+<%--                        id="term__information-tool-share" onclick="openShareDialog()">--%>
+<%--                    <i class="bi bi-upload"></i>--%>
+<%--                </button>--%>
                 <button class="term__information-tool-item term__information-tool-infor" onclick="deleteTerm()">
                     <i class="bi bi-trash"></i>
                 </button>
-
             </div>
+            </c:if>
         </div>
         <div class="term__information-description">
             <p class="term__information-description-text">
@@ -174,13 +174,13 @@
                     Gắn dấu sao (2)
                 </button>
             </div>
-            <div class="term__detail-header-sort">
-                <select class="term__detail-header-sort-select" id="term__detail-header-sort-select">
-                    <option value="initial">Thứ tự gốc</option>
-                    <option value="alphabetically">Bảng chử cái</option>
-                    <option value="other">Thông số của bạn</option>
-                </select>
-            </div>
+<%--            <div class="term__detail-header-sort">--%>
+<%--                <select class="term__detail-header-sort-select" id="term__detail-header-sort-select">--%>
+<%--                    <option value="initial">Thứ tự gốc</option>--%>
+<%--                    <option value="alphabetically">Bảng chử cái</option>--%>
+<%--                    <option value="other">Thông số của bạn</option>--%>
+<%--                </select>--%>
+<%--            </div>--%>
         </div>
         <div class="term__detail-notification">
             <div class="term__detail-notification-title">
@@ -217,10 +217,11 @@
                 </div>
             </c:forEach>
         </div>
-
+<c:if test="${sessionScope.user.username==creator.username}">
         <button class="term__detail-edit-btn">
             <a href="edit-term-page?course_id=${course.id}" style="color: #fff">Thêm hoặc xóa thuật ngữ</a>
         </button>
+</c:if>
     </div>
 </div>
 

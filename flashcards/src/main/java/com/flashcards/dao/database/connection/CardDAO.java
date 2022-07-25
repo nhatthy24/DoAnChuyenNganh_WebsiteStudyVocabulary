@@ -161,4 +161,41 @@ public class CardDAO {
         }
     }
 
+    public static boolean updateCardByTerm(String mean, String word) {
+        String sql = "UPDATE card SET Meaning=? WHERE Term=?";
+        int update = 0;
+        try{
+            PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+            preparedStatement.setString(1, mean);
+            preparedStatement.setString(2, word);
+            synchronized (preparedStatement){
+                update = preparedStatement.executeUpdate();
+                update = 1;
+            }
+            preparedStatement.close();
+            return update == 1;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
+    }
+
+    public static boolean updateCardByMean(String word, String mean) {
+        String sql = "UPDATE card SET Term=? WHERE Meaning=?";
+        int update = 0;
+        try{
+            PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+            preparedStatement.setString(1, mean);
+            preparedStatement.setString(2, word);
+            synchronized (preparedStatement){
+                update = preparedStatement.executeUpdate();
+                update = 1;
+            }
+            preparedStatement.close();
+            return update == 1;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
+    }
 }

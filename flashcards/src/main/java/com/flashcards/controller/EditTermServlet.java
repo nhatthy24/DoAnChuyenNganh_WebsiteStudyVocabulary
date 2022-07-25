@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(urlPatterns = "/edit-term")
@@ -21,37 +22,38 @@ public class EditTermServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("course_id"));
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-        boolean isDeleteCard = CardDAO.deleteCardByCourseId(id);
         String courseName = request.getParameter("title");
         String description = request.getParameter("description");
         String[] words = request.getParameterValues("word");
         String[] means = request.getParameterValues("mean");
-        boolean isUpdate = CourseDAO.updateCourse(courseName, description,id);
-
-        if(isUpdate) {
-            System.out.println("Sửa học phần thành công");
-            if (words != null && means != null) {
-                System.out.println("Kiểm tra words và means != null");
-                int count = 0;
-                for (int i = 0; i < words.length; i++) {
-                    if (CardDAO.insertCard(words[i], means[i], null, id, user.getId())) {
-                        count++;
-                    }
-                }
-                if (count == words.length) {
-                    // nếu đúng thì chuyển sang trang chi tiết
-                    Course course = CourseDAO.loadCourseById(id);
-                    List<Card> cards = CardDAO.loadListCardByCourseId(id);
-                    request.setAttribute("course", course);
-                    request.setAttribute("cards", cards);
-                    System.out.println(course);
-                    System.out.println(cards.get(0));
-                    request.getRequestDispatcher("term_details.jsp").forward(request, response);
-                }
-            } else {
-                System.out.println("word hoac mean la null");
-            }
+        List<Card> cards = CardDAO.loadListCardByCourseId(id);
+        List<String> oldWords = new ArrayList<>();
+        for(Card c: cards){
+            oldWords.add(c.getTerm());
         }
+        List<String> oldMeans = new ArrayList<>();
+        for(Card c: cards){
+            oldMeans.add(c.getMeaning());
+        }
+//        boolean isUpdate = CourseDAO.updateCourse(courseName, description, id);
+//        System.out.println("isUpdate trong EditTerm: " + isUpdate);
+
+            if(words != null && means != null){
+                for(int i=0; i< words.length; i++){
+                   if(oldWords.contains(words[i])){
+                       boolean isUpdateCard = CardDAO.updateCardByTerm(means[i],words[i]);
+                   } else if(oldMeans.contains(means[i])){
+                       boolean isUpdateCard = CardDAO.updateCardByMean(words[i],means[i]);
+                   } else{
+                       boolean isInsert = CardDAO.insertCard(words[i],means[i],null,id, user.getId());
+                   }
+                }
+                request.getRequestDispatcher("detail-term?course_id="+id);
+            }
+
+
+
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
