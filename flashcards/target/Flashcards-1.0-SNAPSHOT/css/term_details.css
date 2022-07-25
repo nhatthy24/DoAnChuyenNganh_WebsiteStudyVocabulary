@@ -320,8 +320,8 @@
 }
 
 .term__information-tool-infor:hover::after {
-    content: "Thông tin";
-    width: 75px;
+    content: "Xóa học phần";
+    width: 100px;
     left: -17px;
 }
 

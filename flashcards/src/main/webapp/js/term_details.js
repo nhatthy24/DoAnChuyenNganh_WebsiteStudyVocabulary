@@ -96,50 +96,32 @@ function switchCard(currentSlide) {
     slides[currentSlide - 1].style.display = 'block';
 }
 
+const shareDialog = document.getElementById("share__dialog");
+const addClassFolderDialog = document.getElementById("add__term-to-folder-class");
+const deleteTermDialog = document.getElementById("confirm__delete-term");
 
 function openShareDialog() {
-    const btnOpen = document.getElementById("term__information-tool-share");
-    const shareDialog = document.getElementById("share__dialog");
-
-    btnOpen.onclick = () => {
-        modalInner.appendChild(shareDialog);
-        shareDialog.style.display = 'block';
-        modal_term.style.display = 'block';
-    }
+    modal_term.style.display = "block";
+    shareDialog.style.display = "block";
+    addClassFolderDialog.style.display = "none";
+    deleteTermDialog.style.display = "none";
 }
 
 function closeShareDialog() {
-    const btnClose = document.getElementById("share__dialog-close-btn");
-    const shareDialog = document.getElementById("share__dialog");
-
-    btnClose.onclick = () => {
-        modalInner.removeChild(shareDialog);
-        shareDialog.style.display = 'none';
-        modal_term.style.display = 'none';
-    }
+    modal_term.style.display = 'none';
+    shareDialog.style.display = "none";
 }
 
 function openAddClassFolderDialog() {
-    const btnOpen = document.getElementById("add__term-to-folder-class-btn");
-    const addClassFolderDialog = document.getElementById("add__term-to-folder-class");
-
-    btnOpen.onclick = () => {
-        modalInner.appendChild(addClassFolderDialog);
-        addClassFolderDialog.style.display = 'block';
-        modal_term.style.display = 'block';
-    }
+    modal_term.style.display = "block";
+    shareDialog.style.display = "none";
+    addClassFolderDialog.style.display = "block";
+    deleteTermDialog.style.display = "none";
 }
 
 function closeAddClassFolderDialog() {
-    const btnClose = document.getElementById("add__term-to-folder-class-close-btn");
-    const addClassFolderDialog = document.getElementById("add__term-to-folder-class");
-
-
-    btnClose.onclick = () => {
-        modalInner.removeChild(addClassFolderDialog);
-        addClassFolderDialog.style.display = 'none';
-        modal_term.style.display = 'none';
-    }
+    modal_term.style.display = 'none';
+    addClassFolderDialog.style.display = "none";
 }
 
 function switchToAddClassFolderContent() {
@@ -184,16 +166,19 @@ function editWord(btn) {
 }
 
 function deleteTerm() {
-    modalInner.appendChild(confirmDeleteDialog);
-    confirmDeleteDialog.style.display = 'block';
-    modal_term.style.display = 'block';
+    modal_term.style.display = "block";
+    shareDialog.style.display = "none";
+    addClassFolderDialog.style.display = "none";
+    deleteTermDialog.style.display = "block";
 }
 
 function closeDeleteDialog() {
-    modalInner.removeChild(confirmDeleteDialog);
-    confirmDeleteDialog.style.display = 'none';
     modal_term.style.display = 'none';
+    deleteTermDialog.style.display = "none";
 }
+
+
+
 
 function speechWord(btn) {
     const wordItem = btn.parentElement.parentElement;

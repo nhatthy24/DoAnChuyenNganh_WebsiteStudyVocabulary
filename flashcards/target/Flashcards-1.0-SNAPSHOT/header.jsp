@@ -23,15 +23,15 @@
                                 </a>
                             </li>
                             <c:if test="${sessionScope.user_id!=null}">
-                            <li class="navbar__menu-item ">
-                                <button class="navbar__menu-link btn-item" onclick="showLibraryDialog()"
-                                        id="navbar__library-btn">
+                                <li class="navbar__menu-item ">
+                                    <button class="navbar__menu-link btn-item" onclick="showLibraryDialog()"
+                                            id="navbar__library-btn">
                                     <span class="navbar__menu-text">
                                         Thư viện của bạn
                                         <i class="fas fa-angle-down"></i>
                                     </span>
-                                </button>
-                            </li>
+                                    </button>
+                                </li>
                             </c:if>
                             <div class="navbar__library" id="navbar__library" style="display: none">
                                 <div class="navbar__library-header">
@@ -57,158 +57,151 @@
                                     <!-- list term -->
                                     <div id="library-term" class="library__tab-content"
                                          style="display: none">
-                                        <c:if test="${sessionScope.listcourses!=null}">
-                                        <div class="navbar__library-not-null">
-                                            <div class="navbar__library-term">
-                                                <ul class="navbar__library-term-list">
-                                                    <c:forEach items="${sessionScope.listcourses}" var="lc">
-                                                    <li class="navbar__library-term-item">
-                                                        <a href="detail-term?course_id=${lc.id}" class="navbar__library-term-link">
+                                        <c:choose>
+                                            <c:when test="${sessionScope.listcourses.size()>0}">
+                                                <div class="navbar__library-not-null">
+                                                    <div class="navbar__library-term">
+                                                        <ul class="navbar__library-term-list">
+                                                            <c:forEach items="${sessionScope.listcourses}" var="lc">
+                                                                <li class="navbar__library-term-item">
+                                                                    <a href="detail-term?course_id=${lc.id}"
+                                                                       class="navbar__library-term-link">
                                                             <span class="navbar__library-term-text">
-                                                                ${lc.courseName}
+                                                                    ${lc.courseName}
                                                             </span>
-                                                            <div class="navbar__term-author">
-                                                                <img class="navbar__term-author-img"
-                                                                     src="./img/avatar.jpg" alt="">
-                                                                <span class="navbar__term-author-name">
-                                                                    ${lc.creatorName}
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    </c:forEach>
-                                                </ul>
-                                            </div>
-                                            <div class="navbar__library-footer">
-                                                <a href="library-detail">Xem tất cả học phần</a>
-                                            </div>
-                                        </div>
-                                        </c:if>
-                                        <!-- use for list term is null -->
-                                        <c:if test="${sessionScope.listcourses==null}">
-                                        <div class="navbar__library-null" style="display: none">
-                                            <div class="navbar__library-null-content">
-                                                <img class="navbar__library-null-img"
-                                                     src="./img/null-term.png" alt="">
-                                                <p class="navbar__library-null-text">
-                                                    Bạn chưa có học phần nào được tạo
-                                                </p>
-<%--                                                <a class="navbar__library-null-link" href="#"> Tìm--%>
-<%--                                                    học--%>
-<%--                                                    phần </a>--%>
-                                            </div>
-                                        </div>
-                                        </c:if>
+                                                                        <div class="navbar__term-author">
+                                                                            <img class="navbar__term-author-img"
+                                                                                 src="./img/avatar.jpg" alt="">
+                                                                            <span class="navbar__term-author-name">
+                                                                                    ${lc.creatorName}
+                                                                            </span>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            </c:forEach>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="navbar__library-footer">
+                                                        <a href="library-detail">Xem tất cả học phần</a>
+                                                    </div>
+                                                </div>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <div class="navbar__library-null">
+                                                    <div class="navbar__library-null-content">
+                                                        <img class="navbar__library-null-img"
+                                                             src="./img/null-term.png" alt="">
+                                                        <p class="navbar__library-null-text">
+                                                            Bạn chưa có học phần nào được tạo
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </c:otherwise>
+                                        </c:choose>
                                     </div>
 
                                     <!-- list folder -->
                                     <div id="library-folder" class="library__tab-content">
-                                        <c:if test="${sessionScope.listfolders!=null}">
-                                        <div class="navbar__library-not-null">
-
-                                            <div class="navbar__library-folder">
-                                                <ul class="navbar__library-folder-list">
-                                                    <c:forEach items="${sessionScope.listfolders}" var="lf">
-                                                    <li class="navbar__library-folder-item">
-                                                        <a href="library-folder?folder_id=${lf.folderId}"
-                                                           class="navbar__library-folder-link">
-                                                            <p class="navbar__library-folder-name">
-                                                                ${lf.title}
-                                                            </p>
-                                                            <p class="navbar__library-folder-des">${lf.courseList.size()} học phần</p>
-                                                        </a>
-                                                    </li>
-                                                    </c:forEach>
-                                                </ul>
-                                            </div>
-                                            <div class="navbar__library-footer">
-                                                <a href="library-detail">Xem tất cả thư mục</a>
-                                            </div>
-                                        </div>
-                                        </c:if>
-                                        <!-- use for list folder is null -->
-                                        <c:if test="${sessionScope.listfolders==null}">
-                                        <div class="navbar__library-null">
-                                            <div class="navbar__library-null-content">
-                                                <img class="navbar__library-null-img"
-                                                     src="./img/null-folder.png" alt="">
-                                                <p class="navbar__library-null-text">
-                                                    Bạn chưa có thư mục nào được tạo</p>
-<%--                                                <a class="navbar__library-null-link" href="#">--%>
-<%--                                                    Tạo thư mục--%>
-<%--                                                </a>--%>
-                                            </div>
-                                        </div>
-                                        </c:if>
+                                        <c:choose>
+                                            <c:when test="${sessionScope.listfolders.size()>0}">
+                                                <div class="navbar__library-not-null">
+                                                    <div class="navbar__library-folder">
+                                                        <ul class="navbar__library-folder-list">
+                                                            <c:forEach items="${sessionScope.listfolders}" var="lf">
+                                                                <li class="navbar__library-folder-item">
+                                                                    <a href="library-folder?folder_id=${lf.folderId}"
+                                                                       class="navbar__library-folder-link">
+                                                                        <p class="navbar__library-folder-name">
+                                                                                ${lf.title}
+                                                                        </p>
+                                                                        <p class="navbar__library-folder-des">${lf.courseList.size()}
+                                                                            học phần</p>
+                                                                    </a>
+                                                                </li>
+                                                            </c:forEach>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="navbar__library-footer">
+                                                        <a href="library-detail">Xem tất cả thư mục</a>
+                                                    </div>
+                                                </div>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <div class="navbar__library-null">
+                                                    <div class="navbar__library-null-content">
+                                                        <img class="navbar__library-null-img"
+                                                             src="./img/null-folder.png" alt="">
+                                                        <p class="navbar__library-null-text">
+                                                            Bạn chưa có thư mục nào được tạo</p>
+                                                    </div>
+                                                </div>
+                                            </c:otherwise>
+                                        </c:choose>
                                     </div>
 
                                     <!-- list class -->
 
                                     <div id="library-class" class="library__tab-content"
                                          style="display: none">
-                                        <c:if test="${sessionScope.listclassrooms!=null}">
-                                        <div class="navbar__library-not-null">
-                                            <div class="navbar__library-class">
-                                                <ul class="navbar__library-class-list">
-                                                    <c:forEach items="${sessionScope.listclassrooms}" var="lr">
-                                                    <li class="navbar__library-class-item">
-                                                        <a href="library-class?class_id=${lr.classID}" class="navbar__library-class-link">
+                                        <c:choose>
+                                            <c:when test="${sessionScope.listclassrooms.size()>0}">
+                                                <div class="navbar__library-not-null">
+                                                    <div class="navbar__library-class">
+                                                        <ul class="navbar__library-class-list">
+                                                            <c:forEach items="${sessionScope.listclassrooms}" var="lr">
+                                                                <li class="navbar__library-class-item">
+                                                                    <a href="library-class?class_id=${lr.classID}"
+                                                                       class="navbar__library-class-link">
                                                             <span class="navbar__library-class-text">
-                                                                ${lr.title}
+                                                                    ${lr.title}
                                                             </span>
-                                                            <div class="navbar__class-author">
-                                                                <img class="navbar__class-author-img"
-                                                                     src="./img/avatar.jpg" alt="">
-                                                                <span class="navbar__class-author-name">
-                                                                    ${lr.creator}
-                                                                </span>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    </c:forEach>
-                                                </ul>
-                                            </div>
+                                                                        <div class="navbar__class-author">
+                                                                            <img class="navbar__class-author-img"
+                                                                                 src="./img/avatar.jpg" alt="">
+                                                                            <span class="navbar__class-author-name">
+                                                                                    ${lr.creator}
+                                                                            </span>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            </c:forEach>
+                                                        </ul>
+                                                    </div>
 
-                                            <div class="navbar__library-footer">
-                                                <a href="library-detail">Xem tất cả lớp học</a>
-                                            </div>
-                                        </div>
-                                        </c:if>
-                                        <!-- use for list class is null -->
-                                        <c:if test="${sessionScope.listclassrooms==null}">
-                                        <div class="navbar__library-null" style="display: none">
-                                            <div class="navbar__library-null-content">
-                                                <img class="navbar__library-null-img"
-                                                     src="./img/null-class.png" alt="">
+                                                    <div class="navbar__library-footer">
+                                                        <a href="library-detail">Xem tất cả lớp học</a>
+                                                    </div>
+                                                </div>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <div class="navbar__library-null">
+                                                    <div class="navbar__library-null-content">
+                                                        <img class="navbar__library-null-img"
+                                                             src="./img/null-class.png" alt="">
 
-                                                <p class="navbar__library-null-text">
-                                                    Bạn chưa có lớp nào được tạo
-                                                </p>
-<%--                                                <a class="navbar__library-null-link" href="#">--%>
-<%--                                                    Tìm một lớp học--%>
-<%--                                                </a>--%>
-                                            </div>
-                                        </div>
-                                        </c:if>
+                                                        <p class="navbar__library-null-text">
+                                                            Bạn chưa có lớp nào được tạo
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </c:otherwise>
+                                        </c:choose>
                                     </div>
                                 </div>
                             </div>
-
                         </ul>
                     </div>
-                </div>
-                </ul>
-                <c:if test="${sessionScope.user==null}">
-                    <button class="navbar__menu-btn" onclick="showCreateButton()" id="navbar__menu-create-btn">
-                         <a href="ProcessLogIn" style="text-decoration: none">
+                    <%--                </ul>--%>
+                    <c:if test="${sessionScope.user==null}">
+                        <a href="ProcessLogIn" class="navbar__menu-btn"
+                           id="navbar__menu-create-btn">
                              <span class="navbar__menu-text">
                                 Tạo <i class="fas fa-angle-down"></i>
                             </span>
-                         </a>
-                    </button>
-                </c:if>
-                <c:if test="${sessionScope.user!=null}">
-                    <button class="navbar__menu-btn" onclick="showCreateButton()" id="navbar__menu-create-btn">
+                        </a>
+                    </c:if>
+                    <c:if test="${sessionScope.user!=null}">
+                        <button class="navbar__menu-btn" onclick="showCreateButton()" id="navbar__menu-create-btn">
                             <span class="navbar__menu-text">
                                 Tạo <i class="fas fa-angle-down"></i>
                             </span>
@@ -238,101 +231,71 @@
                                 </ul>
                             </div>
                         </button>
-                </c:if>
-            </div>
-        </div>
-
-        <!-- left element -->
-        <div class="navbar__right">
-            <div class="navbar__search">
-                <button class="navbar__search-btn">
-                    <i class="fas fa-search"></i>
-                </button>
-                <input type="text" class="navbar__search-input" placeholder="Học phần, câu hỏi">
-            </div>
-            <c:if test="${sessionScope.user==null}">
-                <div class="navbar__login-null">
-                    <a class="navbar__login-null-btn login-btn"
-                       href="${pageContext.request.contextPath}/ProcessLogIn">Đăng nhập</a>
-                    <a class="navbar__login-null-btn register-btn"
-                       href="${pageContext.request.contextPath}/ProcessSignUp">Đăng ký</a>
+                    </c:if>
                 </div>
-            </c:if>
-            <c:if test="${sessionScope.user!=null}">
-                <div class="navbar__login">
-                    <div class="navbar__notify">
-                        <button class="navbar__notify-btn">
-                            <i class="far fa-bell"></i>
+
+
+                <!-- left element -->
+                <div class="navbar__right">
+                    <div class="navbar__search">
+                        <button class="navbar__search-btn">
+                            <i class="fas fa-search"></i>
                         </button>
+                        <input type="text" class="navbar__search-input" placeholder="Học phần, câu hỏi">
                     </div>
-                    <div class="navbar__user" id="navbar__user">
-                        <button class="navbar__user-btn"
-                                onclick="showAccountDialog()">
-                            <img id="navbar__user-btn" src="./img/avatar.jpg" alt="">
-                        </button>
-                        <div class="navbar__user-menu" id="navbar__user-menu" style="display: none">
-                            <div class="navbar__user-header">
-                                <img class="navbar__user-img" src="./img/avatar.jpg" alt="">
-                                <div class="navbar_user-infor">
-                                    <p class="navbar__user-name">
-                                            ${sessionScope.user.username}
-                                    </p>
-                                    <p class="navbar__user-email">
-                                            ${sessionScope.user.email}
-                                    </p>
+                    <c:if test="${sessionScope.user==null}">
+                        <div class="navbar__login-null">
+                            <a class="navbar__login-null-btn login-btn"
+                               href="${pageContext.request.contextPath}/ProcessLogIn">Đăng nhập</a>
+                            <a class="navbar__login-null-btn register-btn"
+                               href="${pageContext.request.contextPath}/ProcessSignUp">Đăng ký</a>
+                        </div>
+                    </c:if>
+                    <c:if test="${sessionScope.user!=null}">
+                        <div class="navbar__login">
+                            <div class="navbar__notify">
+                                <button class="navbar__notify-btn">
+                                    <i class="far fa-bell"></i>
+                                </button>
+                            </div>
+                            <div class="navbar__user" id="navbar__user">
+                                <button class="navbar__user-btn"
+                                        onclick="showAccountDialog()">
+                                    <img id="navbar__user-btn" src="./img/avatar.jpg" alt="">
+                                </button>
+                                <div class="navbar__user-menu" id="navbar__user-menu" style="display: none">
+                                    <div class="navbar__user-header">
+                                        <img class="navbar__user-img" src="./img/avatar.jpg" alt="">
+                                        <div class="navbar_user-infor">
+                                            <p class="navbar__user-name">
+                                                    ${sessionScope.user.username}
+                                            </p>
+                                            <p class="navbar__user-email">
+                                                    ${sessionScope.user.email}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="nav__user-line-spread"></div>
+                                    <ul class="navbar__user-items">
+                                        <li class="navbar__user-item">
+                                            <a href="settinguser" class="navbar__user-link"> Cài đặt </a>
+                                        </li>
+                                        <div class="nav__user-line-spread"></div>
+                                        <li class="navbar__user-item">
+                                            <a href="LogOut" class="navbar__user-link">
+                                                Đăng xuất
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="nav__user-line-spread"></div>
-                            <ul class="navbar__user-items">
-<%--                                <li class="navbar__user-item">--%>
-<%--                                    <a href="#" class="navbar__user-link"> Hồ sơ </a>--%>
-<%--                                </li>--%>
-<%--                                <li class="navbar__user-item">--%>
-<%--                                    <a href="#" class="navbar__user-link"> Tiến độ </a>--%>
-<%--                                </li>--%>
-<%--                                <li class="navbar__user-item">--%>
-<%--                                    <a href="#" class="navbar__user-link">--%>
-<%--                                        <button>--%>
-<%--                                            Chế độ ban đêm <i class="fas fa-toggle-on"></i>--%>
-<%--                                        </button>--%>
-<%--                                    </a>--%>
-<%--                                </li>--%>
-                                <li class="navbar__user-item">
-                                    <a href="settinguser" class="navbar__user-link"> Cài đặt </a>
-                                </li>
-                                <div class="nav__user-line-spread"></div>
-<%--                                <li class="navbar__user-item">--%>
-<%--                                    <a href="#" class="navbar__user-link"> Giới thiệu bạn bè </a>--%>
-<%--                                </li>--%>
-<%--                                <li class="navbar__user-item">--%>
-<%--                                    <a href="#" class="navbar__user-link"> Giúp đỡ và phản hồi </a>--%>
-<%--                                </li>--%>
-<%--                                <li class="navbar__user-item">--%>
-<%--                                    <a href="#" class="navbar__user-link"> Ứng dụng di dộng </a>--%>
-<%--                                </li>--%>
-<%--                                <li class="navbar__user-item">--%>
-<%--                                    <a href="#" class="navbar__user-link"> Blog </a>--%>
-<%--                                </li>--%>
-<%--                                <li class="navbar__user-item">--%>
-<%--                                    <a href="#" class="navbar__user-link"> Quyền riêng tư </a>--%>
-<%--                                </li>--%>
-<%--                                <li class="navbar__user-item">--%>
-<%--                                    <a href="#" class="navbar__user-link"> Nâng cấp </a>--%>
-<%--                                </li>--%>
-<%--                                <div class="nav__user-line-spread"></div>--%>
-                                <li class="navbar__user-item">
-                                    <a href="LogOut" class="navbar__user-link">
-                                        Đăng xuất
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
-                    </div>
+                    </c:if>
                 </div>
-            </c:if>
+            </div>
         </div>
     </div>
-    </div>
+
     <div class="modal" id="modal_create-folder-class" style="display: none">
         <div class="modal__overlay">
         </div>
