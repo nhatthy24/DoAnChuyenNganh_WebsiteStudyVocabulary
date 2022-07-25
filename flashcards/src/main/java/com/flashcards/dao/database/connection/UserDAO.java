@@ -103,6 +103,28 @@ public class UserDAO implements ObjectDAO {
 
     }
 
+    public User getAccountInformationByEmail(String em) {
+        try {
+            ResultSet rs = new DBCPDataSource().chonDuLieu("select * from user where email='" + em + "'");
+            while (rs.next()) {
+                int id = rs.getInt(1);
+                String pass = rs.getString(2);
+                String email = rs.getString(3);
+                String date = rs.getString(4);
+                String role = rs.getString(5);
+                String name = rs.getString(6);
+                String avatar = rs.getString(7);
+                return new User(id, pass, email, date, role, name, avatar);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+        return null;
+
+    }
+
+
     // kiem tra dang nhap
     @Override
     public boolean checkLogIn(String username, String email, String pass) {
@@ -123,8 +145,42 @@ public class UserDAO implements ObjectDAO {
         return false;
     }
 
+    public  boolean checkLoginEmail(String email, String pass){
+        String sql = "SELECT * FROM user u WHERE email=? AND password=?";
+        try {
+            PreparedStatement ps = DBCPDataSource.preparedStatement(sql);
+            ps.setString(1, email);
+            ps.setString(2, pass);
+            ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()) {
+                return true;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public  boolean checkLoginUsername(String username, String pass){
+        String sql = "SELECT * FROM user u WHERE name=? AND password=?";
+        try {
+            PreparedStatement ps = DBCPDataSource.preparedStatement(sql);
+            ps.setString(1, username);
+            ps.setString(2, pass);
+            ResultSet resultSet = ps.executeQuery();
+            while (resultSet.next()) {
+                return true;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
-//        System.out.println(checkUsernameExists("dudu"));
+//        System.out.println(checkLoginEmail("dukhanh2k@gmail.com", "dukhanh00"));
 //		System.out.println(new UserDAO().addAccount(kh));
 //		System.out.println(new UserDAO().checkLogIn("Quoc", "huynhaiquoc@gmail.com", "123456789"));
 //		System.out.println(new UserDAO().getAccountInformation("Quoc"));
