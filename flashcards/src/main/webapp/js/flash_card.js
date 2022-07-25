@@ -1,7 +1,7 @@
 
 
-const modal = document.getElementById("modal");
-const modalInner = document.getElementById("modal__inner");
+const modal = document.getElementById("flashcard_modal");
+const modalInner = document.getElementById("flashcard_modal__inner");
 const editWordDialog = document.getElementById("edit__word-dialog");
 const settingDialog = document.getElementById('setting__learning-dialog');
 const btnOpenSpeaker = document.getElementById('setting__open-speaker');
@@ -16,14 +16,13 @@ let inputDefinition = document.getElementById('edit__word-dialog-item-input-defi
 let inputCard_id = document.getElementById('edit__word-dialog-item-input-card-id');
 let inputCourse_id = document.getElementById('edit__word-dialog-item-input-course-id');
 
-var actionFlip = null;
-var actionFlip2 = null;
-var actionExchange = null;
-var isSpeech = false;
-var answerLanguage = 'vi';
-var isStartLearning = false;
-var isLearnStarCard = false;
-
+let actionFlip = null;
+let actionFlip2 = null;
+let actionExchange = null;
+let isSpeech = false;
+let answerLanguage = 'vi';
+let isStartLearning = false;
+let isLearnStarCard = false;
 
 
 var cards = document.querySelectorAll('.card__item');
@@ -35,8 +34,6 @@ const repeatCardBtn = document.getElementById('card__item-repeat-btn');
 
 let currentCard = 1;
 var wordLearnedElement = document.getElementById('counter__word-learned');
-
-
 
 function setTotalProgress() {
     wordLearnedElement.innerHTML = `${cards.length - 1} thuật ngữ`

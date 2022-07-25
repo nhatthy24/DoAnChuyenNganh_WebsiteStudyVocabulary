@@ -71,7 +71,7 @@
                                                             </span>
                                                                         <div class="navbar__term-author">
                                                                             <img class="navbar__term-author-img"
-                                                                                 src="./img/avatar.jpg" alt="">
+                                                                                 src="${lc.getAvatarCreator()}" alt="">
                                                                             <span class="navbar__term-author-name">
                                                                                     ${lc.creatorName}
                                                                             </span>
@@ -237,12 +237,15 @@
 
                 <!-- left element -->
                 <div class="navbar__right">
-                    <div class="navbar__search">
-                        <button class="navbar__search-btn">
-                            <i class="fas fa-search"></i>
-                        </button>
-                        <input type="text" class="navbar__search-input" placeholder="Học phần, câu hỏi">
-                    </div>
+                    <form action="home" method="get" style="margin-bottom: 0" accept-charset="UTF-8">
+                        <div class="navbar__search">
+                            <button type="submit" class="navbar__search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <input name="course-name" type="text" class="navbar__search-input"
+                                   placeholder="Nhập tên học phần ...">
+                        </div>
+                    </form>
                     <c:if test="${sessionScope.user==null}">
                         <div class="navbar__login-null">
                             <a class="navbar__login-null-btn login-btn"
@@ -261,11 +264,11 @@
                             <div class="navbar__user" id="navbar__user">
                                 <button class="navbar__user-btn"
                                         onclick="showAccountDialog()">
-                                    <img id="navbar__user-btn" src="./img/avatar.jpg" alt="">
+                                    <img id="navbar__user-btn" src="${sessionScope.user.avatar}" alt="">
                                 </button>
                                 <div class="navbar__user-menu" id="navbar__user-menu" style="display: none">
                                     <div class="navbar__user-header">
-                                        <img class="navbar__user-img" src="./img/avatar.jpg" alt="">
+                                        <img class="navbar__user-img" src="${sessionScope.user.avatar}" alt="">
                                         <div class="navbar_user-infor">
                                             <p class="navbar__user-name">
                                                     ${sessionScope.user.username}

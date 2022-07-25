@@ -43,7 +43,6 @@ public class ProcessLogIn extends HttpServlet {
         List<Folder> listfolders = FolderDAO.loadFolderByCreatorId(kh.getId());
         List<Classroom> listclassrooms = ClassroomDAO.loadClassByCreatorId(kh.getId());
 
-        System.out.println(kh);
         if (new UserDAO().checkLogIn(username, email, pass)) {
             HttpSession session = request.getSession();
             session.setAttribute("user", kh);

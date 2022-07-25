@@ -886,6 +886,7 @@ body.theme-default {
     max-height: 100%;
     -webkit-transition: max-height .2s ease-in;
     transition: max-height .2s ease-in;
+    height: fit-content;
 }
 
 .StudyModesLayout_header_navbar {
