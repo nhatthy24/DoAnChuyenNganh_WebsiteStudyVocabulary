@@ -108,35 +108,22 @@
 
 
                     <div class="class__content-folder">
+                        <c:forEach items="${folders}" var="folder">
                         <div class="class__content-folder-card">
                             <a href="" class="class__content-folder-card-link">
                                 <div class="class__content-folder-card-content">
-                                    <span class="class__content-folder-card-count">0 học phần</span>
+                                    <span class="class__content-folder-card-count">${folder.courseList.size()} học phần</span>
                                     <div class="class__content-folder-card-name">
                                         <i class="bi bi-folder class__content-folder-card-icon"></i>
-                                        <p class="class__content-folder-card-name-text">Thư mục</p>
+                                        <p class="class__content-folder-card-name-text">${folder.title}</p>
                                     </div>
                                 </div>
                             </a>
-                            <button class="class__content-folder-card-action">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </div>
-
-                        <div class="class__content-folder-card">
-                            <a href="" class="class__content-folder-card-link">
-                                <div class="class__content-folder-card-content">
-                                    <span class="class__content-folder-card-count">0 học phần</span>
-                                    <div class="class__content-folder-card-name">
-                                        <i class="bi bi-folder class__content-folder-card-icon"></i>
-                                        <p class="class__content-folder-card-name-text">Thư mục</p>
-                                    </div>
-                                </div>
+                            <a href="library-class?class_id=${classroom.classID}&type=deletefolder&folder_id=${folder.folderId}" class="class__content-term-card-action">
+                                <i style="color: #ff5252" class="bi bi-trash"></i>
                             </a>
-                            <button class="class__content-folder-card-action">
-                                <i class="bi bi-trash"></i>
-                            </button>
                         </div>
+                        </c:forEach>
 
                     </div>
 
@@ -151,41 +138,25 @@
 
 
                     <div class="class__content-term">
+                        <c:forEach items="${courses}" var="course">
                         <div class="class__content-term-card">
                             <a href="" class="class__content-term-card-link">
                                 <div class="class__content-term-card-content">
                                     <div class="class__content-term-card-top">
-                                        <span class="class__content-term-card-count">5 thuật ngữ</span>
-                                        <span class="class__content-term-card-author">Khanh_Du5</span>
-                                        <span class="class__content-term-card-class">Lớp học</span>
+                                        <span class="class__content-term-card-count">${course.cards.size()} thuật ngữ</span>
+                                        <span class="class__content-term-card-author"> ${course.creatorName}</span>
+                                        <span class="class__content-term-card-class">${classroom.title}</span>
                                     </div>
                                     <div class="class__content-term-card-name">
-                                        <p class="class__content-term-card-name-text">Sinh học</p>
+                                        <p class="class__content-term-card-name-text">${course.courseName}</p>
                                     </div>
                                 </div>
                             </a>
-                            <button class="class__content-term-card-action">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </div>
-
-                        <div class="class__content-term-card">
-                            <a href="" class="class__content-term-card-link">
-                                <div class="class__content-term-card-content">
-                                    <div class="class__content-term-card-top">
-                                        <span class="class__content-term-card-count">5 thuật ngữ</span>
-                                        <span class="class__content-term-card-author">Khanh_Du5</span>
-                                        <span class="class__content-term-card-class">Lớp học</span>
-                                    </div>
-                                    <div class="class__content-term-card-name">
-                                        <p class="class__content-term-card-name-text">Sinh học</p>
-                                    </div>
-                                </div>
+                            <a href="library-class?class_id=${classroom.classID}&type=deletecourse&course_id=${course.id}" class="class__content-term-card-action">
+                                <i style="color: #ff5252" class="bi bi-trash"></i>
                             </a>
-                            <button class="class__content-term-card-action">
-                                <i class="bi bi-trash"></i>
-                            </button>
                         </div>
+                        </c:forEach>
                     </div>
                 </div>
                 </c:if>
@@ -308,23 +279,16 @@
                         </div>
 
                         <div class="dialog__add-term-row">
+                            <c:forEach items="${coursesInAddBox}" var="course">
                             <div class="dialog__add-term-item">
                                 <p class="dialog__add-term-item-name">
-                                    Tien hoa Một học phần kiểm thử Một học phần kiểm thử Một học phần kiểm thử
+                                        ${course.courseName}
                                 </p>
-                                <button class="dialog__add-term-item-btn dialog__add-term-item-btn--plus">
+                                <a href="library-class?class_id=${classroom.classID}&type=addcourse&course_id=${course.id}" class="dialog__add-term-item-btn dialog__add-term-item-btn--minus">
                                     <i class="bi bi-plus-lg"></i>
-                                </button>
-                            </div>
-
-                            <div class="dialog__add-term-item">
-                                <p class="dialog__add-term-item-name">
-                                    Tien hoa Một học phần kiểm thử Một học phần kiểm thử Một học phần kiểm thử
-                                </p>
-                                <a href="" class="dialog__add-term-item-btn dialog__add-term-item-btn--minus">
-                                    <i class="bi bi-dash-lg"></i>
                                 </a>
                             </div>
+                            </c:forEach>
                         </div>
                     </div>
 
@@ -359,23 +323,16 @@
                         </div>
 
                         <div class="dialog__add-term-row">
+                            <c:forEach items="${foldersInAddBox}" var="folder">
                             <div class="dialog__add-term-item">
                                 <p class="dialog__add-term-item-name">
-                                    Thư mục
+                                        ${folder.title}
                                 </p>
-                                <button class="dialog__add-term-item-btn dialog__add-term-item-btn--plus">
+                                <a href="library-class?class_id=${classroom.classID}&type=addfolder&folder_id=${folder.folderId}" class="dialog__add-term-item-btn dialog__add-term-item-btn--minus">
                                     <i class="bi bi-plus-lg"></i>
-                                </button>
-                            </div>
-
-                            <div class="dialog__add-term-item">
-                                <p class="dialog__add-term-item-name">
-                                    Thư mục khác
-                                </p>
-                                <a href="" class="dialog__add-term-item-btn dialog__add-term-item-btn--minus">
-                                    <i class="bi bi-dash-lg"></i>
                                 </a>
                             </div>
+                            </c:forEach>
                         </div>
                     </div>
 

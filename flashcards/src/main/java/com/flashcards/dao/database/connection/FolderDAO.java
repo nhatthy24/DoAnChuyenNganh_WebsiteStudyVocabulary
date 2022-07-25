@@ -1,5 +1,6 @@
 package com.flashcards.dao.database.connection;
 
+import com.flashcards.model.Course;
 import com.flashcards.model.Folder;
 
 import java.sql.PreparedStatement;
@@ -134,31 +135,61 @@ public class FolderDAO {
         }
         return folder;
     }
-    public static List<Folder> loadFolderByCreatorId(int user_id) {
+
+    public static List<Folder> loadFolderByCreatorId(int creator_id) {
         List<Folder> folders = new ArrayList<>();
-        String sql = "SELECT * FROM folder WHERE Creator="+user_id;
+        String sql = "SELECT * FROM folder WHERE Creator=?";
         try{
-            Statement statement = DBCPDataSource.getStatement();
-            synchronized (statement){
-                ResultSet resultSet = statement.executeQuery(sql);
-                while (resultSet.next()){
+            PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+            preparedStatement.setInt(1, creator_id);
+            synchronized (preparedStatement){
+                ResultSet resultSet = preparedStatement.executeQuery();
+                while(resultSet.next()){
                     Folder folder = new Folder();
                     folder.setFolderId(resultSet.getInt(1));
                     folder.setTitle(resultSet.getString(2));
                     folder.setDescription(resultSet.getString(3));
+                    folder.setCreatorID(resultSet.getInt(4));
                     folder.setCreator(UserDAO.loadUserById(resultSet.getInt(4)).getUsername());
                     folders.add(folder);
                 }
                 resultSet.close();
             }
-            statement.close();
+            preparedStatement.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
+        return folders;
+    }
+    public static List<Folder> loadFolderInClass(int class_id) {
+        List<Folder> folders = new ArrayList<>();
+        String sql = "select F.FolderID,F.Title,F.Description,F.Creator FROM folder F JOIN folder_in_class FC on F.FolderID=FC.FolderID WHERE FC.ClassId=?";
+        try{
+            PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+            preparedStatement.setInt(1, class_id);
+            synchronized (preparedStatement){
+                ResultSet resultSet = preparedStatement.executeQuery();
+                while(resultSet.next()){
+                    Folder folder = new Folder();
+                    folder.setFolderId(resultSet.getInt(1));
+                    folder.setTitle(resultSet.getString(2));
+                    folder.setDescription(resultSet.getString(3));
+                    folder.setCreatorID(resultSet.getInt(4));
+                    folder.setCourseList(CourseDAO.loadCourseInFolder(resultSet.getInt(1)));
+                    folders.add(folder);
+                }
+                resultSet.close();
+            }
+            preparedStatement.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         return folders;
     }
     public static void main(String[] args) {
-        System.out.println(loadFolderByCreatorId(1));
+
+        for(Folder f:loadFolderInClass(1)){
+            System.out.println(f.getTitle());
+        }
     }
 }
