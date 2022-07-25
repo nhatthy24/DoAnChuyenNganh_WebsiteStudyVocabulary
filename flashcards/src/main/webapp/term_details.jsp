@@ -172,7 +172,7 @@
                             </a>
                         </li>
                         <li class="term__information-tool-menu-item">
-                            <a href="#" class="term__information-tool-menu-link" onclick="deleteTerm()">
+                            <a class="term__information-tool-menu-link" onclick="deleteTerm()">
                                 <i class="bi bi-trash"></i>
                                 <span class="term__information-tool-menu-text">
                                         Xóa
@@ -432,7 +432,9 @@
                 Hủy bỏ
             </button>
             <button class="confirm__delete-term-btn-confirm">
+                <a href="delete-term?course_id=${course.id}" style="text-decoration: none; color: #fff">
                 Xóa học phần
+                </a>
             </button>
         </div>
 

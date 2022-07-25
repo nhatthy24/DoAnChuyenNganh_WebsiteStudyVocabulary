@@ -7,6 +7,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ClassroomDAO {
 
@@ -118,7 +120,31 @@ public class ClassroomDAO {
         }
         return classroom;
     }
+    public static List<Classroom> loadClassByCreatorId(int user_id) {
+        List<Classroom> classrooms = new ArrayList<>();
+        String sql = "SELECT * FROM class WHERE Creator="+user_id;
+        try{
+            Statement statement = DBCPDataSource.getStatement();
+            synchronized (statement){
+                ResultSet resultSet = statement.executeQuery(sql);
+                while (resultSet.next()){
+                    Classroom classroom = new Classroom();
+                    classroom.setClassID(resultSet.getInt(1));
+                    classroom.setTitle(resultSet.getString(2));
+                    classroom.setDescription(resultSet.getString(3));
+                    classroom.setSchool(resultSet.getString(4));
+                    classroom.setCreator(UserDAO.loadUserById(resultSet.getInt(5)).getUsername());
+                    classrooms.add(classroom);
+                }
+                resultSet.close();
+            }
+            statement.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
 
+        return classrooms;
+    }
     public static void main(String[] args) {
         System.out.println(deleteClassroom(1));
     }

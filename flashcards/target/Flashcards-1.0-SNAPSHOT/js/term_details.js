@@ -184,14 +184,12 @@ function editWord(btn) {
 }
 
 function deleteTerm() {
-
     modalInner.appendChild(confirmDeleteDialog);
     confirmDeleteDialog.style.display = 'block';
     modal_term.style.display = 'block';
 }
 
 function closeDeleteDialog() {
-
     modalInner.removeChild(confirmDeleteDialog);
     confirmDeleteDialog.style.display = 'none';
     modal_term.style.display = 'none';

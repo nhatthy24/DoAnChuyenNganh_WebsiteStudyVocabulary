@@ -135,6 +135,7 @@ public class FolderDAO {
         }
         return folder;
     }
+
     public static List<Folder> loadFolderByCreatorId(int creator_id) {
         List<Folder> folders = new ArrayList<>();
         String sql = "SELECT * FROM folder WHERE Creator=?";
@@ -149,6 +150,7 @@ public class FolderDAO {
                     folder.setTitle(resultSet.getString(2));
                     folder.setDescription(resultSet.getString(3));
                     folder.setCreatorID(resultSet.getInt(4));
+                    folder.setCreator(UserDAO.loadUserById(resultSet.getInt(4)).getUsername());
                     folders.add(folder);
                 }
                 resultSet.close();
