@@ -1,7 +1,13 @@
 package com.flashcards.controller;
 
+import com.flashcards.dao.database.connection.ClassroomDAO;
 import com.flashcards.dao.database.connection.CourseDAO;
+import com.flashcards.dao.database.connection.FolderDAO;
+import com.flashcards.dao.database.connection.UserDAO;
+import com.flashcards.model.Classroom;
 import com.flashcards.model.Course;
+import com.flashcards.model.Folder;
+import com.flashcards.model.User;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -16,11 +22,15 @@ public class Home extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("title","Trang chủ");
         HttpSession session = request.getSession();
-
         if(session.getAttribute("user_id")!=null){
             int user_id = (int) session.getAttribute("user_id");
-            List<Course> courses = CourseDAO.loadCourseByCreatorId(user_id);
-            request.setAttribute("courses", courses);
+            // header thư viện của tôi
+            List<Course> listcourses = CourseDAO.loadCourseByCreatorId(user_id);
+//            List<Folder> listfolders = FolderDAO.loadFolderByCreatorId(user_id);
+//            List<Classroom> listclassrooms = ClassroomDAO.loadClassByCreatorId(user_id);
+            request.setAttribute("listcourses", listcourses);
+//            request.setAttribute("listfolders", listfolders);
+//            request.setAttribute("listclassrooms", listclassrooms);
             request.getRequestDispatcher("index.jsp").forward(request,response);
         } else if(session.getAttribute("user_id")==null){
             List<Course> courses = CourseDAO.loadCourseHome();
