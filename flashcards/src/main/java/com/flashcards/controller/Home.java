@@ -28,12 +28,20 @@ public class Home extends HttpServlet {
             List<Course> courses = CourseDAO.loadCourseByCreatorId(user_id);
 //            List<Folder> listfolders = FolderDAO.loadFolderByCreatorId(user_id);
 //            List<Classroom> listclassrooms = ClassroomDAO.loadClassByCreatorId(user_id);
+            if(request.getParameter("course-name") !=null){
+                String course_name=request.getParameter("course-name");
+                courses=CourseDAO.loadCourseHomeHasSearch(course_name);
+            }
             request.setAttribute("courses", courses);
 //            request.setAttribute("listfolders", listfolders);
 //            request.setAttribute("listclassrooms", listclassrooms);
             request.getRequestDispatcher("index.jsp").forward(request,response);
         } else if(session.getAttribute("user_id")==null){
             List<Course> courses = CourseDAO.loadCourseHome();
+            if(request.getParameter("course-name") !=null){
+                String course_name=request.getParameter("course-name");
+                courses=CourseDAO.loadCourseHomeHasSearch(course_name);
+            }
             request.setAttribute("courses", courses);
             request.getRequestDispatcher("index.jsp").forward(request,response);
         }
