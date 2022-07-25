@@ -109,6 +109,8 @@ public class ClassroomDAO {
                     classroom.setSchool(resultSet.getString(4));
                     classroom.setCreator(UserDAO.loadUserById(resultSet.getInt(5)).getUsername());
                     classroom.addMembers(UserDAO.loadUserById(resultSet.getInt(5)));
+                    classroom.setCourses(CourseDAO.loadCourseInClass(resultSet.getInt(1)));
+                    classroom.setFolders(FolderDAO.loadFolderInClass(resultSet.getInt(1)));
                 }
                 resultSet.close();
             }

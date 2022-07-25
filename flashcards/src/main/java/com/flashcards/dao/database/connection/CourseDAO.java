@@ -85,7 +85,6 @@ public class CourseDAO {
         }
         return courses;
     }
-
     public static List<Course> loadCourseHome() {
         List<Course> courses = new ArrayList<>();
         String sql = "SELECT * FROM course";
@@ -138,6 +137,33 @@ public class CourseDAO {
         return courses;
 
     }
+    public static List<Course> loadCourseInClass(int id) {
+        List<Course> courses = new ArrayList<>();
+        String sql = "SELECT c.CourseID, c.Title, c.Creator FROM course c JOIN course_in_class CC on c.CourseID=CC.CourseID WHERE CC.ClassId=?";
+        try{
+            PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+            preparedStatement.setInt(1, id);
+            synchronized (preparedStatement){
+                ResultSet resultSet = preparedStatement.executeQuery();
+                while(resultSet.next()){
+                    Course course = new Course();
+                    course.setId(resultSet.getInt(1));
+                    course.setCourseName(resultSet.getString(2));
+                    course.setCreatorId(resultSet.getInt(3));
+                    course.setCards(CardDAO.loadListCardByCourseId(resultSet.getInt(1)));
+                    course.setCreatorName(UserDAO.loadUserById(resultSet.getInt(3)).getUsername());
+                    courses.add(course);
+                }
+                resultSet.close();
+            }
+            preparedStatement.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return courses;
+
+    }
+
     public static boolean deleteCourse(int courseId){
         String sql = "DELETE FROM course WHERE CourseID=?";
         int update = 0;
