@@ -161,13 +161,13 @@
 
                 <div class="modal__body-content" id="modal__body-content">
                     <div class="dialog__add-term" id="dialog__add-term" style="display: none">
-                        <div class="dialog__add-term-row">
-                            <div class="dialog__add-term-redirect">
-                                <a href="created-term?type=term" class="dialog__add-term-redirect-link">
-                                    + TẠO HỌC PHẦN MỚI
-                                </a>
-                            </div>
-                        </div>
+<%--                        <div class="dialog__add-term-row">--%>
+<%--                            <div class="dialog__add-term-redirect">--%>
+<%--                                <a href="created-term?type=term" class="dialog__add-term-redirect-link">--%>
+<%--                                    + TẠO HỌC PHẦN MỚI--%>
+<%--                                </a>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
 
                         <div class="dialog__add-term-row">
                         <c:forEach items="${coursesInAddBox}" var="course">

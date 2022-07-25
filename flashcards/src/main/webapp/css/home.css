@@ -83,7 +83,7 @@ a{
 
 .folder__card-footer-author-icon {
     margin-right: 5px;
-    border: 1px solid var(--text-gray-color);
+    /*border: 1px solid var(--text-gray-color);*/
     width: 24px;
     height: 24px;
     display: flex;
