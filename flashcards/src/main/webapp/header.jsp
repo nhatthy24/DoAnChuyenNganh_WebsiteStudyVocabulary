@@ -71,7 +71,7 @@
                                                             </span>
                                                                         <div class="navbar__term-author">
                                                                             <img class="navbar__term-author-img"
-                                                                                 src="./img/avatar.jpg" alt="">
+                                                                                 src="${lc.getAvatarCreator()}" alt="">
                                                                             <span class="navbar__term-author-name">
                                                                                     ${lc.creatorName}
                                                                             </span>
@@ -263,11 +263,11 @@
                             <div class="navbar__user" id="navbar__user">
                                 <button class="navbar__user-btn"
                                         onclick="showAccountDialog()">
-                                    <img id="navbar__user-btn" src="./img/avatar.jpg" alt="">
+                                    <img id="navbar__user-btn" src="${sessionScope.user.avatar}" alt="">
                                 </button>
                                 <div class="navbar__user-menu" id="navbar__user-menu" style="display: none">
                                     <div class="navbar__user-header">
-                                        <img class="navbar__user-img" src="./img/avatar.jpg" alt="">
+                                        <img class="navbar__user-img" src="${sessionScope.user.avatar}" alt="">
                                         <div class="navbar_user-infor">
                                             <p class="navbar__user-name">
                                                     ${sessionScope.user.username}

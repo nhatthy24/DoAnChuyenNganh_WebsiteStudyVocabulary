@@ -20,7 +20,16 @@ public class User {
     	this.role = newRole;
     	this.username = newUsername;
     }
-
+    public User(int newId, String newPassword, String newEmail, String newDate, String newRole, String newUsername,String avatar) {
+        super();
+        this.id = newId;
+        this.password = newPassword;
+        this.email = newEmail;
+        this.date = newDate;
+        this.role = newRole;
+        this.username = newUsername;
+        this.avatar=avatar;
+    }
     public User() {
     }
 

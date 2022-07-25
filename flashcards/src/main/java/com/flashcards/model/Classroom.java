@@ -1,5 +1,7 @@
 package com.flashcards.model;
 
+import com.flashcards.dao.database.connection.UserDAO;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -91,4 +93,5 @@ public class Classroom {
     public void addMembers(User user){
         this.members.add(user);
     }
+
 }
