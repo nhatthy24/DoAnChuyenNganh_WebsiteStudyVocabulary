@@ -56,7 +56,10 @@ public class CourseDAO {
 //        System.out.println(loadCourseById(123456));
 //        System.out.println(loadCourseByCreatorId(1));
 //        System.out.println(loadCourseInFolder(2));
-        System.out.println(loadCourseHome());
+//        System.out.println(loadCourseHome());
+        for (Course course:loadCourseHomeHasSearch("ew 2")){
+            System.out.println(course.getCourseName());
+        }
     }
 
     public static List<Course> loadCourseByCreatorId(int user_id) {
@@ -110,6 +113,32 @@ public class CourseDAO {
         }
         return courses;
     }
+    public static List<Course> loadCourseHomeHasSearch(String title) {
+        List<Course> courses = new ArrayList<>();
+        String sql = "SELECT * FROM course where Title LIKE "+"'%"+title+"%'";
+        try {
+            Statement statement = DBCPDataSource.getStatement();
+            synchronized (statement){
+                ResultSet resultSet = statement.executeQuery(sql);
+                while(resultSet.next()){
+                    Course course = new Course();
+                    course.setId(resultSet.getInt(1));
+                    course.setCourseName(resultSet.getString(2));
+                    course.setDescription(resultSet.getString(3));
+                    course.setCreatorId(resultSet.getInt(4));
+                    course.setCards(CardDAO.loadListCardByCourseId(resultSet.getInt(1)));
+                    course.setCreatorName(UserDAO.loadUserById(resultSet.getInt(4)).getUsername());
+                    courses.add(course);
+                }
+                resultSet.close();
+            }
+            statement.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return courses;
+    }
+
 
     public static List<Course> loadCourseInFolder(int id) {
         List<Course> courses = new ArrayList<>();
@@ -210,6 +239,10 @@ public class CourseDAO {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        return false;
+    }
+
+    public static boolean updateCourse(String courseName, String description) {
         return false;
     }
 }
