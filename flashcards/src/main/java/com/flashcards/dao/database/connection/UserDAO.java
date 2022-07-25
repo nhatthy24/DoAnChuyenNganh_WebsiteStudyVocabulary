@@ -57,7 +57,8 @@ public class UserDAO implements ObjectDAO {
 				String date = rs.getString(4);
 				String role = rs.getString(5);
 				String name = rs.getString(6);
-				return new User(id, pass, email, date, role, name);
+				String avatar=rs.getString(7);
+				return new User(id, pass, email, date, role, name,avatar);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

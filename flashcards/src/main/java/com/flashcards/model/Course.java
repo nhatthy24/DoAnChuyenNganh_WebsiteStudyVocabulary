@@ -1,5 +1,7 @@
 package com.flashcards.model;
 
+import com.flashcards.dao.database.connection.UserDAO;
+
 import java.util.List;
 
 public class Course {
@@ -68,7 +70,10 @@ public class Course {
     public void setCreatorName(String creatorName) {
         this.creatorName = creatorName;
     }
-
+    public String getAvatarCreator(){
+            User user= UserDAO.loadUserById(creatorId);
+            return user.getAvatar();
+    }
     @Override
     public String toString() {
         return "Course{" +
