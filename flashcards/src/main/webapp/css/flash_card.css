@@ -35,7 +35,7 @@ body{
 }
 
 .control__back-btn i {
-    color: var(--green-color-light);
+    color: var(--green-color);
 }
 
 .control__back-btn-text {
@@ -375,7 +375,7 @@ body{
     width: 36px;
     height: 36px;
     font-size: 1.3rem;
-    color: var(--green-color-light);
+    color: var(--green-color);
     background-color: var(--white-color);
     border: none;
     position: relative;
@@ -584,7 +584,7 @@ body{
     background-color: transparent;
     font-size: 1.5rem;
     font-weight: 500;
-    color:var(--green-color-light);
+    color:var(--green-color);
     padding: 0 15px;
 }
 
@@ -605,7 +605,7 @@ body{
     outline: none;
     font-size: 1.5rem;
     font-weight: 500;
-    color:var(--green-color-light);
+    color:var(--green-color);
 }
 
 

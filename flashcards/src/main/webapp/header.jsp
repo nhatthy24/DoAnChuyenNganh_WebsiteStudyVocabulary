@@ -237,13 +237,14 @@
 
                 <!-- left element -->
                 <div class="navbar__right">
-                    <form action="home" method="get" accept-charset="UTF-8">
-                    <div class="navbar__search">
-                        <button type="submit" class="navbar__search-btn">
-                            <i class="fas fa-search"></i>
-                        </button>
-                        <input name="course-name" type="text" class="navbar__search-input" placeholder="Nhập tên học phần ...">
-                    </div>
+                    <form action="home" method="get" style="margin-bottom: 0" accept-charset="UTF-8">
+                        <div class="navbar__search">
+                            <button type="submit" class="navbar__search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                            <input name="course-name" type="text" class="navbar__search-input"
+                                   placeholder="Nhập tên học phần ...">
+                        </div>
                     </form>
                     <c:if test="${sessionScope.user==null}">
                         <div class="navbar__login-null">

@@ -27,7 +27,7 @@
 </head>
 
 <body>
-<%--<jsp:include page="header.jsp"></jsp:include>--%>
+<jsp:include page="header.jsp"></jsp:include>
 
 <!-- main content -->
 <div class="container__remember-card">
@@ -295,7 +295,6 @@
         <div class="setting__dialog-body-row-separator">
 
         </div>
-
         <div class="setting__dialog-body-row">
             <div class="setting__dialog-body-item">
                 <div class="setting__dialog-body-item-title">
@@ -316,13 +315,13 @@
     </div>
 </div>
 
-<div class="modal" id="modal" style="display: none">
+<div class="modal" id="flashcard_modal" style="display: none">
     <div class="modal__overlay">
 
     </div>
 
     <div class="modal__body">
-        <div class="modal__inner" id="modal__inner">
+        <div class="modal__inner" id="flashcard_modal__inner">
 
         </div>
     </div>
