@@ -410,57 +410,7 @@
                                                         </div>
                                                     </div>
                                                 </c:forEach>
-                                                <%--                                                <div role="listitem" class="listitem">--%>
-                                                <%--                                                    <div id="written-1" tabindex="-1" class="listitem_written">--%>
-                                                <%--                                                        <article class="listitem_written_article article" style="--article-3:0; --article-13:0.5rem;">--%>
-                                                <%--                                                            <div class="listitem_article-definition">--%>
-                                                <%--                                                                <div class="listitem_article-definition-sub">--%>
-                                                <%--                                                                    <div class="listitem_article-definition-sub-hr">--%>
-                                                <%--                                                                        <div class="listitem_article-definition-sub-st">--%>
-                                                <%--                                                                            <section class="listitem_article-definition-sub-sc">Định nghĩa</section>--%>
-                                                <%--                                                                            <div class="listitem_article-definition-sub-div-btn">--%>
-                                                <%--                                                                                <button type="button" aria-label="sound" class="AssemblyButtonBase AssemblyIconButton AssemblyIconButton--tertiary AssemblyIconButton--circle AssemblyButtonBase--small AssemblyButtonBase--circle">--%>
-                                                <%--                                                                                    <div aria-label="sound" class="AssemblyIcon AssemblyIcon--small" role="img">--%>
-                                                <%--                                                                                        <i class="fa fa-volume-up" aria-hidden="true" style="font-size: 1em;"></i>--%>
-                                                <%--                                                                                    </div>--%>
-                                                <%--                                                                                </button>--%>
-                                                <%--                                                                            </div>--%>
-                                                <%--                                                                        </div>--%>
-                                                <%--                                                                    </div>--%>
-                                                <%--                                                                    <div class="question_text" data-testid="Question Text" style="--question_text-0:auto;">--%>
-                                                <%--                                                                        <div class="question_text_1 qtZoom">--%>
-                                                <%--                                                                            <div aria-label="the process of acquiring new and relatively enduring information or behaviors" class="FormattedText notranslate FormattedTextWithImage-wrapper lang-en" style="font-size: 20px;">--%>
-                                                <%--                                                                                <div style="display: block;">away from learning</div>--%>
-                                                <%--                                                                            </div>--%>
-                                                <%--                                                                            <div class="FormattedTextWithImage-wrapper ftZoom">--%>
-                                                <%--                                                                                <div class="Image Zoom-Formatted">--%>
-                                                <%--                                                                                    <div class="ZoomableImage">--%>
-                                                <%--                                                                                        <img alt="" class="ZoomableImage-rawImage">--%>
-                                                <%--                                                                                    </div>--%>
-                                                <%--                                                                                    <div class="Image-image" style="background-image: url(./img/kid-computational-thinking-light.jpeg); background-position: center center; background-repeat: no-repeat; height: 104px; width: 104px; background-size: cover;"></div>--%>
-                                                <%--                                                                                </div>--%>
-                                                <%--                                                                            </div>--%>
-                                                <%--                                                                        </div>--%>
-                                                <%--                                                                    </div>--%>
-                                                <%--                                                                </div>--%>
-                                                <%--                                                            </div>--%>
-                                                <%--                                                            <div class="listitem_written_result" style="--listitem_written_result-1:10rem;">--%>
-                                                <%--                                                                <div class="listitem_written_result-sub">--%>
-                                                <%--                                                                    <section class="listitem_written_result-sub-sc">Đáp án của bạn</section>--%>
-                                                <%--                                                                </div>--%>
-                                                <%--                                                                <form name="form" class="myForm">--%>
-                                                <%--                                                                    <div>--%>
-                                                <%--                                                                        <label class="AssemblyInput">--%>
-                                                <%--                                                                            <input autocompconste="off" spellcheck="false" aria-label="Nhập đáp án" class="AssemblyInput-input AssemblyInput-placeholder js-bound" placeholder="Nhập đáp án" type="text" value="">--%>
-                                                <%--                                                                        </label>--%>
-                                                <%--                                                                    </div>--%>
-                                                <%--                                                                    <div class="mySubmit"></div>--%>
-                                                <%--                                                                </form>--%>
-                                                <%--                                                            </div>--%>
-                                                <%--                                                            <div class="listitem_written_result_none">--%>
-                                                <%--                                                                <div class="div-none-1-1">2/2</div>--%>
-                                                <%--                                                            </div></article></div>--%>
-                                                <%--                                                </div>--%>
+
                                             </div>
                                         </section>
                                         <section class="cdm2lgu StudyModesLayout_section_scores_board">
