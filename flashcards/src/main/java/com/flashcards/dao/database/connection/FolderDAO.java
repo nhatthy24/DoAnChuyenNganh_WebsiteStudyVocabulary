@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FolderDAO {
 
@@ -132,8 +134,31 @@ public class FolderDAO {
         }
         return folder;
     }
+    public static List<Folder> loadFolderByCreatorId(int user_id) {
+        List<Folder> folders = new ArrayList<>();
+        String sql = "SELECT * FROM folder WHERE Creator="+user_id;
+        try{
+            Statement statement = DBCPDataSource.getStatement();
+            synchronized (statement){
+                ResultSet resultSet = statement.executeQuery(sql);
+                while (resultSet.next()){
+                    Folder folder = new Folder();
+                    folder.setFolderId(resultSet.getInt(1));
+                    folder.setTitle(resultSet.getString(2));
+                    folder.setDescription(resultSet.getString(3));
+                    folder.setCreator(UserDAO.loadUserById(resultSet.getInt(4)).getUsername());
+                    folders.add(folder);
+                }
+                resultSet.close();
+            }
+            statement.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
 
+        return folders;
+    }
     public static void main(String[] args) {
-        System.out.println(loadFolderById(2));
+        System.out.println(loadFolderByCreatorId(1));
     }
 }

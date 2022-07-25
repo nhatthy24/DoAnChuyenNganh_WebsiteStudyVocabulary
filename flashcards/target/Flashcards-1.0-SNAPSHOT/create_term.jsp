@@ -47,40 +47,40 @@
                     </div>
                 </div>
 
-                <div class="create__term-permission">
-                    <div class="create__term-permission-left">
-                        <button type="button" class="create__term-add-word create__term-permission-btn">
-                            + Nhập từ Word, Excel, Google Docs,v.v.
-                        </button>
-                    </div>
-                    <div class="create__term-permission-right">
-                        <div class="create__term-permission-view">
-                            <p class="create__term-permission-title"  id="term__permission-view-title">Hiển thị với mọi người</p>
-                            <button type="button" class="create__term-permission-btn" id="term__permission-btn-view">Thay đổi</button>
-                        </div>
-                        <div class="create__term-permission-edit">
-                            <p class="create__term-permission-title" id="term__permission-edit-title">Chỉ tôi có quyền sửa đổi</p>
-                            <button type="button" class="create__term-permission-btn" id="term__permission-btn-edit">Thay đổi</button>
-                        </div>
-                        <button type="button" class="create__term-permission-wrap create__term-permission-btn">
-                            <i class="fas fa-exchange-alt"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="create__term-upload">
-                    <form>
-                        <input type="file" name="file" class="create__term-upload-input" id="chossen-image">
-                        <label for="chossen-image">
-                            <div class="create__term-upload-btn">
-                                <h4 class="create__term-upload-title">Thêm hồ sơ và gắn nhãn</h4>
-                                <p class="create__term-upload-descr">
-                                    Kéo và thả ảnh bất kỳ hoặc
-                                    <span>chọn một hình ảnh</span>
-                                </p>
-                            </div>
-                        </label>
-                    </form>
-                </div>
+<%--                <div class="create__term-permission">--%>
+<%--                    <div class="create__term-permission-left">--%>
+<%--                        <button type="button" class="create__term-add-word create__term-permission-btn">--%>
+<%--                            + Nhập từ Word, Excel, Google Docs,v.v.--%>
+<%--                        </button>--%>
+<%--                    </div>--%>
+<%--                    <div class="create__term-permission-right">--%>
+<%--                        <div class="create__term-permission-view">--%>
+<%--                            <p class="create__term-permission-title"  id="term__permission-view-title">Hiển thị với mọi người</p>--%>
+<%--                            <button type="button" class="create__term-permission-btn" id="term__permission-btn-view">Thay đổi</button>--%>
+<%--                        </div>--%>
+<%--                        <div class="create__term-permission-edit">--%>
+<%--                            <p class="create__term-permission-title" id="term__permission-edit-title">Chỉ tôi có quyền sửa đổi</p>--%>
+<%--                            <button type="button" class="create__term-permission-btn" id="term__permission-btn-edit">Thay đổi</button>--%>
+<%--                        </div>--%>
+<%--                        <button type="button" class="create__term-permission-wrap create__term-permission-btn">--%>
+<%--                            <i class="fas fa-exchange-alt"></i>--%>
+<%--                        </button>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--                <div class="create__term-upload">--%>
+<%--                    <form>--%>
+<%--                        <input type="file" name="file" class="create__term-upload-input" id="chossen-image">--%>
+<%--                        <label for="chossen-image">--%>
+<%--                            <div class="create__term-upload-btn">--%>
+<%--                                <h4 class="create__term-upload-title">Thêm hồ sơ và gắn nhãn</h4>--%>
+<%--                                <p class="create__term-upload-descr">--%>
+<%--                                    Kéo và thả ảnh bất kỳ hoặc--%>
+<%--                                    <span>chọn một hình ảnh</span>--%>
+<%--                                </p>--%>
+<%--                            </div>--%>
+<%--                        </label>--%>
+<%--                    </form>--%>
+<%--                </div>--%>
                 <div class="create__term-definition">
                     <div class="create__term-tag-list" id="create__term-tag-list">
                         <div class="tag__item">
@@ -117,13 +117,13 @@
                                         </div>
                                     </div>
 
-                                    <label>
-                                        <input type="file" class="tab__side-img-file" name="image">
-                                        <div class="tab__side-img">
-                                            <i class="far fa-image"></i>
-                                            <p class="tab__side-img-text">HÌNH ẢNH</p>
-                                        </div>
-                                    </label>
+<%--                                    <label>--%>
+<%--                                        <input type="file" class="tab__side-img-file" name="image">--%>
+<%--                                        <div class="tab__side-img">--%>
+<%--                                            <i class="far fa-image"></i>--%>
+<%--                                            <p class="tab__side-img-text">HÌNH ẢNH</p>--%>
+<%--                                        </div>--%>
+<%--                                    </label>--%>
                                 </div>
                             </div>
                         </div>
@@ -158,13 +158,13 @@
                                             <button type="button" class="tab__language-side">TIẾNG VIỆT</button>
                                         </div>
                                     </div>
-                                    <label>
-                                        <input type="file" class="tab__side-img-file">
-                                        <div class="tab__side-img">
-                                            <i class="far fa-image"></i>
-                                            <p class="tab__side-img-text">HÌNH ẢNH</p>
-                                        </div>
-                                    </label>
+<%--                                    <label>--%>
+<%--                                        <input type="file" class="tab__side-img-file">--%>
+<%--                                        <div class="tab__side-img">--%>
+<%--                                            <i class="far fa-image"></i>--%>
+<%--                                            <p class="tab__side-img-text">HÌNH ẢNH</p>--%>
+<%--                                        </div>--%>
+<%--                                    </label>--%>
 
                                 </div>
                             </div>
