@@ -138,4 +138,52 @@ public class CourseDAO {
         return courses;
 
     }
+    public static boolean deleteCourse(int courseId){
+        String sql = "DELETE FROM course WHERE CourseID=?";
+        int update = 0;
+        try{
+            PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+            preparedStatement.setInt(1, courseId);
+            synchronized (preparedStatement){
+                update = preparedStatement.executeUpdate();
+            }
+            preparedStatement.close();
+            return update == 1;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
+    }
+    public static boolean deleteCourseInFolder(int courseId){
+        String sql = "DELETE FROM course_in_folder WHERE Course=?";
+        int update = 0;
+        try{
+            PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+            preparedStatement.setInt(1, courseId);
+            synchronized (preparedStatement){
+                update = preparedStatement.executeUpdate();
+            }
+            preparedStatement.close();
+            return update == 1;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
+    }
+    public static boolean deleteCourseInClass(int courseId){
+        String sql = "DELETE FROM course_in_class WHERE CourseId=?";
+        int update = 0;
+        try{
+            PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+            preparedStatement.setInt(1, courseId);
+            synchronized (preparedStatement){
+                update = preparedStatement.executeUpdate();
+            }
+            preparedStatement.close();
+            return update == 1;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
+    }
 }

@@ -109,6 +109,23 @@ public class CardDAO {
         return cards;
     }
 
+    public static boolean deleteCardByCourseId(int courseId){
+        String sql = "DELETE FROM card WHERE CourseID=?";
+        int update = 0;
+        try{
+            PreparedStatement preparedStatement = DBCPDataSource.preparedStatement(sql);
+            preparedStatement.setInt(1, courseId);
+            synchronized (preparedStatement){
+                update = preparedStatement.executeUpdate();
+            }
+            preparedStatement.close();
+            return update == 1;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         List<Card> cards= CardDAO.loadListCardByCourseId(1);
         List<Card> cardsmarked= CardDAO.loadListCardWithMarkedByCourseId(1);
