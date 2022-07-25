@@ -123,8 +123,8 @@
                             </div>
                         </div>
                         <div class="folder__card-footer-delete">
-                            <a href="#" class="folder__card-footer-delete-btn">
-                                <i class="bi bi-trash"></i>
+                            <a href="library-folder?folder_id=${folder.folderId}&type=delete&course_id=${course.id}" class="folder__card-footer-delete-btn">
+                                <i style="color: #ff5252" class="bi bi-trash"></i>
                             </a>
                         </div>
                     </div>
@@ -170,23 +170,16 @@
                         </div>
 
                         <div class="dialog__add-term-row">
+                        <c:forEach items="${coursesInAddBox}" var="course">
                             <div class="dialog__add-term-item">
                                 <p class="dialog__add-term-item-name">
-                                    Tien hoa Một học phần kiểm thử Một học phần kiểm thử Một học phần kiểm thử
+                                        ${course.courseName}
                                 </p>
-                                <button class="dialog__add-term-item-btn dialog__add-term-item-btn--plus">
+                                <a href="library-folder?folder_id=${folder.folderId}&type=add&course_id=${course.id}" class="dialog__add-term-item-btn dialog__add-term-item-btn--plus">
                                     <i class="bi bi-plus-lg"></i>
-                                </button>
-                            </div>
-
-                            <div class="dialog__add-term-item">
-                                <p class="dialog__add-term-item-name">
-                                    Tien hoa Một học phần kiểm thử Một học phần kiểm thử Một học phần kiểm thử
-                                </p>
-                                <a href="" class="dialog__add-term-item-btn dialog__add-term-item-btn--minus">
-                                    <i class="bi bi-dash-lg"></i>
                                 </a>
                             </div>
+                        </c:forEach>
                         </div>
                     </div>
 
