@@ -159,6 +159,6 @@ public class FolderDAO {
         return folders;
     }
     public static void main(String[] args) {
-        System.out.println(loadFolderById(2));
+        System.out.println(loadFolderByCreatorId(1));
     }
 }

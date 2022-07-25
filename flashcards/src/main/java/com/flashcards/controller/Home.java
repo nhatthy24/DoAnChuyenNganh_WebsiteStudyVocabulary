@@ -25,10 +25,10 @@ public class Home extends HttpServlet {
         if(session.getAttribute("user_id")!=null){
             int user_id = (int) session.getAttribute("user_id");
             // header thư viện của tôi
-            List<Course> listcourses = CourseDAO.loadCourseByCreatorId(user_id);
+            List<Course> courses = CourseDAO.loadCourseByCreatorId(user_id);
 //            List<Folder> listfolders = FolderDAO.loadFolderByCreatorId(user_id);
 //            List<Classroom> listclassrooms = ClassroomDAO.loadClassByCreatorId(user_id);
-            request.setAttribute("listcourses", listcourses);
+            request.setAttribute("courses", courses);
 //            request.setAttribute("listfolders", listfolders);
 //            request.setAttribute("listclassrooms", listclassrooms);
             request.getRequestDispatcher("index.jsp").forward(request,response);

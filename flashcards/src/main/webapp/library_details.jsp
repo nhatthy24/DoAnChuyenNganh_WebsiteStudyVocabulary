@@ -10,6 +10,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title}</title>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/home.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
@@ -25,6 +29,7 @@
     </style>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 <div class="pb-5">
     <div class="container-lg">
         <div class="row">
@@ -192,5 +197,6 @@
 
     </div>
 </div>
+<script src="./js/header.js"></script>
 </body>
 </html>

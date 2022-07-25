@@ -27,7 +27,7 @@
 
     <div class="dashboard__main">
         <div class="list__card">
-            <c:forEach items="${listcourses}" var="course">
+            <c:forEach items="${courses}" var="course">
                 <a href="detail-term?course_id=${course.id}" class="home__card-link">
                     <div class="folder__card">
                         <div class="folder__card-header">
